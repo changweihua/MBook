@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
+using System.Threading;
 
 namespace MBook
 {
@@ -19,6 +20,8 @@ namespace MBook
             BonusSkins.Register();
             OfficeSkins.Register();
             SkinManager.EnableFormSkins();
+
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CHS");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

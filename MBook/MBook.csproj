@@ -48,9 +48,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Localization.v11.1">
+      <HintPath>C:\Users\Changweihua\Downloads\DevExpress11.1.6破解汉化\DevExpress.Localization.v11.1.6\DevExpress.Localization.v11.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -129,6 +134,14 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\icon\ONENOTE.ico" />
+    <Content Include="images\icon\OneNote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\large\" />
+    <Folder Include="images\small\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
