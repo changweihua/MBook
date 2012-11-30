@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonSmallImages = new System.Windows.Forms.ImageList(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -40,6 +42,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -81,9 +84,15 @@
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.treeList4 = new DevExpress.XtraTreeList.TreeList();
+            this.treeList3 = new DevExpress.XtraTreeList.TreeList();
+            this.treeList2 = new DevExpress.XtraTreeList.TreeList();
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -95,13 +104,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.ApplicationButtonDropDownControl = this.applicationMenu1;
             this.ribbonControl1.ApplicationButtonText = "MBook";
-            this.ribbonControl1.ApplicationCaption = "fdsfdsf";
+            this.ribbonControl1.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Purple;
             // 
             // 
             // 
@@ -117,10 +132,12 @@
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
-            this.barButtonItem8});
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.barButtonItem10});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 24;
+            this.ribbonControl1.MaxItemId = 26;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -132,9 +149,24 @@
             this.repositoryItemTextEdit1,
             this.repositoryItemButtonEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPage2;
+            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(900, 124);
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem9);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // applicationMenu1
+            // 
+            this.applicationMenu1.ItemLinks.Add(this.barButtonItem10);
+            this.applicationMenu1.Name = "applicationMenu1";
+            this.applicationMenu1.Ribbon = this.ribbonControl1;
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "退出(&E)";
+            this.barButtonItem10.Description = "退出整个系统";
+            this.barButtonItem10.Id = 25;
+            this.barButtonItem10.LargeImageIndex = 17;
+            this.barButtonItem10.Name = "barButtonItem10";
             // 
             // ribbonSmallImages
             // 
@@ -205,6 +237,7 @@
             // 
             this.barButtonItem7.Caption = "保存信息";
             this.barButtonItem7.Id = 22;
+            this.barButtonItem7.ImageIndex = 6;
             this.barButtonItem7.Name = "barButtonItem7";
             // 
             // barButtonItem8
@@ -212,6 +245,12 @@
             this.barButtonItem8.Caption = "放弃更改";
             this.barButtonItem8.Id = 23;
             this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "barButtonItem9";
+            this.barButtonItem9.Id = 24;
+            this.barButtonItem9.Name = "barButtonItem9";
             // 
             // ribbonLargeImages
             // 
@@ -234,6 +273,7 @@
             this.ribbonLargeImages.Images.SetKeyName(14, "Sticky.png");
             this.ribbonLargeImages.Images.SetKeyName(15, "MB_0007_book.png");
             this.ribbonLargeImages.Images.SetKeyName(16, "MB_0018_note1.png");
+            this.ribbonLargeImages.Images.SetKeyName(17, "GroupMasterClose.png");
             // 
             // ribbonPage1
             // 
@@ -523,11 +563,46 @@
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Controls.Add(this.treeList4);
+            this.dockPanel1_Container.Controls.Add(this.treeList3);
+            this.dockPanel1_Container.Controls.Add(this.treeList2);
             this.dockPanel1_Container.Controls.Add(this.treeList1);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(192, 372);
             this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // treeList4
+            // 
+            this.treeList4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeList4.Location = new System.Drawing.Point(0, 142);
+            this.treeList4.Name = "treeList4";
+            this.treeList4.Size = new System.Drawing.Size(192, 59);
+            this.treeList4.TabIndex = 3;
+            // 
+            // treeList3
+            // 
+            this.treeList3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeList3.Location = new System.Drawing.Point(0, 93);
+            this.treeList3.Name = "treeList3";
+            this.treeList3.Size = new System.Drawing.Size(192, 49);
+            this.treeList3.TabIndex = 2;
+            // 
+            // treeList2
+            // 
+            this.treeList2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeList2.Location = new System.Drawing.Point(0, 52);
+            this.treeList2.Name = "treeList2";
+            this.treeList2.Size = new System.Drawing.Size(192, 41);
+            this.treeList2.TabIndex = 1;
+            // 
+            // treeList1
+            // 
+            this.treeList1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeList1.Location = new System.Drawing.Point(0, 0);
+            this.treeList1.Name = "treeList1";
+            this.treeList1.Size = new System.Drawing.Size(192, 52);
+            this.treeList1.TabIndex = 0;
             // 
             // ribbonPageGroup2
             // 
@@ -536,13 +611,15 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "日记区";
             // 
-            // treeList1
+            // popupMenu1
             // 
-            this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeList1.Location = new System.Drawing.Point(0, 0);
-            this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(192, 372);
-            this.treeList1.TabIndex = 0;
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl1;
+            // 
+            // popupMenu2
+            // 
+            this.popupMenu2.Name = "popupMenu2";
+            this.popupMenu2.Ribbon = this.ribbonControl1;
             // 
             // Form1
             // 
@@ -562,6 +639,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -573,7 +651,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.treeList4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -633,6 +716,14 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraTreeList.TreeList treeList1;
+        private DevExpress.XtraTreeList.TreeList treeList4;
+        private DevExpress.XtraTreeList.TreeList treeList3;
+        private DevExpress.XtraTreeList.TreeList treeList2;
+        private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.PopupMenu popupMenu2;
     }
 }
 
