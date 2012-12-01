@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <folder id="0" folderName="所有文件夹" folderPath="">
+	    <folder id="1" folderName="我的笔记" folderPath="My Notes" />
+	    <folder id="2" folderName="我的草稿" folderPath="My Drafts" />
+	    <folder id="3" folderName="我的联系人" folderPath="My Contacts" />
+	    <folder id="4" folderName="我的任务" folderPath="My Tasks" />
+	    <folder id="5" folderName="我的日记" folderPath="My Diaries" />
+	    <folder id="6" folderName="我的事件" folderPath="My Drafts" />
+	    <folder id="7" folderName="我的桌面便笺" folderPath="My Sticky Notes" />
+	    <folder id="8" folderName="已删除" folderPath="Deleted Items" />
+    </folder>
+</root>
+

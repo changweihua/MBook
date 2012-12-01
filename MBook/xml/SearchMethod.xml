@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchMethods name="快速搜索">
+	<searchMethod name="通过属性">
+		<searchFilter  filterName="无标签文档" filterValue="" />
+		<searchFilter  filterName="包含附件" filterValue="" />
+		<searchFilter  filterName="一星" filterValue="" />
+		<searchFilter  filterName="两星" filterValue="" />
+		<searchFilter  filterName="三星" filterValue="" />
+		<searchFilter  filterName="四星" filterValue="" />
+		<searchFilter  filterName="五星" filterValue="" />
+	</searchMethod>
+	<searchMethod name="通过创建日期">
+		<searchFilter  filterName="今日" filterValue="" />
+		<searchFilter  filterName="昨日至今" filterValue="" />
+		<searchFilter  filterName="前天至今" filterValue="" />
+		<searchFilter  filterName="一周内" filterValue="" />
+		<searchFilter  filterName="一月内" filterValue="" />
+	</searchMethod>
+	<searchMethod name="通过修改日期">
+		<searchFilter  filterName="今日" filterValue="" />
+		<searchFilter  filterName="昨日至今" filterValue="" />
+		<searchFilter  filterName="前天至今" filterValue="" />
+		<searchFilter  filterName="一周内" filterValue="" />
+		<searchFilter  filterName="一月内" filterValue="" />
+	</searchMethod>
+	<searchMethod name="通过访问日期">
+		<searchFilter  filterName="今日" filterValue="" />
+		<searchFilter  filterName="昨日至今" filterValue="" />
+		<searchFilter  filterName="前天至今" filterValue="" />
+		<searchFilter  filterName="一周内" filterValue="" />
+		<searchFilter  filterName="一月内" filterValue="" />
+	</searchMethod>
+</searchMethods>
