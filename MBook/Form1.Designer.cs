@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem11 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem12 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup7 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem25 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem26 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem27 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem28 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem29 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup8 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup9 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem30 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem31 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem32 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem33 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem34 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem35 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem36 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -56,7 +56,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddStickyNote = new DevExpress.XtraBars.BarButtonItem();
             this.rgbiTools = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonGallaryHoverImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonGallaryImages = new System.Windows.Forms.ImageList(this.components);
@@ -107,6 +107,7 @@
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -121,9 +122,8 @@
             this.treeList4 = new DevExpress.XtraTreeList.TreeList();
             this.treeList3 = new DevExpress.XtraTreeList.TreeList();
             this.treeList2 = new DevExpress.XtraTreeList.TreeList();
-            this.treeList1 = new DevExpress.XtraTreeList.TreeList();
+            this.folderTreeList = new DevExpress.XtraTreeList.TreeList();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
@@ -146,6 +146,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.hideContainerRight.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -157,8 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.treeList4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
-            this.hideContainerRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.folderTreeList)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -181,7 +181,7 @@
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8,
-            this.barButtonItem9,
+            this.btnAddStickyNote,
             this.barButtonItem10,
             this.rgbiTools,
             this.rgbiSkins,
@@ -230,7 +230,7 @@
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(900, 124);
-            this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.btnAddStickyNote);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // mBookMenu
@@ -323,12 +323,13 @@
             this.barButtonItem8.ImageIndex = 15;
             this.barButtonItem8.Name = "barButtonItem8";
             // 
-            // barButtonItem9
+            // btnAddStickyNote
             // 
-            this.barButtonItem9.Caption = "新建桌面便笺";
-            this.barButtonItem9.Id = 24;
-            this.barButtonItem9.ImageIndex = 17;
-            this.barButtonItem9.Name = "barButtonItem9";
+            this.btnAddStickyNote.Caption = "新建桌面便笺";
+            this.btnAddStickyNote.Id = 24;
+            this.btnAddStickyNote.ImageIndex = 17;
+            this.btnAddStickyNote.Name = "btnAddStickyNote";
+            this.btnAddStickyNote.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddStickyNote_ItemClick);
             // 
             // rgbiTools
             // 
@@ -338,30 +339,30 @@
             // 
             this.rgbiTools.Gallery.AllowHoverImages = true;
             this.rgbiTools.Gallery.FirstItemVertAlignment = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment.Center;
-            galleryItemGroup1.Caption = "Group1";
-            galleryItem1.Caption = "日历";
-            galleryItem1.HoverImageIndex = 0;
-            galleryItem1.ImageIndex = 0;
-            galleryItem2.Caption = "任务";
-            galleryItem2.HoverImageIndex = 1;
-            galleryItem2.ImageIndex = 1;
-            galleryItem3.Caption = "作者";
-            galleryItem3.HoverImageIndex = 2;
-            galleryItem3.ImageIndex = 2;
-            galleryItem4.Caption = "邮件";
-            galleryItem4.HoverImageIndex = 4;
-            galleryItem4.ImageIndex = 4;
-            galleryItem5.Caption = "相册";
-            galleryItem5.HoverImageIndex = 3;
-            galleryItem5.ImageIndex = 3;
-            galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1,
-            galleryItem2,
-            galleryItem3,
-            galleryItem4,
-            galleryItem5});
+            galleryItemGroup7.Caption = "Group1";
+            galleryItem25.Caption = "日历";
+            galleryItem25.HoverImageIndex = 0;
+            galleryItem25.ImageIndex = 0;
+            galleryItem26.Caption = "任务";
+            galleryItem26.HoverImageIndex = 1;
+            galleryItem26.ImageIndex = 1;
+            galleryItem27.Caption = "作者";
+            galleryItem27.HoverImageIndex = 2;
+            galleryItem27.ImageIndex = 2;
+            galleryItem28.Caption = "邮件";
+            galleryItem28.HoverImageIndex = 4;
+            galleryItem28.ImageIndex = 4;
+            galleryItem29.Caption = "相册";
+            galleryItem29.HoverImageIndex = 3;
+            galleryItem29.ImageIndex = 3;
+            galleryItemGroup7.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem25,
+            galleryItem26,
+            galleryItem27,
+            galleryItem28,
+            galleryItem29});
             this.rgbiTools.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup7});
             this.rgbiTools.Gallery.HoverImages = this.ribbonGallaryHoverImages;
             this.rgbiTools.Gallery.Images = this.ribbonGallaryImages;
             this.rgbiTools.Gallery.RowCount = 2;
@@ -394,9 +395,9 @@
             // 
             // rgbiSkins
             // 
-            galleryItemGroup2.Caption = "Group1";
+            galleryItemGroup8.Caption = "Group1";
             this.rgbiSkins.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup8});
             this.rgbiSkins.Id = 27;
             this.rgbiSkins.Name = "rgbiSkins";
             // 
@@ -524,24 +525,24 @@
             // 
             // rgbiSocial
             // 
-            galleryItemGroup3.Caption = "Group1";
-            galleryItem6.Caption = "Item1";
-            galleryItem7.Caption = "Item2";
-            galleryItem8.Caption = "Item3";
-            galleryItem9.Caption = "Item4";
-            galleryItem10.Caption = "Item5";
-            galleryItem11.Caption = "Item6";
-            galleryItem12.Caption = "Item7";
-            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem6,
-            galleryItem7,
-            galleryItem8,
-            galleryItem9,
-            galleryItem10,
-            galleryItem11,
-            galleryItem12});
+            galleryItemGroup9.Caption = "Group1";
+            galleryItem30.Caption = "Item1";
+            galleryItem31.Caption = "Item2";
+            galleryItem32.Caption = "Item3";
+            galleryItem33.Caption = "Item4";
+            galleryItem34.Caption = "Item5";
+            galleryItem35.Caption = "Item6";
+            galleryItem36.Caption = "Item7";
+            galleryItemGroup9.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem30,
+            galleryItem31,
+            galleryItem32,
+            galleryItem33,
+            galleryItem34,
+            galleryItem35,
+            galleryItem36});
             this.rgbiSocial.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup9});
             this.rgbiSocial.Gallery.HoverImages = this.ribbonGallaryHoverImages;
             this.rgbiSocial.Gallery.Images = this.ribbonGallaryImages;
             this.rgbiSocial.Id = 50;
@@ -592,7 +593,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAddStickyNote);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -765,6 +766,15 @@
             "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
             "DevExpress.XtraBars.Ribbon.RibbonControl"});
             // 
+            // hideContainerRight
+            // 
+            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(131)))));
+            this.hideContainerRight.Controls.Add(this.dockPanel2);
+            this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.hideContainerRight.Location = new System.Drawing.Point(880, 124);
+            this.hideContainerRight.Name = "hideContainerRight";
+            this.hideContainerRight.Size = new System.Drawing.Size(20, 399);
+            // 
             // dockPanel2
             // 
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
@@ -860,7 +870,7 @@
             this.dockPanel1_Container.Controls.Add(this.treeList4);
             this.dockPanel1_Container.Controls.Add(this.treeList3);
             this.dockPanel1_Container.Controls.Add(this.treeList2);
-            this.dockPanel1_Container.Controls.Add(this.treeList1);
+            this.dockPanel1_Container.Controls.Add(this.folderTreeList);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(192, 372);
@@ -890,13 +900,13 @@
             this.treeList2.Size = new System.Drawing.Size(192, 41);
             this.treeList2.TabIndex = 1;
             // 
-            // treeList1
+            // folderTreeList
             // 
-            this.treeList1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.treeList1.Location = new System.Drawing.Point(0, 0);
-            this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(192, 52);
-            this.treeList1.TabIndex = 0;
+            this.folderTreeList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.folderTreeList.Location = new System.Drawing.Point(0, 0);
+            this.folderTreeList.Name = "folderTreeList";
+            this.folderTreeList.Size = new System.Drawing.Size(192, 52);
+            this.folderTreeList.TabIndex = 0;
             // 
             // ribbonPageGroup2
             // 
@@ -904,15 +914,6 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "日记区";
-            // 
-            // hideContainerRight
-            // 
-            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(131)))));
-            this.hideContainerRight.Controls.Add(this.dockPanel2);
-            this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(880, 124);
-            this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(20, 399);
             // 
             // Form1
             // 
@@ -956,6 +957,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.hideContainerRight.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -967,8 +969,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.treeList4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
-            this.hideContainerRight.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.folderTreeList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1005,13 +1006,13 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraTreeList.TreeList treeList1;
+        private DevExpress.XtraTreeList.TreeList folderTreeList;
         private DevExpress.XtraTreeList.TreeList treeList4;
         private DevExpress.XtraTreeList.TreeList treeList3;
         private DevExpress.XtraTreeList.TreeList treeList2;
         private DevExpress.XtraBars.Ribbon.ApplicationMenu mBookMenu;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem btnAddStickyNote;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgbiTools;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private System.Windows.Forms.ImageList ribbonGallaryImages;

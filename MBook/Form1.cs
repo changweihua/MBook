@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars;
+using System.Xml.Linq;
 
 
 namespace MBook
@@ -22,8 +23,12 @@ namespace MBook
             InitializeComponent();
         }
 
+        #region 全局变量
+
         List<Form2> forms = new List<Form2>();
         int index = 0;
+
+        #endregion 全局变量
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -83,7 +88,18 @@ namespace MBook
             biSchema.EditValue = RibbonControlColorScheme.Blue;
         }
 
+        /// <summary>
+        /// 初始化文件夹树形菜单
+        /// </summary>
+        private void InitFolderTreeList()
+        {
+            string rootPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            XElement root = XElement.Load(rootPath + "Folder.xml");
+        }
+
         #endregion 初始化窗体信息
+        
+        
         /// <summary>
         /// 窗体风格下拉框改变时候触发
         /// </summary>
@@ -121,6 +137,12 @@ namespace MBook
                 biSchema.Visibility = BarItemVisibility.Never;
             }
         }
+
+        private void btnAddStickyNote_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            MessageBox.Show(System.AppDomain.CurrentDomain.BaseDirectory);
+        }
+
 
     }
 }
