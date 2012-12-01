@@ -138,6 +138,8 @@
   <ItemGroup>
     <Content Include="images\icon\ONENOTE.ico" />
     <Content Include="images\icon\OneNote.png" />
+    <Content Include="xml\Folder.xml" />
+    <Content Include="xml\SearchMethod.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\large\" />
