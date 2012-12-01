@@ -36,12 +36,12 @@
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonSmallImages = new System.Windows.Forms.ImageList(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
@@ -49,14 +49,20 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.rgbiTools = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonGallaryHoverImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonGallaryImages = new System.Windows.Forms.ImageList(this.components);
+            this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.biSchema = new DevExpress.XtraBars.BarEditItem();
+            this.biSchemaRepository = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.biStyle = new DevExpress.XtraBars.BarEditItem();
+            this.biStyleRepository = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -69,9 +75,10 @@
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemComboBox4 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
@@ -81,9 +88,6 @@
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
@@ -100,13 +104,16 @@
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biStyleRepository)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
-            this.hideContainerRight.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -120,7 +127,7 @@
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.ApplicationButtonDropDownControl = this.applicationMenu1;
+            this.ribbonControl1.ApplicationButtonDropDownControl = this.mBookMenu;
             this.ribbonControl1.ApplicationButtonText = "MBook";
             this.ribbonControl1.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Purple;
             // 
@@ -132,7 +139,6 @@
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.barButtonItem1,
-            this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
             this.barButtonItem5,
@@ -141,12 +147,17 @@
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
-            this.ribbonGalleryBarItem1});
+            this.rgbiTools,
+            this.rgbiSkins,
+            this.biSchema,
+            this.biStyle});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 27;
+            this.ribbonControl1.MaxItemId = 33;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.biSchema);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
@@ -154,18 +165,22 @@
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemTextEdit1,
-            this.repositoryItemButtonEdit1});
+            this.repositoryItemButtonEdit1,
+            this.repositoryItemComboBox1,
+            this.biSchemaRepository,
+            this.repositoryItemComboBox4,
+            this.biStyleRepository});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(900, 124);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem9);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // applicationMenu1
+            // mBookMenu
             // 
-            this.applicationMenu1.ItemLinks.Add(this.barButtonItem10);
-            this.applicationMenu1.Name = "applicationMenu1";
-            this.applicationMenu1.Ribbon = this.ribbonControl1;
+            this.mBookMenu.ItemLinks.Add(this.barButtonItem10);
+            this.mBookMenu.Name = "mBookMenu";
+            this.mBookMenu.Ribbon = this.ribbonControl1;
             // 
             // barButtonItem10
             // 
@@ -194,6 +209,9 @@
             this.ribbonSmallImages.Images.SetKeyName(12, "NewTask.png");
             this.ribbonSmallImages.Images.SetKeyName(13, "daily.gif");
             this.ribbonSmallImages.Images.SetKeyName(14, "Sticky.png");
+            this.ribbonSmallImages.Images.SetKeyName(15, "2831.gif");
+            this.ribbonSmallImages.Images.SetKeyName(16, "11436.gif");
+            this.ribbonSmallImages.Images.SetKeyName(17, "5331.gif");
             // 
             // barButtonItem1
             // 
@@ -202,13 +220,6 @@
             this.barButtonItem1.LargeImageIndex = 3;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "新建桌面便笺";
-            this.barButtonItem2.Id = 4;
-            this.barButtonItem2.ImageIndex = 14;
-            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // barButtonItem3
             // 
@@ -244,30 +255,31 @@
             // 
             this.barButtonItem7.Caption = "保存信息";
             this.barButtonItem7.Id = 22;
-            this.barButtonItem7.ImageIndex = 6;
+            this.barButtonItem7.ImageIndex = 16;
             this.barButtonItem7.Name = "barButtonItem7";
             // 
             // barButtonItem8
             // 
             this.barButtonItem8.Caption = "放弃更改";
             this.barButtonItem8.Id = 23;
+            this.barButtonItem8.ImageIndex = 15;
             this.barButtonItem8.Name = "barButtonItem8";
             // 
             // barButtonItem9
             // 
-            this.barButtonItem9.Caption = "barButtonItem9";
+            this.barButtonItem9.Caption = "新建桌面便笺";
             this.barButtonItem9.Id = 24;
+            this.barButtonItem9.ImageIndex = 17;
             this.barButtonItem9.Name = "barButtonItem9";
             // 
-            // ribbonGalleryBarItem1
+            // rgbiTools
             // 
-            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.rgbiTools.Caption = "rgbiTools";
             // 
-            // ribbonGalleryBarItem1
+            // rgbiTools
             // 
-            this.ribbonGalleryBarItem1.Gallery.AllowHoverImages = true;
-            this.ribbonGalleryBarItem1.Gallery.ColumnCount = 3;
-            this.ribbonGalleryBarItem1.Gallery.FirstItemVertAlignment = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment.Center;
+            this.rgbiTools.Gallery.AllowHoverImages = true;
+            this.rgbiTools.Gallery.FirstItemVertAlignment = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment.Center;
             galleryItemGroup1.Caption = "Group1";
             galleryItem1.Caption = "日历";
             galleryItem1.HoverImageIndex = 0;
@@ -290,13 +302,13 @@
             galleryItem3,
             galleryItem4,
             galleryItem5});
-            this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            this.rgbiTools.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             galleryItemGroup1});
-            this.ribbonGalleryBarItem1.Gallery.HoverImages = this.ribbonGallaryHoverImages;
-            this.ribbonGalleryBarItem1.Gallery.Images = this.ribbonGallaryImages;
-            this.ribbonGalleryBarItem1.Gallery.RowCount = 2;
-            this.ribbonGalleryBarItem1.Id = 26;
-            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            this.rgbiTools.Gallery.HoverImages = this.ribbonGallaryHoverImages;
+            this.rgbiTools.Gallery.Images = this.ribbonGallaryImages;
+            this.rgbiTools.Gallery.RowCount = 2;
+            this.rgbiTools.Id = 26;
+            this.rgbiTools.Name = "rgbiTools";
             // 
             // ribbonGallaryHoverImages
             // 
@@ -317,6 +329,47 @@
             this.ribbonGallaryImages.Images.SetKeyName(2, "505027.gif");
             this.ribbonGallaryImages.Images.SetKeyName(3, "5047.gif");
             this.ribbonGallaryImages.Images.SetKeyName(4, "1081707.gif");
+            // 
+            // rgbiSkins
+            // 
+            this.rgbiSkins.Caption = "rgbiSkins";
+            // 
+            // rgbiSkins
+            // 
+            galleryItemGroup2.Caption = "Group1";
+            this.rgbiSkins.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup2});
+            this.rgbiSkins.Id = 27;
+            this.rgbiSkins.Name = "rgbiSkins";
+            // 
+            // biSchema
+            // 
+            this.biSchema.Edit = this.biSchemaRepository;
+            this.biSchema.Id = 31;
+            this.biSchema.Name = "biSchema";
+            this.biSchema.Width = 85;
+            // 
+            // biSchemaRepository
+            // 
+            this.biSchemaRepository.AutoHeight = false;
+            this.biSchemaRepository.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.biSchemaRepository.Name = "biSchemaRepository";
+            // 
+            // biStyle
+            // 
+            this.biStyle.Edit = this.biStyleRepository;
+            this.biStyle.Id = 32;
+            this.biStyle.Name = "biStyle";
+            this.biStyle.Width = 85;
+            this.biStyle.EditValueChanged += new System.EventHandler(this.biStyle_EditValueChanged);
+            // 
+            // biStyleRepository
+            // 
+            this.biStyleRepository.AutoHeight = false;
+            this.biStyleRepository.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.biStyleRepository.Name = "biStyleRepository";
             // 
             // ribbonLargeImages
             // 
@@ -346,14 +399,15 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup3,
-            this.ribbonPageGroup11});
+            this.ribbonPageGroup11,
+            this.ribbonPageGroup12});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "操作区";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -368,9 +422,15 @@
             // 
             // ribbonPageGroup11
             // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.ribbonGalleryBarItem1);
+            this.ribbonPageGroup11.ItemLinks.Add(this.rgbiTools);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "工具区";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.rgbiSkins);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            this.ribbonPageGroup12.Text = "皮肤区";
             // 
             // ribbonPage2
             // 
@@ -447,6 +507,20 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemComboBox4
+            // 
+            this.repositoryItemComboBox4.AutoHeight = false;
+            this.repositoryItemComboBox4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox4.Name = "repositoryItemComboBox4";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.CloseTabOnMiddleClick = DevExpress.XtraTabbedMdi.CloseTabOnMiddleClick.OnMouseDown;
@@ -454,10 +528,9 @@
             // 
             // dockManager1
             // 
-            this.dockManager1.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
-            this.hideContainerRight});
             this.dockManager1.Form = this;
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockPanel2,
             this.dockPanel1});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
@@ -466,28 +539,16 @@
             "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
             "DevExpress.XtraBars.Ribbon.RibbonControl"});
             // 
-            // hideContainerRight
-            // 
-            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(131)))));
-            this.hideContainerRight.Controls.Add(this.dockPanel2);
-            this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(880, 124);
-            this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(20, 399);
-            // 
             // dockPanel2
             // 
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel2.ID = new System.Guid("2faf85aa-2354-4a8e-8b07-d0b08f7ca1fb");
-            this.dockPanel2.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel2.Location = new System.Drawing.Point(700, 124);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel2.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanel2.SavedIndex = 0;
             this.dockPanel2.Size = new System.Drawing.Size(200, 399);
             this.dockPanel2.Text = "侧边栏2";
-            this.dockPanel2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel2_Container
             // 
@@ -508,9 +569,6 @@
             this.navBarGroup4,
             this.navBarGroup5});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem2,
-            this.navBarItem3,
             this.navBarItem4,
             this.navBarItem5,
             this.navBarItem6,
@@ -560,26 +618,8 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "所有文件夹";
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "我的笔记";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "我的草稿";
-            this.navBarItem2.Name = "navBarItem2";
-            // 
-            // navBarItem3
-            // 
-            this.navBarItem3.Caption = "我的联系人";
-            this.navBarItem3.Name = "navBarItem3";
             // 
             // navBarGroup3
             // 
@@ -686,12 +726,15 @@
             // 
             // Form1
             // 
+            this.AllowMdiBar = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(900, 523);
             this.Controls.Add(this.dockPanel1);
-            this.Controls.Add(this.hideContainerRight);
+            this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.ribbonControl1);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.LookAndFeel.SkinName = "Office 2010 Black";
@@ -702,13 +745,16 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biStyleRepository)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
-            this.hideContainerRight.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
@@ -731,7 +777,6 @@
         private DevExpress.XtraBars.Docking.DockPanel dockPanel2;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
@@ -739,9 +784,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
         private DevExpress.XtraNavBar.NavBarItem navBarItem8;
         private DevExpress.XtraNavBar.NavBarItem navBarItem9;
         private DevExpress.XtraNavBar.NavBarItem navBarItem10;
@@ -751,7 +793,6 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem5;
         private DevExpress.XtraNavBar.NavBarItem navBarItem6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private System.Windows.Forms.ImageList ribbonSmallImages;
@@ -780,13 +821,21 @@
         private DevExpress.XtraTreeList.TreeList treeList4;
         private DevExpress.XtraTreeList.TreeList treeList3;
         private DevExpress.XtraTreeList.TreeList treeList2;
-        private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;
+        private DevExpress.XtraBars.Ribbon.ApplicationMenu mBookMenu;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.RibbonGalleryBarItem rgbiTools;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private System.Windows.Forms.ImageList ribbonGallaryImages;
         private System.Windows.Forms.ImageList ribbonGallaryHoverImages;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.RibbonGalleryBarItem rgbiSkins;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox biSchemaRepository;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraBars.BarEditItem biSchema;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox4;
+        private DevExpress.XtraBars.BarEditItem biStyle;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox biStyleRepository;
     }
 }
 
