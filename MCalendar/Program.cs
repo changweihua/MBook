@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.UserSkins;
+using DevExpress.Skins;
+using System.Threading;
 
-namespace WizCalendar
+namespace MCalendar
 {
     static class Program
     {
@@ -13,6 +16,13 @@ namespace WizCalendar
         [STAThread]
         static void Main()
         {
+            //注册皮肤
+            BonusSkins.Register();
+            OfficeSkins.Register();
+            SkinManager.EnableFormSkins();
+
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CHS");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

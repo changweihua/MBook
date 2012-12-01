@@ -117,7 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="schedulerStorage1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dateNavigator1.AppearanceCalendar.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAEAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIiIiIiIiIiIiIiP//gAAP//////
+        ////////////AAD/iIiIiIiIiIiIj////wAA/4/4////j/j///////8AAP+P+P///4/4//////j/AAD/
+        j/j///+P+P///4/4/wAA/4iIiIiIiIiIiIiIiP8AAP+P+P+P/4/4////j/j/AAD/j/j/j/+P+P///4/4
+        /wAA/4/4/4//j/j///+P+P8AAP+IiIiIiIiIiIiIiIj/AAD/j/j/iP+P+P+I/4/4/wAA/4/4/4j/j/j/
+        iP+P+P8AAP+P+P+I/4/4/4j/j/j/AAD/iIiIiIiIiIiIiIiI/wAA/4/4////j/j///+P+P8AAP+P+P//
+        /4/4////j/j/AAD/j/j///+P+P///4/4/wAA/4iIiIiIiIiIiIiIiP8AAIiIiIiIiIiIiIiIiIiIAAB3
+        d3d3d3d3d3d3d3d3dwAAmZmZmZmZmZmZmZmZmZkAAJmZmZmZmZmZiJmZmZmZAACZmZmZePiIiH+ZmZmZ
+        mQAAmZmZmXj4iIiIiZmZmZkAAJmZmZl/j4iIh4mZmZmZAACTMzMzf3iDMzMzMzMzOQAAGZmZmZmZmZmZ
+        mZmZmZEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAIAAAACAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAgAAAAIAAAADAAAAB/////w==
+</value>
+  </data>
 </root>
