@@ -56,13 +56,17 @@ namespace MBook
             InitSkinGallary();
             InitSchemaCombo();
             InitStyleCombo();
+            #region 分支3中的方法
             //InitFolderTreeList();
             //folderTreeList.BeforeExpand += new DevExpress.XtraTreeList.BeforeExpandEventHandler(folderTreeList_BeforeExpand);
             //folderTreeList.OptionsView.ShowCheckBoxes = false;
             //folderTreeList.OptionsView.ShowButtons = true;
             //folderTreeList.OptionsView.ShowVertLines = true;
             //folderTreeList.OptionsView.ShowHorzLines = true;
-            FillFolderTreeList("folder", "id", "0");
+            //FillFolderTreeList("folder", "id", "0");
+
+            #endregion 分支3中的方法
+            
         }
 
 
@@ -100,58 +104,65 @@ namespace MBook
             biSchema.EditValue = RibbonControlColorScheme.Blue;
         }
 
+        #endregion
+
+        #region 分支3中的方法
+
         /// <summary>
         /// 通过LINQ to XML 动态生成并填充树形菜单
         /// </summary>
-        private void FillFolderTreeList(string nodeName, string attrName,string attrValue)
-        {
-           
-            string rootPath = System.AppDomain.CurrentDomain.BaseDirectory;
-            string filePath = rootPath + "Folder.xml";
-            XElement root = XElement.Load(filePath);
-            var query = from elem in root.Elements(nodeName)
-                        where (from attr in elem.Attributes()
-                               where attr.Name.LocalName == attrName
-                               select attr
-                                ).Any(id => id.Value == attrValue)
-                        select new Folder { FolderName = elem.Attribute("folderName").Value, FolderPath = elem.Attribute("folderPath").Value, Id = elem.Attribute("id").Value };
+        //private void FillFolderTreeList(string nodeName, string attrName,string attrValue)
+        //{
 
-            IList<Folder> folders = query.ToList();
+        //    string rootPath = System.AppDomain.CurrentDomain.BaseDirectory;
+        //    string filePath = rootPath + "Folder.xml";
+        //    XElement root = XElement.Load(filePath);
+        //    var query = from elem in root.Elements(nodeName)
+        //                where (from attr in elem.Attributes()
+        //                       where attr.Name.LocalName == attrName
+        //                       select attr
+        //                        ).Any(id => id.Value == attrValue)
+        //                select new Folder { FolderName = elem.Attribute("folderName").Value, FolderPath = elem.Attribute("folderPath").Value, Id = elem.Attribute("id").Value };
 
-            folderTreeList.Columns.AddRange(new TreeListColumn[] { 
-                new TreeListColumn{ FieldName="FolderName",VisibleIndex=1, Caption="文件夹列表"}
-            });
+        //    IList<Folder> folders = query.ToList();
 
-            TreeListNode node = null;
-            foreach (var item in folders)
-            {
-                node = folderTreeList.AppendNode(new object[] { item.FolderName }, 0);
-            }
+        //    folderTreeList.Columns.AddRange(new TreeListColumn[] { 
+        //        new TreeListColumn{ FieldName="FolderName",VisibleIndex=1, Caption="文件夹列表"}
+        //    });
 
-            query = from elem in root.Elements("folder").Elements("folder")
-                    where (from attr in elem.Attributes()
-                           where attr.Name.LocalName == "id"
-                           select attr
-                            ).Any(id => id.Value != "0")
-                    select new Folder { FolderName = elem.Attribute("folderName").Value, FolderPath = elem.Attribute("folderPath").Value, Id = elem.Attribute("id").Value };
+        //    TreeListNode node = null;
+        //    foreach (var item in folders)
+        //    {
+        //        node = folderTreeList.AppendNode(new object[] { item.FolderName }, 0);
+        //    }
 
-            folders = query.ToList();
-            int i = 0, j = 0, k = 0;
-            foreach (var item in folders)
-            {
-                node = folderTreeList.AppendNode(new object[] { item.FolderName }, 0, i++, j++, k++);
-            }
-        }
+        //    query = from elem in root.Elements("folder").Elements("folder")
+        //            where (from attr in elem.Attributes()
+        //                   where attr.Name.LocalName == "id"
+        //                   select attr
+        //                    ).Any(id => id.Value != "0")
+        //            select new Folder { FolderName = elem.Attribute("folderName").Value, FolderPath = elem.Attribute("folderPath").Value, Id = elem.Attribute("id").Value };
 
-        
-        void folderTreeList_BeforeExpand(object sender, DevExpress.XtraTreeList.BeforeExpandEventArgs e)
-        {
-            MessageBox.Show(e.Node.GetDisplayText(0));
-        }
+        //    folders = query.ToList();
+        //    int i = 0, j = 0, k = 0;
+        //    foreach (var item in folders)
+        //    {
+        //        node = folderTreeList.AppendNode(new object[] { item.FolderName }, 0, i++, j++, k++);
+        //    }
+        //}
 
-        #endregion 初始化窗体信息
-        
-        
+
+        //void folderTreeList_BeforeExpand(object sender, DevExpress.XtraTreeList.BeforeExpandEventArgs e)
+        //{
+        //    MessageBox.Show(e.Node.GetDisplayText(0));
+        //}
+
+
+
+        #endregion 分支3中的方法
+
+        #region 风格切换下拉框事件
+
         /// <summary>
         /// 窗体风格下拉框改变时候触发
         /// </summary>
@@ -190,8 +201,30 @@ namespace MBook
             }
         }
 
+        #endregion 风格切换下拉框事件
+        
+
         private void btnAddStickyNote_ItemClick(object sender, ItemClickEventArgs e)
         {
+        }
+
+        /// <summary>
+        /// 搜索按钮的方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEditSearch_ButtonPressed(object sender, ButtonPressedEventArgs e)
+        {
+            ButtonEdit edit = sender as ButtonEdit;
+            switch (edit.Properties.Buttons.IndexOf(e.Button))
+            {
+                case 0:
+                    MessageBox.Show("搜索");
+                    break;
+                case 1:
+                    edit.EditValue = "";
+                    break;
+            }
         }
 
 

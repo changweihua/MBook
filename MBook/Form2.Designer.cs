@@ -173,6 +173,10 @@
             this.repositoryItemRichEditStyleEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit();
             this.findItem1 = new DevExpress.XtraRichEdit.UI.FindItem();
             this.replaceItem1 = new DevExpress.XtraRichEdit.UI.ReplaceItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
             this.tableLayoutRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableLayoutRibbonPage();
             this.tableTableRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableTableRibbonPageGroup();
@@ -353,9 +357,13 @@
             this.showParagraphFormItem1,
             this.changeStyleItem1,
             this.findItem1,
-            this.replaceItem1});
+            this.replaceItem1,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 152;
+            this.ribbonControl1.MaxItemId = 156;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -374,9 +382,13 @@
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1030, 149);
+            this.ribbonControl1.Size = new System.Drawing.Size(1030, 99);
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem4);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
+            this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // fileSaveItem1
             // 
@@ -637,10 +649,10 @@
             // richEditControl1
             // 
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 149);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 99);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1030, 368);
+            this.richEditControl1.Size = new System.Drawing.Size(1030, 418);
             this.richEditControl1.TabIndex = 1;
             this.richEditControl1.Text = "richEditControl1";
             // 
@@ -1487,6 +1499,30 @@
             this.replaceItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("replaceItem1.LargeGlyph")));
             this.replaceItem1.Name = "replaceItem1";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 152;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 153;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 154;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 155;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
             // tableToolsRibbonPageCategory1
             // 
             this.tableToolsRibbonPageCategory1.Name = "tableToolsRibbonPageCategory1";
@@ -1884,9 +1920,11 @@
             this.ClientSize = new System.Drawing.Size(1030, 517);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.ribbonControl1);
+            this.DoubleBuffered = true;
             this.LookAndFeel.SkinName = "Office 2010 Black";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Form2";
+            this.ShowIcon = false;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -2071,5 +2109,9 @@
         private DevExpress.XtraRichEdit.UI.TableDesignRibbonPage tableDesignRibbonPage1;
         private DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup tableStylesRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TableDrawBordersRibbonPageGroup tableDrawBordersRibbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }
