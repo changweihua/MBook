@@ -1,0 +1,483 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>New Journal</title>
+    <style type="text/css">
+        html
+        {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        body
+        {
+            font-family: Arial, Helvetica,Sans-serif;
+            color: black;
+            background-color: #fff;
+            font-size: 10.5pt;
+            margin: 0em;
+            padding: 0em;
+            line-height: 1.5;
+            background: white url('journal/_lm.gif') repeat-y;
+        }
+        div
+        {
+            font-size: 1em;
+        }
+        table
+        {
+            empty-cells: show;
+            margin: 0;
+            padding: 0;
+        }
+        font
+        {
+            font-size: 1em;
+        }
+        ul
+        {
+            padding: 0 0 1em 1em;
+        }
+        ol
+        {
+            padding: 0 0 1em 1.3em;
+        }
+        li
+        {
+            line-height: 1.5em;
+            padding: 0 0 0 0;
+        }
+        p
+        {
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5
+        {
+            padding: 0;
+        }
+        h1
+        {
+            font-size: 1.3em;
+        }
+        h2
+        {
+            font-size: 1.1em;
+        }
+        h3
+        {
+            font-size: 1em;
+            line-height: 1.4em;
+            white-space: nowrap;
+            padding: 0;
+        }
+        h4, h5, table
+        {
+            font-size: 1em;
+        }
+        sup, sub
+        {
+            font-size: .7em;
+        }
+        input, select, textarea, option
+        {
+            font-family: inherit;
+            font-size: inherit;
+            margin: 0;
+            padding: 0;
+        }
+        img
+        {
+            border-style: none;
+        }
+        a
+        {
+            outline: none;
+            color: #00c;
+        }
+        a:active
+        {
+            color: red;
+        }
+        a:visited
+        {
+            color: #551a8b;
+        }
+        hr
+        {
+            border-style: none;
+            border-width: 0 0 0px 0;
+            background-color: #EEE;
+            border-bottom: #c9d7f1 1px solid;
+            height: 0px;
+            width: 99.9%;
+            text-align: left;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border-top-color: inherit;
+            border-right-color: inherit;
+            border-bottom-color: #C0C0C0;
+            border-left-color: inherit;
+        }
+        .weather
+        {
+            border:solid   #C0C0C0; 
+            border-width:0 0 1px 0;
+        }
+        .datepicker
+        {
+            cursor: hand;
+            background: #fff url(journal/datepicker.gif) no-repeat right;
+        	border:solid #C0C0C0; 
+			border-width:0 0 1px 0;
+        }
+        .taginput
+        {
+        	border:solid #C0C0C0; 
+			border-width:0 0 1px 0;
+        }
+        input
+        {
+            font-size: 1em;
+        }
+    </style>
+    <link rel="stylesheet" href="jqueryui/themes/base/jquery.ui.all.css">
+    <link rel="stylesheet" href="jwysiwyg/jquery.wysiwyg.css" type="text/css" />
+
+    <script src="jqueryui/jquery-1.4.3.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.core.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.widget.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.datepicker.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery-ui-i18n.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-HK.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-TW.js"></script>
+
+    <script type="text/javascript" src="jwysiwyg/jquery.wysiwyg.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="weather/weather.js"></script>
+
+</head>
+<body>
+    <div style="padding: 0; padding-bottom: 20px; height: 15px; width: 100%">
+        <div style="background-color: white; height: 30px;">
+        </div>
+    </div>
+    <div style="margin: 0 10px 20px 60px; padding: 0px;">
+        <table style="width: 100%; height: 43px; background: url('journal/tback.gif'); margin-left: -15px;"
+            cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="background: url('journal/tback_left.gif'); width: 12px">
+                </td>
+                <td style="">
+                    <input name="journal_title" type="text" style="border: 0px; width: 100%; margin-left: 5px;
+                        margin-right: 5px; font-weight: bold;" />
+                </td>
+                <td style="background: url('journal/tback_right.gif'); background-position: left;
+                    width: 12px">
+                </td>
+            </tr>
+        </table>
+        <div style="margin: 10px 0px 5px 0px; height:35px;">
+            <span style="color: gray;"><span id="labelDate">Date</span>:&nbsp;</span><input type="text" id="datepicker" class="datepicker"/>
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <span style="color:gray;"><span id="labelTags">Tags:</span>&nbsp;</span><input type="text" id="textTags" class="taginput"/>
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <span style="color: gray;"><span id="labelWeather">Weather</span>:&nbsp;</span><input class="weather" size="10" name="journal_weather" id="journal_weather" type="text" />
+            <a href="javascript:refreshWeather(journal_weather)" title="Refresh">
+                <img src="weather/refresh.gif" alt="Refresh" width="16" height="16" /></a>
+        </div>
+        <div style="float:right; width:25em;text-align: right; padding-right: 25px; margin: -45px 0px 5px 0px; height:35px;">
+            <input name="btnSave" id="btnSave" type="button" value="Save" style="height: 2em;
+                width: 6em;" onclick="actionSave()" />
+            <input name="btnSaveAndClose" id="btnSaveAndClose" type="button" value="Save &amp; Close" style="height: 2em;
+                width: 7em;" onclick="actionSaveAndClose()" />
+            <input name="btnClose" id="btnClose" type="button" value="Close" style="height: 2em;
+                width: 6em;" onclick="closeWindow()" />
+       	</div>
+        
+        <div id="editorDiv">
+            <textarea id="editorArea" name="editorArea" rows="10" cols="10"></textarea>
+        </div>
+        
+
+    </div>
+
+    <script type="text/javascript">
+        var lang = getUserLang(); //from jquery
+        lang = lang.replace('-', '_');
+        if (lang != "zh_CN" && lang != "zh_TW") {
+            lang = "en";
+        }
+        //
+        function getUserLang() {
+            var lang = navigator.userLanguage;
+            var arr = lang.split('-');
+            if (arr.length == 2) {
+                return arr[0] + "-" + arr[1].toUpperCase();
+            }
+            return arr[0];
+        }
+        var lang = getUserLang();
+        $(function() {
+            $.datepicker.setDefaults($.datepicker.regional[""]);
+            $("#datepicker").datepicker($.datepicker.regional[lang]);
+            $("#datepicker").datepicker("setDate", new Date());
+        });
+        //
+        refreshWeather(journal_weather);
+        //
+        var objApp = window.external;
+        var objDatabase = objApp.Database;
+        var objCommon = objApp.CreateWizObject("WizKMControls.WizCommonUI");
+
+        function actionPaste() {
+            try {
+                var imagefilename = objCommon.ClipboardToImage(objApp.Window.HWND, "");
+                var html = "<img border=\"0\" src=\"" + imagefilename + "\"></img>";
+                var rgn = getEditorDocument().selection.createRange();
+                rgn.pasteHTML(html);
+            }
+            catch (err) {
+                getEditorDocument().execCommand("Paste");
+            }
+        }
+        function formatInt(val) {
+            if (val < 10)
+                return "0" + val;
+            else
+                return "" + val;
+        }
+        String.prototype.trim = function() {
+            return this.replace(/^\s+|\s+$/g, "");
+        }
+        String.prototype.ltrim = function() {
+            return this.replace(/^\s+/, "");
+        }
+        String.prototype.rtrim = function() {
+            return this.replace(/\s+$/, "");
+        }
+        //
+        function DateToStr(dt) {
+            return "" + dt.getFullYear() + "-" + formatInt(dt.getMonth() + 1) + "-" + formatInt(dt.getDate());
+        }
+        //
+        var objDoc = null;
+        //
+        function getEditor() {
+            var editors = document.getElementsByTagName("iframe");
+            var editor = editors[0];
+            return editor;
+        }
+        function getEditorWindow() {
+            var editor = getEditor();
+            if (editor == null)
+                return null;
+            return editor.contentWindow;
+        }
+        function getEditorDocument() {
+            var win = getEditorWindow();
+            if (win == null)
+                return null;
+            return win.document;
+        }
+        //
+        function saveToWiz(force) {
+            try {
+                var editors = document.getElementsByTagName("iframe");
+                var editor = editors[0];
+                //
+                var content = editor.contentWindow.document.body.innerHTML;
+                if (!force) {
+                    var contentText = editor.contentWindow.document.body.innerText.trim();
+                    if (contentText.length == 0) {
+                        if (content.length < 10)
+                            return;
+                    }
+                }
+                //
+                var date = null;
+                $(function() {
+                    date = $("#datepicker").datepicker("getDate");
+                });
+                var date_string = date.toLocaleDateString();
+                //
+                var title = date_string;
+                if (journal_title.value != null && journal_title.value.length > 0) {
+                    title = title + " " + journal_title.value;
+                }
+                //
+                var location = "/My Journals/" + date.getFullYear() + "-" + formatInt(date.getMonth() + 1) + "/";
+                //
+                var objFolder = objDatabase.GetFolderByLocation(location, true);
+                //
+                if (objDoc == null) {
+                    objDoc = objFolder.CreateDocument2(title, "");
+                    objDoc.Type = "journal";
+                }
+                //
+                
+                if (objDoc.Location != location) {
+                    objDoc.MoveTo(objFolder);
+                }
+                objDoc.ChangeTitleAndFileName(title);
+                objDoc.ParamValue("journal-date") = DateToStr(date) + " 00:00:00";
+                //
+                //
+                var filename = objApp.GetHtmlDocumentPath(document) + "journal\\journal.template.htm";
+                var htmltext = objCommon.LoadTextFromFile(filename);
+
+                htmltext = htmltext.replace("%title%", title);
+                
+                var resSunday = getLocalString("resSunday");
+                var resMonday = getLocalString("resMonday");
+                var resTuesday = getLocalString("resTuesday");
+                var resWednesday = getLocalString("resWednesday");
+                var resThursday = getLocalString("resThursday");
+                var resFriday = getLocalString("resFriday");
+                var resSaturday = getLocalString("resSaturday");
+                
+                var weekarray = new Array(resSunday,resMonday,resTuesday,resWednesday,resThursday,resFriday,resSaturday);
+                
+                //date_string = date_string + " " + weekarray[date.getDay()];
+                
+                //alert(date_string);
+                
+                htmltext = htmltext.replace("%date%", date_string);
+                
+                htmltext = htmltext.replace("%weather%", journal_weather.value);
+                htmltext = htmltext.replace("%text%", content);
+                //
+                objDoc.UpdateDocument3(htmltext, 0);
+                var tags = textTags.value;
+                if (tags != null && tags != "") {
+                    objDoc.TagsText = tags;
+                }
+                //
+                var params = "/DatabasePath=" + objDatabase.DatabasePath + " /KbGUID=" + objDatabase.KbGUID + " /DocumentGUID=" + objDoc.GUID;
+                objApp.Window.ExecCommand("locatedocument", params);
+            }
+            catch (err) {
+                alert(err);
+            }
+        }
+        //
+        function actionSave() {
+            saveToWiz(true);
+        }
+        function actionSaveAndClose() {
+            saveToWiz(true);
+            objApp.Window.CloseHtmlDialog(document, 0);
+        }
+        //
+        //
+        function onPluginWindowClosing() {
+            try {
+                saveToWiz(false);
+            }
+            catch (err) {
+                alert(err)
+                return -1;
+            }
+            return 0;
+        }
+
+
+        function closeWindow() {
+            objApp.Window.CloseHtmlDialog(document, 0);
+        }
+
+
+        //
+        var languageFileName;
+
+        function getLanguageFileName(objApp) {
+            if (languageFileName == null || languageFileName == "") {
+                var path = objApp.GetHtmlDocumentPath(document);
+                languageFileName = path + "journal.ini";
+            }
+            //
+            return languageFileName;
+        }
+        function localizeCurrentDocument(objApp) {
+            objApp.LocalizeHtmlDocument(getLanguageFileName(objApp), document);
+        }
+        //
+        function getLocalString(stringName) {
+            return objApp.LoadStringFromFile(getLanguageFileName(objApp), stringName);
+        }
+        //
+        localizeCurrentDocument(objApp);
+        //
+        function localizeEditorButtons() {
+            var elements = document.getElementsByTagName("li");
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                if (element.title && element.title != "") {
+                    element.title = getLocalString(element.title);
+                    element.innerText = element.title;
+                }
+            }
+        }
+        //
+
+        var wwidth = document.documentElement.clientWidth;
+        var wheight = document.documentElement.clientHeight;
+        editorArea.style.width = (wwidth - 100) + "px";
+        editorArea.style.height = (wheight - 200) + "px";
+        //
+        $(function() {
+            $('#editorArea').wysiwyg({ css : 'journal/editor.css' });
+            //
+            localizeEditorButtons();
+            //
+            getEditorDocument().onkeydown = onDocumentKeyDown;
+        });
+        //
+        function onDocumentKeyDown() {
+            var e = getEditorWindow().event;
+            if (e.ctrlKey && !e.altKey && !e.shiftKey) {
+                if (String.fromCharCode(e.keyCode).toLocaleUpperCase() == 'S') {
+                    actionSave();
+                    e.returnValue = false;
+                }
+                else if (String.fromCharCode(e.keyCode).toLocaleUpperCase() == 'V') {
+                    actionPaste();
+                    e.returnValue = false;
+                }
+            }
+            else if (e.keyCode == 9) {
+                try {
+                    var rgn = getEditorDocument().selection.createRange();
+                    rgn.pasteHTML("&nbsp;&nbsp;&nbsp;&nbsp;");
+                }
+                catch (err) {
+                }
+                e.returnValue = false;
+            }
+            return true;
+        }
+        
+        onload = function(){ //修复滚动条增长的问题
+        	var pickerdiv = document.getElementById("ui-datepicker-div");
+        	
+        	if(pickerdiv)
+        	{
+        		pickerdiv.style.top=0;
+        	}
+        	//var editors = document.getElementsByTagName("iframe");
+            //var editor = editors[0];
+            //editor.contentWindow.focus();
+        	journal_title.focus();
+        }
+    </script>
+</body>
+</html>
+
+

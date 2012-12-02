@@ -1,0 +1,560 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=6">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Grid Diary</title>
+    <style type="text/css">
+        html
+        {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        body
+        {
+            font-family: Arial, Helvetica,Sans-serif;
+            color: black;
+            margin: 0em;
+            line-height: 1.5;
+            background-color: window;
+            padding: 2em;
+            font-size: 10.5pt;
+        }
+        p
+        {
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5
+        {
+            padding: 0;
+        }
+        h1
+        {
+            font-size: 1.2em;
+        }
+        input, select, textarea, option
+        {
+            font-family: inherit;
+            font-size: 1em;
+            margin: 0;
+            padding: 0;
+        }
+        img
+        {
+            border-style: none;
+        }
+        a
+        {
+            outline: none;
+            color: #00c;
+        }
+        a:active
+        {
+            color: red;
+        }
+        a:visited
+        {
+            color: #551a8b;
+        }
+        h1
+        {
+            width: 100%;
+            text-align: center;
+            cursor: default;
+        }
+        .save
+        {
+            text-align: right;
+            padding: 0.5em;
+            margin: 0px;
+            margin-right: 1%;
+        }
+    </style>
+    <link rel="stylesheet" href="jqueryui/themes/base/jquery.ui.all.css">
+
+    <script src="jqueryui/jquery-1.4.3.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.core.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.widget.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.datepicker.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-HK.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-TW.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="weather/weather.js"></script>
+
+</head>
+<body>
+    <table style="width: 100%; height: 43px; background: url('journal/tback.gif');" cellpadding="0"
+        cellspacing="0">
+        <tr>
+            <td style="background: url('journal/tback_left.gif'); width: 12px">
+            </td>
+            <td style="">
+                <input name="journal_title" id="journal_title" type="text" style="border: 0px; width: 100%;
+                    margin-left: 5px; margin-right: 5px; font-weight: bold;" value="Grid Diary" />
+            </td>
+            <td style="background: url('journal/tback_right.gif'); background-position: left;
+                width: 12px">
+            </td>
+        </tr>
+    </table>
+    <table width="100%">
+    <tr>
+    <td nowrap="nowrap">
+    <span style="color:Gray" id="labelChangeTitle">Click on the title or sub-title can change the text</span>
+    </td>
+    <td nowrap="nowrap">
+    <div class="save" align="right">
+        <input id="buttonOK" onclick="closeDialog(1);" style="width: 6em; height: 2em;" type="button"
+            value="Save &amp; Close" />&nbsp;
+        <input id="buttonCancel" onclick="closeDialog(2);" style="width: 6em; height: 2em;"
+            type="button" value="Cancel" />
+    </div>
+    </td>
+    </tr>
+    </table>
+    <div id="content">
+        <style type="text/css">
+            .content_box
+            {
+                height: 229px;
+            }
+            .content_head1
+            {
+                overflow: hidden;
+                display: block;
+                cursor: default;
+                font-weight: bold;
+                color: black;
+                text-align: center;
+                padding: 0.5em;
+                background-color: #CDDDE8;
+                border: 1px solid #CDDDE8;
+                border-top: 0;
+                cursor:pointer;
+            }
+            .content_head2
+            {
+                padding: 0.3em;
+                display: block;
+                cursor: default;
+                margin: 0;
+                text-align: center;
+                border: 1px solid #CDDDE8;
+                border-top: 0;
+                overflow: hidden;
+                background-color: window;
+                font-size: 9pt;
+                font-weight: normal;
+                color: gray;
+                cursor:pointer;
+            }
+            .content_boder
+            {
+                border: 1px solid #CDDDE8;
+                padding: 0;
+                background-color: window;
+                border-top: 0;
+            }
+            .content_edit
+            {
+                width: 99%;
+                border: 0px;
+                background-color: window;
+                overflow: auto;
+            }
+            .content_info_edit
+            {
+                height: 22px;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                border-bottom: 1px #000 dashed;
+                width: 90%;
+            }
+            .content_info_title
+            {
+                margin: 0;
+                padding: 0;
+                text-align: right;
+                border: 0;
+                background: transparent;
+                color: gray;
+                font-size: 1em;
+                left: 0;
+                font-weight: normal;
+                min-width: 5em;
+            }
+        </style>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title1">
+                            What's happy?</div>
+                        <div class="content_head2" id="sub_title1">
+                            What's happy?</div>
+                        <div class="content_boder">
+                            <textarea id="edit1" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title2">
+                            What's bad?</div>
+                        <div class="content_head2" id="sub_title2">
+                            What's bad?</div>
+                        <div class="content_boder">
+                            <textarea id="edit2" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title3">
+                            Work or Plan</div>
+                        <div class="content_head2" id="sub_title3">
+                            Work or Plan</div>
+                        <div class="content_boder">
+                            <textarea id="edit3" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title4">
+                            Progress</div>
+                        <div class="content_head2" id="sub_title4">
+                            Progress</div>
+                        <div class="content_boder">
+                            <textarea id="edit4" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+                <td width="33.3%" valign="top">
+                    <table width="100%">
+                        <tr>
+                            <td nowrap="nowrap" width="30%">
+                                <div class="content_info_title" id="labelDate">
+                                    Date:</div>
+                            </td>
+                            <td width="70%">
+                                <input type="text" class="content_info_edit" id="date" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <div class="content_info_title" id="labelWeather">
+                                    Weather:</div>
+                            </td>
+                            <td>
+                                <input type="text" class="content_info_edit" id="weather" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <div class="content_info_title" id="labelWhatDay" style="cursor:pointer">
+                                    What Day</div>
+                            </td>
+                            <td>
+                                <input type="text" class="content_info_edit" id="day" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap="nowrap">
+                                <div class="content_info_title" id="labelBirthday" style="cursor:pointer">
+                                    Who's birthday</div>
+                            </td>
+                            <td>
+                                <input type="text" class="content_info_edit" id="birthday" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title5">
+                            Mood</div>
+                        <div class="content_head2" id="sub_title5">
+                            Mood</div>
+                        <div class="content_boder">
+                            <textarea id="edit5" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title6">
+                            News</div>
+                        <div class="content_head2" id="sub_title6">
+                            News
+                        </div>
+                        <div class="content_boder">
+                            <textarea id="edit6" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title7">
+                            Health/Weight</div>
+                        <div class="content_head2" id="sub_title7">
+                            Health/Weight</div>
+                        <div class="content_boder">
+                            <textarea id="edit7" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+                <td width="33.3%" valign="top">
+                    <div class="content_box">
+                        <div class="content_head1" id="title8">
+                            Dream</div>
+                        <div class="content_head2" id="sub_title8">
+                            Dream</div>
+                        <div class="content_boder">
+                            <textarea id="edit8" cols="75" class="content_edit" rows="8"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+        function getUserLang() {
+            var lang = navigator.userLanguage;
+            var arr = lang.split('-');
+            if (arr.length == 2) {
+                return arr[0] + "-" + arr[1].toUpperCase();
+            }
+            return arr[0];
+        }
+        var lang = getUserLang();
+        $(function() {
+            $.datepicker.setDefaults($.datepicker.regional[""]);
+            $("#date").datepicker($.datepicker.regional[lang]);
+            $("#date").datepicker("setDate", new Date());
+        });
+        refreshWeather(weather);
+        //
+        var objApp = window.external;
+        var objDatabase = objApp.Database;
+        var objCommon = objApp.CreateWizObject("WizKMControls.WizCommonUI");
+        var objDoc = null;
+        //
+        function formatInt(val) {
+            if (val < 10)
+                return "0" + val;
+            else
+                return "" + val;
+        }
+        String.prototype.trim = function() {
+            return this.replace(/^\s+|\s+$/g, "");
+        }
+        String.prototype.ltrim = function() {
+            return this.replace(/^\s+/, "");
+        }
+        String.prototype.rtrim = function() {
+            return this.replace(/\s+$/, "");
+        }
+        //
+        function DateToStr(dt) {
+            return "" + dt.getFullYear() + "-" + formatInt(dt.getMonth() + 1) + "-" + formatInt(dt.getDate());
+        }
+        //
+        function toRow(text, isTitle) {
+            if (isTitle) {
+                text = "<h2>" + text + "</h2>";
+            }
+            return "<div>" + text + "</div>\n";
+        }
+        //
+        var languageFileName = objApp.GetHtmlDocumentPath(document) + "griddiary.ini";
+        function loadString(name) {
+            return objApp.LoadStringFromFile(languageFileName, name);
+        }
+        //
+        function saveToWizCore() {
+            //
+            var newNote = content.cloneNode(true);
+            //
+            var arr = newNote.getElementsByTagName("TEXTAREA");
+            for (var i = 0; i < arr.length; i++) {
+                var edit = arr[i];
+                //
+                edit.readOnly = true;
+            }
+            //
+            var htmltext = newNote.outerHTML;
+            //
+            var date = null;
+            $(function() {
+                date = $("#date").datepicker("getDate");
+            });
+            var date_string = date.toLocaleDateString();
+            //
+            var title = date_string + " " + journal_title.value;
+            //
+
+            htmltext = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><title>" + title + "</title><!--WizHtmlContentBegin-->" + htmltext + "<!--WizHtmlContentEnd--></body></html>";
+
+            var location = "/My Journals/" + date.getFullYear() + "-" + formatInt(date.getMonth() + 1) + "/";
+            //
+            var objFolder = objDatabase.GetFolderByLocation(location, true);
+            //
+            if (objDoc == null) {
+                objDoc = objFolder.CreateDocument2(title, "");
+                objDoc.Type = "grid_diary";
+                objDoc.SetTagsText2(document.title, "");
+            }
+            //
+            if (objDoc.Location != location) {
+                objDoc.MoveTo(objFolder);
+            }
+            objDoc.ChangeTitleAndFileName(title);
+            objDoc.ParamValue("daily_review-date") = DateToStr(date) + " 00:00:00";
+            //
+            objDoc.UpdateDocument3(htmltext, 0);
+            //
+            var params = "/DatabasePath=" + objDatabase.DatabasePath + " /KbGUID=" + objDatabase.KbGUID + " /DocumentGUID=" + objDoc.GUID;
+            objApp.Window.ExecCommand("locatedocument", params);
+        }
+        //
+        function saveToWiz() {
+            try {
+                saveToWizCore();
+                return true;
+            }
+            catch (err) {
+                var msg = loadString("strCanNotSaveDocument");
+                alert(msg + "\n\n" + err.message);
+                return false;
+            }
+        }
+        //
+        var donotSave = false;
+        //
+        function onPluginWindowClosing() {
+            if (donotSave)
+                return 0;
+            if (objDoc == null) {
+                var msg = loadString("strClosePrompt");
+                if (confirm(msg)) {
+                    if (!saveToWiz()) {
+                        return -1;
+                    }
+                }
+            }
+            return 0;
+        }
+        //
+        function closeDialog(ret) {
+            if (ret == 1) {
+                if (!saveToWiz()) {
+                    return;
+                }
+            }
+            else {
+                donotSave = true;
+            }
+            objApp.Window.CloseHtmlDialog(document, ret);
+        }
+        //
+        //
+        function changeTitle(sub) {
+            var e = window.event;
+            //
+            var src = e.srcElement;
+            //
+            var id = src.id;
+            //
+            var title = document.title;
+            var desc = loadString(sub ? "strChangeSubTitle" : "strChangeTitle");
+            //
+            var text = objCommon.InputBox(title, desc, src.innerText);
+            if (text && text.length > 0) {
+                src.innerText = text;
+                //
+                objDatabase.Meta("grid_diary", id) = text;
+            }
+        }
+        //
+        function initTitle(elem) {
+            var id = elem.id;
+            var text = objDatabase.Meta("grid_diary", id);
+            if (!text || text.length == 0)
+                return;
+            //
+            elem.innerText = text;
+        }
+        //
+        function onTitleClicked() {
+            changeTitle(false);
+        }
+        function onSubTitleClicked() {
+            changeTitle(true);
+        }
+        //
+        function initEvents() {
+            title1.onclick = onTitleClicked;
+            title2.onclick = onTitleClicked;
+            title3.onclick = onTitleClicked;
+            title4.onclick = onTitleClicked;
+            title5.onclick = onTitleClicked;
+            title6.onclick = onTitleClicked;
+            title7.onclick = onTitleClicked;
+            title8.onclick = onTitleClicked;
+            labelWhatDay.onclick = onTitleClicked;
+            labelBirthday.onclick = onTitleClicked;
+            //
+            sub_title1.onclick = onSubTitleClicked;
+            sub_title2.onclick = onSubTitleClicked;
+            sub_title3.onclick = onSubTitleClicked;
+            sub_title4.onclick = onSubTitleClicked;
+            sub_title5.onclick = onSubTitleClicked;
+            sub_title6.onclick = onSubTitleClicked;
+            sub_title7.onclick = onSubTitleClicked;
+            sub_title8.onclick = onSubTitleClicked;
+            //
+            initTitle(title1);
+            initTitle(title2);
+            initTitle(title3);
+            initTitle(title4);
+            initTitle(title5);
+            initTitle(title6);
+            initTitle(title7);
+            initTitle(title8);
+            initTitle(labelWhatDay);
+            initTitle(labelBirthday);
+            //
+            initTitle(sub_title1);
+            initTitle(sub_title2);
+            initTitle(sub_title3);
+            initTitle(sub_title4);
+            initTitle(sub_title5);
+            initTitle(sub_title6);
+            initTitle(sub_title7);
+            initTitle(sub_title8);
+            
+        }
+        //
+        objApp.LocalizeHtmlDocument(languageFileName, document);
+        journal_title.value = document.title;
+        //
+        initEvents();
+        //
+    </script>
+
+</body>
+</html>

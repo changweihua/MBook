@@ -227,6 +227,30 @@ namespace MBook
             }
         }
 
+        private void btnDailyReview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+        }
+
+        private void btnGridDaily_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form4 form = new Form4();
+            form.ShowDialog();
+        }
+
+        private void btnNewContact_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ContactForm contactForm = new ContactForm();
+            contactForm.ShowDialog();
+        }
+
+        private void btnNewDaily_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DailyForm dailyForm = new DailyForm();
+            dailyForm.ShowDialog();
+        }
+
 
     }
 }
