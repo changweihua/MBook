@@ -12,6 +12,11 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars;
 using System.Xml.Linq;
+using MonoBookEntity;
+using DevExpress.XtraTreeList.Columns;
+using DevExpress.XtraNavBar;
+using DevExpress.XtraTreeList.Nodes;
+using DevExpress.XtraTreeList;
 
 
 namespace MBook
@@ -51,6 +56,13 @@ namespace MBook
             InitSkinGallary();
             InitSchemaCombo();
             InitStyleCombo();
+            //InitFolderTreeList();
+            //folderTreeList.BeforeExpand += new DevExpress.XtraTreeList.BeforeExpandEventHandler(folderTreeList_BeforeExpand);
+            //folderTreeList.OptionsView.ShowCheckBoxes = false;
+            //folderTreeList.OptionsView.ShowButtons = true;
+            //folderTreeList.OptionsView.ShowVertLines = true;
+            //folderTreeList.OptionsView.ShowHorzLines = true;
+            FillFolderTreeList("folder", "id", "0");
         }
 
 
@@ -89,12 +101,52 @@ namespace MBook
         }
 
         /// <summary>
-        /// 初始化文件夹树形菜单
+        /// 通过LINQ to XML 动态生成并填充树形菜单
         /// </summary>
-        private void InitFolderTreeList()
+        private void FillFolderTreeList(string nodeName, string attrName,string attrValue)
         {
+           
             string rootPath = System.AppDomain.CurrentDomain.BaseDirectory;
-            XElement root = XElement.Load(rootPath + "Folder.xml");
+            string filePath = rootPath + "Folder.xml";
+            XElement root = XElement.Load(filePath);
+            var query = from elem in root.Elements(nodeName)
+                        where (from attr in elem.Attributes()
+                               where attr.Name.LocalName == attrName
+                               select attr
+                                ).Any(id => id.Value == attrValue)
+                        select new Folder { FolderName = elem.Attribute("folderName").Value, FolderPath = elem.Attribute("folderPath").Value, Id = elem.Attribute("id").Value };
+
+            IList<Folder> folders = query.ToList();
+
+            folderTreeList.Columns.AddRange(new TreeListColumn[] { 
+                new TreeListColumn{ FieldName="FolderName",VisibleIndex=1, Caption="文件夹列表"}
+            });
+
+            TreeListNode node = null;
+            foreach (var item in folders)
+            {
+                node = folderTreeList.AppendNode(new object[] { item.FolderName }, 0);
+            }
+
+            query = from elem in root.Elements("folder").Elements("folder")
+                    where (from attr in elem.Attributes()
+                           where attr.Name.LocalName == "id"
+                           select attr
+                            ).Any(id => id.Value != "0")
+                    select new Folder { FolderName = elem.Attribute("folderName").Value, FolderPath = elem.Attribute("folderPath").Value, Id = elem.Attribute("id").Value };
+
+            folders = query.ToList();
+            int i = 0, j = 0, k = 0;
+            foreach (var item in folders)
+            {
+                node = folderTreeList.AppendNode(new object[] { item.FolderName }, 0, i++, j++, k++);
+            }
+        }
+
+        
+        void folderTreeList_BeforeExpand(object sender, DevExpress.XtraTreeList.BeforeExpandEventArgs e)
+        {
+            MessageBox.Show(e.Node.GetDisplayText(0));
         }
 
         #endregion 初始化窗体信息
@@ -140,7 +192,6 @@ namespace MBook
 
         private void btnAddStickyNote_ItemClick(object sender, ItemClickEventArgs e)
         {
-            MessageBox.Show(System.AppDomain.CurrentDomain.BaseDirectory);
         }
 
 

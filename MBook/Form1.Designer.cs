@@ -30,21 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup7 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem25 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem26 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem27 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem28 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem29 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup8 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup9 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem30 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem31 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem32 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem33 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem34 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem35 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem36 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem11 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem12 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("我的群组");
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -107,23 +108,23 @@
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.treeList5 = new DevExpress.XtraTreeList.TreeList();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.treeList4 = new DevExpress.XtraTreeList.TreeList();
-            this.treeList3 = new DevExpress.XtraTreeList.TreeList();
-            this.treeList2 = new DevExpress.XtraTreeList.TreeList();
             this.folderTreeList = new DevExpress.XtraTreeList.TreeList();
+            this.treeListImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
@@ -146,7 +147,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
-            this.hideContainerRight.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -155,10 +155,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.folderTreeList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
+            this.navBarControl2.SuspendLayout();
+            this.navBarGroupControlContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -339,30 +343,30 @@
             // 
             this.rgbiTools.Gallery.AllowHoverImages = true;
             this.rgbiTools.Gallery.FirstItemVertAlignment = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment.Center;
-            galleryItemGroup7.Caption = "Group1";
-            galleryItem25.Caption = "日历";
-            galleryItem25.HoverImageIndex = 0;
-            galleryItem25.ImageIndex = 0;
-            galleryItem26.Caption = "任务";
-            galleryItem26.HoverImageIndex = 1;
-            galleryItem26.ImageIndex = 1;
-            galleryItem27.Caption = "作者";
-            galleryItem27.HoverImageIndex = 2;
-            galleryItem27.ImageIndex = 2;
-            galleryItem28.Caption = "邮件";
-            galleryItem28.HoverImageIndex = 4;
-            galleryItem28.ImageIndex = 4;
-            galleryItem29.Caption = "相册";
-            galleryItem29.HoverImageIndex = 3;
-            galleryItem29.ImageIndex = 3;
-            galleryItemGroup7.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem25,
-            galleryItem26,
-            galleryItem27,
-            galleryItem28,
-            galleryItem29});
+            galleryItemGroup1.Caption = "Group1";
+            galleryItem1.Caption = "日历";
+            galleryItem1.HoverImageIndex = 0;
+            galleryItem1.ImageIndex = 0;
+            galleryItem2.Caption = "任务";
+            galleryItem2.HoverImageIndex = 1;
+            galleryItem2.ImageIndex = 1;
+            galleryItem3.Caption = "作者";
+            galleryItem3.HoverImageIndex = 2;
+            galleryItem3.ImageIndex = 2;
+            galleryItem4.Caption = "邮件";
+            galleryItem4.HoverImageIndex = 4;
+            galleryItem4.ImageIndex = 4;
+            galleryItem5.Caption = "相册";
+            galleryItem5.HoverImageIndex = 3;
+            galleryItem5.ImageIndex = 3;
+            galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem1,
+            galleryItem2,
+            galleryItem3,
+            galleryItem4,
+            galleryItem5});
             this.rgbiTools.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup7});
+            galleryItemGroup1});
             this.rgbiTools.Gallery.HoverImages = this.ribbonGallaryHoverImages;
             this.rgbiTools.Gallery.Images = this.ribbonGallaryImages;
             this.rgbiTools.Gallery.RowCount = 2;
@@ -395,9 +399,9 @@
             // 
             // rgbiSkins
             // 
-            galleryItemGroup8.Caption = "Group1";
+            galleryItemGroup2.Caption = "Group1";
             this.rgbiSkins.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup8});
+            galleryItemGroup2});
             this.rgbiSkins.Id = 27;
             this.rgbiSkins.Name = "rgbiSkins";
             // 
@@ -525,24 +529,24 @@
             // 
             // rgbiSocial
             // 
-            galleryItemGroup9.Caption = "Group1";
-            galleryItem30.Caption = "Item1";
-            galleryItem31.Caption = "Item2";
-            galleryItem32.Caption = "Item3";
-            galleryItem33.Caption = "Item4";
-            galleryItem34.Caption = "Item5";
-            galleryItem35.Caption = "Item6";
-            galleryItem36.Caption = "Item7";
-            galleryItemGroup9.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem30,
-            galleryItem31,
-            galleryItem32,
-            galleryItem33,
-            galleryItem34,
-            galleryItem35,
-            galleryItem36});
+            galleryItemGroup3.Caption = "Group1";
+            galleryItem6.Caption = "Item1";
+            galleryItem7.Caption = "Item2";
+            galleryItem8.Caption = "Item3";
+            galleryItem9.Caption = "Item4";
+            galleryItem10.Caption = "Item5";
+            galleryItem11.Caption = "Item6";
+            galleryItem12.Caption = "Item7";
+            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem6,
+            galleryItem7,
+            galleryItem8,
+            galleryItem9,
+            galleryItem10,
+            galleryItem11,
+            galleryItem12});
             this.rgbiSocial.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup9});
+            galleryItemGroup3});
             this.rgbiSocial.Gallery.HoverImages = this.ribbonGallaryHoverImages;
             this.rgbiSocial.Gallery.Images = this.ribbonGallaryImages;
             this.rgbiSocial.Id = 50;
@@ -754,10 +758,9 @@
             // 
             // dockManager1
             // 
-            this.dockManager1.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
-            this.hideContainerRight});
             this.dockManager1.Form = this;
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockPanel2,
             this.dockPanel1});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
@@ -766,35 +769,23 @@
             "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
             "DevExpress.XtraBars.Ribbon.RibbonControl"});
             // 
-            // hideContainerRight
-            // 
-            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(131)))));
-            this.hideContainerRight.Controls.Add(this.dockPanel2);
-            this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(880, 124);
-            this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(20, 399);
-            // 
             // dockPanel2
             // 
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel2.ID = new System.Guid("2faf85aa-2354-4a8e-8b07-d0b08f7ca1fb");
-            this.dockPanel2.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel2.Location = new System.Drawing.Point(700, 124);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel2.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanel2.SavedIndex = 0;
-            this.dockPanel2.Size = new System.Drawing.Size(200, 399);
+            this.dockPanel2.Size = new System.Drawing.Size(200, 452);
             this.dockPanel2.Text = "侧边栏2";
-            this.dockPanel2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.groupControl1);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(192, 372);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(192, 425);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // groupControl1
@@ -804,55 +795,28 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(192, 372);
+            this.groupControl1.Size = new System.Drawing.Size(192, 425);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
             // treeList5
             // 
-            this.treeList5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.treeList5.Location = new System.Drawing.Point(2, 102);
+            this.treeList5.Location = new System.Drawing.Point(1, 211);
             this.treeList5.Name = "treeList5";
-            this.treeList5.Size = new System.Drawing.Size(188, 92);
+            this.treeList5.Size = new System.Drawing.Size(188, 59);
             this.treeList5.TabIndex = 1;
             // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
-            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1,
-            this.navBarGroup2});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem2});
+            this.navBarGroup1});
             this.navBarControl1.Location = new System.Drawing.Point(2, 23);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 188;
-            this.navBarControl1.Size = new System.Drawing.Size(188, 79);
+            this.navBarControl1.Size = new System.Drawing.Size(188, 154);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
-            // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.Caption = "navBarGroup1";
-            this.navBarGroup1.Expanded = true;
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // navBarGroup2
-            // 
-            this.navBarGroup2.Caption = "navBarGroup2";
-            this.navBarGroup2.Name = "navBarGroup2";
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "navBarItem1";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "navBarItem2";
-            this.navBarItem2.Name = "navBarItem2";
             // 
             // dockPanel1
             // 
@@ -861,52 +825,96 @@
             this.dockPanel1.ID = new System.Guid("1a49a360-0bba-4eeb-a3da-b72766e2ca7c");
             this.dockPanel1.Location = new System.Drawing.Point(0, 124);
             this.dockPanel1.Name = "dockPanel1";
-            this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(200, 399);
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(375, 200);
+            this.dockPanel1.Size = new System.Drawing.Size(375, 452);
             this.dockPanel1.Text = "侧边栏1";
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Controls.Add(this.treeList4);
-            this.dockPanel1_Container.Controls.Add(this.treeList3);
-            this.dockPanel1_Container.Controls.Add(this.treeList2);
-            this.dockPanel1_Container.Controls.Add(this.folderTreeList);
+            this.dockPanel1_Container.Controls.Add(this.groupControl3);
+            this.dockPanel1_Container.Controls.Add(this.groupControl2);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 372);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(367, 425);
             this.dockPanel1_Container.TabIndex = 0;
-            // 
-            // treeList4
-            // 
-            this.treeList4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.treeList4.Location = new System.Drawing.Point(0, 142);
-            this.treeList4.Name = "treeList4";
-            this.treeList4.Size = new System.Drawing.Size(192, 59);
-            this.treeList4.TabIndex = 3;
-            // 
-            // treeList3
-            // 
-            this.treeList3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.treeList3.Location = new System.Drawing.Point(0, 93);
-            this.treeList3.Name = "treeList3";
-            this.treeList3.Size = new System.Drawing.Size(192, 49);
-            this.treeList3.TabIndex = 2;
-            // 
-            // treeList2
-            // 
-            this.treeList2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.treeList2.Location = new System.Drawing.Point(0, 52);
-            this.treeList2.Name = "treeList2";
-            this.treeList2.Size = new System.Drawing.Size(192, 41);
-            this.treeList2.TabIndex = 1;
             // 
             // folderTreeList
             // 
-            this.folderTreeList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.folderTreeList.Location = new System.Drawing.Point(0, 0);
+            this.folderTreeList.Appearance.Empty.BackColor = System.Drawing.Color.DimGray;
+            this.folderTreeList.Appearance.Empty.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.folderTreeList.Appearance.Empty.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.EvenRow.BackColor = System.Drawing.Color.White;
+            this.folderTreeList.Appearance.EvenRow.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.FocusedRow.BackColor = System.Drawing.Color.Black;
+            this.folderTreeList.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.folderTreeList.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.folderTreeList.Appearance.FooterPanel.BackColor = System.Drawing.Color.DarkGray;
+            this.folderTreeList.Appearance.FooterPanel.BorderColor = System.Drawing.Color.DarkGray;
+            this.folderTreeList.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.folderTreeList.Appearance.GroupButton.BackColor = System.Drawing.Color.Silver;
+            this.folderTreeList.Appearance.GroupButton.BorderColor = System.Drawing.Color.Silver;
+            this.folderTreeList.Appearance.GroupButton.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.folderTreeList.Appearance.GroupFooter.BackColor = System.Drawing.Color.Silver;
+            this.folderTreeList.Appearance.GroupFooter.BorderColor = System.Drawing.Color.Silver;
+            this.folderTreeList.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.folderTreeList.Appearance.HeaderPanel.BackColor = System.Drawing.Color.DarkGray;
+            this.folderTreeList.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.DarkGray;
+            this.folderTreeList.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.folderTreeList.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.LightSlateGray;
+            this.folderTreeList.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.HorzLine.BackColor = System.Drawing.Color.LightGray;
+            this.folderTreeList.Appearance.HorzLine.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.OddRow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.folderTreeList.Appearance.OddRow.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.Preview.BackColor = System.Drawing.Color.Gainsboro;
+            this.folderTreeList.Appearance.Preview.ForeColor = System.Drawing.Color.DimGray;
+            this.folderTreeList.Appearance.Preview.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.Preview.Options.UseForeColor = true;
+            this.folderTreeList.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.folderTreeList.Appearance.Row.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.SelectedRow.BackColor = System.Drawing.Color.DimGray;
+            this.folderTreeList.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.folderTreeList.Appearance.VertLine.BackColor = System.Drawing.Color.LightGray;
+            this.folderTreeList.Appearance.VertLine.Options.UseBackColor = true;
+            this.folderTreeList.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.folderTreeList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.folderTreeList.Location = new System.Drawing.Point(2, 23);
+            this.folderTreeList.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.folderTreeList.Margin = new System.Windows.Forms.Padding(5);
             this.folderTreeList.Name = "folderTreeList";
-            this.folderTreeList.Size = new System.Drawing.Size(192, 52);
+            this.folderTreeList.OptionsBehavior.Editable = false;
+            this.folderTreeList.OptionsLayout.AddNewColumns = false;
+            this.folderTreeList.OptionsPrint.PrintHorzLines = false;
+            this.folderTreeList.OptionsPrint.PrintVertLines = false;
+            this.folderTreeList.OptionsView.ShowIndicator = false;
+            this.folderTreeList.Padding = new System.Windows.Forms.Padding(3);
+            this.folderTreeList.SelectImageList = this.treeListImages;
+            this.folderTreeList.Size = new System.Drawing.Size(363, 171);
             this.folderTreeList.TabIndex = 0;
+            this.folderTreeList.TreeLineStyle = DevExpress.XtraTreeList.LineStyle.None;
+            // 
+            // treeListImages
+            // 
+            this.treeListImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("treeListImages.ImageStream")));
+            this.treeListImages.TransparentColor = System.Drawing.Color.Transparent;
+            this.treeListImages.Images.SetKeyName(0, "1085093.gif");
+            this.treeListImages.Images.SetKeyName(1, "1085094.gif");
+            this.treeListImages.Images.SetKeyName(2, "1085095.gif");
+            this.treeListImages.Images.SetKeyName(3, "1085096.gif");
+            this.treeListImages.Images.SetKeyName(4, "1085097.gif");
+            this.treeListImages.Images.SetKeyName(5, "1085099.gif");
+            this.treeListImages.Images.SetKeyName(6, "1085101.gif");
+            this.treeListImages.Images.SetKeyName(7, "1085103.gif");
+            this.treeListImages.Images.SetKeyName(8, "1085105.gif");
+            this.treeListImages.Images.SetKeyName(9, "1085107.gif");
+            this.treeListImages.Images.SetKeyName(10, "1085108.gif");
+            this.treeListImages.Images.SetKeyName(11, "1085109.gif");
+            this.treeListImages.Images.SetKeyName(12, "1085110.gif");
             // 
             // ribbonPageGroup2
             // 
@@ -915,15 +923,81 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "日记区";
             // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "navBarGroup1";
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.folderTreeList);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(367, 196);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "groupControl2";
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.navBarControl2);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(0, 196);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(367, 173);
+            this.groupControl3.TabIndex = 2;
+            this.groupControl3.Text = "groupControl3";
+            // 
+            // navBarControl2
+            // 
+            this.navBarControl2.ActiveGroup = this.navBarGroup2;
+            this.navBarControl2.Controls.Add(this.navBarGroupControlContainer1);
+            this.navBarControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarControl2.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup2});
+            this.navBarControl2.Location = new System.Drawing.Point(2, 23);
+            this.navBarControl2.Name = "navBarControl2";
+            this.navBarControl2.Size = new System.Drawing.Size(363, 148);
+            this.navBarControl2.TabIndex = 0;
+            this.navBarControl2.Text = "navBarControl2";
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "navBarGroup2";
+            this.navBarGroup2.ControlContainer = this.navBarGroupControlContainer1;
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.GroupClientHeight = 80;
+            this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarGroupControlContainer1
+            // 
+            this.navBarGroupControlContainer1.Controls.Add(this.treeView1);
+            this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
+            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(355, 76);
+            this.navBarGroupControlContainer1.TabIndex = 0;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "我的群组";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            this.treeView1.Size = new System.Drawing.Size(355, 76);
+            this.treeView1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AllowMdiBar = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(900, 523);
+            this.ClientSize = new System.Drawing.Size(900, 576);
             this.Controls.Add(this.dockPanel1);
-            this.Controls.Add(this.hideContainerRight);
+            this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.ribbonControl1);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -957,7 +1031,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
-            this.hideContainerRight.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -966,10 +1039,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.treeList4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.folderTreeList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).EndInit();
+            this.navBarControl2.ResumeLayout(false);
+            this.navBarGroupControlContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1007,9 +1084,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraTreeList.TreeList folderTreeList;
-        private DevExpress.XtraTreeList.TreeList treeList4;
-        private DevExpress.XtraTreeList.TreeList treeList3;
-        private DevExpress.XtraTreeList.TreeList treeList2;
         private DevExpress.XtraBars.Ribbon.ApplicationMenu mBookMenu;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem btnAddStickyNote;
@@ -1027,11 +1101,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox biStyleRepository;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraTreeList.TreeList treeList5;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
@@ -1054,7 +1124,14 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgbiSocial;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
+        private System.Windows.Forms.ImageList treeListImages;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl2;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

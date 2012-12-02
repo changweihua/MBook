@@ -145,6 +145,12 @@
     <Folder Include="images\large\" />
     <Folder Include="images\small\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonoBookEntity\MonoBookEntity.csproj">
+      <Project>{EF3C29F4-4269-43B7-9675-8664A4FD60EB}</Project>
+      <Name>MonoBookEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

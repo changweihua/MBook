@@ -29,7 +29,7 @@ namespace MonoBookEntity
         /// <summary>
         /// 编号
         /// </summary>
-        public int Id { get; set; }
+        public string Id { get; set; }
         /// <summary>
         /// 文件夹显示名称
         /// </summary>
@@ -38,9 +38,5 @@ namespace MonoBookEntity
         /// 文件夹真实名称
         /// </summary>
         public string FolderPath { get; set; }
-        /// <summary>
-        /// 是否是叶子节点
-        /// </summary>
-        public bool IsLeaf { get; set; }
     }
 }
