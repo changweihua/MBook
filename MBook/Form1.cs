@@ -251,6 +251,41 @@ namespace MBook
             dailyForm.ShowDialog();
         }
 
+        private void btnApplicationExit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void rgbiSocial_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
+        {
+            //MessageBox.Show(e.Item.Caption + e.Item.Description);
+            string desc = e.Item.Description;
+            switch (desc)
+            {
+                case "sina":
+                    SinaForm sinaForm = new SinaForm();
+                    sinaForm.ShowDialog();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void rgbiTools_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
+        {
+            string desc = e.Item.Description;
+            switch (desc)
+            {
+                case "email":
+                    MailForm mailForm = new MailForm();
+                    mailForm.ShowDialog();
+                    break;
+                default:
+                    break;
+            }
+        }
+
 
     }
 }

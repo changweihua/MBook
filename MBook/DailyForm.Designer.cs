@@ -76,8 +76,6 @@
             this.toggleMultiLevelListItem1 = new DevExpress.XtraRichEdit.UI.ToggleMultiLevelListItem();
             this.decreaseIndentItem1 = new DevExpress.XtraRichEdit.UI.DecreaseIndentItem();
             this.increaseIndentItem1 = new DevExpress.XtraRichEdit.UI.IncreaseIndentItem();
-            this.toggleShowWhitespaceItem1 = new DevExpress.XtraRichEdit.UI.ToggleShowWhitespaceItem();
-            this.showParagraphFormItem1 = new DevExpress.XtraRichEdit.UI.ShowParagraphFormItem();
             this.changeStyleItem1 = new DevExpress.XtraRichEdit.UI.ChangeStyleItem();
             this.repositoryItemRichEditStyleEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit();
             this.findItem1 = new DevExpress.XtraRichEdit.UI.FindItem();
@@ -144,9 +142,6 @@
             this.toggleTableCellsBottomRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomRightAlignmentItem();
             this.copyItem1 = new DevExpress.XtraRichEdit.UI.CopyItem();
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
-            this.tableDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableDesignRibbonPage();
-            this.tableStylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup();
-            this.tableDrawBordersRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableDrawBordersRibbonPageGroup();
             this.tableLayoutRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableLayoutRibbonPage();
             this.tableTableRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableTableRibbonPageGroup();
             this.tableRowsAndColumnsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableRowsAndColumnsRibbonPageGroup();
@@ -158,13 +153,10 @@
             this.fontRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
             this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
             this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
-            this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
             this.insertRibbonPage1 = new DevExpress.XtraRichEdit.UI.InsertRibbonPage();
-            this.pagesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup();
             this.tablesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup();
             this.illustrationsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup();
             this.linksRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup();
-            this.headerFooterRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup();
             this.symbolsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
@@ -218,8 +210,6 @@
             this.richEditBarController1.BarItems.Add(this.toggleMultiLevelListItem1);
             this.richEditBarController1.BarItems.Add(this.decreaseIndentItem1);
             this.richEditBarController1.BarItems.Add(this.increaseIndentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleShowWhitespaceItem1);
-            this.richEditBarController1.BarItems.Add(this.showParagraphFormItem1);
             this.richEditBarController1.BarItems.Add(this.changeStyleItem1);
             this.richEditBarController1.BarItems.Add(this.findItem1);
             this.richEditBarController1.BarItems.Add(this.replaceItem1);
@@ -286,6 +276,7 @@
             // 
             // cutItem1
             // 
+            this.cutItem1.Caption = "剪切";
             this.cutItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("cutItem1.Glyph")));
             this.cutItem1.Id = 1;
             this.cutItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("cutItem1.LargeGlyph")));
@@ -293,6 +284,7 @@
             // 
             // pasteItem1
             // 
+            this.pasteItem1.Caption = "粘贴";
             this.pasteItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("pasteItem1.Glyph")));
             this.pasteItem1.Id = 3;
             this.pasteItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("pasteItem1.LargeGlyph")));
@@ -300,6 +292,7 @@
             // 
             // pasteSpecialItem1
             // 
+            this.pasteSpecialItem1.Caption = "选择粘贴格式";
             this.pasteSpecialItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("pasteSpecialItem1.Glyph")));
             this.pasteSpecialItem1.Id = 4;
             this.pasteSpecialItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("pasteSpecialItem1.LargeGlyph")));
@@ -307,6 +300,7 @@
             // 
             // changeFontNameItem1
             // 
+            this.changeFontNameItem1.Caption = "字体";
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
             this.changeFontNameItem1.Id = 5;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
@@ -320,9 +314,11 @@
             // 
             // changeFontSizeItem1
             // 
+            this.changeFontSizeItem1.Caption = "字号";
             this.changeFontSizeItem1.Edit = this.repositoryItemRichEditFontSizeEdit1;
             this.changeFontSizeItem1.Id = 105;
             this.changeFontSizeItem1.Name = "changeFontSizeItem1";
+            this.changeFontSizeItem1.Width = 130;
             // 
             // repositoryItemRichEditFontSizeEdit1
             // 
@@ -340,7 +336,6 @@
             this.richEditControl1.Name = "richEditControl1";
             this.richEditControl1.Size = new System.Drawing.Size(1014, 508);
             this.richEditControl1.TabIndex = 2;
-            this.richEditControl1.Text = "richEditControl1";
             // 
             // ribbonControl1
             // 
@@ -396,8 +391,6 @@
             this.toggleMultiLevelListItem1,
             this.decreaseIndentItem1,
             this.increaseIndentItem1,
-            this.toggleShowWhitespaceItem1,
-            this.showParagraphFormItem1,
             this.changeStyleItem1,
             this.findItem1,
             this.replaceItem1,
@@ -461,7 +454,7 @@
             this.toggleTableCellsBottomRightAlignmentItem1,
             this.copyItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 119;
+            this.ribbonControl1.MaxItemId = 129;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -475,7 +468,7 @@
             this.repositoryItemBorderLineStyle1,
             this.repositoryItemBorderLineWeight1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
-            this.ribbonControl1.SelectedPage = this.tableDesignRibbonPage1;
+            this.ribbonControl1.SelectedPage = this.homeRibbonPage1;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
@@ -485,6 +478,7 @@
             // 
             // changeFontColorItem1
             // 
+            this.changeFontColorItem1.Caption = "字体颜色";
             this.changeFontColorItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("changeFontColorItem1.Glyph")));
             this.changeFontColorItem1.Id = 6;
             this.changeFontColorItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("changeFontColorItem1.LargeGlyph")));
@@ -492,6 +486,7 @@
             // 
             // changeFontBackColorItem1
             // 
+            this.changeFontBackColorItem1.Caption = "文本高亮颜色";
             this.changeFontBackColorItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("changeFontBackColorItem1.Glyph")));
             this.changeFontBackColorItem1.Id = 7;
             this.changeFontBackColorItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("changeFontBackColorItem1.LargeGlyph")));
@@ -499,6 +494,7 @@
             // 
             // toggleFontBoldItem1
             // 
+            this.toggleFontBoldItem1.Caption = "粗体";
             this.toggleFontBoldItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontBoldItem1.Glyph")));
             this.toggleFontBoldItem1.Id = 8;
             this.toggleFontBoldItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontBoldItem1.LargeGlyph")));
@@ -506,6 +502,7 @@
             // 
             // toggleFontItalicItem1
             // 
+            this.toggleFontItalicItem1.Caption = "斜体";
             this.toggleFontItalicItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontItalicItem1.Glyph")));
             this.toggleFontItalicItem1.Id = 9;
             this.toggleFontItalicItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontItalicItem1.LargeGlyph")));
@@ -513,6 +510,7 @@
             // 
             // toggleFontUnderlineItem1
             // 
+            this.toggleFontUnderlineItem1.Caption = "下划线";
             this.toggleFontUnderlineItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontUnderlineItem1.Glyph")));
             this.toggleFontUnderlineItem1.Id = 10;
             this.toggleFontUnderlineItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontUnderlineItem1.LargeGlyph")));
@@ -520,6 +518,7 @@
             // 
             // toggleFontDoubleUnderlineItem1
             // 
+            this.toggleFontDoubleUnderlineItem1.Caption = "双下划线";
             this.toggleFontDoubleUnderlineItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontDoubleUnderlineItem1.Glyph")));
             this.toggleFontDoubleUnderlineItem1.Id = 11;
             this.toggleFontDoubleUnderlineItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontDoubleUnderlineItem1.LargeGlyph")));
@@ -527,6 +526,7 @@
             // 
             // toggleFontStrikeoutItem1
             // 
+            this.toggleFontStrikeoutItem1.Caption = "删除线";
             this.toggleFontStrikeoutItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontStrikeoutItem1.Glyph")));
             this.toggleFontStrikeoutItem1.Id = 12;
             this.toggleFontStrikeoutItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontStrikeoutItem1.LargeGlyph")));
@@ -534,6 +534,7 @@
             // 
             // toggleFontDoubleStrikeoutItem1
             // 
+            this.toggleFontDoubleStrikeoutItem1.Caption = "双删除线";
             this.toggleFontDoubleStrikeoutItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontDoubleStrikeoutItem1.Glyph")));
             this.toggleFontDoubleStrikeoutItem1.Id = 13;
             this.toggleFontDoubleStrikeoutItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontDoubleStrikeoutItem1.LargeGlyph")));
@@ -541,6 +542,7 @@
             // 
             // toggleFontSuperscriptItem1
             // 
+            this.toggleFontSuperscriptItem1.Caption = "上标";
             this.toggleFontSuperscriptItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontSuperscriptItem1.Glyph")));
             this.toggleFontSuperscriptItem1.Id = 14;
             this.toggleFontSuperscriptItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontSuperscriptItem1.LargeGlyph")));
@@ -548,6 +550,7 @@
             // 
             // toggleFontSubscriptItem1
             // 
+            this.toggleFontSubscriptItem1.Caption = "下标";
             this.toggleFontSubscriptItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleFontSubscriptItem1.Glyph")));
             this.toggleFontSubscriptItem1.Id = 15;
             this.toggleFontSubscriptItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleFontSubscriptItem1.LargeGlyph")));
@@ -555,6 +558,7 @@
             // 
             // changeTextCaseItem1
             // 
+            this.changeTextCaseItem1.Caption = "改变大小写";
             this.changeTextCaseItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("changeTextCaseItem1.Glyph")));
             this.changeTextCaseItem1.Id = 16;
             this.changeTextCaseItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("changeTextCaseItem1.LargeGlyph")));
@@ -581,6 +585,7 @@
             // 
             // fontSizeIncreaseItem1
             // 
+            this.fontSizeIncreaseItem1.Caption = "加大字号";
             this.fontSizeIncreaseItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("fontSizeIncreaseItem1.Glyph")));
             this.fontSizeIncreaseItem1.Id = 20;
             this.fontSizeIncreaseItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("fontSizeIncreaseItem1.LargeGlyph")));
@@ -588,6 +593,7 @@
             // 
             // fontSizeDecreaseItem1
             // 
+            this.fontSizeDecreaseItem1.Caption = "缩小字号";
             this.fontSizeDecreaseItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("fontSizeDecreaseItem1.Glyph")));
             this.fontSizeDecreaseItem1.Id = 21;
             this.fontSizeDecreaseItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("fontSizeDecreaseItem1.LargeGlyph")));
@@ -595,6 +601,7 @@
             // 
             // clearFormattingItem1
             // 
+            this.clearFormattingItem1.Caption = "清除格式";
             this.clearFormattingItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("clearFormattingItem1.Glyph")));
             this.clearFormattingItem1.Id = 22;
             this.clearFormattingItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("clearFormattingItem1.LargeGlyph")));
@@ -602,6 +609,7 @@
             // 
             // showFontFormItem1
             // 
+            this.showFontFormItem1.Caption = "字体";
             this.showFontFormItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("showFontFormItem1.Glyph")));
             this.showFontFormItem1.Id = 23;
             this.showFontFormItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showFontFormItem1.LargeGlyph")));
@@ -609,6 +617,7 @@
             // 
             // toggleParagraphAlignmentLeftItem1
             // 
+            this.toggleParagraphAlignmentLeftItem1.Caption = "左对齐";
             this.toggleParagraphAlignmentLeftItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentLeftItem1.Glyph")));
             this.toggleParagraphAlignmentLeftItem1.Id = 24;
             this.toggleParagraphAlignmentLeftItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentLeftItem1.LargeGlyph")));
@@ -616,6 +625,7 @@
             // 
             // toggleParagraphAlignmentCenterItem1
             // 
+            this.toggleParagraphAlignmentCenterItem1.Caption = "居 中";
             this.toggleParagraphAlignmentCenterItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentCenterItem1.Glyph")));
             this.toggleParagraphAlignmentCenterItem1.Id = 25;
             this.toggleParagraphAlignmentCenterItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentCenterItem1.LargeGlyph")));
@@ -623,6 +633,7 @@
             // 
             // toggleParagraphAlignmentRightItem1
             // 
+            this.toggleParagraphAlignmentRightItem1.Caption = "右对齐";
             this.toggleParagraphAlignmentRightItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentRightItem1.Glyph")));
             this.toggleParagraphAlignmentRightItem1.Id = 26;
             this.toggleParagraphAlignmentRightItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentRightItem1.LargeGlyph")));
@@ -630,6 +641,7 @@
             // 
             // toggleParagraphAlignmentJustifyItem1
             // 
+            this.toggleParagraphAlignmentJustifyItem1.Caption = "自适应";
             this.toggleParagraphAlignmentJustifyItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentJustifyItem1.Glyph")));
             this.toggleParagraphAlignmentJustifyItem1.Id = 27;
             this.toggleParagraphAlignmentJustifyItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleParagraphAlignmentJustifyItem1.LargeGlyph")));
@@ -637,6 +649,7 @@
             // 
             // changeParagraphLineSpacingItem1
             // 
+            this.changeParagraphLineSpacingItem1.Caption = "行距";
             this.changeParagraphLineSpacingItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("changeParagraphLineSpacingItem1.Glyph")));
             this.changeParagraphLineSpacingItem1.Id = 28;
             this.changeParagraphLineSpacingItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("changeParagraphLineSpacingItem1.LargeGlyph")));
@@ -693,6 +706,7 @@
             // 
             // toggleBulletedListItem1
             // 
+            this.toggleBulletedListItem1.Caption = "项目符号";
             this.toggleBulletedListItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleBulletedListItem1.Glyph")));
             this.toggleBulletedListItem1.Id = 37;
             this.toggleBulletedListItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleBulletedListItem1.LargeGlyph")));
@@ -700,6 +714,7 @@
             // 
             // toggleNumberingListItem1
             // 
+            this.toggleNumberingListItem1.Caption = "编号";
             this.toggleNumberingListItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleNumberingListItem1.Glyph")));
             this.toggleNumberingListItem1.Id = 38;
             this.toggleNumberingListItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleNumberingListItem1.LargeGlyph")));
@@ -707,6 +722,7 @@
             // 
             // toggleMultiLevelListItem1
             // 
+            this.toggleMultiLevelListItem1.Caption = "多级列表";
             this.toggleMultiLevelListItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleMultiLevelListItem1.Glyph")));
             this.toggleMultiLevelListItem1.Id = 39;
             this.toggleMultiLevelListItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleMultiLevelListItem1.LargeGlyph")));
@@ -714,6 +730,7 @@
             // 
             // decreaseIndentItem1
             // 
+            this.decreaseIndentItem1.Caption = "减少缩进量";
             this.decreaseIndentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("decreaseIndentItem1.Glyph")));
             this.decreaseIndentItem1.Id = 40;
             this.decreaseIndentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("decreaseIndentItem1.LargeGlyph")));
@@ -721,24 +738,11 @@
             // 
             // increaseIndentItem1
             // 
+            this.increaseIndentItem1.Caption = "增加缩进量";
             this.increaseIndentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("increaseIndentItem1.Glyph")));
             this.increaseIndentItem1.Id = 41;
             this.increaseIndentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("increaseIndentItem1.LargeGlyph")));
             this.increaseIndentItem1.Name = "increaseIndentItem1";
-            // 
-            // toggleShowWhitespaceItem1
-            // 
-            this.toggleShowWhitespaceItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleShowWhitespaceItem1.Glyph")));
-            this.toggleShowWhitespaceItem1.Id = 42;
-            this.toggleShowWhitespaceItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleShowWhitespaceItem1.LargeGlyph")));
-            this.toggleShowWhitespaceItem1.Name = "toggleShowWhitespaceItem1";
-            // 
-            // showParagraphFormItem1
-            // 
-            this.showParagraphFormItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("showParagraphFormItem1.Glyph")));
-            this.showParagraphFormItem1.Id = 43;
-            this.showParagraphFormItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showParagraphFormItem1.LargeGlyph")));
-            this.showParagraphFormItem1.Name = "showParagraphFormItem1";
             // 
             // changeStyleItem1
             // 
@@ -777,6 +781,7 @@
             // 
             // insertTableItem1
             // 
+            this.insertTableItem1.Caption = "表格";
             this.insertTableItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertTableItem1.Glyph")));
             this.insertTableItem1.Id = 48;
             this.insertTableItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertTableItem1.LargeGlyph")));
@@ -784,6 +789,7 @@
             // 
             // insertPictureItem1
             // 
+            this.insertPictureItem1.Caption = "图片";
             this.insertPictureItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertPictureItem1.Glyph")));
             this.insertPictureItem1.Id = 49;
             this.insertPictureItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertPictureItem1.LargeGlyph")));
@@ -791,6 +797,7 @@
             // 
             // insertBookmarkItem1
             // 
+            this.insertBookmarkItem1.Caption = "书签";
             this.insertBookmarkItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertBookmarkItem1.Glyph")));
             this.insertBookmarkItem1.Id = 50;
             this.insertBookmarkItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertBookmarkItem1.LargeGlyph")));
@@ -798,6 +805,7 @@
             // 
             // insertHyperlinkItem1
             // 
+            this.insertHyperlinkItem1.Caption = "超链接";
             this.insertHyperlinkItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertHyperlinkItem1.Glyph")));
             this.insertHyperlinkItem1.Id = 51;
             this.insertHyperlinkItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertHyperlinkItem1.LargeGlyph")));
@@ -833,6 +841,7 @@
             // 
             // insertSymbolItem1
             // 
+            this.insertSymbolItem1.Caption = "符号";
             this.insertSymbolItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertSymbolItem1.Glyph")));
             this.insertSymbolItem1.Id = 56;
             this.insertSymbolItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertSymbolItem1.LargeGlyph")));
@@ -936,6 +945,7 @@
             // 
             // toggleShowTableGridLinesItem1
             // 
+            this.toggleShowTableGridLinesItem1.Caption = "查看网格线";
             this.toggleShowTableGridLinesItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleShowTableGridLinesItem1.Glyph")));
             this.toggleShowTableGridLinesItem1.Id = 69;
             this.toggleShowTableGridLinesItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleShowTableGridLinesItem1.LargeGlyph")));
@@ -986,6 +996,7 @@
             // 
             // selectTableElementsItem1
             // 
+            this.selectTableElementsItem1.Caption = "选择";
             this.selectTableElementsItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("selectTableElementsItem1.Glyph")));
             this.selectTableElementsItem1.Id = 73;
             this.selectTableElementsItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("selectTableElementsItem1.LargeGlyph")));
@@ -1026,6 +1037,7 @@
             // 
             // showTablePropertiesFormItem1
             // 
+            this.showTablePropertiesFormItem1.Caption = "属性";
             this.showTablePropertiesFormItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("showTablePropertiesFormItem1.Glyph")));
             this.showTablePropertiesFormItem1.Id = 78;
             this.showTablePropertiesFormItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showTablePropertiesFormItem1.LargeGlyph")));
@@ -1033,6 +1045,7 @@
             // 
             // deleteTableElementsItem1
             // 
+            this.deleteTableElementsItem1.Caption = "删除";
             this.deleteTableElementsItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("deleteTableElementsItem1.Glyph")));
             this.deleteTableElementsItem1.Id = 79;
             this.deleteTableElementsItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("deleteTableElementsItem1.LargeGlyph")));
@@ -1073,6 +1086,7 @@
             // 
             // insertTableRowAboveItem1
             // 
+            this.insertTableRowAboveItem1.Caption = "在上方插入";
             this.insertTableRowAboveItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertTableRowAboveItem1.Glyph")));
             this.insertTableRowAboveItem1.Id = 84;
             this.insertTableRowAboveItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertTableRowAboveItem1.LargeGlyph")));
@@ -1080,6 +1094,7 @@
             // 
             // insertTableRowBelowItem1
             // 
+            this.insertTableRowBelowItem1.Caption = "在下方插入";
             this.insertTableRowBelowItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertTableRowBelowItem1.Glyph")));
             this.insertTableRowBelowItem1.Id = 85;
             this.insertTableRowBelowItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertTableRowBelowItem1.LargeGlyph")));
@@ -1087,6 +1102,7 @@
             // 
             // insertTableColumnToLeftItem1
             // 
+            this.insertTableColumnToLeftItem1.Caption = "在左侧插入";
             this.insertTableColumnToLeftItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertTableColumnToLeftItem1.Glyph")));
             this.insertTableColumnToLeftItem1.Id = 86;
             this.insertTableColumnToLeftItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertTableColumnToLeftItem1.LargeGlyph")));
@@ -1094,6 +1110,7 @@
             // 
             // insertTableColumnToRightItem1
             // 
+            this.insertTableColumnToRightItem1.Caption = "在右侧插入";
             this.insertTableColumnToRightItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertTableColumnToRightItem1.Glyph")));
             this.insertTableColumnToRightItem1.Id = 87;
             this.insertTableColumnToRightItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertTableColumnToRightItem1.LargeGlyph")));
@@ -1101,6 +1118,7 @@
             // 
             // showInsertTableCellsFormItem1
             // 
+            this.showInsertTableCellsFormItem1.Caption = "插入单元格";
             this.showInsertTableCellsFormItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("showInsertTableCellsFormItem1.Glyph")));
             this.showInsertTableCellsFormItem1.Id = 88;
             this.showInsertTableCellsFormItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showInsertTableCellsFormItem1.LargeGlyph")));
@@ -1108,6 +1126,7 @@
             // 
             // mergeTableCellsItem1
             // 
+            this.mergeTableCellsItem1.Caption = "合并单元格";
             this.mergeTableCellsItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("mergeTableCellsItem1.Glyph")));
             this.mergeTableCellsItem1.Id = 89;
             this.mergeTableCellsItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("mergeTableCellsItem1.LargeGlyph")));
@@ -1115,6 +1134,7 @@
             // 
             // showSplitTableCellsForm1
             // 
+            this.showSplitTableCellsForm1.Caption = "拆分单元格";
             this.showSplitTableCellsForm1.Glyph = ((System.Drawing.Image)(resources.GetObject("showSplitTableCellsForm1.Glyph")));
             this.showSplitTableCellsForm1.Id = 90;
             this.showSplitTableCellsForm1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showSplitTableCellsForm1.LargeGlyph")));
@@ -1122,6 +1142,7 @@
             // 
             // splitTableItem1
             // 
+            this.splitTableItem1.Caption = "拆分表格";
             this.splitTableItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("splitTableItem1.Glyph")));
             this.splitTableItem1.Id = 91;
             this.splitTableItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("splitTableItem1.LargeGlyph")));
@@ -1129,6 +1150,7 @@
             // 
             // toggleTableAutoFitItem1
             // 
+            this.toggleTableAutoFitItem1.Caption = "自动调整";
             this.toggleTableAutoFitItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableAutoFitItem1.Glyph")));
             this.toggleTableAutoFitItem1.Id = 92;
             this.toggleTableAutoFitItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableAutoFitItem1.LargeGlyph")));
@@ -1161,6 +1183,7 @@
             // 
             // toggleTableCellsTopLeftAlignmentItem1
             // 
+            this.toggleTableCellsTopLeftAlignmentItem1.Caption = "靠上左对齐";
             this.toggleTableCellsTopLeftAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsTopLeftAlignmentItem1.Glyph")));
             this.toggleTableCellsTopLeftAlignmentItem1.Id = 96;
             this.toggleTableCellsTopLeftAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsTopLeftAlignmentItem1.LargeGlyph")));
@@ -1168,6 +1191,7 @@
             // 
             // toggleTableCellsTopCenterAlignmentItem1
             // 
+            this.toggleTableCellsTopCenterAlignmentItem1.Caption = "靠上居中对齐";
             this.toggleTableCellsTopCenterAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsTopCenterAlignmentItem1.Glyph")));
             this.toggleTableCellsTopCenterAlignmentItem1.Id = 97;
             this.toggleTableCellsTopCenterAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsTopCenterAlignmentItem1.LargeGlyph")));
@@ -1175,6 +1199,7 @@
             // 
             // toggleTableCellsTopRightAlignmentItem1
             // 
+            this.toggleTableCellsTopRightAlignmentItem1.Caption = "靠上右对齐";
             this.toggleTableCellsTopRightAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsTopRightAlignmentItem1.Glyph")));
             this.toggleTableCellsTopRightAlignmentItem1.Id = 98;
             this.toggleTableCellsTopRightAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsTopRightAlignmentItem1.LargeGlyph")));
@@ -1182,6 +1207,7 @@
             // 
             // toggleTableCellsMiddleLeftAlignmentItem1
             // 
+            this.toggleTableCellsMiddleLeftAlignmentItem1.Caption = "中部左对齐";
             this.toggleTableCellsMiddleLeftAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsMiddleLeftAlignmentItem1.Glyph")));
             this.toggleTableCellsMiddleLeftAlignmentItem1.Id = 99;
             this.toggleTableCellsMiddleLeftAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsMiddleLeftAlignmentItem1.LargeGlyph")));
@@ -1189,6 +1215,7 @@
             // 
             // toggleTableCellsMiddleCenterAlignmentItem1
             // 
+            this.toggleTableCellsMiddleCenterAlignmentItem1.Caption = "中部居中对齐";
             this.toggleTableCellsMiddleCenterAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsMiddleCenterAlignmentItem1.Glyph")));
             this.toggleTableCellsMiddleCenterAlignmentItem1.Id = 100;
             this.toggleTableCellsMiddleCenterAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsMiddleCenterAlignmentItem1.LargeGlyph")));
@@ -1196,6 +1223,7 @@
             // 
             // toggleTableCellsMiddleRightAlignmentItem1
             // 
+            this.toggleTableCellsMiddleRightAlignmentItem1.Caption = "中部右对齐";
             this.toggleTableCellsMiddleRightAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsMiddleRightAlignmentItem1.Glyph")));
             this.toggleTableCellsMiddleRightAlignmentItem1.Id = 101;
             this.toggleTableCellsMiddleRightAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsMiddleRightAlignmentItem1.LargeGlyph")));
@@ -1203,6 +1231,7 @@
             // 
             // toggleTableCellsBottomLeftAlignmentItem1
             // 
+            this.toggleTableCellsBottomLeftAlignmentItem1.Caption = "靠下左对齐";
             this.toggleTableCellsBottomLeftAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomLeftAlignmentItem1.Glyph")));
             this.toggleTableCellsBottomLeftAlignmentItem1.Id = 102;
             this.toggleTableCellsBottomLeftAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomLeftAlignmentItem1.LargeGlyph")));
@@ -1210,6 +1239,7 @@
             // 
             // toggleTableCellsBottomCenterAlignmentItem1
             // 
+            this.toggleTableCellsBottomCenterAlignmentItem1.Caption = "靠下居中对齐";
             this.toggleTableCellsBottomCenterAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomCenterAlignmentItem1.Glyph")));
             this.toggleTableCellsBottomCenterAlignmentItem1.Id = 103;
             this.toggleTableCellsBottomCenterAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomCenterAlignmentItem1.LargeGlyph")));
@@ -1217,6 +1247,7 @@
             // 
             // toggleTableCellsBottomRightAlignmentItem1
             // 
+            this.toggleTableCellsBottomRightAlignmentItem1.Caption = "靠下右对齐";
             this.toggleTableCellsBottomRightAlignmentItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomRightAlignmentItem1.Glyph")));
             this.toggleTableCellsBottomRightAlignmentItem1.Id = 104;
             this.toggleTableCellsBottomRightAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomRightAlignmentItem1.LargeGlyph")));
@@ -1224,6 +1255,7 @@
             // 
             // copyItem1
             // 
+            this.copyItem1.Caption = "复制";
             this.copyItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("copyItem1.Glyph")));
             this.copyItem1.Id = 113;
             this.copyItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("copyItem1.LargeGlyph")));
@@ -1233,30 +1265,7 @@
             // 
             this.tableToolsRibbonPageCategory1.Name = "tableToolsRibbonPageCategory1";
             this.tableToolsRibbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.tableDesignRibbonPage1,
             this.tableLayoutRibbonPage1});
-            // 
-            // tableDesignRibbonPage1
-            // 
-            this.tableDesignRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.tableStylesRibbonPageGroup1,
-            this.tableDrawBordersRibbonPageGroup1});
-            this.tableDesignRibbonPage1.Name = "tableDesignRibbonPage1";
-            // 
-            // tableStylesRibbonPageGroup1
-            // 
-            this.tableStylesRibbonPageGroup1.ItemLinks.Add(this.changeTableCellsShadingItem1);
-            this.tableStylesRibbonPageGroup1.ItemLinks.Add(this.changeTableBordersItem1);
-            this.tableStylesRibbonPageGroup1.Name = "tableStylesRibbonPageGroup1";
-            this.tableStylesRibbonPageGroup1.RichEditControl = this.richEditControl1;
-            // 
-            // tableDrawBordersRibbonPageGroup1
-            // 
-            this.tableDrawBordersRibbonPageGroup1.ItemLinks.Add(this.changeTableBorderLineStyleItem1);
-            this.tableDrawBordersRibbonPageGroup1.ItemLinks.Add(this.changeTableBorderLineWeightItem1);
-            this.tableDrawBordersRibbonPageGroup1.ItemLinks.Add(this.changeTableBorderColorItem1);
-            this.tableDrawBordersRibbonPageGroup1.Name = "tableDrawBordersRibbonPageGroup1";
-            this.tableDrawBordersRibbonPageGroup1.RichEditControl = this.richEditControl1;
             // 
             // tableLayoutRibbonPage1
             // 
@@ -1267,6 +1276,7 @@
             this.tableCellSizeRibbonPageGroup1,
             this.tableAlignmentRibbonPageGroup1});
             this.tableLayoutRibbonPage1.Name = "tableLayoutRibbonPage1";
+            this.tableLayoutRibbonPage1.Text = "布局";
             // 
             // tableTableRibbonPageGroup1
             // 
@@ -1286,6 +1296,7 @@
             this.tableRowsAndColumnsRibbonPageGroup1.ItemLinks.Add(this.showInsertTableCellsFormItem1);
             this.tableRowsAndColumnsRibbonPageGroup1.Name = "tableRowsAndColumnsRibbonPageGroup1";
             this.tableRowsAndColumnsRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.tableRowsAndColumnsRibbonPageGroup1.Text = "行和列";
             // 
             // tableMergeRibbonPageGroup1
             // 
@@ -1294,12 +1305,14 @@
             this.tableMergeRibbonPageGroup1.ItemLinks.Add(this.splitTableItem1);
             this.tableMergeRibbonPageGroup1.Name = "tableMergeRibbonPageGroup1";
             this.tableMergeRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.tableMergeRibbonPageGroup1.Text = "    合 并";
             // 
             // tableCellSizeRibbonPageGroup1
             // 
             this.tableCellSizeRibbonPageGroup1.ItemLinks.Add(this.toggleTableAutoFitItem1);
             this.tableCellSizeRibbonPageGroup1.Name = "tableCellSizeRibbonPageGroup1";
             this.tableCellSizeRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.tableCellSizeRibbonPageGroup1.Text = "单元格大小";
             // 
             // tableAlignmentRibbonPageGroup1
             // 
@@ -1314,6 +1327,7 @@
             this.tableAlignmentRibbonPageGroup1.ItemLinks.Add(this.toggleTableCellsBottomRightAlignmentItem1);
             this.tableAlignmentRibbonPageGroup1.Name = "tableAlignmentRibbonPageGroup1";
             this.tableAlignmentRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.tableAlignmentRibbonPageGroup1.Text = "对齐方式";
             // 
             // homeRibbonPage1
             // 
@@ -1321,9 +1335,9 @@
             this.clipboardRibbonPageGroup1,
             this.fontRibbonPageGroup1,
             this.paragraphRibbonPageGroup1,
-            this.stylesRibbonPageGroup1,
-            this.editingRibbonPageGroup1});
+            this.stylesRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
+            this.homeRibbonPage1.Text = "主页";
             // 
             // clipboardRibbonPageGroup1
             // 
@@ -1333,6 +1347,7 @@
             this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteSpecialItem1);
             this.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1";
             this.clipboardRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.clipboardRibbonPageGroup1.Text = "      剪贴板";
             // 
             // fontRibbonPageGroup1
             // 
@@ -1355,6 +1370,7 @@
             this.fontRibbonPageGroup1.ItemLinks.Add(this.showFontFormItem1);
             this.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1";
             this.fontRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.fontRibbonPageGroup1.Text = "字体";
             // 
             // paragraphRibbonPageGroup1
             // 
@@ -1368,52 +1384,40 @@
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.toggleMultiLevelListItem1);
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.decreaseIndentItem1);
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.increaseIndentItem1);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.toggleShowWhitespaceItem1);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.showParagraphFormItem1);
             this.paragraphRibbonPageGroup1.Name = "paragraphRibbonPageGroup1";
             this.paragraphRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.paragraphRibbonPageGroup1.Text = "段落";
             // 
             // stylesRibbonPageGroup1
             // 
             this.stylesRibbonPageGroup1.ItemLinks.Add(this.changeStyleItem1);
             this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
             this.stylesRibbonPageGroup1.RichEditControl = this.richEditControl1;
-            // 
-            // editingRibbonPageGroup1
-            // 
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1);
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1);
-            this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
-            this.editingRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.stylesRibbonPageGroup1.Text = "更改样式";
             // 
             // insertRibbonPage1
             // 
             this.insertRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.pagesRibbonPageGroup1,
             this.tablesRibbonPageGroup1,
             this.illustrationsRibbonPageGroup1,
             this.linksRibbonPageGroup1,
-            this.headerFooterRibbonPageGroup1,
             this.symbolsRibbonPageGroup1});
             this.insertRibbonPage1.Name = "insertRibbonPage1";
-            // 
-            // pagesRibbonPageGroup1
-            // 
-            this.pagesRibbonPageGroup1.ItemLinks.Add(this.insertPageBreakItem1);
-            this.pagesRibbonPageGroup1.Name = "pagesRibbonPageGroup1";
-            this.pagesRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.insertRibbonPage1.Text = "插入";
             // 
             // tablesRibbonPageGroup1
             // 
             this.tablesRibbonPageGroup1.ItemLinks.Add(this.insertTableItem1);
             this.tablesRibbonPageGroup1.Name = "tablesRibbonPageGroup1";
             this.tablesRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.tablesRibbonPageGroup1.Text = "表格";
             // 
             // illustrationsRibbonPageGroup1
             // 
             this.illustrationsRibbonPageGroup1.ItemLinks.Add(this.insertPictureItem1);
             this.illustrationsRibbonPageGroup1.Name = "illustrationsRibbonPageGroup1";
             this.illustrationsRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.illustrationsRibbonPageGroup1.Text = "插图";
             // 
             // linksRibbonPageGroup1
             // 
@@ -1421,21 +1425,14 @@
             this.linksRibbonPageGroup1.ItemLinks.Add(this.insertHyperlinkItem1);
             this.linksRibbonPageGroup1.Name = "linksRibbonPageGroup1";
             this.linksRibbonPageGroup1.RichEditControl = this.richEditControl1;
-            // 
-            // headerFooterRibbonPageGroup1
-            // 
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.editPageHeaderItem1);
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.editPageFooterItem1);
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.insertPageNumberItem1);
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.insertPageCountItem1);
-            this.headerFooterRibbonPageGroup1.Name = "headerFooterRibbonPageGroup1";
-            this.headerFooterRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.linksRibbonPageGroup1.Text = "链接";
             // 
             // symbolsRibbonPageGroup1
             // 
             this.symbolsRibbonPageGroup1.ItemLinks.Add(this.insertSymbolItem1);
             this.symbolsRibbonPageGroup1.Name = "symbolsRibbonPageGroup1";
             this.symbolsRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.symbolsRibbonPageGroup1.Text = "符号";
             // 
             // DailyForm
             // 
@@ -1512,8 +1509,6 @@
         private DevExpress.XtraRichEdit.UI.ToggleMultiLevelListItem toggleMultiLevelListItem1;
         private DevExpress.XtraRichEdit.UI.DecreaseIndentItem decreaseIndentItem1;
         private DevExpress.XtraRichEdit.UI.IncreaseIndentItem increaseIndentItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleShowWhitespaceItem toggleShowWhitespaceItem1;
-        private DevExpress.XtraRichEdit.UI.ShowParagraphFormItem showParagraphFormItem1;
         private DevExpress.XtraRichEdit.UI.ChangeStyleItem changeStyleItem1;
         private DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit repositoryItemRichEditStyleEdit1;
         private DevExpress.XtraRichEdit.UI.FindItem findItem1;
@@ -1580,9 +1575,6 @@
         private DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomRightAlignmentItem toggleTableCellsBottomRightAlignmentItem1;
         private DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory tableToolsRibbonPageCategory1;
         private DevExpress.XtraRichEdit.UI.CopyItem copyItem1;
-        private DevExpress.XtraRichEdit.UI.TableDesignRibbonPage tableDesignRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup tableStylesRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.TableDrawBordersRibbonPageGroup tableDrawBordersRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TableLayoutRibbonPage tableLayoutRibbonPage1;
         private DevExpress.XtraRichEdit.UI.TableTableRibbonPageGroup tableTableRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TableRowsAndColumnsRibbonPageGroup tableRowsAndColumnsRibbonPageGroup1;
@@ -1594,13 +1586,10 @@
         private DevExpress.XtraRichEdit.UI.FontRibbonPageGroup fontRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup paragraphRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup stylesRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup editingRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.InsertRibbonPage insertRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup pagesRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup tablesRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup illustrationsRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup linksRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup headerFooterRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup symbolsRibbonPageGroup1;
     }
 }
