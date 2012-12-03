@@ -34,6 +34,14 @@ namespace MBook
 
         private NetDimension.Weibo.OAuth oauth;
 
+        public NetDimension.Weibo.OAuth OOAuth 
+        {
+            get
+            {
+                return this.oauth;
+            }
+        }
+
         #endregion 全局变量
 
         public LoginForm()
@@ -65,6 +73,33 @@ namespace MBook
             InitForm(text);
 
         }
+
+        public LoginForm(WeiboType weiboType, ref NetDimension.Weibo.OAuth oa)
+            : this()
+        {
+            string text = string.Empty;
+
+            switch (weiboType)
+            {
+                case WeiboType.Sina:
+                    text = "新浪微博";
+                    oa = new NetDimension.Weibo.OAuth(Properties.Settings.Default.AppKey, Properties.Settings.Default.AppSecret, Properties.Settings.Default.CallbackUrl);
+                    oauth = new NetDimension.Weibo.OAuth(Properties.Settings.Default.AppKey, Properties.Settings.Default.AppSecret, Properties.Settings.Default.CallbackUrl);
+                    break;
+                case WeiboType.Tencent:
+                    break;
+                case WeiboType.Sohu:
+                    break;
+                case WeiboType.Netease:
+                    break;
+                default:
+                    break;
+            }
+
+            InitForm(text);
+
+        }
+
 
         /// <summary>
         /// 根据不同的微博，显示不同的窗体信息
@@ -182,6 +217,57 @@ namespace MBook
             threadLogin.Start();
 
         }
+
+        private void Login(NetDimension.Weibo.OAuth oa)
+        {
+            string passport = bePassport.EditValue == null ? "" : bePassport.EditValue.ToString();
+            if (string.IsNullOrEmpty(passport))
+            {
+                MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //acError.FormShowingEffect = DevExpress.XtraBars.Alerter.AlertFormShowingEffect.FadeIn;
+                //acError.Show(this, "Error", "请输入登录账号");
+                return;
+            }
+
+            string password = bePassword.EditValue == null ? "" : bePassword.EditValue.ToString();
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            mpbcLoginStatus.Visible = true;
+
+            //新建一个线程进行登录
+            Thread threadLogin = new Thread(new ThreadStart(() =>
+            {
+                try
+                {
+                    //bool result = oauth.ClientLogin(passport, password);
+                    //NetDimension.Weibo.TokenResult tokenResult = oauth.VerifierAccessToken();
+                    bool result = oa.ClientLogin(passport, password);
+                    NetDimension.Weibo.TokenResult tokenResult = oa.VerifierAccessToken();
+
+                    if (tokenResult == NetDimension.Weibo.TokenResult.Success)
+                    {
+                        UILoginComplete(result, "登录成功");
+                    }
+                    else
+                    {
+                        UILoginComplete(result, tokenResult.ToString());
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    UILoginComplete(false, ex.Message);
+                }
+            }));
+
+            threadLogin.Start();
+
+        }
+
 
         private void UILoginComplete(bool success, string msg)
         {

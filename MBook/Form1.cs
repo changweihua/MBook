@@ -269,13 +269,17 @@ namespace MBook
             switch (desc)
             {
                 case "sina":
-                    //SinaForm sinaForm = new SinaForm();
-                    //sinaForm.ShowDialog();
-                    LoginForm loginForm = new LoginForm(WeiboType.Sina);
-                    if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    SinaForm sinaForm = new SinaForm(WeiboType.Sina);
+                    if (sinaForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        new SinaForm().ShowDialog();
+                        sinaForm.ShowDialog();
                     }
+                    //MonoBook5 中登录功能的实现
+                    //LoginForm loginForm = new LoginForm();
+                    //if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    //{
+                    //    new SinaForm().ShowDialog();
+                    //}
                     break;
                 default:
                     break;
