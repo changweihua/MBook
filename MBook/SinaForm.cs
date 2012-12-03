@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NetDimension.Weibo;
+using System.Threading;
 
 namespace MBook
 {
@@ -28,9 +30,39 @@ namespace MBook
      ************************************************************************************/
     public partial class SinaForm : XtraForm
     {
-        public SinaForm()
+        private SinaForm()
         {
             InitializeComponent();
         }
+
+
+        #region 全局变量
+
+        private NetDimension.Weibo.OAuth oauth;
+        private NetDimension.Weibo.Client Sina;
+        private string UserId = string.Empty;
+
+        private byte[] imageBuffer = null;
+
+        #endregion 全局变量
+
+        public SinaForm(OAuth oauth):this()
+        {
+
+        }
+
+        private void LoadUserInformation()
+        {
+            Thread threadUserInfo = new Thread(new ThreadStart(() => {
+                string userId = Sina.API.Account.GetUID();
+                NetDimension.Weibo.Entities.user.Entity userInfo = Sina.API.Users.Show(userId, null);
+
+            }));
+
+            threadUserInfo.IsBackground = true;
+            threadUserInfo.Start();
+
+        }
+
     }
 }

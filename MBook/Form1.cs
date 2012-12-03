@@ -251,6 +251,11 @@ namespace MBook
             dailyForm.ShowDialog();
         }
 
+        /// <summary>
+        /// 退出应用程序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnApplicationExit_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Close();
@@ -264,8 +269,13 @@ namespace MBook
             switch (desc)
             {
                 case "sina":
-                    SinaForm sinaForm = new SinaForm();
-                    sinaForm.ShowDialog();
+                    //SinaForm sinaForm = new SinaForm();
+                    //sinaForm.ShowDialog();
+                    LoginForm loginForm = new LoginForm(WeiboType.Sina);
+                    if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        new SinaForm().ShowDialog();
+                    }
                     break;
                 default:
                     break;
