@@ -286,6 +286,12 @@ namespace MBook
             }
         }
 
+        private void btnApplicationAbout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
+        }
+
 
     }
 }

@@ -334,7 +334,7 @@
             this.richEditControl1.Location = new System.Drawing.Point(0, 151);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1014, 508);
+            this.richEditControl1.Size = new System.Drawing.Size(1117, 508);
             this.richEditControl1.TabIndex = 2;
             // 
             // ribbonControl1
@@ -454,7 +454,7 @@
             this.toggleTableCellsBottomRightAlignmentItem1,
             this.copyItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 129;
+            this.ribbonControl1.MaxItemId = 133;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -472,7 +472,7 @@
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1014, 151);
+            this.ribbonControl1.Size = new System.Drawing.Size(1117, 151);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -486,7 +486,7 @@
             // 
             // changeFontBackColorItem1
             // 
-            this.changeFontBackColorItem1.Caption = "文本高亮颜色";
+            this.changeFontBackColorItem1.Caption = "文本高亮";
             this.changeFontBackColorItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("changeFontBackColorItem1.Glyph")));
             this.changeFontBackColorItem1.Id = 7;
             this.changeFontBackColorItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("changeFontBackColorItem1.LargeGlyph")));
@@ -1285,6 +1285,7 @@
             this.tableTableRibbonPageGroup1.ItemLinks.Add(this.showTablePropertiesFormItem1);
             this.tableTableRibbonPageGroup1.Name = "tableTableRibbonPageGroup1";
             this.tableTableRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.tableTableRibbonPageGroup1.Text = "表格";
             // 
             // tableRowsAndColumnsRibbonPageGroup1
             // 
@@ -1305,7 +1306,7 @@
             this.tableMergeRibbonPageGroup1.ItemLinks.Add(this.splitTableItem1);
             this.tableMergeRibbonPageGroup1.Name = "tableMergeRibbonPageGroup1";
             this.tableMergeRibbonPageGroup1.RichEditControl = this.richEditControl1;
-            this.tableMergeRibbonPageGroup1.Text = "    合 并";
+            this.tableMergeRibbonPageGroup1.Text = "合并与拆分";
             // 
             // tableCellSizeRibbonPageGroup1
             // 
@@ -1439,7 +1440,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 659);
+            this.ClientSize = new System.Drawing.Size(1117, 659);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1449,7 +1450,7 @@
             this.Name = "DailyForm";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MonoBook ---- 记录下每天的点点滴滴";
+            this.Text = "MonoBook ---- 记录每一秒的幸福";
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).EndInit();

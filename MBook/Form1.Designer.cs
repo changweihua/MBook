@@ -62,6 +62,7 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.btnApplicationExit = new DevExpress.XtraBars.BarButtonItem();
+            this.btnApplicationAbout = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonSmallImages = new System.Windows.Forms.ImageList(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewDaily = new DevExpress.XtraBars.BarButtonItem();
@@ -220,10 +221,11 @@
             this.barEditItem4,
             this.barButtonItem12,
             this.rgbiSocial,
-            this.barEditItem2});
+            this.barEditItem2,
+            this.btnApplicationAbout});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 54;
+            this.ribbonControl1.MaxItemId = 55;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
@@ -261,6 +263,7 @@
             // mBookMenu
             // 
             this.mBookMenu.ItemLinks.Add(this.btnApplicationExit);
+            this.mBookMenu.ItemLinks.Add(this.btnApplicationAbout);
             this.mBookMenu.Name = "mBookMenu";
             this.mBookMenu.Ribbon = this.ribbonControl1;
             // 
@@ -272,6 +275,15 @@
             this.btnApplicationExit.LargeImageIndex = 17;
             this.btnApplicationExit.Name = "btnApplicationExit";
             this.btnApplicationExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnApplicationExit_ItemClick);
+            // 
+            // btnApplicationAbout
+            // 
+            this.btnApplicationAbout.Caption = "关于";
+            this.btnApplicationAbout.Description = "查看系统信息";
+            this.btnApplicationAbout.Id = 54;
+            this.btnApplicationAbout.LargeImageIndex = 27;
+            this.btnApplicationAbout.Name = "btnApplicationAbout";
+            this.btnApplicationAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnApplicationAbout_ItemClick);
             // 
             // ribbonSmallImages
             // 
@@ -297,6 +309,7 @@
             this.ribbonSmallImages.Images.SetKeyName(17, "5331.gif");
             this.ribbonSmallImages.Images.SetKeyName(18, "32466.gif");
             this.ribbonSmallImages.Images.SetKeyName(19, "583495.gif");
+            this.ribbonSmallImages.Images.SetKeyName(20, "20121203082940739_easyicon_cn_16.png");
             // 
             // barButtonItem1
             // 
@@ -679,6 +692,8 @@
             this.ribbonLargeImages.Images.SetKeyName(24, "518208.gif");
             this.ribbonLargeImages.Images.SetKeyName(25, "525855.gif");
             this.ribbonLargeImages.Images.SetKeyName(26, "1078749.gif");
+            this.ribbonLargeImages.Images.SetKeyName(27, "20121203082938141_easyicon_cn_32.png");
+            this.ribbonLargeImages.Images.SetKeyName(28, "20121203084701204_easyicon_cn_32.png");
             // 
             // ribbonPage1
             // 
@@ -1277,6 +1292,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit3;
         private DevExpress.XtraBars.BarEditItem barEditItem2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit4;
+        private DevExpress.XtraBars.BarButtonItem btnApplicationAbout;
     }
 }
 
