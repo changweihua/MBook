@@ -293,8 +293,10 @@ namespace MBook
             switch (desc)
             {
                 case "email":
-                    MailForm mailForm = new MailForm();
-                    mailForm.ShowDialog();
+                    new MailForm().ShowDialog();
+                    break;
+                case "calendar":
+                    new MCalendar().ShowDialog();
                     break;
                 default:
                     break;
