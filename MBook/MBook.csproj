@@ -134,6 +134,16 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LargeImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LargeImages.resx</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +164,11 @@
     </Compile>
     <Compile Include="SinaForm.Designer.cs">
       <DependentUpon>SinaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SmallImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmallImages.resx</DependentUpon>
     </Compile>
     <Compile Include="WeiboType.cs" />
     <EmbeddedResource Include="AboutForm.resx">
@@ -177,6 +192,14 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LargeImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LargeImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +219,10 @@
     </Compile>
     <EmbeddedResource Include="SinaForm.resx">
       <DependentUpon>SinaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SmallImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SmallImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -228,6 +255,79 @@
   <ItemGroup>
     <Content Include="images\icon\ONENOTE.ico" />
     <Content Include="images\icon\OneNote.png" />
+    <None Include="images\small\1857.gif" />
+    <None Include="images\small\2780.gif" />
+    <None Include="images\small\2831.gif" />
+    <None Include="images\small\3023.gif" />
+    <None Include="images\small\3216.gif" />
+    <None Include="images\small\4960.gif" />
+    <None Include="images\small\5331.gif" />
+    <None Include="images\small\7608.gif" />
+    <None Include="images\small\7632.gif" />
+    <None Include="images\small\7980.gif" />
+    <None Include="images\small\8965.gif" />
+    <None Include="images\small\8987.gif" />
+    <None Include="images\small\9148.gif" />
+    <None Include="images\small\9679.gif" />
+    <None Include="images\small\11436.gif" />
+    <None Include="images\small\15765.gif" />
+    <None Include="images\small\16971.gif" />
+    <None Include="images\small\20429.gif" />
+    <None Include="images\small\23243.gif" />
+    <None Include="images\small\24256.gif" />
+    <None Include="images\small\24313.gif" />
+    <None Include="images\small\24344.gif" />
+    <None Include="images\small\24628.gif" />
+    <None Include="images\small\24756.gif" />
+    <None Include="images\small\24805.gif" />
+    <None Include="images\small\25054.gif" />
+    <None Include="images\small\25091.gif" />
+    <None Include="images\small\26244.gif" />
+    <None Include="images\small\28872.gif" />
+    <None Include="images\small\30684.gif" />
+    <None Include="images\small\32466.gif" />
+    <None Include="images\small\33987.gif" />
+    <None Include="images\small\34027.gif" />
+    <None Include="images\small\35633.gif" />
+    <None Include="images\small\38365.gif" />
+    <None Include="images\small\513441.gif" />
+    <None Include="images\small\513444.gif" />
+    <None Include="images\small\583495.gif" />
+    <None Include="images\small\585812.gif" />
+    <None Include="images\small\1085093.gif" />
+    <None Include="images\small\1085094.gif" />
+    <None Include="images\small\1085095.gif" />
+    <None Include="images\small\1085096.gif" />
+    <None Include="images\small\1085097.gif" />
+    <None Include="images\small\1085099.gif" />
+    <None Include="images\small\1085101.gif" />
+    <None Include="images\small\1085103.gif" />
+    <None Include="images\small\1085105.gif" />
+    <None Include="images\small\1085107.gif" />
+    <None Include="images\small\1085108.gif" />
+    <None Include="images\small\1085109.gif" />
+    <None Include="images\small\1085110.gif" />
+    <None Include="images\small\20121203082939421_easyicon_cn_24.png" />
+    <None Include="images\small\20121203082940739_easyicon_cn_16.png" />
+    <None Include="images\small\20121203101645872_easyicon_cn_24.png" />
+    <None Include="images\small\20121203102208992_easyicon_cn_32.png" />
+    <None Include="images\small\20121203102218384_easyicon_cn_16.png" />
+    <None Include="images\small\20121203103110250_easyicon_cn_24.png" />
+    <None Include="images\small\AddressBook.png" />
+    <None Include="images\small\Daily.gif" />
+    <None Include="images\small\DocumentTemplate.png" />
+    <None Include="images\small\FileClose.png" />
+    <None Include="images\small\FileNew.png" />
+    <None Include="images\small\FileOpen.png" />
+    <None Include="images\small\FilePrint.png" />
+    <None Include="images\small\FileSave.png" />
+    <None Include="images\small\FileSaveAsPdfOrXps.png" />
+    <None Include="images\small\FileSaveAsWord97_2003.png" />
+    <None Include="images\small\FileSaveAsWordDocx.png" />
+    <None Include="images\small\NewAppointment.png" />
+    <None Include="images\small\NewContact.png" />
+    <None Include="images\small\NewTask.png" />
+    <None Include="images\small\Sticky.png" />
     <Content Include="templates\contact.htm" />
     <Content Include="templates\contact\contact.template.html" />
     <Content Include="templates\contact\contact.template_1028.html" />
@@ -264,7 +364,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\large\" />
-    <Folder Include="images\small\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonoBookEntity\MonoBookEntity.csproj">

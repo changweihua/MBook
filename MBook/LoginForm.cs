@@ -145,7 +145,9 @@ namespace MBook
                     bePassword.EditValue = Properties.Settings.Default.Password;
                     break;
                 case 2:
-                    this.Close();
+                    this.DialogResult = System.Windows.Forms.DialogResult.No;
+                    oauth = null;
+                    //this.Close();
                     break;
                 default:
                     break;

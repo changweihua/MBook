@@ -127,20 +127,33 @@ namespace MBook
 
         #endregion 全局变量
 
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="weiboType"></param>
         public SinaForm(WeiboType weiboType)
             : this()
         {
             if (oauth == null)
             {
-                LoginForm loginForm = new LoginForm(weiboType,ref oauth);//貌似ref传引用不是深复制
+                LoginForm loginForm = new LoginForm(weiboType, ref oauth);//貌似ref传引用不是深复制
                 if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     this.DialogResult = System.Windows.Forms.DialogResult.OK;
                     Sina = new NetDimension.Weibo.Client(loginForm.OOAuth);
-                    
+                    LoadUserInformation();
+                    LoadFriendTimeline();
+                }
+                else
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.No;
                 }
             }
-            
+            else
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.No;
+            }
         }
 
 
@@ -372,8 +385,7 @@ namespace MBook
 
         private void SinaForm_Load(object sender, EventArgs e)
         {
-            LoadUserInformation();
-            LoadFriendTimeline();
+            
         }
 
         private void btnInsertPicture_Click(object sender, EventArgs e)
