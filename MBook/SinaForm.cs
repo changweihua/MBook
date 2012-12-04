@@ -132,28 +132,15 @@ namespace MBook
         /// 构造函数
         /// </summary>
         /// <param name="weiboType"></param>
-        public SinaForm(WeiboType weiboType)
+        public SinaForm(WeiboType weiboType, NetDimension.Weibo.OAuth oa)
             : this()
         {
-            if (oauth == null)
-            {
-                LoginForm loginForm = new LoginForm(weiboType, ref oauth);//貌似ref传引用不是深复制
-                if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                    Sina = new NetDimension.Weibo.Client(loginForm.OOAuth);
-                    LoadUserInformation();
-                    LoadFriendTimeline();
-                }
-                else
-                {
-                    this.DialogResult = System.Windows.Forms.DialogResult.No;
-                }
-            }
-            else
-            {
-                this.DialogResult = System.Windows.Forms.DialogResult.No;
-            }
+            oauth = oa;
+
+            Sina = new NetDimension.Weibo.Client(oauth);
+            LoadUserInformation();
+            LoadFriendTimeline();
+
         }
 
 
