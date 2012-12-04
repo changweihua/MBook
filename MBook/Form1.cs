@@ -314,6 +314,11 @@ namespace MBook
 
         }
 
+        private void btnUserProfile_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new ProfileForm().ShowDialog();
+        }
+
 
     }
 }

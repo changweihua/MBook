@@ -82,6 +82,9 @@
       <HintPath>..\..\..\DLL\NetDimension.Weibo.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NLite">
+      <HintPath>..\packages\NLite.0.9.3.11\lib\net35\NLite.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -141,6 +144,12 @@
     </Compile>
     <Compile Include="MCalendar.Designer.cs">
       <DependentUpon>MCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Icons.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,6 +212,9 @@
     <EmbeddedResource Include="MCalendar.resx">
       <DependentUpon>MCalendar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Icons.Designer.cs</LastGenOutput>
@@ -236,6 +248,7 @@
       <LastGenOutput>SmallImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -374,6 +387,7 @@
     <Content Include="xml\SearchMethod.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="data\" />
     <Folder Include="images\large\" />
   </ItemGroup>
   <ItemGroup>
