@@ -94,7 +94,7 @@
             this.xtraTabControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(986, 577);
+            this.xtraTabControl1.Size = new System.Drawing.Size(986, 536);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -110,7 +110,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Controls.Add(this.pictureEdit1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(984, 552);
+            this.xtraTabPage1.Size = new System.Drawing.Size(984, 511);
             this.xtraTabPage1.Text = "关于系统";
             // 
             // memoEdit1
@@ -118,20 +118,20 @@
             this.memoEdit1.EditValue = "开发平台 ---- Windows 7 SP1\r\n开发工具 ---- Visual Studio 2010 SP1\r\n开发语言 ---- C# .NET Fram" +
     "ework 3.5\r\n开发人员 ---- 常伟华\r\n项目地址 ---- https://github.com/CMONO/MBook\r\n项目微博 ---- ht" +
     "tp://t.qq.com/monobook";
-            this.memoEdit1.Location = new System.Drawing.Point(406, 129);
+            this.memoEdit1.Location = new System.Drawing.Point(406, 120);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 13F);
             this.memoEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
             this.memoEdit1.Properties.Appearance.Options.UseFont = true;
             this.memoEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.memoEdit1.Properties.ReadOnly = true;
             this.memoEdit1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.memoEdit1.Size = new System.Drawing.Size(548, 303);
+            this.memoEdit1.Size = new System.Drawing.Size(548, 282);
             this.memoEdit1.TabIndex = 3;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(406, 99);
+            this.labelControl4.Location = new System.Drawing.Point(406, 92);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 14);
             this.labelControl4.TabIndex = 2;
@@ -139,7 +139,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(871, 446);
+            this.labelControl2.Location = new System.Drawing.Point(871, 414);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(83, 14);
             this.labelControl2.TabIndex = 1;
@@ -147,7 +147,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(633, 446);
+            this.labelControl3.Location = new System.Drawing.Point(633, 414);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(127, 14);
             this.labelControl3.TabIndex = 1;
@@ -155,7 +155,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(406, 446);
+            this.labelControl1.Location = new System.Drawing.Point(406, 414);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(116, 14);
             this.labelControl1.TabIndex = 1;
@@ -164,10 +164,10 @@
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(11, 103);
+            this.pictureEdit1.Location = new System.Drawing.Point(10, 95);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(357, 357);
+            this.pictureEdit1.Size = new System.Drawing.Size(357, 332);
             this.pictureEdit1.TabIndex = 0;
             // 
             // xtraTabPage2
@@ -176,7 +176,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl2);
             this.xtraTabPage2.Controls.Add(this.groupControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(984, 552);
+            this.xtraTabPage2.Size = new System.Drawing.Size(984, 511);
             this.xtraTabPage2.Text = "关于作者";
             // 
             // groupControl3
@@ -188,26 +188,26 @@
             this.groupControl3.Controls.Add(this.labelControl11);
             this.groupControl3.Controls.Add(this.labelControl10);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 392);
+            this.groupControl3.Location = new System.Drawing.Point(0, 363);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(984, 160);
+            this.groupControl3.Size = new System.Drawing.Size(984, 148);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "众里寻他千百度，蓦然回首，那人却在灯火阑珊处";
             // 
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
-            this.pictureEdit4.Location = new System.Drawing.Point(214, 56);
+            this.pictureEdit4.Location = new System.Drawing.Point(213, 52);
             this.pictureEdit4.Name = "pictureEdit4";
             this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit4.Size = new System.Drawing.Size(82, 73);
+            this.pictureEdit4.Size = new System.Drawing.Size(82, 68);
             this.pictureEdit4.TabIndex = 1;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(225, 135);
+            this.labelControl12.Location = new System.Drawing.Point(225, 126);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(56, 14);
             this.labelControl12.TabIndex = 0;
@@ -216,17 +216,17 @@
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(42, 56);
+            this.pictureEdit3.Location = new System.Drawing.Point(42, 52);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Size = new System.Drawing.Size(82, 73);
+            this.pictureEdit3.Size = new System.Drawing.Size(82, 68);
             this.pictureEdit3.TabIndex = 1;
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(54, 135);
+            this.labelControl11.Location = new System.Drawing.Point(54, 126);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(56, 14);
             this.labelControl11.TabIndex = 0;
@@ -248,9 +248,9 @@
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Controls.Add(this.labelControl14);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 191);
+            this.groupControl2.Location = new System.Drawing.Point(0, 178);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(984, 361);
+            this.groupControl2.Size = new System.Drawing.Size(984, 333);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "衣带渐宽终不悔，为伊消得人憔悴";
             // 
@@ -259,7 +259,7 @@
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl6.Location = new System.Drawing.Point(674, 39);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(308, 320);
+            this.groupControl6.Size = new System.Drawing.Size(308, 292);
             this.groupControl6.TabIndex = 0;
             this.groupControl6.Text = "重庆文理学院";
             // 
@@ -268,7 +268,7 @@
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl5.Location = new System.Drawing.Point(319, 39);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(355, 320);
+            this.groupControl5.Size = new System.Drawing.Size(355, 292);
             this.groupControl5.TabIndex = 0;
             this.groupControl5.Text = "江苏省丹阳市珥陵高级中学";
             // 
@@ -277,7 +277,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl4.Location = new System.Drawing.Point(2, 39);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(317, 320);
+            this.groupControl4.Size = new System.Drawing.Size(317, 292);
             this.groupControl4.TabIndex = 0;
             this.groupControl4.Text = "江苏省丹阳市珥陵初级中学";
             // 
@@ -302,22 +302,22 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(984, 191);
+            this.groupControl1.Size = new System.Drawing.Size(984, 178);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "昨夜西风凋碧树，独上高楼，望尽天涯路";
             // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(849, 42);
+            this.pictureEdit2.Location = new System.Drawing.Point(849, 39);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(124, 144);
+            this.pictureEdit2.Size = new System.Drawing.Size(124, 133);
             this.pictureEdit2.TabIndex = 1;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(183, 104);
+            this.labelControl8.Location = new System.Drawing.Point(183, 96);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(176, 14);
             this.labelControl8.TabIndex = 0;
@@ -325,7 +325,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(795, 57);
+            this.labelControl9.Location = new System.Drawing.Point(794, 53);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(48, 14);
             this.labelControl9.TabIndex = 0;
@@ -341,7 +341,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(183, 57);
+            this.labelControl7.Location = new System.Drawing.Point(183, 53);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(199, 14);
             this.labelControl7.TabIndex = 0;
@@ -349,7 +349,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(26, 104);
+            this.labelControl6.Location = new System.Drawing.Point(26, 96);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(109, 14);
             this.labelControl6.TabIndex = 0;
@@ -357,7 +357,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(26, 57);
+            this.labelControl5.Location = new System.Drawing.Point(26, 53);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(84, 14);
             this.labelControl5.TabIndex = 0;
@@ -368,20 +368,20 @@
             this.xtraTabPage3.Controls.Add(this.marqueeProgressBarControl1);
             this.xtraTabPage3.Controls.Add(this.labelControl15);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(984, 552);
+            this.xtraTabPage3.Size = new System.Drawing.Size(984, 511);
             this.xtraTabPage3.Text = "更多";
             // 
             // marqueeProgressBarControl1
             // 
             this.marqueeProgressBarControl1.EditValue = 0;
-            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(313, 167);
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(313, 155);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
-            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(169, 18);
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(169, 16);
             this.marqueeProgressBarControl1.TabIndex = 1;
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(339, 217);
+            this.labelControl15.Location = new System.Drawing.Point(339, 202);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(96, 14);
             this.labelControl15.TabIndex = 0;
@@ -397,9 +397,11 @@
             // 
             // AboutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.Appearance.Font = new System.Drawing.Font("浪漫雅圆", 10F);
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 577);
+            this.ClientSize = new System.Drawing.Size(986, 536);
             this.Controls.Add(this.xtraTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

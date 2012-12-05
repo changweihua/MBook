@@ -177,7 +177,8 @@ namespace MBook
             string passport = bePassport.EditValue == null ? "" : bePassport.EditValue.ToString();
             if (string.IsNullOrEmpty(passport))
             {
-                MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show(this.LookAndFeel, "请输入登录用户名", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //acError.FormShowingEffect = DevExpress.XtraBars.Alerter.AlertFormShowingEffect.FadeIn;
                 //acError.Show(this, "Error", "请输入登录账号");
                 return;
@@ -186,10 +187,12 @@ namespace MBook
             string password = bePassword.EditValue == null ? "" : bePassword.EditValue.ToString();
             if (string.IsNullOrEmpty(password))
             {
-                MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show(this.LookAndFeel, "请输入登录密码", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
+            SetControlStatus();
             mpbcLoginStatus.Visible = true;
 
             //新建一个线程进行登录
@@ -220,12 +223,28 @@ namespace MBook
 
         }
 
+        /// <summary>
+        /// 设置控件是否只读
+        /// </summary>
+        private void SetControlStatus()
+        {
+            beAction.Enabled = !beAction.Enabled;
+            bePassport.Enabled = !bePassport.Enabled;
+            bePassword.Enabled = !bePassword.Enabled;
+            
+        }
+
+        /// <summary>
+        /// 废弃的
+        /// </summary>
+        /// <param name="oa"></param>
         private void Login(NetDimension.Weibo.OAuth oa)
         {
             string passport = bePassport.EditValue == null ? "" : bePassport.EditValue.ToString();
             if (string.IsNullOrEmpty(passport))
             {
-                MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show(this.LookAndFeel, "请输入登录用户名", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //acError.FormShowingEffect = DevExpress.XtraBars.Alerter.AlertFormShowingEffect.FadeIn;
                 //acError.Show(this, "Error", "请输入登录账号");
                 return;
@@ -234,10 +253,14 @@ namespace MBook
             string password = bePassword.EditValue == null ? "" : bePassword.EditValue.ToString();
             if (string.IsNullOrEmpty(password))
             {
-                MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(this, "请输入登录密码。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show(this.LookAndFeel, "请输入登录密码", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
+            beAction.Enabled = false;
+            bePassport.Enabled = false;
+            bePassword.Enabled = false;
             mpbcLoginStatus.Visible = true;
 
             //新建一个线程进行登录
@@ -304,7 +327,10 @@ namespace MBook
                 }
                 else
                 {
-                    MessageBox.Show(this, "没有登录成功，请确保账号密码正确。\r\n错误提示：" + msg + "\r\n\r\n当然还要确定Settings里你的AppKey和回调地址是对的。不懂看视频去，不解释。如果出现未审核应用人数达到上限那就去新浪后台把测试账号的UID填到网站测试账号栏目里。", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SetControlStatus();
+                    mpbcLoginStatus.Visible = false;
+                    XtraMessageBox.Show(this.LookAndFeel, "没有登录成功，请确保账号密码正确。\r\n错误提示：" + msg + "\r\n\r\n当然还要确定Settings里你的AppKey和回调地址是对的。不懂看视频去，不解释。如果出现未审核应用人数达到上限那就去新浪后台把测试账号的UID填到网站测试账号栏目里。", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show(this, "没有登录成功，请确保账号密码正确。\r\n错误提示：" + msg + "\r\n\r\n当然还要确定Settings里你的AppKey和回调地址是对的。不懂看视频去，不解释。如果出现未审核应用人数达到上限那就去新浪后台把测试账号的UID填到网站测试账号栏目里。", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
