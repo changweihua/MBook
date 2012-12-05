@@ -23,41 +23,106 @@ namespace MonoBookEntity
      * 
      ************************************************************************************/
     /// <summary>
-    /// 添加类描述
+    /// 每日回顾实体类
     /// </summary>
     
     [Table(Name="tbDailyReview")]
     public class DailyReview
     {
-        [Id(Name="")]
+        /// <summary>
+        /// Guid标识符
+        /// </summary>
+        [Id(Name = "dr_guid")]
+        public string Guid;
+
+        /// <summary>
+        /// 日期
+        /// </summary>
+        [Column(Name = "dr_today_date")]
         public string TodayDate;
-        [Column]
+
+        /// <summary>
+        /// 今日天气
+        /// </summary>
+        [Column(Name = "dr_today_weather")]
         public string TodayWeather;
-        [Column]
+
+        /// <summary>
+        /// 日子
+        /// </summary>
+        [Column(Name = "dr_today_desc")]
         public string TodayDescrption;
-        [Column]
+
+        /// <summary>
+        /// 纪念日
+        /// </summary>
+        [Column(Name = "dr_commenoration_day")]
         public string CommemorationDay;
-        [Column]
+
+        /// <summary>
+        /// 命运日
+        /// </summary>
+        [Column(Name = "dr_fortune_day")]
         public string FortuneDay;
-        [Column]
+
+        /// <summary>
+        /// 相遇日
+        /// </summary>
+        [Column(Name = "dr_meetion_day")]
         public string MeetionDay;
-        [Column]
+
+        /// <summary>
+        /// 起床时间
+        /// </summary>
+        [Column(Name = "dr_today_getuptime")]
         public string TodayGetupTime;
-        [Column]
+
+        /// <summary>
+        /// 昨天睡觉时间
+        /// </summary>
+        [Column(Name = "dr_yesterday_sleeptime")]
         public string YesterdaySleepTime;
-        [Column]
+
+        /// <summary>
+        /// 今天心情
+        /// </summary>
+        [Column(Name = "dr_today_mood")]
         public string TodayMood;
-        [Column]
+
+        /// <summary>
+        /// 灵感涂鸦
+        /// </summary>
+        [Column(Name = "dr_inspiration")]
         public string Inspiration;
-        [Column]
+
+        /// <summary>
+        /// 昨天的不足
+        /// </summary>
+        [Column(Name = "dr_yesterday_shortage")]
         public string YesterdayShortage;
-        [Column]
+
+        /// <summary>
+        /// 昨天的进步
+        /// </summary>
+        [Column(Name = "dr_yesterday_progress")]
         public string YesterdayProgress;
-        [Column]
+
+        /// <summary>
+        /// 今天的感悟和收获
+        /// </summary>
+        [Column(Name = "dr_today_gains")]
         public string TodayGains;
-        [Column]
+
+        /// <summary>
+        /// 今天阅读的书目和理解(非专业书籍)
+        /// </summary>
+        [Column(Name = "dr_today_books_notmajored")]
         public string TodayBooksNotMajored;
-        [Column]
+
+        /// <summary>
+        /// 专业关注和理解(专业)
+        /// </summary>
+        [Column(Name = "dr_today_books_majored")]
         public string TodayBooksMajored;
     }
 }
