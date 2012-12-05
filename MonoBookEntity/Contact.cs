@@ -29,31 +29,82 @@ namespace MonoBookEntity
     [Table(Name="tbContact")]
     public class Contact
     {
-        [Id]
+        /// <summary>
+        /// Guid标识符
+        /// </summary>
+        [Id(Name = "c_guid")]
         public string Guid;
-        [Column]
+
+        /// <summary>
+        /// 姓名
+        /// </summary>
+        [Column(Name = "c_name")]
         public string Name;
-        [Column]
+
+        /// <summary>
+        /// 部门
+        /// </summary>
+        [Column(Name = "c_department")]
         public string Department;
-        [Column]
+
+        /// <summary>
+        /// 电话
+        /// </summary>
+        [Column(Name = "c_telephone")]
         public string Telephone;
-        [Column]
+
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [Column(Name = "c_email")]
         public string Email;
-        [Column]
+
+        /// <summary>
+        /// 地址
+        /// </summary>
+        [Column(Name = "c_address")]
         public string Address;
-        [Column]
+
+        /// <summary>
+        /// 网站
+        /// </summary>
+        [Column(Name = "c_website")]
         public string Website;
-        [Column]
+
+        /// <summary>
+        /// 生日
+        /// </summary>
+        [Column(Name = "c_birthday")]
         public string Birthday;
-        [Column]
+
+        /// <summary>
+        /// QQ
+        /// </summary>
+        [Column(Name = "c_qq")]
         public string QQ;
-        [Column]
+
+        /// <summary>
+        /// MSN
+        /// </summary>
+        [Column(Name = "c_msn")]
         public string Msn;
-        [Column]
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [Column(Name = "c_remark")]
         public string Remark;
-        [Column]
+
+        /// <summary>
+        /// 头衔
+        /// </summary>
+        [Column(Name = "c_rank")]
         public string Rank;
-        [Column]
+
+        /// <summary>
+        /// 照片
+        /// </summary>
+        [Column(Name = "c_image")]
         public byte[] UserImage;
     }
 }
