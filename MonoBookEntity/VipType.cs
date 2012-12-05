@@ -23,20 +23,39 @@ namespace MonoBookEntity
      * 
      ************************************************************************************/
     /// <summary>
-    /// VIP类
+    /// VIP级别类
     /// </summary>
     [Table(Name="tbVipType")]
     public class VipType
     {
-        [Id]
+        /// <summary>
+        /// Guid标识符
+        /// </summary>
+        [Id(Name = "vt_id")]
         public int VipTypeId;
-        [Column]
+
+        /// <summary>
+        /// VIP级别名称
+        /// </summary>
+        [Column(Name = "vt_name")]
         public string VipTypeName;
-        [Column]
+
+        /// <summary>
+        /// VIP每月流量
+        /// </summary>
+        [Column(Name = "vt_flow")]
         public int VipTypeFlow;
-        [Column]
+
+        /// <summary>
+        /// 积分数量要求
+        /// </summary>
+        [Column(Name = "vt_upgrade_count")]
         public int VipTypeUpgradeCount;
-        [Column]
+
+        /// <summary>
+        /// 会员费/月
+        /// </summary>
+        [Column(Name = "vt_month_day")]
         public double VipTypeMonthPay;
 
     }
