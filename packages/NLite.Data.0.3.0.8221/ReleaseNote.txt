@@ -1,0 +1,14 @@
+﻿Change log for NLite.Data
+
+基于http://ndo.codeplex.com/SourceControl/changeset/97822/RC2_03版本
+
+NLite.Data 0.3 RC2[0.3.0.822](2012/12/3)
+1. 修复通过HashTable进行删除的Bug
+2. 支持通过connectionString 和providerName 作为参数来配置
+3. 使MySQL 支持无符号类型
+4. 在TableAttribute中添加Schema 属性
+5. 添加基于版本号机制的并发冲突检查机制
+6. 移除在DbHelper中对Position参数支持机制，并重构和简化DbHelper，使DbHelper仅仅支持命名参数
+7. 添加Fluent映射Api
+8. 重构表达式ExpresionBuilder，使其可以自定义扩展
+9. 使Oracle 支持自定义序列功能

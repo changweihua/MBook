@@ -32,5 +32,10 @@ namespace MBook
         {
             InitializeComponent();
         }
+
+        private void barButtonItemCloseWindow_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

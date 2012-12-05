@@ -257,27 +257,27 @@
             // groupControl6
             // 
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl6.Location = new System.Drawing.Point(674, 39);
+            this.groupControl6.Location = new System.Drawing.Point(674, 40);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(308, 292);
+            this.groupControl6.Size = new System.Drawing.Size(308, 291);
             this.groupControl6.TabIndex = 0;
             this.groupControl6.Text = "重庆文理学院";
             // 
             // groupControl5
             // 
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl5.Location = new System.Drawing.Point(319, 39);
+            this.groupControl5.Location = new System.Drawing.Point(319, 40);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(355, 292);
+            this.groupControl5.Size = new System.Drawing.Size(355, 291);
             this.groupControl5.TabIndex = 0;
             this.groupControl5.Text = "江苏省丹阳市珥陵高级中学";
             // 
             // groupControl4
             // 
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl4.Location = new System.Drawing.Point(2, 39);
+            this.groupControl4.Location = new System.Drawing.Point(2, 40);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(317, 292);
+            this.groupControl4.Size = new System.Drawing.Size(317, 291);
             this.groupControl4.TabIndex = 0;
             this.groupControl4.Text = "江苏省丹阳市珥陵初级中学";
             // 

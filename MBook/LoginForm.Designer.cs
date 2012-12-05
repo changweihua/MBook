@@ -102,7 +102,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Undo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "重新填写表单", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "取消", null, null, true)});
             this.beAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.beAction.Size = new System.Drawing.Size(236, 18);
+            this.beAction.Size = new System.Drawing.Size(236, 20);
             this.beAction.TabIndex = 3;
             this.beAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.beAction_ButtonClick);
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.bePassport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.LookAndFeel.SkinName = "Foggy";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.Name = "LoginForm";

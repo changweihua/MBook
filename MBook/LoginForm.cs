@@ -329,7 +329,7 @@ namespace MBook
                 {
                     SetControlStatus();
                     mpbcLoginStatus.Visible = false;
-                    XtraMessageBox.Show(this.LookAndFeel, "没有登录成功，请确保账号密码正确。\r\n错误提示：" + msg + "\r\n\r\n当然还要确定Settings里你的AppKey和回调地址是对的。不懂看视频去，不解释。如果出现未审核应用人数达到上限那就去新浪后台把测试账号的UID填到网站测试账号栏目里。", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show(this.LookAndFeel, "没有登录成功，请确保账号密码正确。\r\n错误提示：" + msg, "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //MessageBox.Show(this, "没有登录成功，请确保账号密码正确。\r\n错误提示：" + msg + "\r\n\r\n当然还要确定Settings里你的AppKey和回调地址是对的。不懂看视频去，不解释。如果出现未审核应用人数达到上限那就去新浪后台把测试账号的UID填到网站测试账号栏目里。", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

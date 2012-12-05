@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Threading;
+using System.Collections;
 
 namespace MBook
 {
@@ -115,8 +117,10 @@ namespace MBook
 
             //threadLogin.Start();
 
-            this.DialogResult = DialogResult.OK;
+            loginProgress.Visible = true;
 
+            this.DialogResult = DialogResult.OK;
+            
         }
 
         /// <summary>

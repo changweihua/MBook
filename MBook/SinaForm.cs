@@ -170,7 +170,7 @@ namespace MBook
         {
             if (txtSomething.TextLength == 0)
             {
-                MessageBox.Show(this, "说点什么新鲜事儿呗。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show(this.LookAndFeel, "说点什么新鲜事儿呗。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -342,7 +342,7 @@ namespace MBook
             }
             else
             {
-                MessageBox.Show(this, txt, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show(this.LookAndFeel, txt, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -401,7 +401,7 @@ namespace MBook
 
                     simpleButton1.Enabled = false;
 
-                    MessageBox.Show(this, "图片已附加，发条微博看看吧～", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show(this.LookAndFeel, "图片已附加，发条微博看看吧～", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
