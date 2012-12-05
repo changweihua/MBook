@@ -23,25 +23,52 @@ namespace MonoBookEntity
      * 
      ************************************************************************************/
     /// <summary>
-    /// 九宫格实体类
+    /// 九宫格日记实体类
     /// </summary>
     
     [Table(Name="tbGridDaily")]
     public class GridDaily
     {
-        [Id]
+        /// <summary>
+        /// Guid编号
+        /// </summary>
+        [Id(Name = "gd_guid")]
         public string Guid;
-        [Column]
+
+        /// <summary>
+        /// 标题
+        /// </summary>
+        [Column(Name = "gd_title")]
         public string Title;
-        [Column]
+
+        /// <summary>
+        /// 日期
+        /// </summary>
+        [Column(Name = "gd_date")]
         public string Date;
-        [Column]
+
+        /// <summary>
+        /// 天气
+        /// </summary>
+        [Column(Name = "gd_weather")]
         public string Weather;
-        [Column]
+
+        /// <summary>
+        /// 什么日子
+        /// </summary>
+        [Column(Name = "gd_today")]
         public string Today;
-        [Column]
+
+        /// <summary>
+        /// 谁的生日
+        /// </summary>
+        [Column(Name = "gd_birthday")]
         public string Birthday;
-        [Column]
+
+        /// <summary>
+        /// 其他八个格子的信息
+        /// </summary>
+        [Column(Name="gd_info")]
         public string Info;
     }
 }
