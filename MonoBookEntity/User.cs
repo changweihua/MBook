@@ -28,33 +28,88 @@ namespace MonoBookEntity
     [Table(Name = "tbUser")]
     public class User
     {
-        [Id]
+        /// <summary>
+        /// Guid唯一标识符
+        /// </summary>
+        [Id(Name = "u_guid")]
         public string Guid;
-        [Column]
+
+        /// <summary>
+        /// 电子邮件
+        /// </summary>
+        [Column(Name = "u_email")]
         public string UserEmail;
-        [Column]
+
+        /// <summary>
+        /// 用户名
+        /// </summary>
+        [Column(Name = "u_name")]
         public string UserName;
-        [Column]
+
+        /// <summary>
+        /// 密码
+        /// </summary>
+        [Column(Name = "u_password")]
         public string UserPassword;
-        [Column]
+
+        /// <summary>
+        /// 出生日期
+        /// </summary>
+        [Column(Name = "u_birthday")]
         public DateTime UserBirthday;
-        [Column]
+
+        /// <summary>
+        /// QQ
+        /// </summary>
+        [Column(Name = "u_qq")]
         public string UserQQ;
-        [Column]
+
+        /// <summary>
+        /// VIP级别
+        /// </summary>
+        [Column(Name = "u_vip_type_id")]
         public int UserVipTypeId;
-        [Column]
+
+        /// <summary>
+        /// 会员积分
+        /// </summary>
+        [Column(Name = "u_member_count")]
         public int UserMemberCount;
-        [Column]
+
+        /// <summary>
+        /// 头像
+        /// </summary>
+        [Column(Name = "u_image")]
         public byte[] UserImage;
-        [Column]
+
+        /// <summary>
+        /// 用户流量
+        /// </summary>
+        [Column(Name = "u_flow")]
         public int UserFlow;
-        [Column]
+
+        /// <summary>
+        /// 用户已用流量
+        /// </summary>
+        [Column(Name = "u_used_flow")]
         public int UserUsedFlow;
-        [Column]
+
+        /// <summary>
+        /// 用户个人网站
+        /// </summary>
+        [Column(Name = "u_website")]
         public string UserWebsite;
-        [Column]
+
+        /// <summary>
+        /// 腾讯微博
+        /// </summary>
+        [Column(Name = "u_tencent")]
         public string UserTencent;
-        [Column]
+
+        /// <summary>
+        /// 新浪微博
+        /// </summary>
+        [Column(Name = "u_sina")]
         public string UserSina;
     }
 }
