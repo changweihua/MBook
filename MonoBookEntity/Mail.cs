@@ -26,26 +26,61 @@ namespace MonoBookEntity
     /// 邮件实体类
     /// </summary>
     
-    [Table(Name="")]
+    [Table(Name="tbMail")]
     public class Mail
     {
-        [Id]
+        /// <summary>
+        /// Guid标识符
+        /// </summary>
+        [Id(Name = "m_guid")]
         public string Guid;
-        [Column]
+
+        /// <summary>
+        /// 发件人姓名
+        /// </summary>
+        [Column(Name = "m_from_name")]
         public string FromName;
-        [Column]
+
+        /// <summary>
+        /// 发件人邮箱
+        /// </summary>
+        [Column(Name = "m_from_email")]
         public string FromEmail;
-        [Column]
+
+        /// <summary>
+        /// 发件人邮箱密码
+        /// </summary>
+        [Column(Name = "m_from_password")]
         public string FromPassword;
-        [Column]
+
+        /// <summary>
+        /// 收件人姓名
+        /// </summary>
+        [Column(Name = "m_to_name")]
         public string ToName;
-        [Column]
+
+        /// <summary>
+        /// 收件人邮箱
+        /// </summary>
+        [Column(Name = "m_to_email")]
         public string ToEmail;
-        [Column]
+
+        /// <summary>
+        /// 邮件标题
+        /// </summary>
+        [Column(Name = "m_title")]
         public string EmailTitle;
-        [Column]
+
+        /// <summary>
+        /// 邮件主题
+        /// </summary>
+        [Column(Name = "m_subject")]
         public string EmailSubject;
-        [Column]
+
+        /// <summary>
+        /// 邮件正文
+        /// </summary>
+        [Column(Name = "M_content")]
         public string EmailContent;
     }
 }
