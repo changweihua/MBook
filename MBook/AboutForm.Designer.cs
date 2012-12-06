@@ -58,9 +58,6 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -80,8 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -98,8 +93,7 @@
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
-            this.xtraTabPage2,
-            this.xtraTabPage3});
+            this.xtraTabPage2});
             // 
             // xtraTabPage1
             // 
@@ -257,27 +251,27 @@
             // groupControl6
             // 
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl6.Location = new System.Drawing.Point(674, 40);
+            this.groupControl6.Location = new System.Drawing.Point(674, 39);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(308, 291);
+            this.groupControl6.Size = new System.Drawing.Size(308, 292);
             this.groupControl6.TabIndex = 0;
             this.groupControl6.Text = "重庆文理学院";
             // 
             // groupControl5
             // 
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl5.Location = new System.Drawing.Point(319, 40);
+            this.groupControl5.Location = new System.Drawing.Point(319, 39);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(355, 291);
+            this.groupControl5.Size = new System.Drawing.Size(355, 292);
             this.groupControl5.TabIndex = 0;
             this.groupControl5.Text = "江苏省丹阳市珥陵高级中学";
             // 
             // groupControl4
             // 
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl4.Location = new System.Drawing.Point(2, 40);
+            this.groupControl4.Location = new System.Drawing.Point(2, 39);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(317, 291);
+            this.groupControl4.Size = new System.Drawing.Size(317, 292);
             this.groupControl4.TabIndex = 0;
             this.groupControl4.Text = "江苏省丹阳市珥陵初级中学";
             // 
@@ -363,30 +357,6 @@
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "姓名 ---- 常伟华";
             // 
-            // xtraTabPage3
-            // 
-            this.xtraTabPage3.Controls.Add(this.marqueeProgressBarControl1);
-            this.xtraTabPage3.Controls.Add(this.labelControl15);
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(984, 511);
-            this.xtraTabPage3.Text = "更多";
-            // 
-            // marqueeProgressBarControl1
-            // 
-            this.marqueeProgressBarControl1.EditValue = 0;
-            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(313, 155);
-            this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
-            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(169, 16);
-            this.marqueeProgressBarControl1.TabIndex = 1;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(339, 202);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(96, 14);
-            this.labelControl15.TabIndex = 0;
-            this.labelControl15.Text = "耐心等待 . . . . . .";
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -434,9 +404,6 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            this.xtraTabPage3.ResumeLayout(false);
-            this.xtraTabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,8 +439,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
     }
 }

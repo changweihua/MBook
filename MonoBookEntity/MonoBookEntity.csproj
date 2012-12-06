@@ -46,6 +46,7 @@
     <Compile Include="Contact.cs" />
     <Compile Include="DailyReview.cs" />
     <Compile Include="Folder.cs" />
+    <Compile Include="Grade.cs" />
     <Compile Include="GridDaily.cs" />
     <Compile Include="Index.cs" />
     <Compile Include="Mail.cs" />

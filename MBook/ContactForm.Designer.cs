@@ -33,7 +33,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -58,7 +58,7 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
@@ -76,7 +76,7 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
-            this.groupControl1.Controls.Add(this.buttonEdit1);
+            this.groupControl1.Controls.Add(this.buttonEditAction);
             this.groupControl1.Controls.Add(this.memoEdit1);
             this.groupControl1.Controls.Add(this.dateEdit1);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -106,18 +106,19 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "填完下面的信息，就是一张完整的名片了哟";
             // 
-            // buttonEdit1
+            // buttonEditAction
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(101, 397);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditAction.Location = new System.Drawing.Point(101, 397);
+            this.buttonEditAction.Name = "buttonEditAction";
+            this.buttonEditAction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "点击按钮，保存联系人", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Undo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "觉得信息填的不好吗，没关系，点击，我们从头再来", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "可能我还不够坚定，还没想好，点我，暂时离开", null, null, true)});
-            this.buttonEdit1.Properties.HideSelection = false;
-            this.buttonEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.buttonEdit1.Size = new System.Drawing.Size(511, 18);
-            this.buttonEdit1.TabIndex = 4;
+            this.buttonEditAction.Properties.HideSelection = false;
+            this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.buttonEditAction.Size = new System.Drawing.Size(511, 18);
+            this.buttonEditAction.TabIndex = 4;
+            this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
             // memoEdit1
             // 
@@ -150,6 +151,8 @@
             // 
             this.textEdit2.Location = new System.Drawing.Point(413, 65);
             this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Mask.EditMask = "\\S{1,10}";
+            this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit2.Size = new System.Drawing.Size(199, 21);
             this.textEdit2.TabIndex = 0;
             // 
@@ -173,6 +176,8 @@
             // 
             this.textEdit10.Location = new System.Drawing.Point(101, 296);
             this.textEdit10.Name = "textEdit10";
+            this.textEdit10.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
+            this.textEdit10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit10.Size = new System.Drawing.Size(199, 21);
             this.textEdit10.TabIndex = 0;
             // 
@@ -188,6 +193,8 @@
             // 
             this.textEdit9.Location = new System.Drawing.Point(101, 267);
             this.textEdit9.Name = "textEdit9";
+            this.textEdit9.Properties.Mask.EditMask = "\\d{5,10}";
+            this.textEdit9.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit9.Size = new System.Drawing.Size(199, 21);
             this.textEdit9.TabIndex = 0;
             // 
@@ -211,6 +218,8 @@
             // 
             this.textEdit6.Location = new System.Drawing.Point(101, 209);
             this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Properties.Mask.EditMask = "(http://|https://)?(www\\.)?[a-zA-Z]+\\.[a-zA-Z]+";
+            this.textEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit6.Size = new System.Drawing.Size(199, 21);
             this.textEdit6.TabIndex = 0;
             // 
@@ -226,6 +235,8 @@
             // 
             this.textEdit5.Location = new System.Drawing.Point(101, 180);
             this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Properties.Mask.EditMask = "\\S+@\\S+";
+            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit5.Size = new System.Drawing.Size(199, 21);
             this.textEdit5.TabIndex = 0;
             // 
@@ -241,6 +252,8 @@
             // 
             this.textEdit4.Location = new System.Drawing.Point(101, 152);
             this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
+            this.textEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit4.Size = new System.Drawing.Size(199, 21);
             this.textEdit4.TabIndex = 0;
             // 
@@ -256,6 +269,8 @@
             // 
             this.textEdit7.Location = new System.Drawing.Point(101, 94);
             this.textEdit7.Name = "textEdit7";
+            this.textEdit7.Properties.Mask.EditMask = "\\S{1,100}";
+            this.textEdit7.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit7.Size = new System.Drawing.Size(199, 21);
             this.textEdit7.TabIndex = 0;
             // 
@@ -271,6 +286,9 @@
             // 
             this.textEdit3.Location = new System.Drawing.Point(101, 122);
             this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.Mask.BeepOnError = true;
+            this.textEdit3.Properties.Mask.EditMask = "(\\(\\d\\d\\d\\))?\\d{1,3}-\\d{4}-\\d{4}";
+            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit3.Size = new System.Drawing.Size(199, 21);
             this.textEdit3.TabIndex = 0;
             // 
@@ -308,7 +326,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
@@ -350,6 +368,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
     }
 }

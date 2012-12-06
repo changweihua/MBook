@@ -384,7 +384,7 @@
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1030, 99);
+            this.ribbonControl1.Size = new System.Drawing.Size(1030, 101);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem1);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem4);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
@@ -649,10 +649,10 @@
             // richEditControl1
             // 
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 99);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 101);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1030, 418);
+            this.richEditControl1.Size = new System.Drawing.Size(1030, 416);
             this.richEditControl1.TabIndex = 1;
             this.richEditControl1.Text = "richEditControl1";
             // 

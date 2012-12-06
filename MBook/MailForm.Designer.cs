@@ -34,11 +34,17 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.llBlog = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.llWeibo = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.llEmail = new System.Windows.Forms.LinkLabel();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -61,12 +67,6 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -105,6 +105,19 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "作者信息";
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel3.Location = new System.Drawing.Point(453, 83);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(139, 14);
+            this.linkLabel3.TabIndex = 3;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "http://www.cmono.net";
+            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBlog_LinkClicked);
+            // 
             // llBlog
             // 
             this.llBlog.AutoSize = true;
@@ -117,6 +130,19 @@
             this.llBlog.Text = "http://www.cmono.net";
             this.llBlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.llBlog.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBlog_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel2.Location = new System.Drawing.Point(453, 63);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(147, 14);
+            this.linkLabel2.TabIndex = 3;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "http://weibo.com/cmono";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBlog_LinkClicked);
             // 
             // llWeibo
             // 
@@ -131,6 +157,18 @@
             this.llWeibo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.llWeibo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBlog_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.Location = new System.Drawing.Point(453, 43);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(158, 14);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "changweihua@outlook.com";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // llEmail
             // 
             this.llEmail.AutoSize = true;
@@ -143,6 +181,14 @@
             this.llEmail.Text = "changweihua@outlook.com";
             this.llEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(375, 83);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(72, 14);
+            this.labelControl16.TabIndex = 1;
+            this.labelControl16.Text = "作者网站 ---- ";
+            // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(47, 83);
@@ -151,6 +197,14 @@
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "作者网站 ---- ";
             // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(375, 63);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(72, 14);
+            this.labelControl15.TabIndex = 1;
+            this.labelControl15.Text = "作者微博 ---- ";
+            // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(47, 63);
@@ -158,6 +212,14 @@
             this.labelControl3.Size = new System.Drawing.Size(72, 14);
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "组织机构 ---- ";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(375, 43);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(72, 14);
+            this.labelControl14.TabIndex = 1;
+            this.labelControl14.Text = "作者邮箱 ---- ";
             // 
             // labelControl2
             // 
@@ -304,6 +366,8 @@
             this.buttonEdit4.Name = "buttonEdit4";
             this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.buttonEdit4.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
+            this.buttonEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.buttonEdit4.Size = new System.Drawing.Size(228, 21);
             this.buttonEdit4.TabIndex = 1;
             // 
@@ -313,6 +377,8 @@
             this.buttonEdit1.Name = "buttonEdit1";
             this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.buttonEdit1.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
+            this.buttonEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.buttonEdit1.Size = new System.Drawing.Size(237, 21);
             this.buttonEdit1.TabIndex = 1;
             // 
@@ -363,68 +429,6 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "515813.gif");
             this.imageList1.Images.SetKeyName(1, "20121203081900595_easyicon_cn_48.png");
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(375, 43);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(72, 14);
-            this.labelControl14.TabIndex = 1;
-            this.labelControl14.Text = "作者邮箱 ---- ";
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(375, 63);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(72, 14);
-            this.labelControl15.TabIndex = 1;
-            this.labelControl15.Text = "作者微博 ---- ";
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(375, 83);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(72, 14);
-            this.labelControl16.TabIndex = 1;
-            this.labelControl16.Text = "作者网站 ---- ";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.Location = new System.Drawing.Point(453, 43);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(158, 14);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "changweihua@outlook.com";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel2.Location = new System.Drawing.Point(453, 63);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(147, 14);
-            this.linkLabel2.TabIndex = 3;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "http://weibo.com/cmono";
-            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBlog_LinkClicked);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel3.Location = new System.Drawing.Point(453, 83);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(139, 14);
-            this.linkLabel3.TabIndex = 3;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "http://www.cmono.net";
-            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llBlog_LinkClicked);
             // 
             // MailForm
             // 

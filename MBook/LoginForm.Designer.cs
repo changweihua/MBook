@@ -54,6 +54,8 @@
             this.bePassport.Name = "bePassport";
             this.bePassport.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "清空文本框，重新填写", null, null, true)});
+            this.bePassport.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
+            this.bePassport.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.bePassport.Size = new System.Drawing.Size(238, 21);
             this.bePassport.TabIndex = 0;
             this.bePassport.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bePassport_ButtonClick);
