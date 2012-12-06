@@ -23,14 +23,23 @@ namespace MBook
 
             //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CHS");
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //取消登录程序验证
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
 
-            SystemLoginForm loginForm = new SystemLoginForm();
-            if (loginForm.ShowDialog() == DialogResult.OK)
+            //SystemLoginForm loginForm = new SystemLoginForm();
+            //if (loginForm.ShowDialog() == DialogResult.OK)
+            //{
+            //    Application.Run(new Form1());
+            //}
+
+
+            InitForm initForm = new InitForm();
+            if (initForm.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new Form1());
             }
+           
         }
     }
 }
