@@ -17,5 +17,11 @@
     <Setting Name="Password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">changweihua@outlook.com</Value>
+    </Setting>
+    <Setting Name="userpassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ds</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

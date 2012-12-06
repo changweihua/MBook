@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
-            this.btnReset = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCancel = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
@@ -43,9 +41,14 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonImages = new System.Windows.Forms.ImageList(this.components);
+            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReset = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCancel = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.mpbcStatus = new DevExpress.XtraEditors.MarqueeProgressBarControl();
+            this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
             this.memoEdit3 = new DevExpress.XtraEditors.MemoEdit();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.memoEdit6 = new DevExpress.XtraEditors.MemoEdit();
@@ -80,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit6.Properties)).BeginInit();
@@ -103,7 +108,6 @@
             this.barManager1.AllowCustomization = false;
             this.barManager1.AllowMoveBarOnToolbar = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2,
             this.bar3});
             this.barManager1.Controller = this.barAndDockingController1;
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -119,55 +123,8 @@
             this.barStaticItem1,
             this.barStaticItem2,
             this.barStaticItem3});
-            this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 6;
             this.barManager1.StatusBar = this.bar3;
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.FloatLocation = new System.Drawing.Point(251, 196);
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnSave),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnReset),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancel)});
-            this.bar2.OptionsBar.AllowQuickCustomization = false;
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.btnSave.Border = DevExpress.XtraEditors.Controls.BorderStyles.Default;
-            this.btnSave.Caption = "保存";
-            this.btnSave.Id = 0;
-            this.btnSave.ImageIndex = 0;
-            this.btnSave.LargeImageIndex = 1;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.btnReset.Caption = "重置";
-            this.btnReset.Id = 1;
-            this.btnReset.ImageIndex = 1;
-            this.btnReset.Name = "btnReset";
-            this.btnReset.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.btnCancel.Caption = "取消";
-            this.btnCancel.Id = 2;
-            this.btnCancel.ImageIndex = 2;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // bar3
             // 
@@ -200,7 +157,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(927, 32);
+            this.barDockControlTop.Size = new System.Drawing.Size(927, 0);
             // 
             // barDockControlBottom
             // 
@@ -213,15 +170,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 32);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 559);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 591);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(927, 32);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 559);
+            this.barDockControlRight.Location = new System.Drawing.Point(927, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 591);
             // 
             // barButtonImages
             // 
@@ -230,6 +187,36 @@
             this.barButtonImages.Images.SetKeyName(0, "15765.gif");
             this.barButtonImages.Images.SetKeyName(1, "38365.gif");
             this.barButtonImages.Images.SetKeyName(2, "16971.gif");
+            // 
+            // btnSave
+            // 
+            this.btnSave.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
+            this.btnSave.Border = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this.btnSave.Caption = "保存";
+            this.btnSave.Id = 0;
+            this.btnSave.ImageIndex = 0;
+            this.btnSave.LargeImageIndex = 1;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
+            this.btnReset.Caption = "重置";
+            this.btnReset.Id = 1;
+            this.btnReset.ImageIndex = 1;
+            this.btnReset.Name = "btnReset";
+            this.btnReset.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
+            this.btnCancel.Caption = "取消";
+            this.btnCancel.Id = 2;
+            this.btnCancel.ImageIndex = 2;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barStaticItem1
             // 
@@ -248,6 +235,8 @@
             // groupControl1
             // 
             this.groupControl1.AutoSize = true;
+            this.groupControl1.Controls.Add(this.mpbcStatus);
+            this.groupControl1.Controls.Add(this.buttonEditAction);
             this.groupControl1.Controls.Add(this.memoEdit3);
             this.groupControl1.Controls.Add(this.memoEdit2);
             this.groupControl1.Controls.Add(this.memoEdit6);
@@ -279,11 +268,38 @@
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.dateEdit1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 32);
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(927, 559);
+            this.groupControl1.Size = new System.Drawing.Size(927, 591);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "每日回顾";
+            // 
+            // mpbcStatus
+            // 
+            this.mpbcStatus.EditValue = 0;
+            this.mpbcStatus.Location = new System.Drawing.Point(253, 534);
+            this.mpbcStatus.MenuManager = this.barManager1;
+            this.mpbcStatus.Name = "mpbcStatus";
+            this.mpbcStatus.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.mpbcStatus.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.mpbcStatus.Size = new System.Drawing.Size(411, 24);
+            this.mpbcStatus.TabIndex = 6;
+            this.mpbcStatus.Visible = false;
+            // 
+            // buttonEditAction
+            // 
+            this.buttonEditAction.Location = new System.Drawing.Point(253, 564);
+            this.buttonEditAction.MenuManager = this.barManager1;
+            this.buttonEditAction.Name = "buttonEditAction";
+            this.buttonEditAction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "保存", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "关闭窗体", null, null, true)});
+            this.buttonEditAction.Properties.LookAndFeel.SkinName = "Office 2010 Black";
+            this.buttonEditAction.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.buttonEditAction.Size = new System.Drawing.Size(411, 21);
+            this.buttonEditAction.TabIndex = 5;
+            this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
             // memoEdit3
             // 
@@ -551,6 +567,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit6.Properties)).EndInit();
@@ -575,7 +593,6 @@
         #endregion
 
         private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem btnSave;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
@@ -620,5 +637,7 @@
         private DevExpress.XtraEditors.MemoEdit memoEdit4;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraEditors.MemoEdit memoEdit6;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
+        private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcStatus;
     }
 }

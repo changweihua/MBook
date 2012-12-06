@@ -51,7 +51,7 @@ namespace MBook
                     Login();
                     break;
                 case 1:
-                    this.DialogResult = System.Windows.Forms.DialogResult.No;
+                    this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
                     break;
                 default:
                     this.DialogResult = System.Windows.Forms.DialogResult.None;

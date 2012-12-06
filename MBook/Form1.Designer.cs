@@ -36,6 +36,7 @@
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
@@ -269,7 +270,7 @@
             this.repositoryItemButtonEdit5,
             this.repositoryItemButtonEdit6});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPage3;
+            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(900, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -405,6 +406,7 @@
             // rgbiTools
             // 
             this.rgbiTools.Gallery.AllowHoverImages = true;
+            this.rgbiTools.Gallery.DistanceBetweenItems = 2;
             this.rgbiTools.Gallery.FirstItemVertAlignment = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment.Center;
             galleryItemGroup1.Caption = "Group1";
             galleryItem1.Caption = "日历";
@@ -437,6 +439,12 @@
             galleryItemGroup1});
             this.rgbiTools.Gallery.HoverImages = this.ribbonGallaryHoverImages;
             this.rgbiTools.Gallery.Images = this.ribbonGallaryImages;
+            skinPaddingEdges1.All = 5;
+            skinPaddingEdges1.Bottom = 5;
+            skinPaddingEdges1.Left = 5;
+            skinPaddingEdges1.Right = 5;
+            skinPaddingEdges1.Top = 5;
+            this.rgbiTools.Gallery.ItemImagePadding = skinPaddingEdges1;
             this.rgbiTools.Gallery.RowCount = 2;
             this.rgbiTools.Gallery.ItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.rgbiTools_Gallery_ItemClick);
             this.rgbiTools.Id = 26;
@@ -446,21 +454,14 @@
             // 
             this.ribbonGallaryHoverImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonGallaryHoverImages.ImageStream")));
             this.ribbonGallaryHoverImages.TransparentColor = System.Drawing.Color.Transparent;
-            this.ribbonGallaryHoverImages.Images.SetKeyName(0, "11974.gif");
-            this.ribbonGallaryHoverImages.Images.SetKeyName(1, "581824.gif");
-            this.ribbonGallaryHoverImages.Images.SetKeyName(2, "151.gif");
-            this.ribbonGallaryHoverImages.Images.SetKeyName(3, "1078817.gif");
-            this.ribbonGallaryHoverImages.Images.SetKeyName(4, "1805.gif");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(0, "20121206054414815_easyicon_cn_48.png");
             // 
             // ribbonGallaryImages
             // 
             this.ribbonGallaryImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonGallaryImages.ImageStream")));
             this.ribbonGallaryImages.TransparentColor = System.Drawing.Color.Transparent;
-            this.ribbonGallaryImages.Images.SetKeyName(0, " ");
-            this.ribbonGallaryImages.Images.SetKeyName(1, "530455.gif");
-            this.ribbonGallaryImages.Images.SetKeyName(2, "505027.gif");
-            this.ribbonGallaryImages.Images.SetKeyName(3, "5047.gif");
-            this.ribbonGallaryImages.Images.SetKeyName(4, "1081707.gif");
+            this.ribbonGallaryImages.Images.SetKeyName(0, "MB_0000_calendar (2).png");
+            this.ribbonGallaryImages.Images.SetKeyName(1, "MB_0004_One-Note (2).png");
             // 
             // rgbiSkins
             // 

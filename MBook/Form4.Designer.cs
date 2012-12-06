@@ -39,8 +39,8 @@
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditTitle = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.buttonEdit5 = new DevExpress.XtraEditors.ButtonEdit();
@@ -78,13 +78,14 @@
             this.memoEdit9 = new DevExpress.XtraEditors.MemoEdit();
             this.buttonEdit19 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEdit20 = new DevExpress.XtraEditors.ButtonEdit();
+            this.mpbcStatus = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
@@ -127,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit19.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit20.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -152,8 +154,10 @@
             // 
             // memoEdit1
             // 
+            this.memoEdit1.EditValue = "";
             this.memoEdit1.Location = new System.Drawing.Point(6, 60);
             this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.NullText = "sds";
             this.memoEdit1.Size = new System.Drawing.Size(288, 119);
             this.memoEdit1.TabIndex = 2;
             // 
@@ -165,8 +169,10 @@
             this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit4.Properties.ReadOnly = true;
             this.buttonEdit4.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit4.TabIndex = 0;
+            this.buttonEdit4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit3
             // 
@@ -176,31 +182,37 @@
             this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit3.Properties.ReadOnly = true;
             this.buttonEdit3.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit3.TabIndex = 0;
+            this.buttonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit1
+            // buttonEditAction
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(336, 636);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditAction.Location = new System.Drawing.Point(336, 636);
+            this.buttonEditAction.Name = "buttonEditAction";
+            this.buttonEditAction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "保存", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Undo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "重置", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "取消", null, null, true)});
-            this.buttonEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.buttonEdit1.Size = new System.Drawing.Size(299, 18);
-            this.buttonEdit1.TabIndex = 1;
+            this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.buttonEditAction.Size = new System.Drawing.Size(299, 18);
+            this.buttonEditAction.TabIndex = 1;
+            this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
-            // buttonEdit2
+            // buttonEditTitle
             // 
-            this.buttonEdit2.EditValue = "九宫格日记";
-            this.buttonEdit2.Location = new System.Drawing.Point(13, 13);
-            this.buttonEdit2.Name = "buttonEdit2";
-            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", 45, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", 45, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "清空标题", null, null, true)});
-            this.buttonEdit2.Size = new System.Drawing.Size(947, 21);
-            this.buttonEdit2.TabIndex = 2;
+            this.buttonEditTitle.EditValue = "九宫格日记";
+            this.buttonEditTitle.Location = new System.Drawing.Point(13, 13);
+            this.buttonEditTitle.Name = "buttonEditTitle";
+            this.buttonEditTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", 45, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", 45, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "清空标题", null, null, true)});
+            this.buttonEditTitle.Properties.ReadOnly = true;
+            this.buttonEditTitle.Size = new System.Drawing.Size(947, 21);
+            this.buttonEditTitle.TabIndex = 2;
+            this.buttonEditTitle.ToolTip = "这里是日记的标题";
+            this.buttonEditTitle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl2
             // 
@@ -230,8 +242,10 @@
             this.buttonEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit5.Properties.ReadOnly = true;
             this.buttonEdit5.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit5.TabIndex = 0;
+            this.buttonEdit5.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit6
             // 
@@ -241,8 +255,10 @@
             this.buttonEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit6.Properties.ReadOnly = true;
             this.buttonEdit6.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit6.TabIndex = 0;
+            this.buttonEdit6.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl3
             // 
@@ -272,8 +288,10 @@
             this.buttonEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit7.Properties.ReadOnly = true;
             this.buttonEdit7.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit7.TabIndex = 0;
+            this.buttonEdit7.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit8
             // 
@@ -283,8 +301,10 @@
             this.buttonEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit8.Properties.ReadOnly = true;
             this.buttonEdit8.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit8.TabIndex = 0;
+            this.buttonEdit8.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl4
             // 
@@ -314,8 +334,10 @@
             this.buttonEdit9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit9.Properties.ReadOnly = true;
             this.buttonEdit9.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit9.TabIndex = 0;
+            this.buttonEdit9.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit10
             // 
@@ -325,8 +347,10 @@
             this.buttonEdit10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit10.Properties.ReadOnly = true;
             this.buttonEdit10.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit10.TabIndex = 0;
+            this.buttonEdit10.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl5
             // 
@@ -447,8 +471,10 @@
             this.buttonEdit13.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit13.Properties.ReadOnly = true;
             this.buttonEdit13.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit13.TabIndex = 0;
+            this.buttonEdit13.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit14
             // 
@@ -458,8 +484,10 @@
             this.buttonEdit14.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit14.Properties.ReadOnly = true;
             this.buttonEdit14.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit14.TabIndex = 0;
+            this.buttonEdit14.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl7
             // 
@@ -489,8 +517,10 @@
             this.buttonEdit15.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit15.Properties.ReadOnly = true;
             this.buttonEdit15.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit15.TabIndex = 0;
+            this.buttonEdit15.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit16
             // 
@@ -500,8 +530,10 @@
             this.buttonEdit16.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit16.Properties.ReadOnly = true;
             this.buttonEdit16.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit16.TabIndex = 0;
+            this.buttonEdit16.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl8
             // 
@@ -531,8 +563,10 @@
             this.buttonEdit17.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit17.Properties.ReadOnly = true;
             this.buttonEdit17.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit17.TabIndex = 0;
+            this.buttonEdit17.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit18
             // 
@@ -542,8 +576,10 @@
             this.buttonEdit18.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit18.Properties.ReadOnly = true;
             this.buttonEdit18.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit18.TabIndex = 0;
+            this.buttonEdit18.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl9
             // 
@@ -573,8 +609,10 @@
             this.buttonEdit19.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit19.Properties.ReadOnly = true;
             this.buttonEdit19.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit19.TabIndex = 0;
+            this.buttonEdit19.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEdit20
             // 
@@ -584,16 +622,31 @@
             this.buttonEdit20.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
+            this.buttonEdit20.Properties.ReadOnly = true;
             this.buttonEdit20.Size = new System.Drawing.Size(289, 21);
             this.buttonEdit20.TabIndex = 0;
+            this.buttonEdit20.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            // 
+            // mpbcStatus
+            // 
+            this.mpbcStatus.EditValue = "";
+            this.mpbcStatus.Location = new System.Drawing.Point(660, 630);
+            this.mpbcStatus.Name = "mpbcStatus";
+            this.mpbcStatus.Properties.LookAndFeel.SkinName = "Office 2007 Black";
+            this.mpbcStatus.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.mpbcStatus.Properties.ReadOnly = true;
+            this.mpbcStatus.Size = new System.Drawing.Size(301, 27);
+            this.mpbcStatus.TabIndex = 3;
+            this.mpbcStatus.Visible = false;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 669);
-            this.Controls.Add(this.buttonEdit2);
-            this.Controls.Add(this.buttonEdit1);
+            this.Controls.Add(this.mpbcStatus);
+            this.Controls.Add(this.buttonEditTitle);
+            this.Controls.Add(this.buttonEditAction);
             this.Controls.Add(this.groupControl9);
             this.Controls.Add(this.groupControl8);
             this.Controls.Add(this.groupControl6);
@@ -617,8 +670,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditTitle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
@@ -662,6 +715,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit19.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit20.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -670,8 +724,8 @@
 
         private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditTitle;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit3;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit4;
@@ -712,5 +766,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcStatus;
     }
 }

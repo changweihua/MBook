@@ -73,7 +73,13 @@ namespace MBook
 
         private bool CheckIsLogin()
         {
-            return false;
+            if (string.IsNullOrEmpty(Properties.Settings.Default.username) || string.IsNullOrEmpty(Properties.Settings.Default.userpassword))
+            {
+                return false;
+            }
+            {
+                return true;
+            }
         }
 
         private void InitForm_Load(object sender, EventArgs e)

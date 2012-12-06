@@ -32,11 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl9 = new DevExpress.XtraEditors.GroupControl();
+            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
+            this.groupControl8 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
+            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -58,10 +61,18 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).BeginInit();
+            this.groupControl9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).BeginInit();
+            this.groupControl8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
+            this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
@@ -93,75 +104,114 @@
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPage2,
+            this.xtraTabPage3});
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.memoEdit1);
-            this.xtraTabPage1.Controls.Add(this.labelControl4);
-            this.xtraTabPage1.Controls.Add(this.labelControl2);
-            this.xtraTabPage1.Controls.Add(this.labelControl3);
-            this.xtraTabPage1.Controls.Add(this.labelControl1);
+            this.xtraTabPage1.Controls.Add(this.groupControl9);
+            this.xtraTabPage1.Controls.Add(this.groupControl8);
+            this.xtraTabPage1.Controls.Add(this.groupControl7);
             this.xtraTabPage1.Controls.Add(this.pictureEdit1);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(984, 511);
             this.xtraTabPage1.Text = "关于系统";
             // 
-            // memoEdit1
+            // groupControl9
             // 
-            this.memoEdit1.EditValue = "开发平台 ---- Windows 7 SP1\r\n开发工具 ---- Visual Studio 2010 SP1\r\n开发语言 ---- C# .NET Fram" +
-    "ework 3.5\r\n开发人员 ---- 常伟华\r\n项目地址 ---- https://github.com/CMONO/MBook\r\n项目微博 ---- ht" +
-    "tp://t.qq.com/monobook";
-            this.memoEdit1.Location = new System.Drawing.Point(406, 120);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 13F);
-            this.memoEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
-            this.memoEdit1.Properties.Appearance.Options.UseFont = true;
-            this.memoEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.memoEdit1.Size = new System.Drawing.Size(548, 282);
-            this.memoEdit1.TabIndex = 3;
+            this.groupControl9.Controls.Add(this.memoEdit2);
+            this.groupControl9.Location = new System.Drawing.Point(12, 279);
+            this.groupControl9.Name = "groupControl9";
+            this.groupControl9.Size = new System.Drawing.Size(961, 221);
+            this.groupControl9.TabIndex = 6;
+            this.groupControl9.Text = "功能说明";
             // 
-            // labelControl4
+            // memoEdit2
             // 
-            this.labelControl4.Location = new System.Drawing.Point(406, 92);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 14);
-            this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "产品简介";
+            this.memoEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memoEdit2.EditValue = "文章            ----   记录所学知识\r\n九宫格日记  ----   记录当天发生的事情\r\n日记            ----   记录当天发生" +
+    "的事情\r\n日历            ----   备忘待做的事情";
+            this.memoEdit2.Location = new System.Drawing.Point(2, 24);
+            this.memoEdit2.Name = "memoEdit2";
+            this.memoEdit2.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.memoEdit2.Properties.Appearance.Options.UseFont = true;
+            this.memoEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.memoEdit2.Size = new System.Drawing.Size(957, 195);
+            this.memoEdit2.TabIndex = 0;
             // 
-            // labelControl2
+            // groupControl8
             // 
-            this.labelControl2.Location = new System.Drawing.Point(871, 414);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(83, 14);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "© 2012 - 2013";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(633, 414);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(127, 14);
-            this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "All Copyrights Reserved";
+            this.groupControl8.Controls.Add(this.labelControl1);
+            this.groupControl8.Controls.Add(this.labelControl3);
+            this.groupControl8.Controls.Add(this.labelControl2);
+            this.groupControl8.Location = new System.Drawing.Point(706, 16);
+            this.groupControl8.Name = "groupControl8";
+            this.groupControl8.Size = new System.Drawing.Size(267, 254);
+            this.groupControl8.TabIndex = 5;
+            this.groupControl8.Text = "版权信息";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(406, 414);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.labelControl1.Location = new System.Drawing.Point(71, 48);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(116, 14);
+            this.labelControl1.Size = new System.Drawing.Size(138, 20);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "版权所有  ----  常伟华";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.labelControl3.Location = new System.Drawing.Point(71, 112);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(145, 19);
+            this.labelControl3.TabIndex = 1;
+            this.labelControl3.Text = "All Copyrights Reserved";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.labelControl2.Location = new System.Drawing.Point(85, 78);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(94, 19);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "© 2012 - 2013";
+            // 
+            // groupControl7
+            // 
+            this.groupControl7.Controls.Add(this.memoEdit1);
+            this.groupControl7.Location = new System.Drawing.Point(274, 16);
+            this.groupControl7.Name = "groupControl7";
+            this.groupControl7.Size = new System.Drawing.Size(425, 256);
+            this.groupControl7.TabIndex = 4;
+            this.groupControl7.Text = "开发说明";
+            // 
+            // memoEdit1
+            // 
+            this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memoEdit1.EditValue = "开发平台 ---- Windows 7 SP1\r\n开发工具 ---- Visual Studio 2010 SP1\r\n开发语言 ---- C# .NET Fram" +
+    "ework 3.5\r\n开发人员 ---- 常伟华\r\n项目地址 ---- https://github.com/CMONO/MBook\r\n项目微博 ---- ht" +
+    "tp://t.qq.com/monobook";
+            this.memoEdit1.Location = new System.Drawing.Point(2, 24);
+            this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.memoEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(188)))));
+            this.memoEdit1.Properties.Appearance.Options.UseFont = true;
+            this.memoEdit1.Properties.Appearance.Options.UseForeColor = true;
+            this.memoEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.memoEdit1.Properties.ReadOnly = true;
+            this.memoEdit1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.memoEdit1.Size = new System.Drawing.Size(421, 230);
+            this.memoEdit1.TabIndex = 3;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(10, 95);
+            this.pictureEdit1.Location = new System.Drawing.Point(11, 16);
             this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ReadOnly = true;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(357, 332);
+            this.pictureEdit1.Size = new System.Drawing.Size(256, 256);
             this.pictureEdit1.TabIndex = 0;
             // 
             // xtraTabPage2
@@ -357,6 +407,12 @@
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "姓名 ---- 常伟华";
             // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(984, 511);
+            this.xtraTabPage3.Text = "使用说明";
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -385,7 +441,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).EndInit();
+            this.groupControl9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).EndInit();
+            this.groupControl8.ResumeLayout(false);
+            this.groupControl8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
+            this.groupControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
@@ -418,7 +481,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
@@ -439,5 +501,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
+        private DevExpress.XtraEditors.GroupControl groupControl7;
+        private DevExpress.XtraEditors.GroupControl groupControl8;
+        private DevExpress.XtraEditors.GroupControl groupControl9;
+        private DevExpress.XtraEditors.MemoEdit memoEdit2;
     }
 }

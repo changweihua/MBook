@@ -32,6 +32,134 @@ namespace MBook
         {
         }
 
+
+        /// <summary>
+        /// 检查窗体
+        /// </summary>
+        private bool CheckForm()
+        {
+            var groupControls = this.Controls.Find("groupControl1", false);
+
+            if (groupControls.Length > 0)
+            {
+
+                var collection1 = groupControls[0].Controls;
+
+                for (int i = 0; i < collection1.Count; i++)
+                {
+                    if (collection1[i].GetType().Name == "TextEdit")
+                    {
+                        if ((collection1[i] as TextEdit).EditValue == null)
+                        {
+                            XtraMessageBox.Show(this.LookAndFeel, "必须填写", "信息提示", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                            return false;
+                        }
+                    }
+                    else if (collection1[i].GetType().Name == "DateEdit")
+                    {
+                        if ((collection1[i] as DateEdit).EditValue == null)
+                        {
+                            XtraMessageBox.Show(this.LookAndFeel, "必须填写", "信息提示", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                            return false;
+                        }
+                    }
+                    else if (collection1[i].GetType().Name == "TimeEdit")
+                    {
+                        if ((collection1[i] as TimeEdit).EditValue == null)
+                        {
+                            XtraMessageBox.Show(this.LookAndFeel, "必须填写", "信息提示", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                            return false;
+                        }
+                    }
+                    else if (collection1[i].GetType().Name == "MemoEdit")
+                    {
+                        if ((collection1[i] as MemoEdit).EditValue == null)
+                        {
+                            XtraMessageBox.Show(this.LookAndFeel, "必须填写", "信息提示", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                            return false;
+                        }
+                    }
+                }
+            }
+
+
+            return true;
+        }
+
+
+        /// <summary>
+        /// 设置窗体只读
+        /// </summary>
+        private void SetFormReadonly()
+        {
+            var groupControls = this.Controls.Find("groupControl1", false);
+
+            if (groupControls.Length > 0)
+            {
+
+                var collection1 = groupControls[0].Controls;
+
+                for (int i = 0; i < collection1.Count; i++)
+                {
+                    if (collection1[i].GetType().Name == "TextEdit")
+                    {
+                        (collection1[i] as TextEdit).Properties.ReadOnly = true;
+                    }
+                    else if (collection1[i].GetType().Name == "DateEdit")
+                    {
+                        (collection1[i] as DateEdit).Properties.ReadOnly = true;
+                    }
+                    else if (collection1[i].GetType().Name == "TimeEdit")
+                    {
+                        (collection1[i] as TimeEdit).Properties.ReadOnly = true;
+                    }
+                    else if (collection1[i].GetType().Name == "MemoEdit")
+                    {
+                        (collection1[i] as MemoEdit).Properties.ReadOnly = true;
+                    }
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// 操作按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonEditAction_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int index = e.Button.Index;
+
+            switch (index)
+            {
+                case 0:
+                    AddDailyReview();
+                    break;
+                case 1:
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+
+        /// <summary>
+        /// 保存每日回顾
+        /// </summary>
+        private void AddDailyReview()
+        {
+            if (CheckForm())
+            {
+                SetFormReadonly();
+                mpbcStatus.Location = buttonEditAction.Location;
+                buttonEditAction.Visible = false;
+                mpbcStatus.Visible = true;
+            }
+        }
+
     }
 
     #region RichEditControl帮助类

@@ -37,6 +37,7 @@
             // mpbcInitStatus
             // 
             this.mpbcInitStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mpbcInitStatus.EditValue = 0;
             this.mpbcInitStatus.Location = new System.Drawing.Point(0, 358);
             this.mpbcInitStatus.Name = "mpbcInitStatus";
             this.mpbcInitStatus.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
@@ -48,9 +49,10 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(289, 127);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("时尚中黑简体", 15F);
+            this.labelControl1.Location = new System.Drawing.Point(310, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(72, 14);
+            this.labelControl1.Size = new System.Drawing.Size(140, 21);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "正在启动......";
             // 
