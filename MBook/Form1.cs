@@ -438,5 +438,33 @@ namespace MBook
             this.Activate();
         }
 
+        private void tsmiExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void tsmiAbout_Click(object sender, EventArgs e)
+        {
+            using (AboutForm aboutForm = new AboutForm())
+            {
+                aboutForm.ShowInTaskbar = true;
+                aboutForm.ShowDialog();
+            }
+        }
+
+        private void tsmiShow_Click(object sender, EventArgs e)
+        {
+            notifyIcon1_DoubleClick(sender, e);
+            //if (this.WindowState == FormWindowState.Minimized)
+            //    this.WindowState = FormWindowState.Maximized;
+
+            //// Activate the form.
+            //this.Show();
+            //this.ShowInTaskbar = true;
+            //this.notifyIcon1.Visible = false;
+            //this.Activate();
+        }
+
     }
 }
