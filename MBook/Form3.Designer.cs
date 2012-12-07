@@ -297,8 +297,8 @@
             this.buttonEditAction.Properties.LookAndFeel.SkinName = "Office 2010 Black";
             this.buttonEditAction.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.buttonEditAction.Size = new System.Drawing.Size(411, 21);
-            this.buttonEditAction.TabIndex = 5;
+            this.buttonEditAction.Size = new System.Drawing.Size(411, 18);
+            this.buttonEditAction.TabIndex = 15;
             this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
             // memoEdit3
@@ -306,35 +306,35 @@
             this.memoEdit3.Location = new System.Drawing.Point(510, 303);
             this.memoEdit3.Name = "memoEdit3";
             this.memoEdit3.Size = new System.Drawing.Size(400, 89);
-            this.memoEdit3.TabIndex = 4;
+            this.memoEdit3.TabIndex = 11;
             // 
             // memoEdit2
             // 
             this.memoEdit2.Location = new System.Drawing.Point(21, 303);
             this.memoEdit2.Name = "memoEdit2";
             this.memoEdit2.Size = new System.Drawing.Size(400, 89);
-            this.memoEdit2.TabIndex = 4;
+            this.memoEdit2.TabIndex = 10;
             // 
             // memoEdit6
             // 
             this.memoEdit6.Location = new System.Drawing.Point(510, 494);
             this.memoEdit6.Name = "memoEdit6";
             this.memoEdit6.Size = new System.Drawing.Size(400, 49);
-            this.memoEdit6.TabIndex = 4;
+            this.memoEdit6.TabIndex = 14;
             // 
             // memoEdit5
             // 
             this.memoEdit5.Location = new System.Drawing.Point(21, 494);
             this.memoEdit5.Name = "memoEdit5";
             this.memoEdit5.Size = new System.Drawing.Size(400, 49);
-            this.memoEdit5.TabIndex = 4;
+            this.memoEdit5.TabIndex = 13;
             // 
             // memoEdit4
             // 
             this.memoEdit4.Location = new System.Drawing.Point(21, 420);
             this.memoEdit4.Name = "memoEdit4";
             this.memoEdit4.Size = new System.Drawing.Size(889, 49);
-            this.memoEdit4.TabIndex = 4;
+            this.memoEdit4.TabIndex = 12;
             // 
             // memoEdit1
             // 
@@ -342,7 +342,7 @@
             this.memoEdit1.MenuManager = this.barManager1;
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Size = new System.Drawing.Size(889, 89);
-            this.memoEdit1.TabIndex = 4;
+            this.memoEdit1.TabIndex = 9;
             // 
             // timeEdit2
             // 
@@ -352,7 +352,7 @@
             this.timeEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.timeEdit2.Size = new System.Drawing.Size(250, 21);
-            this.timeEdit2.TabIndex = 3;
+            this.timeEdit2.TabIndex = 7;
             // 
             // timeEdit1
             // 
@@ -363,28 +363,28 @@
             this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.timeEdit1.Size = new System.Drawing.Size(250, 21);
-            this.timeEdit1.TabIndex = 3;
+            this.timeEdit1.TabIndex = 6;
             // 
             // textEdit3
             // 
             this.textEdit3.Location = new System.Drawing.Point(21, 92);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(250, 21);
-            this.textEdit3.TabIndex = 2;
+            this.textEdit3.TabIndex = 3;
             // 
             // textEdit6
             // 
             this.textEdit6.Location = new System.Drawing.Point(651, 140);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(250, 21);
-            this.textEdit6.TabIndex = 2;
+            this.textEdit6.TabIndex = 8;
             // 
             // textEdit5
             // 
             this.textEdit5.Location = new System.Drawing.Point(651, 92);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(250, 21);
-            this.textEdit5.TabIndex = 2;
+            this.textEdit5.TabIndex = 5;
             // 
             // textEdit2
             // 
@@ -398,7 +398,7 @@
             this.textEdit4.Location = new System.Drawing.Point(336, 92);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(250, 21);
-            this.textEdit4.TabIndex = 2;
+            this.textEdit4.TabIndex = 4;
             // 
             // textEdit1
             // 
@@ -406,7 +406,7 @@
             this.textEdit1.MenuManager = this.barManager1;
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(250, 21);
-            this.textEdit1.TabIndex = 2;
+            this.textEdit1.TabIndex = 1;
             // 
             // labelControl10
             // 

@@ -37,5 +37,10 @@ namespace MBook
         {
             DevExpress.Accessibility.AccLocalizer.Active = new DevExpress.LocalizationCHS.DevExpressUtilsLocalizationCHS();
         }
+
+        private void fileSaveItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show(this.richEditControl1.MhtText);
+        }
     }
 }

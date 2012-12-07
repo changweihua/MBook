@@ -187,14 +187,14 @@
             this.tableDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableDesignRibbonPage();
             this.tableStylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup();
             this.tableDrawBordersRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableDrawBordersRibbonPageGroup();
+            this.fileRibbonPage1 = new DevExpress.XtraRichEdit.UI.FileRibbonPage();
+            this.commonRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup();
             this.homeRibbonPage1 = new DevExpress.XtraRichEdit.UI.HomeRibbonPage();
             this.clipboardRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup();
             this.fontRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
             this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
             this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
             this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
-            this.fileRibbonPage1 = new DevExpress.XtraRichEdit.UI.FileRibbonPage();
-            this.commonRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup();
             this.insertRibbonPage1 = new DevExpress.XtraRichEdit.UI.InsertRibbonPage();
             this.pagesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup();
             this.tablesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup();
@@ -368,8 +368,8 @@
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.homeRibbonPage1,
             this.fileRibbonPage1,
+            this.homeRibbonPage1,
             this.insertRibbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemBorderLineStyle1,
@@ -378,13 +378,12 @@
             this.repositoryItemRichEditFontSizeEdit1,
             this.repositoryItemRichEditStyleEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.homeRibbonPage1;
+            this.ribbonControl1.SelectedPage = this.insertRibbonPage1;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
+            this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1030, 101);
+            this.ribbonControl1.Size = new System.Drawing.Size(1030, 124);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem1);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem4);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
@@ -397,6 +396,7 @@
             this.fileSaveItem1.Id = 3;
             this.fileSaveItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("fileSaveItem1.LargeGlyph")));
             this.fileSaveItem1.Name = "fileSaveItem1";
+            this.fileSaveItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.fileSaveItem1_ItemClick);
             // 
             // quickPrintItem1
             // 
@@ -648,13 +648,16 @@
             // 
             // richEditControl1
             // 
+            this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 101);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 124);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1030, 416);
+            this.richEditControl1.Options.Behavior.Drag = DevExpress.XtraRichEdit.DocumentCapability.Enabled;
+            this.richEditControl1.Options.Behavior.Drop = DevExpress.XtraRichEdit.DocumentCapability.Enabled;
+            this.richEditControl1.Options.Import.FallbackFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
+            this.richEditControl1.Size = new System.Drawing.Size(1030, 393);
             this.richEditControl1.TabIndex = 1;
-            this.richEditControl1.Text = "richEditControl1";
             // 
             // changeTableBorderLineWeightItem1
             // 
@@ -1619,6 +1622,25 @@
             this.tableDrawBordersRibbonPageGroup1.RichEditControl = this.richEditControl1;
             this.tableDrawBordersRibbonPageGroup1.Text = "绘图边框";
             // 
+            // fileRibbonPage1
+            // 
+            this.fileRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.commonRibbonPageGroup1});
+            this.fileRibbonPage1.Name = "fileRibbonPage1";
+            this.fileRibbonPage1.Text = "文件";
+            // 
+            // commonRibbonPageGroup1
+            // 
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
+            this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
+            this.commonRibbonPageGroup1.RichEditControl = this.richEditControl1;
+            this.commonRibbonPageGroup1.Text = "公共";
+            // 
             // homeRibbonPage1
             // 
             this.homeRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1695,25 +1717,6 @@
             this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
             this.editingRibbonPageGroup1.RichEditControl = this.richEditControl1;
             this.editingRibbonPageGroup1.Text = "编辑";
-            // 
-            // fileRibbonPage1
-            // 
-            this.fileRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.commonRibbonPageGroup1});
-            this.fileRibbonPage1.Name = "fileRibbonPage1";
-            this.fileRibbonPage1.Text = "文件";
-            // 
-            // commonRibbonPageGroup1
-            // 
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
-            this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
-            this.commonRibbonPageGroup1.RichEditControl = this.richEditControl1;
-            this.commonRibbonPageGroup1.Text = "公共";
             // 
             // insertRibbonPage1
             // 
@@ -1925,6 +1928,7 @@
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Form2";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -1941,7 +1945,6 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
         private DevExpress.XtraRichEdit.UI.FileSaveItem fileSaveItem1;
         private DevExpress.XtraRichEdit.UI.QuickPrintItem quickPrintItem1;
         private DevExpress.XtraRichEdit.UI.PrintItem printItem1;
@@ -2113,5 +2116,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
     }
 }

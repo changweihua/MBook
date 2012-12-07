@@ -88,7 +88,7 @@ namespace MBook
                 }
 
             }
-
+            radioGroup1.Enabled = !radioGroup1.Enabled;
             mpbcSendStatus.Visible = !mpbcSendStatus.Visible;
             buttonEditAction.Enabled = !buttonEditAction.Enabled;
 
@@ -100,39 +100,70 @@ namespace MBook
         /// </summary>
         private void SendMail()
         {
-            //if (CheckForm())
-            //{
+
+            if (CheckForm())
+            {
                 SetControlStatus();
-                //mpbcSendStatus.Visible = true;
-                //buttonEditAction.Enabled = false;
-                Thread thread = new Thread(new ThreadStart(() => {
+
+                string server = this.radioGroup1.Properties.Items[this.radioGroup1.SelectedIndex].Value.ToString();
+                string mailFrom = buttonEditMailFrom.EditValue.ToString();
+                string mailFromName = buttonEditMailFromName.EditValue.ToString();
+                string mailFromPassword = buttonEditMailFromPassword.EditValue.ToString();
+                string mailTo = buttonEditMailTo.EditValue.ToString();
+                string mailToName = buttonEditMailToName.EditValue.ToString();
+                string mailTitle = buttonEditMailTitle.EditValue.ToString();
+                string mailSubject = memoEditMailSubject.EditValue.ToString();
+                string mailContent = memoEditMailContent.EditValue.ToString();
+
+
+                Thread thread = new Thread(new ThreadStart(() =>
+                {
                     try
                     {
                         MailHelper mailHelper = Singleton<MailHelper>.Instance;
-                        mailHelper.SendMail("smtp.yeah.net", 25, "dyelcwh@yeah.com", "danyang%%huazai", "monobook", "ceshi", "ceshineirong", "dyelcwh@163.com", "mamager");
-
-                        string msg = mailHelper.Msg;
-                        bool result = mailHelper.Result;
-
-                        if (result)
+                        //  mailHelper.SendMail("smtp.yeah.net", 25, "dyelcwh@yeah.net", "danyang%%huazai", "monobook", "ceshi", "ceshineirong", "dyelcwh@163.com", "mamager");
+                        //mailHelper.SendMailAsync("smtp.yeah.net", 25, "dyelcwh@yeah.net", "************", "monobook", "ceshi", "ceshineirong", "dyelcwh@163.com", "mamager", (sender, e) =>
+                        mailHelper.SendMailAsync(server, 25, mailFrom, mailFromPassword, mailFromName, mailTitle, mailSubject + mailContent, mailTo, mailToName, (sender, e) =>
                         {
+                            string msg = mailHelper.Message;
+                            MailResult result = mailHelper.Result;
+
+                            try
+                            {
+                                if (e.Cancelled)
+                                {
+                                    msg = "发送已取消！";
+                                    result = MailResult.Cancel;
+                                }
+                                if (e.Error != null)
+                                {
+                                    result = MailResult.Fail;
+                                    msg = "邮件发送失败！" + "\n" + "技术信息:\n" + e.ToString();
+                                }
+                                else
+                                {
+                                    result = MailResult.Success;
+                                    msg = "邮件成功发出!";
+                                }
+                            }
+                            catch (Exception Ex)
+                            {
+                                result = MailResult.Fail;
+                                msg = "邮件发送失败！" + "\n" + "技术信息:\n" + Ex.Message;
+                            }
+
                             SendComplete(result, msg);
-                        }
-                        else
-                        {
-                            SendComplete(result, msg);
-                        }
+                        });
+
                     }
                     catch (Exception ex)
                     {
-                        SendComplete(false, ex.Message);
+                        SendComplete(MailResult.Unknow, ex.Message);
                     }
-                   
 
                 }));
                 thread.Start();
-
-            //}
+            }
         }
 
 
@@ -147,7 +178,7 @@ namespace MBook
             if (groupControls.Length > 0)
             {
                 var collection = groupControls[0].Controls;
-                SetControlStatus();
+                
                 for (int i = 0; i < collection.Count; i++)
                 {
                     if (collection[i].GetType().Name == "ButtonEdit")
@@ -167,7 +198,11 @@ namespace MBook
                         }
                     }
                 }
-
+                if (radioGroup1.SelectedIndex < 0)
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "必须选择", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
             }
 
             return true;
@@ -177,7 +212,7 @@ namespace MBook
         /// <summary>
         /// 发送完毕
         /// </summary>
-        private void SendComplete(bool success, string msg)
+        private void SendComplete(MailResult success, string msg)
         {
             if (mpbcSendStatus.InvokeRequired)
             {
@@ -190,7 +225,15 @@ namespace MBook
             {
                 //mpbcSendStatus.Visible = false;
                 SetControlStatus();
-                XtraMessageBox.Show(this.LookAndFeel, msg, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (success == MailResult.Success)
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, msg, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, msg, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
             }
         }
 

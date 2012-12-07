@@ -36,23 +36,23 @@ namespace EnterpriseObjects
         MailMessage mailMessage = null;
         FileStream fStream = null;//附件文件流
 
-        private bool result = false;//发送结果
+        private MailResult mailResult = MailResult.Unknow;//发送结果
 
-        public bool Result
+        public MailResult Result
         {
             get
             {
-                return result;
+               return  this.mailResult;
             }
         }
 
-        private string msg;
+        private string message;
 
-        public string Msg
+        public string Message
         {
             get
             {
-                return this.msg;
+                return this.message;
             }
         }
 
@@ -67,9 +67,11 @@ namespace EnterpriseObjects
         {
             smtpClient = new SmtpClient();
             //指定SMTP服务面，QQ邮箱为smtp.qq.com
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtpClient.Host = serverHost;
             smtpClient.Port = port;
-            smtpClient.Timeout = 0;
+           // smtpClient.Timeout = 0;
         }
 
         #endregion
@@ -148,39 +150,79 @@ namespace EnterpriseObjects
             }
             //添加附件
             //注册邮件发送完毕后的处理事件
-            smtpClient.SendCompleted += new SendCompletedEventHandler(smtpClient_SendCompleted);
-            //开始发送
-            smtpClient.Send(mailMessage);
+            //mailMessage.DeliveryNotificationOptions = DeliveryNotificationOptions.Delay;
+
+            //smtpClient.Send(mailMessage);
+
+            //mailResult = MailResult.Success;
+            //message = "发送成功";
         }
 
+
         #endregion
+
+        /// <summary>
+        /// 异步发送邮件
+        /// </summary>
+        /// <param name="CompleteMethod"></param>
+        public void SendMailAsync(string serverHost, int port, string mailAddress, string mailPwd, string mailFromName, string subject, string mailMessageBody, string mailTo, string mailToName, SendCompletedEventHandler CompleteMethod)
+        {
+            mailMessage = new MailMessage();
+            SetSmtpClient(serverHost, port);
+            SetAddressFrom(mailAddress, mailPwd, mailFromName);
+            //清空历史发送信息
+            if (mailMessage.To.Count > 0)
+            {
+                mailMessage.To.Clear();
+            }
+            //添加发件人，可添加多个
+            mailMessage.To.Add(new MailAddress(mailTo, mailToName, Encoding.UTF8));
+            //发件人邮箱
+            mailMessage.From = mailFrom;
+            //邮件主题
+            mailMessage.Subject = subject;
+            mailMessage.SubjectEncoding = Encoding.UTF8;
+            //邮件正文
+            mailMessage.Body = mailMessageBody;
+            mailMessage.BodyEncoding = Encoding.UTF8;
+            //清空历史附件
+            if (mailMessage.Attachments.Count > 0)
+            {
+                mailMessage.Attachments.Clear();
+            }
+            mailMessage.DeliveryNotificationOptions = DeliveryNotificationOptions.Delay;
+            smtpClient.SendCompleted += new SendCompletedEventHandler(CompleteMethod);
+            //开始发送
+            smtpClient.SendAsync(mailMessage, mailMessage.Subject);
+        }
 
         #region 发送邮件后所处理的函数
 
         private void smtpClient_SendCompleted(object sender, AsyncCompletedEventArgs e)
         {
+
             try
             {
                 if (e.Cancelled)
                 {
-                    msg = "发送已取消！";
-                    result = false;
+                    message = "发送已取消！";
+                    mailResult = MailResult.Cancel;
                 }
                 if (e.Error != null)
                 {
-                    result = false;
-                    msg = "邮件发送失败！" + "\n" + "技术信息:\n" + e.ToString();
+                    mailResult = MailResult.Fail;
+                    message = "邮件发送失败！" + "\n" + "技术信息:\n" + e.ToString();
                 }
                 else
                 {
-                    result = true;
-                    msg = "邮件成功发出!";
+                    mailResult = MailResult.Success;
+                    message = "邮件成功发出!";
                 }
             }
             catch (Exception Ex)
             {
-                result = false;
-                msg = "邮件发送失败！" + "\n" + "技术信息:\n" + Ex.Message;
+                mailResult = MailResult.Fail;
+                message = "邮件发送失败！" + "\n" + "技术信息:\n" + Ex.Message;
             }
 
         }

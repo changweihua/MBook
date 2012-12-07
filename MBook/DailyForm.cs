@@ -27,7 +27,7 @@ namespace MBook
      * 修 改 人:
      * 
      ************************************************************************************/
-    public partial class DailyForm : RibbonForm
+    public partial class DailyForm : XtraForm
     {
         public DailyForm()
         {
@@ -37,5 +37,37 @@ namespace MBook
         private void DailyForm_Load(object sender, EventArgs e)
         {
         }
+
+        private void barButtonClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void barButtonClear_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.richEditControl1.ResetText();
+        }
+
+        private void barButtonUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.richEditControl1.CanUndo)
+            {
+                this.richEditControl1.Undo();
+            }
+        }
+
+        private void barButtonRedo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.richEditControl1.CanRedo)
+            {
+                this.richEditControl1.Redo();
+            }
+        }
+
+        private void richEditControl1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
     }
 }

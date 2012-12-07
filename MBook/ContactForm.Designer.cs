@@ -56,6 +56,8 @@
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
@@ -71,11 +73,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
+            this.groupControl1.Controls.Add(this.pictureEdit1);
+            this.groupControl1.Controls.Add(this.labelControl12);
             this.groupControl1.Controls.Add(this.buttonEditAction);
             this.groupControl1.Controls.Add(this.memoEdit1);
             this.groupControl1.Controls.Add(this.dateEdit1);
@@ -117,7 +122,7 @@
             this.buttonEditAction.Properties.HideSelection = false;
             this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.buttonEditAction.Size = new System.Drawing.Size(511, 18);
-            this.buttonEditAction.TabIndex = 4;
+            this.buttonEditAction.TabIndex = 12;
             this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
             // memoEdit1
@@ -125,7 +130,7 @@
             this.memoEdit1.Location = new System.Drawing.Point(101, 327);
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Size = new System.Drawing.Size(511, 64);
-            this.memoEdit1.TabIndex = 3;
+            this.memoEdit1.TabIndex = 10;
             // 
             // dateEdit1
             // 
@@ -137,7 +142,7 @@
             this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEdit1.Size = new System.Drawing.Size(199, 21);
-            this.dateEdit1.TabIndex = 2;
+            this.dateEdit1.TabIndex = 7;
             // 
             // labelControl2
             // 
@@ -154,7 +159,7 @@
             this.textEdit2.Properties.Mask.EditMask = "\\S{1,10}";
             this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit2.Size = new System.Drawing.Size(199, 21);
-            this.textEdit2.TabIndex = 0;
+            this.textEdit2.TabIndex = 1;
             // 
             // labelControl11
             // 
@@ -179,7 +184,7 @@
             this.textEdit10.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
             this.textEdit10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit10.Size = new System.Drawing.Size(199, 21);
-            this.textEdit10.TabIndex = 0;
+            this.textEdit10.TabIndex = 9;
             // 
             // labelControl9
             // 
@@ -196,7 +201,7 @@
             this.textEdit9.Properties.Mask.EditMask = "\\d{5,10}";
             this.textEdit9.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit9.Size = new System.Drawing.Size(199, 21);
-            this.textEdit9.TabIndex = 0;
+            this.textEdit9.TabIndex = 8;
             // 
             // labelControl8
             // 
@@ -221,7 +226,7 @@
             this.textEdit6.Properties.Mask.EditMask = "(http://|https://)?(www\\.)?[a-zA-Z]+\\.[a-zA-Z]+";
             this.textEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit6.Size = new System.Drawing.Size(199, 21);
-            this.textEdit6.TabIndex = 0;
+            this.textEdit6.TabIndex = 6;
             // 
             // labelControl5
             // 
@@ -238,7 +243,7 @@
             this.textEdit5.Properties.Mask.EditMask = "\\S+@\\S+";
             this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit5.Size = new System.Drawing.Size(199, 21);
-            this.textEdit5.TabIndex = 0;
+            this.textEdit5.TabIndex = 5;
             // 
             // labelControl4
             // 
@@ -255,7 +260,7 @@
             this.textEdit4.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
             this.textEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit4.Size = new System.Drawing.Size(199, 21);
-            this.textEdit4.TabIndex = 0;
+            this.textEdit4.TabIndex = 4;
             // 
             // labelControl7
             // 
@@ -272,7 +277,7 @@
             this.textEdit7.Properties.Mask.EditMask = "\\S{1,100}";
             this.textEdit7.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit7.Size = new System.Drawing.Size(199, 21);
-            this.textEdit7.TabIndex = 0;
+            this.textEdit7.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -290,7 +295,7 @@
             this.textEdit3.Properties.Mask.EditMask = "(\\(\\d\\d\\d\\))?\\d{1,3}-\\d{4}-\\d{4}";
             this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.textEdit3.Size = new System.Drawing.Size(199, 21);
-            this.textEdit3.TabIndex = 0;
+            this.textEdit3.TabIndex = 3;
             // 
             // labelControl1
             // 
@@ -306,6 +311,22 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(199, 21);
             this.textEdit1.TabIndex = 0;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(369, 96);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(24, 14);
+            this.labelControl12.TabIndex = 5;
+            this.labelControl12.Text = "头像";
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(413, 96);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Size = new System.Drawing.Size(199, 162);
+            this.pictureEdit1.TabIndex = 11;
             // 
             // ContactForm
             // 
@@ -339,6 +360,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +391,7 @@
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
     }
 }

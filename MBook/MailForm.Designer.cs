@@ -48,19 +48,20 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.memoEditMailSubject = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditMailContent = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonEdit7 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit5 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditMailTitle = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditMailToName = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditMailFromPassword = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditMailTo = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditMailFrom = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditMailFromName = new DevExpress.XtraEditors.ButtonEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -73,14 +74,15 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditMailSubject.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditMailContent.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailTitle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailToName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailFromPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailFromName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
@@ -245,19 +247,20 @@
             // groupControl2
             // 
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
-            this.groupControl2.Controls.Add(this.memoEdit2);
-            this.groupControl2.Controls.Add(this.memoEdit1);
+            this.groupControl2.Controls.Add(this.radioGroup1);
+            this.groupControl2.Controls.Add(this.memoEditMailSubject);
+            this.groupControl2.Controls.Add(this.memoEditMailContent);
             this.groupControl2.Controls.Add(this.labelControl13);
             this.groupControl2.Controls.Add(this.labelControl12);
             this.groupControl2.Controls.Add(this.labelControl11);
             this.groupControl2.Controls.Add(this.labelControl10);
             this.groupControl2.Controls.Add(this.labelControl7);
-            this.groupControl2.Controls.Add(this.buttonEdit7);
-            this.groupControl2.Controls.Add(this.buttonEdit5);
-            this.groupControl2.Controls.Add(this.buttonEdit3);
-            this.groupControl2.Controls.Add(this.buttonEdit4);
-            this.groupControl2.Controls.Add(this.buttonEdit1);
-            this.groupControl2.Controls.Add(this.buttonEdit2);
+            this.groupControl2.Controls.Add(this.buttonEditMailTitle);
+            this.groupControl2.Controls.Add(this.buttonEditMailToName);
+            this.groupControl2.Controls.Add(this.buttonEditMailFromPassword);
+            this.groupControl2.Controls.Add(this.buttonEditMailTo);
+            this.groupControl2.Controls.Add(this.buttonEditMailFrom);
+            this.groupControl2.Controls.Add(this.buttonEditMailFromName);
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Controls.Add(this.labelControl9);
             this.groupControl2.Controls.Add(this.labelControl6);
@@ -269,19 +272,34 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "发件箱";
             // 
-            // memoEdit2
+            // radioGroup1
             // 
-            this.memoEdit2.Location = new System.Drawing.Point(47, 203);
-            this.memoEdit2.Name = "memoEdit2";
-            this.memoEdit2.Size = new System.Drawing.Size(680, 53);
-            this.memoEdit2.TabIndex = 5;
+            this.radioGroup1.EditValue = "smtp.163.com";
+            this.radioGroup1.Location = new System.Drawing.Point(293, 48);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("smtp.163.com", "163.com"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("smtp.yeah.net", "yeah.net"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("smtp.qq.com", "qq.com")});
+            this.radioGroup1.Properties.LookAndFeel.SkinName = "Office 2010 Black";
+            this.radioGroup1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.radioGroup1.Size = new System.Drawing.Size(434, 31);
+            this.radioGroup1.TabIndex = 6;
             // 
-            // memoEdit1
+            // memoEditMailSubject
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(47, 283);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(680, 189);
-            this.memoEdit1.TabIndex = 3;
+            this.memoEditMailSubject.Location = new System.Drawing.Point(47, 203);
+            this.memoEditMailSubject.Name = "memoEditMailSubject";
+            this.memoEditMailSubject.Size = new System.Drawing.Size(680, 53);
+            this.memoEditMailSubject.TabIndex = 6;
+            // 
+            // memoEditMailContent
+            // 
+            this.memoEditMailContent.Location = new System.Drawing.Point(47, 283);
+            this.memoEditMailContent.Name = "memoEditMailContent";
+            this.memoEditMailContent.Size = new System.Drawing.Size(680, 189);
+            this.memoEditMailContent.TabIndex = 7;
             // 
             // labelControl13
             // 
@@ -323,63 +341,64 @@
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "发件人名称";
             // 
-            // buttonEdit7
+            // buttonEditMailTitle
             // 
-            this.buttonEdit7.Location = new System.Drawing.Point(137, 148);
-            this.buttonEdit7.Name = "buttonEdit7";
-            this.buttonEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditMailTitle.Location = new System.Drawing.Point(137, 148);
+            this.buttonEditMailTitle.Name = "buttonEditMailTitle";
+            this.buttonEditMailTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.buttonEdit7.Size = new System.Drawing.Size(590, 21);
-            this.buttonEdit7.TabIndex = 1;
+            this.buttonEditMailTitle.Size = new System.Drawing.Size(590, 21);
+            this.buttonEditMailTitle.TabIndex = 5;
             // 
-            // buttonEdit5
+            // buttonEditMailToName
             // 
-            this.buttonEdit5.Location = new System.Drawing.Point(137, 117);
-            this.buttonEdit5.Name = "buttonEdit5";
-            this.buttonEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditMailToName.Location = new System.Drawing.Point(137, 117);
+            this.buttonEditMailToName.Name = "buttonEditMailToName";
+            this.buttonEditMailToName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.buttonEdit5.Size = new System.Drawing.Size(237, 21);
-            this.buttonEdit5.TabIndex = 1;
+            this.buttonEditMailToName.Size = new System.Drawing.Size(237, 21);
+            this.buttonEditMailToName.TabIndex = 3;
             // 
-            // buttonEdit3
+            // buttonEditMailFromPassword
             // 
-            this.buttonEdit3.Location = new System.Drawing.Point(499, 85);
-            this.buttonEdit3.Name = "buttonEdit3";
-            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditMailFromPassword.Location = new System.Drawing.Point(499, 85);
+            this.buttonEditMailFromPassword.Name = "buttonEditMailFromPassword";
+            this.buttonEditMailFromPassword.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.buttonEdit3.Size = new System.Drawing.Size(228, 21);
-            this.buttonEdit3.TabIndex = 1;
+            this.buttonEditMailFromPassword.Properties.PasswordChar = '*';
+            this.buttonEditMailFromPassword.Size = new System.Drawing.Size(228, 21);
+            this.buttonEditMailFromPassword.TabIndex = 2;
             // 
-            // buttonEdit4
+            // buttonEditMailTo
             // 
-            this.buttonEdit4.Location = new System.Drawing.Point(499, 117);
-            this.buttonEdit4.Name = "buttonEdit4";
-            this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditMailTo.Location = new System.Drawing.Point(499, 117);
+            this.buttonEditMailTo.Name = "buttonEditMailTo";
+            this.buttonEditMailTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.buttonEdit4.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
-            this.buttonEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.buttonEdit4.Size = new System.Drawing.Size(228, 21);
-            this.buttonEdit4.TabIndex = 1;
+            this.buttonEditMailTo.Properties.Mask.EditMask = "([a-zA-Z0-9]+([a-zA-Z0-9]\\.)?)@([a-zA-Z0-9]+\\.)+[a-zA-Z]+";
+            this.buttonEditMailTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.buttonEditMailTo.Size = new System.Drawing.Size(228, 21);
+            this.buttonEditMailTo.TabIndex = 4;
             // 
-            // buttonEdit1
+            // buttonEditMailFrom
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(137, 85);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditMailFrom.Location = new System.Drawing.Point(137, 85);
+            this.buttonEditMailFrom.Name = "buttonEditMailFrom";
+            this.buttonEditMailFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.buttonEdit1.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
-            this.buttonEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.buttonEdit1.Size = new System.Drawing.Size(237, 21);
-            this.buttonEdit1.TabIndex = 1;
+            this.buttonEditMailFrom.Properties.Mask.EditMask = "([a-zA-Z0-9]+([a-zA-Z0-9]\\.)?)@([a-zA-Z0-9]+\\.)+[a-zA-Z]+";
+            this.buttonEditMailFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.buttonEditMailFrom.Size = new System.Drawing.Size(237, 21);
+            this.buttonEditMailFrom.TabIndex = 1;
             // 
-            // buttonEdit2
+            // buttonEditMailFromName
             // 
-            this.buttonEdit2.Location = new System.Drawing.Point(137, 53);
-            this.buttonEdit2.Name = "buttonEdit2";
-            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditMailFromName.Location = new System.Drawing.Point(137, 53);
+            this.buttonEditMailFromName.Name = "buttonEditMailFromName";
+            this.buttonEditMailFromName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
-            this.buttonEdit2.Size = new System.Drawing.Size(237, 21);
-            this.buttonEdit2.TabIndex = 1;
+            this.buttonEditMailFromName.Size = new System.Drawing.Size(127, 21);
+            this.buttonEditMailFromName.TabIndex = 0;
             // 
             // labelControl8
             // 
@@ -449,6 +468,7 @@
             // 
             // mpbcSendStatus
             // 
+            this.mpbcSendStatus.EditValue = 0;
             this.mpbcSendStatus.Location = new System.Drawing.Point(47, 33);
             this.mpbcSendStatus.Name = "mpbcSendStatus";
             this.mpbcSendStatus.Properties.LookAndFeel.SkinName = "Darkroom";
@@ -480,14 +500,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditMailSubject.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditMailContent.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailTitle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailToName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailFromPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailFrom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditMailFromName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
@@ -511,20 +532,20 @@
         private System.Windows.Forms.ImageList imageList1;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit5;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditMailToName;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditMailFromName;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit3;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit4;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditMailFromPassword;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditMailTo;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditMailFrom;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit memoEditMailContent;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit7;
-        private DevExpress.XtraEditors.MemoEdit memoEdit2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditMailTitle;
+        private DevExpress.XtraEditors.MemoEdit memoEditMailSubject;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
@@ -534,5 +555,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcSendStatus;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }

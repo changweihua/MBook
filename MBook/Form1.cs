@@ -66,7 +66,7 @@ namespace MBook
             //FillFolderTreeList("folder", "id", "0");
 
             #endregion 分支3中的方法
-            
+            this.ribbonControl1.SelectedPage = ribbonPage1;
         }
 
 
@@ -319,6 +319,81 @@ namespace MBook
             new ProfileForm().ShowDialog();
         }
 
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FolderBrowserDialog fdb = new FolderBrowserDialog();
+            if (fdb.ShowDialog() == DialogResult.OK)
+            {
+                this.barEditItemSavePath.EditValue = fdb.SelectedPath;
+            }
+            fdb = null;
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FolderBrowserDialog fdb = new FolderBrowserDialog();
+            if (fdb.ShowDialog() == DialogResult.OK)
+            {
+                this.barEditItemBackupPath.EditValue = fdb.SelectedPath;
+            }
+            fdb = null;
+        }
+
+        private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
+        {
+            RibbonPage page = (sender as RibbonControl).SelectedPage;
+            switch (page.Name)
+            {
+                case "ribbonPageSetting":
+                    InitSettingPage();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        private void InitSettingPage()
+        {
+           this.barEditItemSavePath.EditValue = Properties.Settings.Default.savePath ;
+           this.barEditItemBackupPath.EditValue= Properties.Settings.Default.backupPath ;
+           this.barEditItemAllowAutoUpdate.EditValue = Properties.Settings.Default.allowUpdate ;
+           this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.allowUpdateToBeta ;
+        }
+
+        private void barButtonItemCancel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            InitSettingPage();
+        }
+
+        private void barButtonItemCheckUpdate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void barButtonItemSave_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (this.barEditItemSavePath.EditValue == null || this.barEditItemBackupPath.EditValue == null)
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "必须要选择文件夹", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                Properties.Settings.Default.savePath = this.barEditItemSavePath.EditValue.ToString();
+                Properties.Settings.Default.backupPath = this.barEditItemBackupPath.EditValue.ToString();
+                Properties.Settings.Default.allowUpdate = (bool)this.barEditItemAllowAutoUpdate.EditValue;
+                Properties.Settings.Default.allowUpdateToBeta = (bool)this.barEditItemAllowUpdateToDevelop.EditValue;
+
+                XtraMessageBox.Show(this.LookAndFeel, "保存成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InitSettingPage();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "保存失败，错误信息\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }

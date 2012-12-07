@@ -106,5 +106,53 @@ namespace MBook.Properties {
                 this["userpassword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Changweihua\\monobook")]
+        public string savePath {
+            get {
+                return ((string)(this["savePath"]));
+            }
+            set {
+                this["savePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Changweihua\\monobook")]
+        public string backupPath {
+            get {
+                return ((string)(this["backupPath"]));
+            }
+            set {
+                this["backupPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool allowUpdate {
+            get {
+                return ((bool)(this["allowUpdate"]));
+            }
+            set {
+                this["allowUpdate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool allowUpdateToBeta {
+            get {
+                return ((bool)(this["allowUpdateToBeta"]));
+            }
+            set {
+                this["allowUpdateToBeta"] = value;
+            }
+        }
     }
 }
