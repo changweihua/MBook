@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.llBlog = new System.Windows.Forms.LinkLabel();
@@ -49,7 +49,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit6 = new DevExpress.XtraEditors.ButtonEdit();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -66,13 +65,15 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.mpbcSendStatus = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).BeginInit();
@@ -80,6 +81,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mpbcSendStatus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -241,7 +246,6 @@
             // 
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
             this.groupControl2.Controls.Add(this.memoEdit2);
-            this.groupControl2.Controls.Add(this.buttonEdit6);
             this.groupControl2.Controls.Add(this.memoEdit1);
             this.groupControl2.Controls.Add(this.labelControl13);
             this.groupControl2.Controls.Add(this.labelControl12);
@@ -261,7 +265,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 110);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(782, 511);
+            this.groupControl2.Size = new System.Drawing.Size(782, 559);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "发件箱";
             // 
@@ -271,20 +275,6 @@
             this.memoEdit2.Name = "memoEdit2";
             this.memoEdit2.Size = new System.Drawing.Size(680, 53);
             this.memoEdit2.TabIndex = 5;
-            // 
-            // buttonEdit6
-            // 
-            this.buttonEdit6.Location = new System.Drawing.Point(47, 478);
-            this.buttonEdit6.Name = "buttonEdit6";
-            this.buttonEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "如果确认了，就点它，发送吧", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Undo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "点此，清空所有值", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "点此，关闭该窗体", null, null, true)});
-            this.buttonEdit6.Properties.LookAndFeel.SkinName = "Office 2010 Black";
-            this.buttonEdit6.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.buttonEdit6.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.buttonEdit6.Size = new System.Drawing.Size(680, 18);
-            this.buttonEdit6.TabIndex = 4;
             // 
             // memoEdit1
             // 
@@ -423,6 +413,21 @@
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "填写好发件人，收件人，以及内容，当然暂时还不支持附件";
             // 
+            // buttonEditAction
+            // 
+            this.buttonEditAction.Location = new System.Drawing.Point(47, 9);
+            this.buttonEditAction.Name = "buttonEditAction";
+            this.buttonEditAction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "如果确认了，就点它，发送吧", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Undo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "点此，清空所有值", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "点此，关闭该窗体", null, null, true)});
+            this.buttonEditAction.Properties.LookAndFeel.SkinName = "Office 2010 Black";
+            this.buttonEditAction.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.buttonEditAction.Size = new System.Drawing.Size(680, 18);
+            this.buttonEditAction.TabIndex = 4;
+            this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -430,13 +435,37 @@
             this.imageList1.Images.SetKeyName(0, "515813.gif");
             this.imageList1.Images.SetKeyName(1, "20121203081900595_easyicon_cn_48.png");
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.mpbcSendStatus);
+            this.groupControl3.Controls.Add(this.buttonEditAction);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl3.Location = new System.Drawing.Point(0, 588);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.ShowCaption = false;
+            this.groupControl3.Size = new System.Drawing.Size(782, 81);
+            this.groupControl3.TabIndex = 2;
+            this.groupControl3.Text = "groupControl3";
+            // 
+            // mpbcSendStatus
+            // 
+            this.mpbcSendStatus.Location = new System.Drawing.Point(47, 33);
+            this.mpbcSendStatus.Name = "mpbcSendStatus";
+            this.mpbcSendStatus.Properties.LookAndFeel.SkinName = "Darkroom";
+            this.mpbcSendStatus.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.mpbcSendStatus.Size = new System.Drawing.Size(680, 25);
+            this.mpbcSendStatus.TabIndex = 5;
+            this.mpbcSendStatus.Visible = false;
+            // 
             // MailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 621);
+            this.ClientSize = new System.Drawing.Size(782, 669);
+            this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "Office 2010 Black";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -452,7 +481,6 @@
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).EndInit();
@@ -460,6 +488,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mpbcSendStatus.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,7 +520,7 @@
         private DevExpress.XtraEditors.ButtonEdit buttonEdit4;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit6;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit7;
@@ -500,5 +532,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcSendStatus;
     }
 }

@@ -410,6 +410,10 @@
     <Folder Include="images\large\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EnterpriseObjects\EnterpriseObjects.csproj">
+      <Project>{199D55C4-4C6F-4776-A664-FE819FEE0DA7}</Project>
+      <Name>EnterpriseObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonoBookEntity\MonoBookEntity.csproj">
       <Project>{EF3C29F4-4269-43B7-9675-8664A4FD60EB}</Project>
       <Name>MonoBookEntity</Name>

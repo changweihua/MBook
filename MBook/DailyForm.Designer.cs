@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailyForm));
-            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
+            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo2 = new DevExpress.XtraRichEdit.Model.BorderInfo();
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.repositoryItemRichEditFontSizeEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditFontSizeEdit();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -144,6 +144,14 @@
             this.toggleTableCellsBottomLeftAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomLeftAlignmentItem();
             this.toggleTableCellsBottomCenterAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomCenterAlignmentItem();
             this.toggleTableCellsBottomRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomRightAlignmentItem();
+            this.goToPageHeaderItem1 = new DevExpress.XtraRichEdit.UI.GoToPageHeaderItem();
+            this.goToPageFooterItem1 = new DevExpress.XtraRichEdit.UI.GoToPageFooterItem();
+            this.goToNextHeaderFooterItem1 = new DevExpress.XtraRichEdit.UI.GoToNextHeaderFooterItem();
+            this.goToPreviousHeaderFooterItem1 = new DevExpress.XtraRichEdit.UI.GoToPreviousHeaderFooterItem();
+            this.toggleLinkToPreviousItem1 = new DevExpress.XtraRichEdit.UI.ToggleLinkToPreviousItem();
+            this.toggleDifferentFirstPageItem1 = new DevExpress.XtraRichEdit.UI.ToggleDifferentFirstPageItem();
+            this.toggleDifferentOddAndEvenPagesItem1 = new DevExpress.XtraRichEdit.UI.ToggleDifferentOddAndEvenPagesItem();
+            this.closePageHeaderFooterItem1 = new DevExpress.XtraRichEdit.UI.ClosePageHeaderFooterItem();
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
             this.tableDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableDesignRibbonPage();
             this.tableStylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup();
@@ -170,6 +178,7 @@
             this.repositoryItemRichEditStyleEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit();
             this.repositoryItemBorderLineStyle1 = new DevExpress.XtraRichEdit.Forms.Design.RepositoryItemBorderLineStyle();
             this.repositoryItemBorderLineWeight1 = new DevExpress.XtraRichEdit.Forms.Design.RepositoryItemBorderLineWeight();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).BeginInit();
@@ -317,9 +326,17 @@
             this.toggleTableCellsMiddleRightAlignmentItem1,
             this.toggleTableCellsBottomLeftAlignmentItem1,
             this.toggleTableCellsBottomCenterAlignmentItem1,
-            this.toggleTableCellsBottomRightAlignmentItem1});
+            this.toggleTableCellsBottomRightAlignmentItem1,
+            this.goToPageHeaderItem1,
+            this.goToPageFooterItem1,
+            this.goToNextHeaderFooterItem1,
+            this.goToPreviousHeaderFooterItem1,
+            this.toggleLinkToPreviousItem1,
+            this.toggleDifferentFirstPageItem1,
+            this.toggleDifferentOddAndEvenPagesItem1,
+            this.closePageHeaderFooterItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 269;
+            this.ribbonControl1.MaxItemId = 277;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -338,11 +355,12 @@
             this.repositoryItemBorderLineStyle2,
             this.repositoryItemBorderLineWeight2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
-            this.ribbonControl1.SelectedPage = this.tableDesignRibbonPage1;
+            this.ribbonControl1.SelectedPage = this.tableLayoutRibbonPage1;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(1117, 151);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -407,9 +425,9 @@
             this.richEditControl1.Location = new System.Drawing.Point(0, 151);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1117, 508);
-            this.richEditControl1.TabIndex = 4;
-            this.richEditControl1.Text = "richEditControl1";
+            this.richEditControl1.Size = new System.Drawing.Size(1117, 487);
+            this.richEditControl1.TabIndex = 7;
+            this.richEditControl1.Text = "这里，快笔书写您的风采";
             // 
             // changeFontColorItem1
             // 
@@ -872,13 +890,13 @@
             // changeTableBorderLineStyleItem1
             // 
             this.changeTableBorderLineStyleItem1.Edit = this.repositoryItemBorderLineStyle2;
-            borderInfo1.Color = System.Drawing.Color.Black;
-            borderInfo1.Frame = false;
-            borderInfo1.Offset = 0;
-            borderInfo1.Shadow = false;
-            borderInfo1.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
-            borderInfo1.Width = 10;
-            this.changeTableBorderLineStyleItem1.EditValue = borderInfo1;
+            borderInfo2.Color = System.Drawing.Color.Black;
+            borderInfo2.Frame = false;
+            borderInfo2.Offset = 0;
+            borderInfo2.Shadow = false;
+            borderInfo2.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
+            borderInfo2.Width = 10;
+            this.changeTableBorderLineStyleItem1.EditValue = borderInfo2;
             this.changeTableBorderLineStyleItem1.Id = 234;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
             // 
@@ -1150,6 +1168,62 @@
             this.toggleTableCellsBottomRightAlignmentItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleTableCellsBottomRightAlignmentItem1.LargeGlyph")));
             this.toggleTableCellsBottomRightAlignmentItem1.Name = "toggleTableCellsBottomRightAlignmentItem1";
             // 
+            // goToPageHeaderItem1
+            // 
+            this.goToPageHeaderItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("goToPageHeaderItem1.Glyph")));
+            this.goToPageHeaderItem1.Id = 269;
+            this.goToPageHeaderItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("goToPageHeaderItem1.LargeGlyph")));
+            this.goToPageHeaderItem1.Name = "goToPageHeaderItem1";
+            // 
+            // goToPageFooterItem1
+            // 
+            this.goToPageFooterItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("goToPageFooterItem1.Glyph")));
+            this.goToPageFooterItem1.Id = 270;
+            this.goToPageFooterItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("goToPageFooterItem1.LargeGlyph")));
+            this.goToPageFooterItem1.Name = "goToPageFooterItem1";
+            // 
+            // goToNextHeaderFooterItem1
+            // 
+            this.goToNextHeaderFooterItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("goToNextHeaderFooterItem1.Glyph")));
+            this.goToNextHeaderFooterItem1.Id = 271;
+            this.goToNextHeaderFooterItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("goToNextHeaderFooterItem1.LargeGlyph")));
+            this.goToNextHeaderFooterItem1.Name = "goToNextHeaderFooterItem1";
+            // 
+            // goToPreviousHeaderFooterItem1
+            // 
+            this.goToPreviousHeaderFooterItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("goToPreviousHeaderFooterItem1.Glyph")));
+            this.goToPreviousHeaderFooterItem1.Id = 272;
+            this.goToPreviousHeaderFooterItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("goToPreviousHeaderFooterItem1.LargeGlyph")));
+            this.goToPreviousHeaderFooterItem1.Name = "goToPreviousHeaderFooterItem1";
+            // 
+            // toggleLinkToPreviousItem1
+            // 
+            this.toggleLinkToPreviousItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleLinkToPreviousItem1.Glyph")));
+            this.toggleLinkToPreviousItem1.Id = 273;
+            this.toggleLinkToPreviousItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleLinkToPreviousItem1.LargeGlyph")));
+            this.toggleLinkToPreviousItem1.Name = "toggleLinkToPreviousItem1";
+            // 
+            // toggleDifferentFirstPageItem1
+            // 
+            this.toggleDifferentFirstPageItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleDifferentFirstPageItem1.Glyph")));
+            this.toggleDifferentFirstPageItem1.Id = 274;
+            this.toggleDifferentFirstPageItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleDifferentFirstPageItem1.LargeGlyph")));
+            this.toggleDifferentFirstPageItem1.Name = "toggleDifferentFirstPageItem1";
+            // 
+            // toggleDifferentOddAndEvenPagesItem1
+            // 
+            this.toggleDifferentOddAndEvenPagesItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleDifferentOddAndEvenPagesItem1.Glyph")));
+            this.toggleDifferentOddAndEvenPagesItem1.Id = 275;
+            this.toggleDifferentOddAndEvenPagesItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleDifferentOddAndEvenPagesItem1.LargeGlyph")));
+            this.toggleDifferentOddAndEvenPagesItem1.Name = "toggleDifferentOddAndEvenPagesItem1";
+            // 
+            // closePageHeaderFooterItem1
+            // 
+            this.closePageHeaderFooterItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("closePageHeaderFooterItem1.Glyph")));
+            this.closePageHeaderFooterItem1.Id = 276;
+            this.closePageHeaderFooterItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("closePageHeaderFooterItem1.LargeGlyph")));
+            this.closePageHeaderFooterItem1.Name = "closePageHeaderFooterItem1";
+            // 
             // tableToolsRibbonPageCategory1
             // 
             this.tableToolsRibbonPageCategory1.Name = "tableToolsRibbonPageCategory1";
@@ -1382,6 +1456,13 @@
             this.repositoryItemBorderLineWeight1.Control = null;
             this.repositoryItemBorderLineWeight1.Name = "repositoryItemBorderLineWeight1";
             // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 638);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1117, 31);
+            // 
             // richEditBarController1
             // 
             this.richEditBarController1.BarItems.Add(this.cutItem1);
@@ -1489,6 +1570,14 @@
             this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomLeftAlignmentItem1);
             this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomCenterAlignmentItem1);
             this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomRightAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.goToPageHeaderItem1);
+            this.richEditBarController1.BarItems.Add(this.goToPageFooterItem1);
+            this.richEditBarController1.BarItems.Add(this.goToNextHeaderFooterItem1);
+            this.richEditBarController1.BarItems.Add(this.goToPreviousHeaderFooterItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleLinkToPreviousItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleDifferentFirstPageItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleDifferentOddAndEvenPagesItem1);
+            this.richEditBarController1.BarItems.Add(this.closePageHeaderFooterItem1);
             this.richEditBarController1.RichEditControl = this.richEditControl1;
             // 
             // DailyForm
@@ -1496,16 +1585,17 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 659);
+            this.ClientSize = new System.Drawing.Size(1117, 669);
             this.Controls.Add(this.richEditControl1);
+            this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DailyForm";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "MonoBook ---- 记录每一秒的幸福";
             this.Load += new System.EventHandler(this.DailyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
@@ -1532,7 +1622,6 @@
         private DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit repositoryItemRichEditStyleEdit1;
         private DevExpress.XtraRichEdit.Forms.Design.RepositoryItemBorderLineStyle repositoryItemBorderLineStyle1;
         private DevExpress.XtraRichEdit.Forms.Design.RepositoryItemBorderLineWeight repositoryItemBorderLineWeight1;
-        private DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory tableToolsRibbonPageCategory1;
         private DevExpress.XtraRichEdit.UI.CutItem cutItem1;
         private DevExpress.XtraRichEdit.UI.CopyItem copyItem1;
         private DevExpress.XtraRichEdit.UI.PasteItem pasteItem1;
@@ -1541,7 +1630,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit2;
         private DevExpress.XtraRichEdit.UI.ChangeFontSizeItem changeFontSizeItem1;
         private DevExpress.XtraRichEdit.Design.RepositoryItemRichEditFontSizeEdit repositoryItemRichEditFontSizeEdit2;
-        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
         private DevExpress.XtraRichEdit.UI.ChangeFontColorItem changeFontColorItem1;
         private DevExpress.XtraRichEdit.UI.ChangeFontBackColorItem changeFontBackColorItem1;
         private DevExpress.XtraRichEdit.UI.ToggleFontBoldItem toggleFontBoldItem1;
@@ -1644,6 +1732,18 @@
         private DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomLeftAlignmentItem toggleTableCellsBottomLeftAlignmentItem1;
         private DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomCenterAlignmentItem toggleTableCellsBottomCenterAlignmentItem1;
         private DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomRightAlignmentItem toggleTableCellsBottomRightAlignmentItem1;
+        private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
+        private DevExpress.XtraRichEdit.UI.GoToPageHeaderItem goToPageHeaderItem1;
+        private DevExpress.XtraRichEdit.UI.GoToPageFooterItem goToPageFooterItem1;
+        private DevExpress.XtraRichEdit.UI.GoToNextHeaderFooterItem goToNextHeaderFooterItem1;
+        private DevExpress.XtraRichEdit.UI.GoToPreviousHeaderFooterItem goToPreviousHeaderFooterItem1;
+        private DevExpress.XtraRichEdit.UI.ToggleLinkToPreviousItem toggleLinkToPreviousItem1;
+        private DevExpress.XtraRichEdit.UI.ToggleDifferentFirstPageItem toggleDifferentFirstPageItem1;
+        private DevExpress.XtraRichEdit.UI.ToggleDifferentOddAndEvenPagesItem toggleDifferentOddAndEvenPagesItem1;
+        private DevExpress.XtraRichEdit.UI.ClosePageHeaderFooterItem closePageHeaderFooterItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
+        private DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory tableToolsRibbonPageCategory1;
         private DevExpress.XtraRichEdit.UI.TableDesignRibbonPage tableDesignRibbonPage1;
         private DevExpress.XtraRichEdit.UI.TableStylesRibbonPageGroup tableStylesRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TableDrawBordersRibbonPageGroup tableDrawBordersRibbonPageGroup1;
@@ -1666,6 +1766,5 @@
         private DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup linksRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup headerFooterRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup symbolsRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
     }
 }
