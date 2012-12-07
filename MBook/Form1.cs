@@ -352,7 +352,9 @@ namespace MBook
             }
         }
 
-
+        /// <summary>
+        /// 切换到设置页的时候，读取配置信息，信息量少， 不使用多线程异步
+        /// </summary>
         private void InitSettingPage()
         {
            this.barEditItemSavePath.EditValue = Properties.Settings.Default.savePath ;
@@ -385,6 +387,8 @@ namespace MBook
                 Properties.Settings.Default.backupPath = this.barEditItemBackupPath.EditValue.ToString();
                 Properties.Settings.Default.allowUpdate = (bool)this.barEditItemAllowAutoUpdate.EditValue;
                 Properties.Settings.Default.allowUpdateToBeta = (bool)this.barEditItemAllowUpdateToDevelop.EditValue;
+                //保存配置
+                Properties.Settings.Default.Save();
 
                 XtraMessageBox.Show(this.LookAndFeel, "保存成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 InitSettingPage();
@@ -393,6 +397,45 @@ namespace MBook
             {
                 XtraMessageBox.Show(this.LookAndFeel, "保存失败，错误信息\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void InitNotify()
+        { 
+            
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.Visible = true;
+                notifyIcon1.BalloonTipTitle = "提示";
+                notifyIcon1.BalloonTipText = "程序仍在运行,双击图标显示主窗体";
+                notifyIcon1.ShowBalloonTip(1000);
+                this.ShowInTaskbar = false;
+                this.Hide();
+            }
+            
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            // Show the form when the user double clicks on the notify icon.
+
+            // Set the WindowState to normal if the form is minimized.
+            if (this.WindowState == FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Maximized;
+
+            // Activate the form.
+            this.Show();
+            this.ShowInTaskbar = true;
+            this.notifyIcon1.Visible = false;
+            this.Activate();
         }
 
     }
