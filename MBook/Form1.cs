@@ -19,6 +19,7 @@ using DevExpress.XtraTreeList.Nodes;
 using DevExpress.XtraTreeList;
 
 
+
 namespace MBook
 {
     public partial class Form1 : XtraForm
@@ -368,9 +369,19 @@ namespace MBook
             InitSettingPage();
         }
 
+
+        /// <summary>
+        /// 检查程序更新
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void barButtonItemCheckUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //UpdateClass updater = new UpdateClass();
+            //bool isComplete = true;
+            //List<Manifest> maniFests = new List<Manifest>();
+
+            //XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void barButtonItemSave_ItemClick(object sender, ItemClickEventArgs e)

@@ -1,0 +1,783 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=6">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>每日回顾</title>
+    <style type="text/css">
+        html
+        {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        body
+        {
+            font-family: Arial, Helvetica,Sans-serif;
+            color: black;
+            background-color: #fff;
+            font-size: 10.5pt;
+            margin: 0em;
+            padding: 0em;
+            line-height: 1.5;
+        }
+        div
+        {
+            font-size: 1em;
+        }
+        table
+        {
+            empty-cells: show;
+            margin: 0;
+            padding: 0;
+        }
+        font
+        {
+            font-size: 1em;
+        }
+        ul
+        {
+            padding: 0 0 1em 1em;
+        }
+        ol
+        {
+            padding: 0 0 1em 1.3em;
+        }
+        li
+        {
+            line-height: 1.5em;
+            padding: 0 0 0 0;
+        }
+        p
+        {
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5
+        {
+            padding: 0;
+        }
+        h1
+        {
+            font-size: 1.3em;
+        }
+        h2
+        {
+            font-size: 1.1em;
+        }
+        h3
+        {
+            font-size: 1em;
+            line-height: 1.4em;
+            white-space: nowrap;
+            padding: 0;
+        }
+        h4, h5, table
+        {
+            font-size: 1em;
+        }
+        sup, sub
+        {
+            font-size: .7em;
+        }
+        input, select, textarea, option
+        {
+            font-family: inherit;
+            font-size: inherit;
+            margin: 0;
+            padding: 0;
+        }
+        img
+        {
+            border-style: none;
+        }
+        a
+        {
+            outline: none;
+            color: #00c;
+        }
+        a:active
+        {
+            color: red;
+        }
+        a:visited
+        {
+            color: #551a8b;
+        }
+        hr
+        {
+            border-style: none;
+            border-width: 0 0 0px 0;
+            background-color: #EEE;
+            border-bottom: #c9d7f1 1px solid;
+            height: 0px;
+            width: 99.9%;
+            text-align: left;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border-top-color: inherit;
+            border-right-color: inherit;
+            border-bottom-color: #C0C0C0;
+            border-left-color: inherit;
+        }
+        input
+        {
+            font-size: 1em;
+        }
+    </style>
+    <link rel="stylesheet" href="jqueryui/themes/base/jquery.ui.all.css">
+
+    <script src="jqueryui/jquery-1.4.3.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.core.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.widget.js"></script>
+
+    <script src="jqueryui/ui/jquery.ui.datepicker.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-af.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ar.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-az.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-bg.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-bs.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ca.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-cs.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-da.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-de.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-el.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-en-GB.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-eo.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-es.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-et.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-eu.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-fa.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-fi.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-fo.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-fr.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-fr-CH.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-gl.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-he.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-hr.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-hu.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-hy.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-id.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-is.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-it.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ja.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ko.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-kz.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-lt.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-lv.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ms.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-nl.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-no.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-pl.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-pt.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-pt-BR.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ro.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ru.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-sk.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-sl.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-sq.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-sr.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-sr-SR.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-sv.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-ta.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-th.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-tr.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-uk.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-vi.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-HK.js"></script>
+
+    <script src="jqueryui/ui/i18n/jquery.ui.datepicker-zh-TW.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="weather/weather.js"></script>
+
+</head>
+<body>
+    <div style="margin: 10px 10px 20px 60px; padding: 0px;">
+        <h1>
+            每日回顾</h1>
+        <hr />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_0">
+                        日期
+                    </label>
+                    <br />
+                    <input type="text" id="entry_0" name="entry.0.single" style="width: 700px;" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_1">
+                        今日天气
+                    </label>
+                    <br />
+                    <input type="text" id="entry_1" name="entry.1.single" style="width: 700px;" />
+                    <a href="javascript:refreshWeather(entry_1)" title="Refresh">
+                        <img src="weather/refresh.gif" alt="Refresh" width="16" height="16" style="margin-bottom: -3px;
+                            border: 0px"></a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_2">
+                        今天是个什么日子？
+                    </label>
+                    <br />
+                    <input id="entry_2" name="entry.2.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_3">
+                        今天是谁的生日？
+                    </label>
+                    <br />
+                    <input id="entry_3" name="entry.3.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_4">
+                        纪念日？
+                    </label>
+                    <br />
+                    <input id="entry_4" name="entry.4.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_5">
+                        命运日？
+                    </label>
+                    <br />
+                    <input id="entry_5" name="entry.5.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_6">
+                        相遇日？
+                    </label>
+                    <br />
+                    <input id="entry_6" name="entry.6.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_7">
+                        起床时间
+                    </label>
+                    <br />
+                    <select id="entry_7" name="entry.7.single">
+                        <option selected="selected" value="7点">7点</option>
+                        <option value="7点半">7点半</option>
+                        <option value="八点">八点</option>
+                        <option value="八点半">八点半</option>
+                        <option value="九点">九点</option>
+                        <option value="九点半">九点半</option>
+                        <option value="十点">十点</option>
+                        <option value="十点半">十点半</option>
+                        <option value="十一点">十一点</option>
+                    </select></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_8">
+                        昨天睡觉时间
+                    </label>
+                    &nbsp;<br />
+                    <select id="entry_8" name="entry.8.single">
+                        <option selected="selected" value="十点">十点</option>
+                        <option value="十点半">十点半</option>
+                        <option value="十一点">十一点</option>
+                        <option value="十一点半">十一点半</option>
+                        <option value="十二点">十二点</option>
+                        <option value="十二点半">十二点半</option>
+                        <option value="一点">一点</option>
+                        <option value="一点半">一点半</option>
+                        <option value="二点">二点</option>
+                    </select></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_9">
+                        今天心情
+                    </label>
+                    <br />
+                    <input id="entry_9" name="entry.9.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_10">
+                        今天记账了吗？
+                    </label>
+                    <br />
+                    <select id="entry_10" name="entry.10.single">
+                        <option selected="selected" value="记了">记了</option>
+                        <option value="没记">没记</option>
+                    </select></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_11">
+                        今天对理财有什么感悟？学到了什么？
+                    </label>
+                    <br />
+                    <textarea id="entry_11" cols="75" name="entry.11.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_12">
+                        今天我要尝试？
+                    </label>
+                    <br />
+                    <input id="entry_12" name="entry.12.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_13">
+                        灵感涂鸦
+                    </label>
+                    <br />
+                    <textarea id="entry_13" cols="75" name="entry.13.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_14">
+                        昨天的进步
+                    </label>
+                    <br />
+                    <input id="entry_14" name="entry.14.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_15">
+                        昨天的不足
+                    </label>
+                    <br />
+                    <input id="entry_15" name="entry.15.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_16">
+                        昨天成功的五件事
+                    </label>
+                    <br />
+                    <textarea id="entry_16" cols="75" name="entry.16.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_17">
+                        成功的原因
+                    </label>
+                    <br />
+                    <textarea id="entry_17" cols="75" name="entry.17.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_18">
+                        今天的感悟和收获
+                    </label>
+                    <br />
+                    <textarea id="entry_18" cols="75" name="entry.18.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_19">
+                        和亲人朋友的沟通
+                    </label>
+                    <br />
+                    <textarea id="entry_19" cols="75" name="entry.19.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_20">
+                        昨天的感情收获
+                    </label>
+                    <br />
+                    <textarea id="entry_20" cols="75" name="entry.20.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_21">
+                        身体异样
+                    </label>
+                    <br />
+                    <input id="entry_21" name="entry.21.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_22">
+                        排便状况
+                    </label>
+                    <br />
+                    <input id="entry_22" name="entry.22.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_23">
+                        饮食
+                    </label>
+                    <br />
+                    <input id="entry_23" name="entry.23.single" type="text" style="width: 700px;" /></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_24">
+                        锻炼情况
+                    </label>
+                    <ul>
+                        <li>
+                            <label>
+                                <input id="group_24_1" checked="true" name="entry.24.group" type="radio" value="没有锻炼" />
+                                没有锻炼</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_2" name="entry.24.group" type="radio" value="俯卧撑" />
+                                俯卧撑</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_3" name="entry.24.group" type="radio" value="仰卧起坐" />
+                                仰卧起坐</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_4" name="entry.24.group" type="radio" value="跑步" />
+                                跑步</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_5" name="entry.24.group" type="radio" value="篮球" />
+                                篮球</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_6" name="entry.24.group" type="radio" value="足球" />
+                                足球</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_7" name="entry.24.group" type="radio" value="乒乓球" />
+                                乒乓球</label></li>
+                        <li>
+                            <label>
+                                <input id="group_24_8" name="entry.24.group" type="radio" value="其它" />
+                                其它</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_25">
+                        对健康的关注和理解
+                    </label>
+                    <br />
+                    <textarea id="entry_25" cols="75" name="entry.25.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_26">
+                        今天阅读的书目和理解&nbsp;<font color="gray">(非专业书籍)</font>
+                    </label>
+                    <br />
+                    <textarea id="entry_26" cols="75" name="entry.26.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div>
+                <div>
+                    <label for="entry_27">
+                        专业关注和理解&nbsp;<font color="gray">(有关你的专业的关注和理解)</font>
+                    </label>
+                    <br />
+                    <textarea id="entry_27" cols="75" name="entry.27.single" style="width: 700px;" rows="8"></textarea></div>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <input id="buttonOK" onclick="closeDialog(1);" style="width: 70px; padding-top: 3px;"
+                type="button" value="确定" />&nbsp;
+            <input id="buttonCancel" onclick="closeDialog(2);" style="width: 70px; padding-top: 3px;"
+                type="button" value="取消" />
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <script language="javascript">
+    
+        function getUserLang() {
+            var lang = navigator.userLanguage;
+            var arr = lang.split('-');
+            if (arr.length == 2) {
+                return arr[0] + "-" + arr[1].toUpperCase();
+            }
+            return arr[0];
+        }
+        var lang = getUserLang();
+        $(function() {
+            $.datepicker.setDefaults($.datepicker.regional[""]);
+            $("#entry_0").datepicker($.datepicker.regional[lang]);
+            $("#entry_0").datepicker("setDate", new Date());
+        });
+        refreshWeather(entry_1);
+        //
+        var objApp = window.external;
+        var objDatabase = objApp.Database;
+        var objDoc = null;
+        //
+        function formatInt(val) {
+            if (val < 10)
+                return "0" + val;
+            else
+                return "" + val;
+        }
+        String.prototype.trim = function() {
+            return this.replace(/^\s+|\s+$/g, "");
+        }
+        String.prototype.ltrim = function() {
+            return this.replace(/^\s+/, "");
+        }
+        String.prototype.rtrim = function() {
+            return this.replace(/\s+$/, "");
+        }
+        //
+        function DateToStr(dt) {
+            return "" + dt.getFullYear() + "-" + formatInt(dt.getMonth() + 1) + "-" + formatInt(dt.getDate());
+        }
+        //
+        function toRow(text, isTitle) {
+            if (isTitle) {
+                text = "<h2>" + text + "</h2>";
+            }
+            return "<div>" + text + "</div>\n";
+        }
+        //
+        function saveToWizCore() {
+            //
+            var htmltext = "";
+            //
+            var tags = document.all;
+            for (var i = 0; i < tags.length; i++) {
+                var elem = tags[i];
+                var tagName = elem.tagName.toLowerCase();
+                if (tagName == "label") {
+                    var htmlFor = elem.htmlFor;
+                    if (htmlFor != null && htmlFor.length > 0 && htmlFor.split("_").length == 2) {
+                        htmltext += toRow(elem.innerHTML, true);
+                    }
+                }
+                else if (tagName == "input") {
+                    var type = elem.type.toLowerCase();
+                    if (type == "button")
+                        continue;
+                    if (type == "radio" && !elem.checked)
+                        continue;
+                    htmltext += toRow(elem.value, false);
+                }
+                else if (tagName == "select") {
+                    htmltext += toRow(elem.value, false);
+                }
+                else if (tagName == "textarea") {
+                    htmltext += toRow(elem.innerHTML, false);
+                }
+            }
+            //
+            var date = null;
+            $(function() {
+                date = $("#entry_0").datepicker("getDate");
+            });
+            var date_string = date.toLocaleDateString();
+            //
+            var title = date_string + " 每日回顾";
+            //
+            var location = "/My Journals/" + date.getFullYear() + "-" + formatInt(date.getMonth() + 1) + "/";
+            //
+            var objFolder = objDatabase.GetFolderByLocation(location, true);
+            //
+            if (objDoc == null) {
+                objDoc = objFolder.CreateDocument2(title, "");
+                objDoc.Type = "daily_review";
+                objDoc.SetTagsText2("每日回顾", "");
+            }
+            //
+            if (objDoc.Location != location) {
+                objDoc.MoveTo(objFolder);
+            }
+            objDoc.ChangeTitleAndFileName(title);
+            objDoc.ParamValue("daily_review-date") = DateToStr(date) + " 00:00:00";
+            //
+            objDoc.UpdateDocument3(htmltext, 0);
+            //
+            var params = "/DatabasePath=" + objDatabase.DatabasePath + " /KbGUID=" + objDatabase.KbGUID + " /DocumentGUID=" + objDoc.GUID;
+            objApp.Window.ExecCommand("locatedocument", params);
+        }
+        //
+        function saveToWiz() {
+            try {
+                saveToWizCore();
+                return true;
+            }
+            catch (err) {
+                alert("不能保存文档!\n\n" + err);
+                return false;
+            }
+        }
+        //
+        var donotSave = false;
+        //
+        function onPluginWindowClosing() {
+            if (donotSave)
+                return 0;
+            if (objDoc == null) {
+                if (confirm("是否要保存？点击确定保存，点击取消不保存。")) {
+                    if (!saveToWiz()) {
+                        return -1;
+                    }
+                }
+            }
+            return 0;
+        }
+        //
+        function closeDialog(ret) {
+            if (ret == 1) {
+                if (!saveToWiz()) {
+                    return;
+                }
+            }
+            else {
+                donotSave = true;
+            }
+            objApp.Window.CloseHtmlDialog(document, ret);
+        }
+        //
+    </script>
+
+</body>
+</html>

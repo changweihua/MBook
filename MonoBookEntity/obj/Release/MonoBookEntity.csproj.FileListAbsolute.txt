@@ -1,0 +1,7 @@
+E:\VS2010\MBook\MonoBookEntity\bin\Release\MonoBookEntity.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Release\MonoBookEntity.pdb
+E:\VS2010\MBook\MonoBookEntity\bin\Release\NLite.Data.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Release\NLite.Data.xml
+E:\VS2010\MBook\MonoBookEntity\obj\Release\ResolveAssemblyReference.cache
+E:\VS2010\MBook\MonoBookEntity\obj\Release\MonoBookEntity.dll
+E:\VS2010\MBook\MonoBookEntity\obj\Release\MonoBookEntity.pdb
