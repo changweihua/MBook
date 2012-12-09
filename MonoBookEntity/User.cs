@@ -116,18 +116,18 @@ namespace MonoBookEntity
         /// 账号创建日期
         /// </summary>
         [Column(Name = "u_create_date")]
-        public string UserSina;
+        public string UserCreateDate;
 
         /// <summary>
         /// 密保邮箱
         /// </summary>
         [Column(Name = "u_secret_email")]
-        public string UserSina;
+        public string UserSecretEmail;
 
         /// <summary>
         /// 等级编号
         /// </summary>
         [Column(Name = "u_grade_id")]
-        public string UserSina;
+        public int UserGradeId;
     }
 }

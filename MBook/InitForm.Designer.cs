@@ -49,10 +49,10 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("时尚中黑简体", 15F);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.labelControl1.Location = new System.Drawing.Point(310, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(140, 21);
+            this.labelControl1.Size = new System.Drawing.Size(110, 25);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "正在启动......";
             // 

@@ -34,3 +34,7 @@ E:\VS2010\MBook\MBook\bin\Debug\MonoBookEntity.pdb
 E:\VS2010\MBook\MBook\bin\Debug\DevExpress.Data.v11.1.xml
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.exe
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.pdb
+E:\VS2010\MBook\MBook\bin\Debug\Updater.dll
+E:\VS2010\MBook\MBook\bin\Debug\Updater.pdb
+E:\VS2010\MBook\MBook\bin\Debug\NLite.Data.dll
+E:\VS2010\MBook\MBook\bin\Debug\NLite.Data.xml

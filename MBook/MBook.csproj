@@ -106,6 +106,7 @@
     <Compile Include="MCalendar.Designer.cs">
       <DependentUpon>MCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonoBookDBContext.cs" />
     <Compile Include="ProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +373,12 @@
     <ProjectReference Include="..\MonoBookEntity\MonoBookEntity.csproj">
       <Project>{EF3C29F4-4269-43B7-9675-8664A4FD60EB}</Project>
       <Name>MonoBookEntity</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Updater\Updater.csproj">
+      <Project>{0BCE1F6A-05D7-4791-B0EC-CC95D6383693}</Project>
+      <Name>Updater</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -402,6 +409,9 @@
     <Reference Include="DevExpress.XtraScheduler.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ELinq">
+      <HintPath>..\packages\ELinq.0.4\lib\net35\ELinq.dll</HintPath>
+    </Reference>
     <Reference Include="NetDimension.Weibo">
       <HintPath>..\..\..\DLL\NetDimension.Weibo.dll</HintPath>
     </Reference>

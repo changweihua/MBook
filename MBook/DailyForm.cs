@@ -69,5 +69,20 @@ namespace MBook
            
         }
 
+        private void barButtonCut_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.richEditControl1.Cut();
+        }
+
+        private void barButtonCopy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.richEditControl1.Copy();
+        }
+
+        private void barButtonPaste_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.richEditControl1.Paste();
+        }
+
     }
 }

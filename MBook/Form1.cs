@@ -17,6 +17,7 @@ using DevExpress.XtraTreeList.Columns;
 using DevExpress.XtraNavBar;
 using DevExpress.XtraTreeList.Nodes;
 using DevExpress.XtraTreeList;
+using Updater;
 
 
 
@@ -104,6 +105,7 @@ namespace MBook
             }
             biSchema.EditValue = RibbonControlColorScheme.Blue;
         }
+
 
         #endregion
 
@@ -260,7 +262,7 @@ namespace MBook
         private void btnApplicationExit_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Close();
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void rgbiSocial_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
@@ -379,9 +381,10 @@ namespace MBook
         {
             //UpdateClass updater = new UpdateClass();
             //bool isComplete = true;
-            //List<Manifest> maniFests = new List<Manifest>();
+            //List<Updater.Manifest> maniFests = new List<Updater.Manifest>();
+            //int mLength = 0;
 
-            //XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void barButtonItemSave_ItemClick(object sender, ItemClickEventArgs e)
@@ -410,14 +413,16 @@ namespace MBook
             }
         }
 
+        #region 实现程序托盘功能
+
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void InitNotify()
-        { 
-            
+        {
+
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -431,7 +436,7 @@ namespace MBook
                 this.ShowInTaskbar = false;
                 this.Hide();
             }
-            
+
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
@@ -452,7 +457,7 @@ namespace MBook
         private void tsmiExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void tsmiAbout_Click(object sender, EventArgs e)
@@ -477,5 +482,19 @@ namespace MBook
             //this.Activate();
         }
 
+
+        #endregion
+
+        #region 加载属性列表
+
+        /// <summary>
+        /// 加载文件夹树形菜单
+        /// </summary>
+        private void FillFolderTreeView()
+        {
+            
+        }
+
+        #endregion
     }
 }

@@ -1,0 +1,5 @@
+E:\VS2010\MBook\Updater\bin\Debug\Updater.dll
+E:\VS2010\MBook\Updater\bin\Debug\Updater.pdb
+E:\VS2010\MBook\Updater\obj\Debug\ResolveAssemblyReference.cache
+E:\VS2010\MBook\Updater\obj\Debug\Updater.dll
+E:\VS2010\MBook\Updater\obj\Debug\Updater.pdb

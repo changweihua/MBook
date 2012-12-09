@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <folder id="0" folderName="所有文件夹" folderPath="">
+    	<folder id="0" folderName="所有文件夹" folderPath="">
 	    <folder id="1" folderName="我的笔记" folderPath="My Notes" />
 	    <folder id="2" folderName="我的草稿" folderPath="My Drafts" />
 	    <folder id="3" folderName="我的联系人" folderPath="My Contacts" />

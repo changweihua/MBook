@@ -38,5 +38,9 @@ namespace MonoBookEntity
         /// 文件夹真实名称
         /// </summary>
         public string FolderPath { get; set; }
+        /// <summary>
+        /// 父节点编号
+        /// </summary>
+        public int parentId { get; set; }
     }
 }

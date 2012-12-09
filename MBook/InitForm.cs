@@ -12,7 +12,7 @@ using System.Threading;
 namespace MBook
 {
     /*************************************************************************************
-     * CLR  版本:       4.0.30319.586
+     * CLR  版本:      4.0.30319.586
      * 类 名 称:       InitForm
      * 机器名称:       HSERVER
      * 命名空间:       MBook
@@ -41,10 +41,8 @@ namespace MBook
         /// </summary>
         private void InitProgram()
         {
-
             Thread th = new Thread(new ThreadStart(() =>
             {
-               
                 //验证用户是否登录
                 if (CheckIsLogin())
                 {

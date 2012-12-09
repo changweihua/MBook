@@ -3,3 +3,5 @@ E:\VS2010\MBook\MonoBookEntity\bin\Debug\MonoBookEntity.pdb
 E:\VS2010\MBook\MonoBookEntity\obj\Debug\ResolveAssemblyReference.cache
 E:\VS2010\MBook\MonoBookEntity\obj\Debug\MonoBookEntity.dll
 E:\VS2010\MBook\MonoBookEntity\obj\Debug\MonoBookEntity.pdb
+E:\VS2010\MBook\MonoBookEntity\bin\Debug\NLite.Data.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Debug\NLite.Data.xml

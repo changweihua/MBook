@@ -207,6 +207,7 @@
             this.barButtonCut.ImageIndex = 7;
             this.barButtonCut.Name = "barButtonCut";
             this.barButtonCut.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonCut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonCut_ItemClick);
             // 
             // barButtonCopy
             // 
@@ -215,6 +216,7 @@
             this.barButtonCopy.ImageIndex = 6;
             this.barButtonCopy.Name = "barButtonCopy";
             this.barButtonCopy.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonCopy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonCopy_ItemClick);
             // 
             // barButtonPaste
             // 
@@ -223,6 +225,7 @@
             this.barButtonPaste.ImageIndex = 8;
             this.barButtonPaste.Name = "barButtonPaste";
             this.barButtonPaste.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonPaste.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonPaste_ItemClick);
             // 
             // bar3
             // 
