@@ -56,11 +56,10 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("所有文件夹");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("群组1");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("我的群组", new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("快速搜索");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("群组1");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("我的群组", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("快速搜索");
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -145,7 +144,7 @@
             this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvFolders = new System.Windows.Forms.TreeView();
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.treeView2 = new System.Windows.Forms.TreeView();
             this.navBarGroupControlContainer3 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
@@ -162,11 +161,11 @@
             this.barEditItemChooseSaveFolder = new DevExpress.XtraBars.BarEditItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiShow = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiShow = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
@@ -1072,7 +1071,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(180, 425);
-            this.splitContainerControl1.SplitterPosition = 333;
+            this.splitContainerControl1.SplitterPosition = 356;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -1082,7 +1081,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(180, 333);
+            this.groupControl3.Size = new System.Drawing.Size(180, 356);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "大纲";
             // 
@@ -1103,7 +1102,7 @@
             this.navBarControl2.Location = new System.Drawing.Point(2, 23);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 363;
-            this.navBarControl2.Size = new System.Drawing.Size(176, 308);
+            this.navBarControl2.Size = new System.Drawing.Size(176, 331);
             this.navBarControl2.SmallImages = this.nbgImages;
             this.navBarControl2.TabIndex = 0;
             this.navBarControl2.Text = "navBarControl2";
@@ -1112,29 +1111,28 @@
             // 
             this.navBarGroup2.Caption = "所有文件夹";
             this.navBarGroup2.ControlContainer = this.navBarGroupControlContainer1;
-            this.navBarGroup2.GroupClientHeight = 80;
+            this.navBarGroup2.GroupClientHeight = 150;
             this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup2.LargeImageIndex = 0;
             this.navBarGroup2.Name = "navBarGroup2";
+            this.navBarGroup2.ItemChanged += new System.EventHandler(this.navBarGroup_ItemChanged);
             // 
             // navBarGroupControlContainer1
             // 
-            this.navBarGroupControlContainer1.Controls.Add(this.treeView1);
+            this.navBarGroupControlContainer1.Controls.Add(this.tvFolders);
             this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(168, 76);
+            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(168, 146);
             this.navBarGroupControlContainer1.TabIndex = 0;
             // 
-            // treeView1
+            // tvFolders
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "节点0";
-            treeNode1.Text = "所有文件夹";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.treeView1.Size = new System.Drawing.Size(168, 76);
-            this.treeView1.TabIndex = 0;
+            this.tvFolders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvFolders.Location = new System.Drawing.Point(0, 0);
+            this.tvFolders.Name = "tvFolders";
+            this.tvFolders.ShowNodeToolTips = true;
+            this.tvFolders.Size = new System.Drawing.Size(168, 146);
+            this.tvFolders.TabIndex = 0;
+            this.tvFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvFolders_AfterSelect);
             // 
             // navBarGroupControlContainer2
             // 
@@ -1148,12 +1146,12 @@
             this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView2.Location = new System.Drawing.Point(0, 0);
             this.treeView2.Name = "treeView2";
-            treeNode2.Name = "节点1";
-            treeNode2.Text = "群组1";
-            treeNode3.Name = "节点0";
-            treeNode3.Text = "我的群组";
+            treeNode1.Name = "节点1";
+            treeNode1.Text = "群组1";
+            treeNode2.Name = "节点0";
+            treeNode2.Text = "我的群组";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode2});
             this.treeView2.Size = new System.Drawing.Size(168, 76);
             this.treeView2.TabIndex = 0;
             // 
@@ -1170,10 +1168,10 @@
             this.treeView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView3.Location = new System.Drawing.Point(0, 0);
             this.treeView3.Name = "treeView3";
-            treeNode4.Name = "节点0";
-            treeNode4.Text = "快速搜索";
+            treeNode3.Name = "节点0";
+            treeNode3.Text = "快速搜索";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            treeNode3});
             this.treeView3.Size = new System.Drawing.Size(168, 76);
             this.treeView3.TabIndex = 0;
             // 
@@ -1205,26 +1203,27 @@
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup3.LargeImageIndex = 1;
             this.navBarGroup3.Name = "navBarGroup3";
+            this.navBarGroup3.ItemChanged += new System.EventHandler(this.navBarGroup_ItemChanged);
             // 
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "快速搜索";
             this.navBarGroup4.ControlContainer = this.navBarGroupControlContainer3;
-            this.navBarGroup4.Expanded = true;
             this.navBarGroup4.GroupClientHeight = 80;
             this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup4.LargeImageIndex = 2;
             this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup4.ItemChanged += new System.EventHandler(this.navBarGroup_ItemChanged);
             // 
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "搜索";
             this.navBarGroup1.ControlContainer = this.navBarGroupControlContainer4;
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.GroupClientHeight = 80;
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup1.LargeImageIndex = 3;
             this.navBarGroup1.Name = "navBarGroup1";
+            this.navBarGroup1.ItemChanged += new System.EventHandler(this.navBarGroup_ItemChanged);
             // 
             // nbgImages
             // 
@@ -1240,7 +1239,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(180, 86);
+            this.groupControl2.Size = new System.Drawing.Size(180, 63);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "详细";
             // 
@@ -1284,6 +1283,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(153, 104);
             // 
+            // tsmiShow
+            // 
+            this.tsmiShow.Image = ((System.Drawing.Image)(resources.GetObject("tsmiShow.Image")));
+            this.tsmiShow.Name = "tsmiShow";
+            this.tsmiShow.Size = new System.Drawing.Size(152, 22);
+            this.tsmiShow.Text = "显示主窗体";
+            this.tsmiShow.Click += new System.EventHandler(this.tsmiShow_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            // 
             // tsmiAbout
             // 
             this.tsmiAbout.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAbout.Image")));
@@ -1304,19 +1316,6 @@
             this.tsmiExit.Size = new System.Drawing.Size(152, 22);
             this.tsmiExit.Text = "退出程序";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
-            // 
-            // tsmiShow
-            // 
-            this.tsmiShow.Image = ((System.Drawing.Image)(resources.GetObject("tsmiShow.Image")));
-            this.tsmiShow.Name = "tsmiShow";
-            this.tsmiShow.Size = new System.Drawing.Size(152, 22);
-            this.tsmiShow.Text = "显示主窗体";
-            this.tsmiShow.Click += new System.EventHandler(this.tsmiShow_Click);
             // 
             // Form1
             // 
@@ -1457,7 +1456,7 @@
         private DevExpress.XtraNavBar.NavBarControl navBarControl2;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvFolders;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer2;
         private System.Windows.Forms.TreeView treeView2;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;

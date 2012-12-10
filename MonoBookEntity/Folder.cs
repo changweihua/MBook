@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using NLite.Data;
+
 
 namespace MonoBookEntity
 {
@@ -24,23 +25,36 @@ namespace MonoBookEntity
     /// <summary>
     /// 文件夹信息类
     /// </summary>
+    /// 
+    [NLite.Data.Table(Name = "tbFolder")]
     public class Folder
     {
         /// <summary>
         /// 编号
         /// </summary>
-        public string Id { get; set; }
+        /// 
+        [Id(IsDbGenerated=true,Name="f_id")]
+        public int Id { get; set; }
+
         /// <summary>
         /// 文件夹显示名称
         /// </summary>
+        /// 
+        [Column(Name="f_display_name")]
         public string FolderName { get; set; }
+
         /// <summary>
         /// 文件夹真实名称
         /// </summary>
+        /// 
+        [Column(Name = "f_name")]
         public string FolderPath { get; set; }
+
         /// <summary>
         /// 父节点编号
         /// </summary>
+        /// 
+        [Column(Name = "f_parent_id")]
         public int parentId { get; set; }
     }
 }

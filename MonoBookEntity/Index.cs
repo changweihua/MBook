@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using NLite.Data;
 
@@ -26,25 +25,25 @@ namespace MonoBookEntity
     /// 索引实体类
     /// </summary>
     
-    [Table(Name="tbIndex")]
+    [Table(Name="aaa")]
     public class Index
     {
         /// <summary>
         /// 编号
         /// </summary>
-        [Id(Name="i_id")]
-        public int Id;
+        [Id(Name = "i_id", IsDbGenerated = true)]
+        public int Id { get; set; }
 
         /// <summary>
         /// 记录Guid标识符
         /// </summary>
         [Column(Name="i_guid")]
-        public string Guid;
+        public string Guid { get; set; }
 
         /// <summary>
         /// 记录类别编号
         /// </summary>
         [Column(Name="i_type_id")]
-        public int TypeId;
+        public int TypeId { get; set; }
     }
 }

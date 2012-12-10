@@ -25,17 +25,36 @@ namespace MBook
     /// MonoBook程序的数据库操作类
     /// </summary>
     /// 
-    public class MonoBookDBContext : DbContext
+    public class MonoBookDBUtil
     {
-        static DbConfiguration config = DbConfiguration.Configure("MonoBook")
+        const string connectionStringName = "Mono";
+
+         static DbConfiguration config = DbConfiguration.Configure("Mono")
             .AddClass<Index>()
-            .SetSqlLogger(() => new SqlLog(Console.Out));
+            .AddClass<Folder>();
 
-        public MonoBookDBContext():
-            base(config)
-        {
+         private IDbContext dbContext;
 
-        }
+         public MonoBookDBUtil()
+         {
+             this.dbContext = config.CreateDbContext();
+         }
+
+         public virtual IDbSet<Folder> Folders
+         {
+             get
+             {
+                 return this.dbContext.Set<Folder>();
+             }
+         }
+
+         public virtual IDbSet<Index> Indexs
+         {
+             get
+             {
+                 return this.dbContext.Set<Index>();
+             }
+         }
 
     }
 }

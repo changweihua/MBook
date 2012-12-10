@@ -11,18 +11,26 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraBars;
-using System.Xml.Linq;
-using MonoBookEntity;
 using DevExpress.XtraTreeList.Columns;
 using DevExpress.XtraNavBar;
 using DevExpress.XtraTreeList.Nodes;
 using DevExpress.XtraTreeList;
 using Updater;
+using NLite.Data;
+using MonoBookEntity;
+
 
 
 
 namespace MBook
 {
+    public struct Assert
+    {
+        static Assert()
+        {
+            
+        }
+    }
     public partial class Form1 : XtraForm
     {
         public Form1()
@@ -52,6 +60,12 @@ namespace MBook
             //MessageBox.Show(forms.Count.ToString());
         }
 
+
+        /// <summary>
+        /// 窗体加载
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             DevExpress.Accessibility.AccLocalizer.Active = new DevExpress.LocalizationCHS.DevExpressUtilsLocalizationCHS();
@@ -69,6 +83,7 @@ namespace MBook
 
             #endregion 分支3中的方法
             this.ribbonControl1.SelectedPage = ribbonPage1;
+            FillFolderTreeView(null, 0);
         }
 
 
@@ -254,6 +269,10 @@ namespace MBook
             dailyForm.ShowDialog();
         }
 
+        
+
+        #region 退出程序
+
         /// <summary>
         /// 退出应用程序
         /// </summary>
@@ -264,6 +283,9 @@ namespace MBook
             this.Close();
             System.Windows.Forms.Application.Exit();
         }
+
+        #endregion
+
 
         private void rgbiSocial_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
         {
@@ -372,6 +394,11 @@ namespace MBook
         }
 
 
+        
+
+
+        #region 程序设置页操作
+
         /// <summary>
         /// 检查程序更新
         /// </summary>
@@ -387,6 +414,12 @@ namespace MBook
             XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+
+        /// <summary>
+        /// 保存程序配置信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void barButtonItemSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (this.barEditItemSavePath.EditValue == null || this.barEditItemBackupPath.EditValue == null)
@@ -412,6 +445,9 @@ namespace MBook
                 XtraMessageBox.Show(this.LookAndFeel, "保存失败，错误信息\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
+
 
         #region 实现程序托盘功能
 
@@ -490,11 +526,80 @@ namespace MBook
         /// <summary>
         /// 加载文件夹树形菜单
         /// </summary>
-        private void FillFolderTreeView()
+        /// <param name="id">菜单编号</param>
+        private void FillFolderTreeView(TreeNode parentNode,int id)
         {
-            
+            //MonoBookDBUtil mbd = new MonoBookDBUtil();
+
+            //var query = mbd.Folders.Select(folder => folder.Id == id);
+
+            //XtraMessageBox.Show(query.ToList<Folder>);
+
+            //DbConfiguration cfg = DbConfiguration
+            //    .Configure("Mono")//通过connectionStringName对象创建DbConfiguration对象（可以用于配置文件中有多个数据库连接字符串配置）
+            //    .AddClass<MonoBookEntity.Index>()//注册实体到数据表的映射关系
+            //    ;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var query = ctx.Set<Folder>().Where(p => p.parentId == id);
+
+                TreeNode node = null;
+                foreach (Folder folder in query.ToList())
+                {
+                    node = new TreeNode
+                    {
+                        Text = folder.FolderName,
+                        ToolTipText = folder.FolderName,
+                        Tag = folder.Id
+                    };
+                    if (parentNode == null)
+                    {
+                        tvFolders.Nodes.Add(node);
+                    }
+                    else
+                    {
+                        parentNode.Nodes.Add(node);
+                    }
+                }
+                tvFolders.ExpandAll();
+
+            }
+
+        }
+        #endregion
+
+        private void tvFolders_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode parentNode = e.Node;
+            FillFolderTreeView(parentNode, Convert.ToInt32(parentNode.Tag));
+        }
+
+        #region NavBarGroup
+
+        /// <summary>
+        /// 任何时刻保持一个展开
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void navBarGroup_ItemChanged(object sender, EventArgs e)
+        {
+            NavBarGroup nbg = sender as NavBarGroup;
+
+            foreach (var item in navBarControl2.Controls)
+            {
+                if (item is NavBarGroupControlContainer)
+                {
+                    //XtraMessageBox.Show((item as NavBarGroupControlContainer).OwnerGroup.Name);
+
+                    (item as NavBarGroupControlContainer).OwnerGroup.Expanded = false;
+                }
+            }
+            nbg.Expanded = !nbg.Expanded;
+
         }
 
         #endregion
+
+       
     }
 }

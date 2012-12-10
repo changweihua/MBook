@@ -7,6 +7,7 @@ using DevExpress.Skins;
 using System.Threading;
 using System.Runtime.InteropServices;
 using DevExpress.XtraEditors;
+using NLite.Data;
 
 namespace MBook
 {
@@ -30,6 +31,30 @@ namespace MBook
         [STAThread]
         static void Main()
         {
+            DbConfiguration cfg = DbConfiguration
+               .Configure("Mono")//通过connectionStringName对象创建DbConfiguration对象（可以用于配置文件中有多个数据库连接字符串配置）
+                //.AddClass<MonoBookEntity.Index>()//注册实体到数据表的映射关系
+               .AddClass<MonoBookEntity.Index>(p =>
+               {
+                   p.TableName("tbIndex");
+                   p.Id(q => q.Id).DbGenerated().ColumnName("i_id");
+                   p.Column(q => q.Guid).ColumnName("i_guid");
+                   p.Column(q => q.TypeId).ColumnName("i_type_id");
+               })
+               .AddClass<MonoBookEntity.Folder>(p =>
+               {
+                   p.TableName("tbFolder");
+                   p.Id(q => q.Id).DbGenerated().ColumnName("f_id");
+                   p.Column(q => q.parentId).ColumnName("f_parent_id");
+                   p.Column(q => q.FolderName).ColumnName("f_display_name");
+                   p.Column(q => q.FolderPath).ColumnName("f_name");
+               });
+            using (var ctx = cfg.CreateDbContext())
+            {
+                var q = ctx.Set<MonoBookEntity.Index>();
+                var mapping = q.Entity;
+            }
+
             #region 注册皮肤
 
             BonusSkins.Register();
@@ -80,8 +105,6 @@ namespace MBook
 
             #endregion
 
-
-
             #region 初始化资源窗体，根据初始化结果判断是否显示主窗体
 
             InitForm initForm = new InitForm();
@@ -93,7 +116,7 @@ namespace MBook
 
                 //if (!mutexWasCreated)
                 //{
-                    Application.Run(new Form1());
+                Application.Run(new Form1());
                 //}
                 //else
                 //{
