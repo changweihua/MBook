@@ -20,24 +20,20 @@ using NLite.Data;
 using MonoBookEntity;
 
 
-
-
 namespace MBook
 {
-    public struct Assert
-    {
-        static Assert()
-        {
-            
-        }
-    }
+
     public partial class Form1 : XtraForm
     {
+        #region 构造函数
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        #endregion
+       
         #region 全局变量
 
         List<Form2> forms = new List<Form2>();
@@ -45,6 +41,23 @@ namespace MBook
 
         #endregion 全局变量
 
+        #region 操作区标签 --> 笔记区
+
+        /// <summary>
+        /// 新建桌面便笺
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddStickyNote_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
+
+
+        /// <summary>
+        /// 新建笔记
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //Form2 f2 = new Form2();
@@ -60,6 +73,62 @@ namespace MBook
             //MessageBox.Show(forms.Count.ToString());
         }
 
+        /// <summary>
+        /// 新建每日回顾
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDailyReview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+        }
+
+        /// <summary>
+        /// 新建九宫格日记
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnGridDaily_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form4 form = new Form4();
+            form.ShowDialog();
+        }
+
+        /// <summary>
+        /// 新建联系人
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNewContact_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ContactForm contactForm = new ContactForm();
+            if (contactForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                FillTreeViewWithContact(new TreeNode { Tag = 4 });
+            }
+        }
+
+        /// <summary>
+        /// 添加日记
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNewDaily_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DailyForm dailyForm = new DailyForm();
+            if (dailyForm.ShowDialog() == DialogResult.OK)
+            {
+                FillTreeViewWithDaily(new TreeNode { Tag = 6 });
+            }
+        }
+
+        
+
+
+        #endregion
+
+        #region 窗体Load事件
 
         /// <summary>
         /// 窗体加载
@@ -86,6 +155,8 @@ namespace MBook
             FillFolderTreeView(null, 0);
         }
 
+
+        #endregion
 
         #region 初始化窗体信息
 
@@ -221,56 +292,6 @@ namespace MBook
 
         #endregion 风格切换下拉框事件
         
-
-        private void btnAddStickyNote_ItemClick(object sender, ItemClickEventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// 搜索按钮的方法
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnEditSearch_ButtonPressed(object sender, ButtonPressedEventArgs e)
-        {
-            ButtonEdit edit = sender as ButtonEdit;
-            switch (edit.Properties.Buttons.IndexOf(e.Button))
-            {
-                case 0:
-                    MessageBox.Show("搜索");
-                    break;
-                case 1:
-                    edit.EditValue = "";
-                    break;
-            }
-        }
-
-        private void btnDailyReview_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form3 form3 = new Form3();
-            form3.ShowDialog();
-        }
-
-        private void btnGridDaily_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form4 form = new Form4();
-            form.ShowDialog();
-        }
-
-        private void btnNewContact_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ContactForm contactForm = new ContactForm();
-            contactForm.ShowDialog();
-        }
-
-        private void btnNewDaily_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            DailyForm dailyForm = new DailyForm();
-            dailyForm.ShowDialog();
-        }
-
-        
-
         #region 退出程序
 
         /// <summary>
@@ -286,32 +307,13 @@ namespace MBook
 
         #endregion
 
+        #region 操作区标签 --> 工具区
 
-        private void rgbiSocial_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
-        {
-            //MessageBox.Show(e.Item.Caption + e.Item.Description);
-            string desc = e.Item.Description;
-            switch (desc)
-            {
-                case "sina":
-                    //SinaForm sinaForm = new SinaForm(WeiboType.Sina);
-                    //if (sinaForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                    //{
-                    //    sinaForm.ShowDialog();
-                    //}
-
-                    //MonoBook5 中登录功能的实现
-                    LoginForm loginForm = new LoginForm(WeiboType.Sina);
-                    if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                    {
-                        new SinaForm(WeiboType.Sina, loginForm.OOAuth).ShowDialog();
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-
+        /// <summary>
+        /// 工具选择，例如发送右键
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rgbiTools_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
         {
             string desc = e.Item.Description;
@@ -328,15 +330,43 @@ namespace MBook
             }
         }
 
+
+        #endregion
+
+        #region 个人信息区 --> 第三方共享
+
+
+        /// <summary>
+        ///  第三方共享
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rgbiSocial_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
+        {
+            string desc = e.Item.Description;
+            switch (desc)
+            {
+                case "sina":
+                    LoginForm loginForm = new LoginForm(WeiboType.Sina);
+                    if (loginForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        new SinaForm(WeiboType.Sina, loginForm.OOAuth).ShowDialog();
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        #endregion
+
+        #region 左上角菜单按钮
+
         private void btnApplicationAbout_ItemClick(object sender, ItemClickEventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
-        }
-
-        private void barEditItemChooseFolder_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
         }
 
         private void btnUserProfile_ItemClick(object sender, ItemClickEventArgs e)
@@ -344,26 +374,16 @@ namespace MBook
             new ProfileForm().ShowDialog();
         }
 
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FolderBrowserDialog fdb = new FolderBrowserDialog();
-            if (fdb.ShowDialog() == DialogResult.OK)
-            {
-                this.barEditItemSavePath.EditValue = fdb.SelectedPath;
-            }
-            fdb = null;
-        }
 
-        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FolderBrowserDialog fdb = new FolderBrowserDialog();
-            if (fdb.ShowDialog() == DialogResult.OK)
-            {
-                this.barEditItemBackupPath.EditValue = fdb.SelectedPath;
-            }
-            fdb = null;
-        }
+        #endregion
 
+        #region 标签页切换
+
+        /// <summary>
+        /// 标签页切换事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
         {
             RibbonPage page = (sender as RibbonControl).SelectedPage;
@@ -377,15 +397,19 @@ namespace MBook
             }
         }
 
+        #endregion
+
+        #region 程序设置页操作
+
         /// <summary>
         /// 切换到设置页的时候，读取配置信息，信息量少， 不使用多线程异步
         /// </summary>
         private void InitSettingPage()
         {
-           this.barEditItemSavePath.EditValue = Properties.Settings.Default.savePath ;
-           this.barEditItemBackupPath.EditValue= Properties.Settings.Default.backupPath ;
-           this.barEditItemAllowAutoUpdate.EditValue = Properties.Settings.Default.allowUpdate ;
-           this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.allowUpdateToBeta ;
+            this.barEditItemSavePath.EditValue = Properties.Settings.Default.savePath;
+            this.barEditItemBackupPath.EditValue = Properties.Settings.Default.backupPath;
+            this.barEditItemAllowAutoUpdate.EditValue = Properties.Settings.Default.allowUpdate;
+            this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.allowUpdateToBeta;
         }
 
         private void barButtonItemCancel_ItemClick(object sender, ItemClickEventArgs e)
@@ -393,11 +417,6 @@ namespace MBook
             InitSettingPage();
         }
 
-
-        
-
-
-        #region 程序设置页操作
 
         /// <summary>
         /// 检查程序更新
@@ -446,8 +465,37 @@ namespace MBook
             }
         }
 
-        #endregion
+        /// <summary>
+        /// 选择保存途径
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FolderBrowserDialog fdb = new FolderBrowserDialog();
+            if (fdb.ShowDialog() == DialogResult.OK)
+            {
+                this.barEditItemSavePath.EditValue = fdb.SelectedPath;
+            }
+            fdb = null;
+        }
 
+        /// <summary>
+        /// 选择保存途径
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FolderBrowserDialog fdb = new FolderBrowserDialog();
+            if (fdb.ShowDialog() == DialogResult.OK)
+            {
+                this.barEditItemBackupPath.EditValue = fdb.SelectedPath;
+            }
+            fdb = null;
+        }
+
+        #endregion
 
         #region 实现程序托盘功能
 
@@ -521,7 +569,21 @@ namespace MBook
 
         #endregion
 
-        #region 加载属性列表
+        #region 加载树形列表
+
+        /// <summary>
+        /// 详细信息列表的右键菜单
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tvResult_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (tvResult.SelectedNode != null)
+            {
+                tsmiDelete.Enabled = true;
+            }
+        }
+
 
         /// <summary>
         /// 加载文件夹树形菜单
@@ -555,26 +617,193 @@ namespace MBook
                     if (parentNode == null)
                     {
                         tvFolders.Nodes.Add(node);
+                        tvFolders.AfterSelect += new TreeViewEventHandler(tvFolders_AfterSelect);
                     }
                     else
                     {
                         parentNode.Nodes.Add(node);
                     }
+                    tvResult.ExpandAll();
                 }
-                tvFolders.ExpandAll();
 
             }
 
         }
-        #endregion
+
 
         private void tvFolders_AfterSelect(object sender, TreeViewEventArgs e)
         {
             TreeNode parentNode = e.Node;
-            FillFolderTreeView(parentNode, Convert.ToInt32(parentNode.Tag));
+            if (!string.IsNullOrEmpty(parentNode.Tag.ToString()))
+            {
+                int index = Convert.ToInt32(parentNode.Tag);
+                if (index == 1)
+                {
+                    FillFolderTreeView(parentNode, Convert.ToInt32(parentNode.Tag));
+                }
+                else
+                {
+                    switch (index)
+                    {
+                        case 4:
+                            FillTreeViewWithContact(parentNode);
+                            break;
+                        case 6:
+                            FillTreeViewWithDaily(parentNode);
+                            break;
+                        default:
+                            FillTreeViewWithDaily(parentNode);
+                            break;
+                    }
+                    
+                }
+            }
         }
 
-        #region NavBarGroup
+        #endregion
+
+        #region 左侧树形菜单的具体信息
+
+        TreeNode treeNode;
+
+        /// <summary>
+        /// 加载日记详细列表
+        /// </summary>
+        /// <param name="node"></param>
+        private void FillTreeViewWithDaily(TreeNode node)
+        {
+            tvResult.Nodes.Clear();
+            tvResult.Tag = node.Tag;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var folders = ctx.Set<Folder>().Where(f => f.Id == Convert.ToInt32(node.Tag));
+
+                Folder folder = folders.ElementAt<Folder>(0);
+
+                if (folder != null)
+                {
+                    var query = ctx.Set<Daily>().Where(d => d.RecordType == folder.RecordTypeId);
+                    var dailies = query.ToList();
+
+                    TreeNode n = null;
+                    int index = 0;
+                    foreach (var item in dailies)
+                    {
+                        n = new TreeNode
+                        {
+                            Text = string.Format("{0} ({1})", Convert.ToDateTime(item.CreateDate).ToShortDateString(), (++index).ToString()),
+                            Tag = item.Guid,
+                            ImageIndex = 0
+                        };
+                        tvResult.Nodes.Add(n);
+                    }
+                }
+
+            }
+            
+
+        }
+
+        /// <summary>
+        /// 加载联系人详细列表
+        /// </summary>
+        /// <param name="node"></param>
+        private void FillTreeViewWithContact(TreeNode node)
+        {
+            tvResult.Nodes.Clear();
+            tvResult.Tag = node.Tag;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var folders = ctx.Set<Folder>().Where(f => f.Id == Convert.ToInt32(node.Tag));
+
+                Folder folder = folders.ElementAt<Folder>(0);
+
+                if (folder != null)
+                {
+                    var query = ctx.Set<Contact>().Where(c => c.RecordType == folder.RecordTypeId);
+                    var contacts = query.ToList();
+
+                    TreeNode n = null;
+                    foreach (var item in contacts)
+                    {
+                        n = new TreeNode
+                        {
+                            Text = string.Format("< {0} > 的名片", item.Name),
+                            Tag = item.Guid,
+                            ImageIndex = 1
+                        };
+                        tvResult.Nodes.Add(n);
+                    }
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiDelete_Click(object sender, EventArgs e)
+        {
+            treeNode = tvResult.SelectedNode;
+            if (treeNode != null)
+            {
+                using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                {
+                    string type = tvResult.Tag.ToString();
+                    switch (type)
+                    {
+                        case "4":
+                            ctx.Set<Contact>().Delete(c => c.Guid == treeNode.Tag.ToString());
+                            FillTreeViewWithContact(new TreeNode { Tag = type });
+                            break;
+                        case "6":
+                            ctx.Set<Daily>().Delete(d => d.Guid == treeNode.Tag.ToString());
+                            FillTreeViewWithDaily(new TreeNode { Tag = type });
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// 双击
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tvResult_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string type = tvResult.Tag.ToString();
+            //XtraMessageBox.Show(type);
+            switch (type)
+            {
+                case "4":
+                    ContactForm cf =new ContactForm(e.Node.Tag.ToString());
+                    if (cf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        cf.Close();
+                    }
+                    break;
+                case "6":
+                    if (new DailyForm(e.Node.Tag.ToString()).ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        #endregion
+
+        #region 保持任何时刻只显示一个NavBarGroup
 
         /// <summary>
         /// 任何时刻保持一个展开
@@ -583,23 +812,50 @@ namespace MBook
         /// <param name="e"></param>
         private void navBarGroup_ItemChanged(object sender, EventArgs e)
         {
-            NavBarGroup nbg = sender as NavBarGroup;
-
-            foreach (var item in navBarControl2.Controls)
-            {
-                if (item is NavBarGroupControlContainer)
-                {
-                    //XtraMessageBox.Show((item as NavBarGroupControlContainer).OwnerGroup.Name);
-
-                    (item as NavBarGroupControlContainer).OwnerGroup.Expanded = false;
-                }
-            }
-            nbg.Expanded = !nbg.Expanded;
+            //NavBarGroup nbg = sender as NavBarGroup;
+            //NavBarGroupControlContainer nbgcc  =null;
+            //foreach (var item in navBarControl2.Controls)
+            //{
+            //    if (item is NavBarGroupControlContainer)
+            //    {
+            //        nbgcc = item as NavBarGroupControlContainer;
+            //        ////XtraMessageBox.Show(nbgcc.OwnerGroup.Name);
+            //        nbgcc.OwnerGroup.Expanded = !nbgcc.OwnerGroup.Expanded;
+            //        //if (nbgcc.OwnerGroup.Name == nbg.Name)
+            //        //{
+            //        //    nbgcc.OwnerGroup.Expanded = true;
+            //        //}
+            //        // (item as NavBarGroupControlContainer).OwnerGroup.Expanded = false;
+            //    }
+            //}
+            ////nbg.Expanded = true;
 
         }
 
         #endregion
+        
+        #region 搜索功能 
 
-       
+        /// <summary>
+        /// 搜索按钮的方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEditSearch_ButtonPressed(object sender, ButtonPressedEventArgs e)
+        {
+            ButtonEdit edit = sender as ButtonEdit;
+            switch (edit.Properties.Buttons.IndexOf(e.Button))
+            {
+                case 0:
+                    MessageBox.Show("搜索");
+                    break;
+                case 1:
+                    edit.EditValue = "";
+                    break;
+            }
+        }
+
+
+        #endregion
     }
 }

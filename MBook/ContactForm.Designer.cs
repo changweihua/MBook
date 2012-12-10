@@ -33,83 +33,99 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pictureEditImage = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.memoEditRemark = new DevExpress.XtraEditors.MemoEdit();
+            this.dateEditBirthday = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditRank = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditMsn = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditQQ = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditWebsite = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditAddress = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditDepartment = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTelePhone = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.textEditName = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditImage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditRank.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditMsn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditQQ.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditWebsite.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDepartment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTelePhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
-            this.groupControl1.Controls.Add(this.pictureEdit1);
+            this.groupControl1.Controls.Add(this.pictureEditImage);
             this.groupControl1.Controls.Add(this.labelControl12);
             this.groupControl1.Controls.Add(this.buttonEditAction);
-            this.groupControl1.Controls.Add(this.memoEdit1);
-            this.groupControl1.Controls.Add(this.dateEdit1);
+            this.groupControl1.Controls.Add(this.memoEditRemark);
+            this.groupControl1.Controls.Add(this.dateEditBirthday);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.textEditRank);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Controls.Add(this.labelControl10);
-            this.groupControl1.Controls.Add(this.textEdit10);
+            this.groupControl1.Controls.Add(this.textEditMsn);
             this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Controls.Add(this.textEdit9);
+            this.groupControl1.Controls.Add(this.textEditQQ);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.textEdit6);
+            this.groupControl1.Controls.Add(this.textEditWebsite);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.textEditAddress);
             this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.textEdit4);
+            this.groupControl1.Controls.Add(this.textEditEmail);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.textEdit7);
+            this.groupControl1.Controls.Add(this.textEditDepartment);
             this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.textEdit3);
+            this.groupControl1.Controls.Add(this.textEditTelePhone);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.textEditName);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(640, 430);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "填完下面的信息，就是一张完整的名片了哟";
+            // 
+            // pictureEditImage
+            // 
+            this.pictureEditImage.EditValue = ((object)(resources.GetObject("pictureEditImage.EditValue")));
+            this.pictureEditImage.Location = new System.Drawing.Point(413, 96);
+            this.pictureEditImage.Name = "pictureEditImage";
+            this.pictureEditImage.Size = new System.Drawing.Size(199, 162);
+            this.pictureEditImage.TabIndex = 11;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(369, 96);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(24, 14);
+            this.labelControl12.TabIndex = 5;
+            this.labelControl12.Text = "头像";
             // 
             // buttonEditAction
             // 
@@ -125,24 +141,24 @@
             this.buttonEditAction.TabIndex = 12;
             this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
-            // memoEdit1
+            // memoEditRemark
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(101, 327);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(511, 64);
-            this.memoEdit1.TabIndex = 10;
+            this.memoEditRemark.Location = new System.Drawing.Point(101, 327);
+            this.memoEditRemark.Name = "memoEditRemark";
+            this.memoEditRemark.Size = new System.Drawing.Size(511, 64);
+            this.memoEditRemark.TabIndex = 10;
             // 
-            // dateEdit1
+            // dateEditBirthday
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(101, 237);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditBirthday.EditValue = null;
+            this.dateEditBirthday.Location = new System.Drawing.Point(101, 237);
+            this.dateEditBirthday.Name = "dateEditBirthday";
+            this.dateEditBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditBirthday.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(199, 21);
-            this.dateEdit1.TabIndex = 7;
+            this.dateEditBirthday.Size = new System.Drawing.Size(199, 21);
+            this.dateEditBirthday.TabIndex = 7;
             // 
             // labelControl2
             // 
@@ -152,14 +168,12 @@
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "头衔";
             // 
-            // textEdit2
+            // textEditRank
             // 
-            this.textEdit2.Location = new System.Drawing.Point(413, 65);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Mask.EditMask = "\\S{1,10}";
-            this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit2.Size = new System.Drawing.Size(199, 21);
-            this.textEdit2.TabIndex = 1;
+            this.textEditRank.Location = new System.Drawing.Point(413, 65);
+            this.textEditRank.Name = "textEditRank";
+            this.textEditRank.Size = new System.Drawing.Size(199, 21);
+            this.textEditRank.TabIndex = 1;
             // 
             // labelControl11
             // 
@@ -177,14 +191,14 @@
             this.labelControl10.TabIndex = 1;
             this.labelControl10.Text = "MSN";
             // 
-            // textEdit10
+            // textEditMsn
             // 
-            this.textEdit10.Location = new System.Drawing.Point(101, 296);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
-            this.textEdit10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit10.Size = new System.Drawing.Size(199, 21);
-            this.textEdit10.TabIndex = 9;
+            this.textEditMsn.Location = new System.Drawing.Point(101, 296);
+            this.textEditMsn.Name = "textEditMsn";
+            this.textEditMsn.Properties.Mask.EditMask = "([a-zA-Z0-9]+([a-zA-Z0-9]\\.)?)@([a-zA-Z0-9]+\\.)+([a-zA-Z0-9]+\\.)?[a-zA-Z0-9]+";
+            this.textEditMsn.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEditMsn.Size = new System.Drawing.Size(199, 21);
+            this.textEditMsn.TabIndex = 9;
             // 
             // labelControl9
             // 
@@ -194,14 +208,14 @@
             this.labelControl9.TabIndex = 1;
             this.labelControl9.Text = "QQ";
             // 
-            // textEdit9
+            // textEditQQ
             // 
-            this.textEdit9.Location = new System.Drawing.Point(101, 267);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Properties.Mask.EditMask = "\\d{5,10}";
-            this.textEdit9.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit9.Size = new System.Drawing.Size(199, 21);
-            this.textEdit9.TabIndex = 8;
+            this.textEditQQ.Location = new System.Drawing.Point(101, 267);
+            this.textEditQQ.Name = "textEditQQ";
+            this.textEditQQ.Properties.Mask.EditMask = "\\d{5,10}";
+            this.textEditQQ.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEditQQ.Size = new System.Drawing.Size(199, 21);
+            this.textEditQQ.TabIndex = 8;
             // 
             // labelControl8
             // 
@@ -219,14 +233,14 @@
             this.labelControl6.TabIndex = 1;
             this.labelControl6.Text = "个人网站";
             // 
-            // textEdit6
+            // textEditWebsite
             // 
-            this.textEdit6.Location = new System.Drawing.Point(101, 209);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Mask.EditMask = "(http://|https://)?(www\\.)?[a-zA-Z]+\\.[a-zA-Z]+";
-            this.textEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit6.Size = new System.Drawing.Size(199, 21);
-            this.textEdit6.TabIndex = 6;
+            this.textEditWebsite.Location = new System.Drawing.Point(101, 209);
+            this.textEditWebsite.Name = "textEditWebsite";
+            this.textEditWebsite.Properties.Mask.EditMask = "(http://|https://)?(www\\.)?[a-zA-Z0-9]+\\.[a-zA-Z]+";
+            this.textEditWebsite.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEditWebsite.Size = new System.Drawing.Size(199, 21);
+            this.textEditWebsite.TabIndex = 6;
             // 
             // labelControl5
             // 
@@ -236,14 +250,13 @@
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "地址";
             // 
-            // textEdit5
+            // textEditAddress
             // 
-            this.textEdit5.Location = new System.Drawing.Point(101, 180);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Mask.EditMask = "\\S+@\\S+";
-            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit5.Size = new System.Drawing.Size(199, 21);
-            this.textEdit5.TabIndex = 5;
+            this.textEditAddress.Location = new System.Drawing.Point(101, 180);
+            this.textEditAddress.Name = "textEditAddress";
+            this.textEditAddress.Properties.Mask.EditMask = "\\S+@\\S+";
+            this.textEditAddress.Size = new System.Drawing.Size(199, 21);
+            this.textEditAddress.TabIndex = 5;
             // 
             // labelControl4
             // 
@@ -253,14 +266,14 @@
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "电子邮件";
             // 
-            // textEdit4
+            // textEditEmail
             // 
-            this.textEdit4.Location = new System.Drawing.Point(101, 152);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
-            this.textEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit4.Size = new System.Drawing.Size(199, 21);
-            this.textEdit4.TabIndex = 4;
+            this.textEditEmail.Location = new System.Drawing.Point(101, 152);
+            this.textEditEmail.Name = "textEditEmail";
+            this.textEditEmail.Properties.Mask.EditMask = "([a-zA-Z0-9]+([a-zA-Z0-9]\\.)?)@([a-zA-Z0-9]+\\.)+([a-zA-Z0-9]+\\.)?[a-zA-Z0-9]+";
+            this.textEditEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEditEmail.Size = new System.Drawing.Size(199, 21);
+            this.textEditEmail.TabIndex = 4;
             // 
             // labelControl7
             // 
@@ -270,14 +283,13 @@
             this.labelControl7.TabIndex = 1;
             this.labelControl7.Text = "单位";
             // 
-            // textEdit7
+            // textEditDepartment
             // 
-            this.textEdit7.Location = new System.Drawing.Point(101, 94);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Mask.EditMask = "\\S{1,100}";
-            this.textEdit7.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit7.Size = new System.Drawing.Size(199, 21);
-            this.textEdit7.TabIndex = 2;
+            this.textEditDepartment.Location = new System.Drawing.Point(101, 94);
+            this.textEditDepartment.Name = "textEditDepartment";
+            this.textEditDepartment.Properties.Mask.EditMask = "\\S{1,100}";
+            this.textEditDepartment.Size = new System.Drawing.Size(199, 21);
+            this.textEditDepartment.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -287,15 +299,15 @@
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "电话";
             // 
-            // textEdit3
+            // textEditTelePhone
             // 
-            this.textEdit3.Location = new System.Drawing.Point(101, 122);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Mask.BeepOnError = true;
-            this.textEdit3.Properties.Mask.EditMask = "(\\(\\d\\d\\d\\))?\\d{1,3}-\\d{4}-\\d{4}";
-            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit3.Size = new System.Drawing.Size(199, 21);
-            this.textEdit3.TabIndex = 3;
+            this.textEditTelePhone.Location = new System.Drawing.Point(101, 122);
+            this.textEditTelePhone.Name = "textEditTelePhone";
+            this.textEditTelePhone.Properties.Mask.BeepOnError = true;
+            this.textEditTelePhone.Properties.Mask.EditMask = "(\\(\\d\\d\\d\\))?\\d{1,3}-\\d{4}-\\d{4}";
+            this.textEditTelePhone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEditTelePhone.Size = new System.Drawing.Size(199, 21);
+            this.textEditTelePhone.TabIndex = 3;
             // 
             // labelControl1
             // 
@@ -305,28 +317,12 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "姓名";
             // 
-            // textEdit1
+            // textEditName
             // 
-            this.textEdit1.Location = new System.Drawing.Point(101, 65);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(199, 21);
-            this.textEdit1.TabIndex = 0;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(369, 96);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(24, 14);
-            this.labelControl12.TabIndex = 5;
-            this.labelControl12.Text = "头像";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(413, 96);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Size = new System.Drawing.Size(199, 162);
-            this.pictureEdit1.TabIndex = 11;
+            this.textEditName.Location = new System.Drawing.Point(101, 65);
+            this.textEditName.Name = "textEditName";
+            this.textEditName.Size = new System.Drawing.Size(199, 21);
+            this.textEditName.TabIndex = 0;
             // 
             // ContactForm
             // 
@@ -344,23 +340,24 @@
             this.Name = "ContactForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mono Book ----  添加联系人，让彼此变得更亲密";
+            this.Load += new System.EventHandler(this.ContactForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditImage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditRank.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditMsn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditQQ.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditWebsite.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDepartment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTelePhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,29 +366,29 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textEditRank;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
+        private DevExpress.XtraEditors.TextEdit textEditMsn;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit textEditQQ;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit textEditWebsite;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit textEditAddress;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit textEditEmail;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit textEditDepartment;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit textEditTelePhone;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit textEditName;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.MemoEdit memoEditRemark;
+        private DevExpress.XtraEditors.DateEdit dateEditBirthday;
         private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit pictureEditImage;
     }
 }

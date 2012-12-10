@@ -8,6 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraEditors;
+using NLite.Data;
+using MonoBookEntity;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace MBook
 {
@@ -29,10 +33,21 @@ namespace MBook
      ************************************************************************************/
     public partial class ContactForm : XtraForm
     {
+        private Contact contact;
+
         public ContactForm()
         {
             InitializeComponent();
+            this.Tag = "";
         }
+
+        public ContactForm(string guid)
+        {
+            InitializeComponent();
+            this.Tag = guid;
+        }
+
+        #region 大按钮
 
         private void buttonEditAction_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -41,7 +56,7 @@ namespace MBook
             switch (index)
             {
                 case 0:
-                    AddContact();
+                    SaveContact();
                     break;
                 case 1:
                     ResetForm();
@@ -55,6 +70,10 @@ namespace MBook
 
         }
 
+
+        #endregion
+
+        #region 重置
 
         /// <summary>
         /// 重置整个表单
@@ -96,6 +115,113 @@ namespace MBook
         }
 
 
+        #endregion
+
+        #region 保存
+
+        /// <summary>
+        /// 保存联系人
+        /// </summary>
+        private void SaveContact()
+        {
+            if (!CheckForm())
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "信息必须填写完整", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string guid = "";
+            if (!string.IsNullOrEmpty(this.Tag.ToString()))
+            {
+                guid = contact.Guid;
+            }
+            else
+            {
+                guid = Guid.NewGuid().ToString();
+            }
+
+            contact = new Contact
+            {
+                Address = textEditAddress.EditValue.ToString(),
+                Birthday = dateEditBirthday.EditValue.ToString(),
+                Department = textEditDepartment.EditValue.ToString(),
+                Email = textEditEmail.EditValue.ToString(),
+                Guid = guid,
+                Msn = textEditMsn.EditValue.ToString(),
+                Name = textEditName.EditValue.ToString(),
+                QQ = textEditQQ.EditValue.ToString(),
+                Rank = textEditRank.EditValue.ToString(),
+                Remark = memoEditRemark.EditValue.ToString(),
+                Telephone = textEditTelePhone.EditValue.ToString(),
+                Website = textEditWebsite.EditValue.ToString(),
+                RecordType = 5
+            };
+
+            string filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.savePath, contact.Guid);
+
+            bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Xml, contact, filePath);
+
+            if (flag)
+            {
+                Bitmap map = pictureEditImage.EditValue as Bitmap;
+                if (map != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        map.Save(ms, ImageFormat.Png);
+                        byte[] byteImage = new byte[ms.Length];
+                        byteImage = ms.ToArray();
+                        contact.UserImage = byteImage;
+                    }
+                }
+                using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                {
+                    int count = 0;
+                    if (!string.IsNullOrEmpty(this.Tag.ToString()))
+                    {
+                        count = ctx.Set<Contact>().Update(contact);
+                    }
+                    else
+                    {
+                        count = ctx.Set<Contact>().Insert(contact);
+                    }
+                    //XtraMessageBox.Show(count.ToString());
+                    if (count == 1)
+                    {
+                        this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        #region 显示
+
+        private void ShowContact()
+        {
+            int a = 0;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                contact = ctx.Set<Contact>().Where(c => c.Guid == this.Tag.ToString()).ElementAt(0);
+                this.textEditAddress.EditValue = contact.Address;
+                this.textEditDepartment.EditValue = contact.Department;
+                this.textEditEmail.EditValue = contact.Email;
+                this.textEditMsn.EditValue = contact.Msn;
+                this.textEditName.EditValue = contact.Name;
+                this.textEditQQ.EditValue = contact.QQ;
+                this.textEditRank.EditValue = contact.Rank;
+                this.textEditTelePhone.EditValue = contact.Telephone;
+                this.textEditWebsite.EditValue = contact.Website;
+                this.dateEditBirthday.EditValue = contact.Birthday;
+                this.memoEditRemark.EditValue = contact.Remark;
+            }
+        }
+
+        #endregion
+
+        #region 公共方法
+
         /// <summary>
         /// 检查表单项是否输入完整
         /// </summary>
@@ -118,13 +244,13 @@ namespace MBook
                         switch (name)
                         {
                             case "DateEdit":
-                                obj=(temp[i] as DateEdit).EditValue ;
+                                obj = (temp[i] as DateEdit).EditValue;
                                 break;
                             case "TextEdit":
-                                obj=(temp[i] as TextEdit).EditValue;
+                                obj = (temp[i] as TextEdit).EditValue;
                                 break;
                             case "MemoEdit":
-                                obj=(temp[i] as MemoEdit).EditValue;
+                                obj = (temp[i] as MemoEdit).EditValue;
                                 break;
                             default:
                                 obj = "true";
@@ -144,22 +270,24 @@ namespace MBook
         }
 
 
-        private void AddContact()
-        {
-            if (!CheckForm())
-            {
-                XtraMessageBox.Show("不完整");
-            }
-        }
-
         /// <summary>
         /// 初始化验证规则
         /// </summary>
-        private void InitValidationRules() 
+        private void InitValidationRules()
         {
             //CustomValidationRule customValidationRule = new CustomValidationRule();
             //customValidationRule.ErrorText = "Please enter a valid person name";
             //customValidationRule.ErrorType = ErrorType.Warning;
+        }
+
+        #endregion
+
+        private void ContactForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.Tag.ToString()))
+            {
+                ShowContact();
+            }
         }
 
     }

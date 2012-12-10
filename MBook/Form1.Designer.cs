@@ -30,37 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem11 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem12 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem13 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem14 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem15 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem16 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem17 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem18 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("群组1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("我的群组", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("快速搜索");
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem19 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem20 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem21 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem22 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem23 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup6 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup7 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem24 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem25 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem26 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem27 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem28 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem29 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem30 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem31 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup8 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem32 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem33 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem34 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem35 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem36 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("群组1");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("我的群组", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("快速搜索");
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.btnUserProfile = new DevExpress.XtraBars.BarButtonItem();
@@ -156,6 +156,10 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbgImages = new System.Windows.Forms.ImageList(this.components);
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.tvResult = new System.Windows.Forms.TreeView();
+            this.cmsTreeViewResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tvResultImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.treeViewImages = new System.Windows.Forms.ImageList(this.components);
             this.barEditItemChooseSaveFolder = new DevExpress.XtraBars.BarEditItem();
@@ -211,6 +215,8 @@
             this.navBarGroupControlContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            this.cmsTreeViewResult.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -434,42 +440,42 @@
             this.rgbiTools.Gallery.AllowHoverImages = true;
             this.rgbiTools.Gallery.DistanceBetweenItems = 2;
             this.rgbiTools.Gallery.FirstItemVertAlignment = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment.Center;
-            galleryItemGroup1.Caption = "Group1";
-            galleryItem1.Caption = "日历";
-            galleryItem1.Description = "calendar";
-            galleryItem1.ImageIndex = 0;
-            galleryItem2.Caption = "任务";
-            galleryItem2.Description = "task";
-            galleryItem2.HoverImageIndex = 1;
-            galleryItem2.ImageIndex = 1;
-            galleryItem3.Caption = "作者";
-            galleryItem3.Description = "author";
-            galleryItem3.HoverImageIndex = 2;
-            galleryItem3.ImageIndex = 2;
-            galleryItem4.Caption = "邮件";
-            galleryItem4.Description = "email";
-            galleryItem4.HoverImageIndex = 4;
-            galleryItem4.ImageIndex = 4;
-            galleryItem5.Caption = "相册";
-            galleryItem5.Description = "gallary";
-            galleryItem5.HoverImageIndex = 3;
-            galleryItem5.ImageIndex = 3;
-            galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1,
-            galleryItem2,
-            galleryItem3,
-            galleryItem4,
-            galleryItem5});
+            galleryItemGroup5.Caption = "Group1";
+            galleryItem19.Caption = "日历";
+            galleryItem19.Description = "calendar";
+            galleryItem19.ImageIndex = 0;
+            galleryItem20.Caption = "任务";
+            galleryItem20.Description = "task";
+            galleryItem20.HoverImageIndex = 1;
+            galleryItem20.ImageIndex = 1;
+            galleryItem21.Caption = "作者";
+            galleryItem21.Description = "author";
+            galleryItem21.HoverImageIndex = 2;
+            galleryItem21.ImageIndex = 2;
+            galleryItem22.Caption = "邮件";
+            galleryItem22.Description = "email";
+            galleryItem22.HoverImageIndex = 4;
+            galleryItem22.ImageIndex = 4;
+            galleryItem23.Caption = "相册";
+            galleryItem23.Description = "gallary";
+            galleryItem23.HoverImageIndex = 3;
+            galleryItem23.ImageIndex = 3;
+            galleryItemGroup5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem19,
+            galleryItem20,
+            galleryItem21,
+            galleryItem22,
+            galleryItem23});
             this.rgbiTools.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup5});
             this.rgbiTools.Gallery.HoverImages = this.ribbonGallaryHoverImages;
             this.rgbiTools.Gallery.Images = this.ribbonGallaryImages;
-            skinPaddingEdges1.All = 5;
-            skinPaddingEdges1.Bottom = 5;
-            skinPaddingEdges1.Left = 5;
-            skinPaddingEdges1.Right = 5;
-            skinPaddingEdges1.Top = 5;
-            this.rgbiTools.Gallery.ItemImagePadding = skinPaddingEdges1;
+            skinPaddingEdges2.All = 5;
+            skinPaddingEdges2.Bottom = 5;
+            skinPaddingEdges2.Left = 5;
+            skinPaddingEdges2.Right = 5;
+            skinPaddingEdges2.Top = 5;
+            this.rgbiTools.Gallery.ItemImagePadding = skinPaddingEdges2;
             this.rgbiTools.Gallery.RowCount = 2;
             this.rgbiTools.Gallery.ItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.rgbiTools_Gallery_ItemClick);
             this.rgbiTools.Id = 26;
@@ -494,9 +500,9 @@
             // 
             // rgbiSkins
             // 
-            galleryItemGroup2.Caption = "Group1";
+            galleryItemGroup6.Caption = "Group1";
             this.rgbiSkins.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup6});
             this.rgbiSkins.Id = 27;
             this.rgbiSkins.Name = "rgbiSkins";
             // 
@@ -587,73 +593,73 @@
             // 
             this.rgbiSocial.Gallery.AllowHoverImages = true;
             this.rgbiSocial.Gallery.ColumnCount = 8;
-            galleryItemGroup3.Caption = "国内";
-            galleryItem6.Caption = "新浪微博";
-            galleryItem6.Description = "sina";
-            galleryItem6.HoverImageIndex = 0;
-            galleryItem6.ImageIndex = 0;
-            galleryItem7.Caption = "腾讯微博";
-            galleryItem7.Description = "tencent";
-            galleryItem7.HoverImageIndex = 1;
-            galleryItem7.ImageIndex = 1;
-            galleryItem8.Caption = "搜狐微博";
-            galleryItem8.Description = "sohu";
-            galleryItem8.HoverImageIndex = 2;
-            galleryItem8.ImageIndex = 2;
-            galleryItem9.Caption = "网易空间";
-            galleryItem9.Description = "netease";
-            galleryItem9.HoverImageIndex = 3;
-            galleryItem9.ImageIndex = 3;
-            galleryItem10.Caption = "人人网";
-            galleryItem10.Description = "renren";
-            galleryItem10.HoverImageIndex = 4;
-            galleryItem10.ImageIndex = 4;
-            galleryItem11.Caption = "开心网";
-            galleryItem11.Description = "kaixin";
-            galleryItem11.HoverImageIndex = 5;
-            galleryItem11.ImageIndex = 5;
-            galleryItem12.Caption = "QQ空间";
-            galleryItem12.Description = "qzone";
-            galleryItem12.HoverImageIndex = 6;
-            galleryItem12.ImageIndex = 6;
-            galleryItem13.Caption = "豆瓣日记";
-            galleryItem13.Description = "douban";
-            galleryItem13.HoverImageIndex = 7;
-            galleryItem13.ImageIndex = 7;
-            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem6,
-            galleryItem7,
-            galleryItem8,
-            galleryItem9,
-            galleryItem10,
-            galleryItem11,
-            galleryItem12,
-            galleryItem13});
-            galleryItemGroup4.Caption = "国外";
-            galleryItem14.Caption = "Item9";
-            galleryItem14.HoverImageIndex = 10;
-            galleryItem14.ImageIndex = 9;
-            galleryItem15.Caption = "Item10";
-            galleryItem15.HoverImageIndex = 8;
-            galleryItem15.ImageIndex = 8;
-            galleryItem16.Caption = "Item11";
-            galleryItem16.HoverImageIndex = 11;
-            galleryItem16.ImageIndex = 10;
-            galleryItem17.Caption = "Item12";
-            galleryItem17.HoverImageIndex = 12;
-            galleryItem17.ImageIndex = 11;
-            galleryItem18.Caption = "Item13";
-            galleryItem18.HoverImageIndex = 9;
-            galleryItem18.ImageIndex = 12;
-            galleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem14,
-            galleryItem15,
-            galleryItem16,
-            galleryItem17,
-            galleryItem18});
+            galleryItemGroup7.Caption = "国内";
+            galleryItem24.Caption = "新浪微博";
+            galleryItem24.Description = "sina";
+            galleryItem24.HoverImageIndex = 0;
+            galleryItem24.ImageIndex = 0;
+            galleryItem25.Caption = "腾讯微博";
+            galleryItem25.Description = "tencent";
+            galleryItem25.HoverImageIndex = 1;
+            galleryItem25.ImageIndex = 1;
+            galleryItem26.Caption = "搜狐微博";
+            galleryItem26.Description = "sohu";
+            galleryItem26.HoverImageIndex = 2;
+            galleryItem26.ImageIndex = 2;
+            galleryItem27.Caption = "网易空间";
+            galleryItem27.Description = "netease";
+            galleryItem27.HoverImageIndex = 3;
+            galleryItem27.ImageIndex = 3;
+            galleryItem28.Caption = "人人网";
+            galleryItem28.Description = "renren";
+            galleryItem28.HoverImageIndex = 4;
+            galleryItem28.ImageIndex = 4;
+            galleryItem29.Caption = "开心网";
+            galleryItem29.Description = "kaixin";
+            galleryItem29.HoverImageIndex = 5;
+            galleryItem29.ImageIndex = 5;
+            galleryItem30.Caption = "QQ空间";
+            galleryItem30.Description = "qzone";
+            galleryItem30.HoverImageIndex = 6;
+            galleryItem30.ImageIndex = 6;
+            galleryItem31.Caption = "豆瓣日记";
+            galleryItem31.Description = "douban";
+            galleryItem31.HoverImageIndex = 7;
+            galleryItem31.ImageIndex = 7;
+            galleryItemGroup7.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem24,
+            galleryItem25,
+            galleryItem26,
+            galleryItem27,
+            galleryItem28,
+            galleryItem29,
+            galleryItem30,
+            galleryItem31});
+            galleryItemGroup8.Caption = "国外";
+            galleryItem32.Caption = "Item9";
+            galleryItem32.HoverImageIndex = 10;
+            galleryItem32.ImageIndex = 9;
+            galleryItem33.Caption = "Item10";
+            galleryItem33.HoverImageIndex = 8;
+            galleryItem33.ImageIndex = 8;
+            galleryItem34.Caption = "Item11";
+            galleryItem34.HoverImageIndex = 11;
+            galleryItem34.ImageIndex = 10;
+            galleryItem35.Caption = "Item12";
+            galleryItem35.HoverImageIndex = 12;
+            galleryItem35.ImageIndex = 11;
+            galleryItem36.Caption = "Item13";
+            galleryItem36.HoverImageIndex = 9;
+            galleryItem36.ImageIndex = 12;
+            galleryItemGroup8.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem32,
+            galleryItem33,
+            galleryItem34,
+            galleryItem35,
+            galleryItem36});
             this.rgbiSocial.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3,
-            galleryItemGroup4});
+            galleryItemGroup7,
+            galleryItemGroup8});
             this.rgbiSocial.Gallery.HoverImages = this.rgbiSocialHoverImages;
             this.rgbiSocial.Gallery.Images = this.rgbiSocialImages;
             this.rgbiSocial.Gallery.RowCount = 2;
@@ -968,21 +974,21 @@
             // 
             this.repositoryItemButtonEdit4.AutoHeight = false;
             this.repositoryItemButtonEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "修改", 55, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleLeft, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit4.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "点击，修改文件夹的位置", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "修改", 55, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleLeft, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit4.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "点击，修改文件夹的位置", null, null, true)});
             this.repositoryItemButtonEdit4.Name = "repositoryItemButtonEdit4";
             // 
             // repositoryItemButtonEdit5
             // 
             this.repositoryItemButtonEdit5.AutoHeight = false;
             this.repositoryItemButtonEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit5.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit5.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
             // 
             // repositoryItemButtonEdit6
             // 
             this.repositoryItemButtonEdit6.AutoHeight = false;
             this.repositoryItemButtonEdit6.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit6.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit6.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.repositoryItemButtonEdit6.Name = "repositoryItemButtonEdit6";
             // 
             // repositoryItemButtonEdit7
@@ -1071,7 +1077,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(180, 425);
-            this.splitContainerControl1.SplitterPosition = 356;
+            this.splitContainerControl1.SplitterPosition = 252;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -1081,7 +1087,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(180, 356);
+            this.groupControl3.Size = new System.Drawing.Size(180, 252);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "大纲";
             // 
@@ -1102,7 +1108,7 @@
             this.navBarControl2.Location = new System.Drawing.Point(2, 23);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 363;
-            this.navBarControl2.Size = new System.Drawing.Size(176, 331);
+            this.navBarControl2.Size = new System.Drawing.Size(176, 227);
             this.navBarControl2.SmallImages = this.nbgImages;
             this.navBarControl2.TabIndex = 0;
             this.navBarControl2.Text = "navBarControl2";
@@ -1129,10 +1135,10 @@
             this.tvFolders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvFolders.Location = new System.Drawing.Point(0, 0);
             this.tvFolders.Name = "tvFolders";
+            this.tvFolders.Scrollable = false;
             this.tvFolders.ShowNodeToolTips = true;
             this.tvFolders.Size = new System.Drawing.Size(168, 146);
             this.tvFolders.TabIndex = 0;
-            this.tvFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvFolders_AfterSelect);
             // 
             // navBarGroupControlContainer2
             // 
@@ -1146,12 +1152,12 @@
             this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView2.Location = new System.Drawing.Point(0, 0);
             this.treeView2.Name = "treeView2";
-            treeNode1.Name = "节点1";
-            treeNode1.Text = "群组1";
-            treeNode2.Name = "节点0";
-            treeNode2.Text = "我的群组";
+            treeNode4.Name = "节点1";
+            treeNode4.Text = "群组1";
+            treeNode5.Name = "节点0";
+            treeNode5.Text = "我的群组";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode5});
             this.treeView2.Size = new System.Drawing.Size(168, 76);
             this.treeView2.TabIndex = 0;
             // 
@@ -1168,10 +1174,10 @@
             this.treeView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView3.Location = new System.Drawing.Point(0, 0);
             this.treeView3.Name = "treeView3";
-            treeNode3.Name = "节点0";
-            treeNode3.Text = "快速搜索";
+            treeNode6.Name = "节点0";
+            treeNode6.Text = "快速搜索";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode6});
             this.treeView3.Size = new System.Drawing.Size(168, 76);
             this.treeView3.TabIndex = 0;
             // 
@@ -1189,7 +1195,7 @@
             this.btnEditSearch.MenuManager = this.ribbonControl1;
             this.btnEditSearch.Name = "btnEditSearch";
             this.btnEditSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditSearch.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditSearch.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
             this.btnEditSearch.Size = new System.Drawing.Size(162, 22);
             this.btnEditSearch.TabIndex = 0;
@@ -1236,12 +1242,51 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.tvResult);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(180, 63);
+            this.groupControl2.Size = new System.Drawing.Size(180, 167);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "详细";
+            // 
+            // tvResult
+            // 
+            this.tvResult.ContextMenuStrip = this.cmsTreeViewResult;
+            this.tvResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvResult.ImageIndex = 0;
+            this.tvResult.ImageList = this.tvResultImages;
+            this.tvResult.Location = new System.Drawing.Point(2, 23);
+            this.tvResult.Name = "tvResult";
+            this.tvResult.SelectedImageIndex = 0;
+            this.tvResult.ShowLines = false;
+            this.tvResult.ShowRootLines = false;
+            this.tvResult.Size = new System.Drawing.Size(176, 142);
+            this.tvResult.TabIndex = 0;
+            this.tvResult.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvResult_NodeMouseDoubleClick);
+            this.tvResult.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tvResult_MouseClick);
+            // 
+            // cmsTreeViewResult
+            // 
+            this.cmsTreeViewResult.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDelete});
+            this.cmsTreeViewResult.Name = "cmsTreeViewResult";
+            this.cmsTreeViewResult.Size = new System.Drawing.Size(153, 48);
+            // 
+            // tsmiDelete
+            // 
+            this.tsmiDelete.Enabled = false;
+            this.tsmiDelete.Name = "tsmiDelete";
+            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDelete.Text = "删除";
+            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            // 
+            // tvResultImages
+            // 
+            this.tvResultImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tvResultImages.ImageStream")));
+            this.tvResultImages.TransparentColor = System.Drawing.Color.Transparent;
+            this.tvResultImages.Images.SetKeyName(0, "Daily.gif");
+            this.tvResultImages.Images.SetKeyName(1, "NewContact.png");
             // 
             // ribbonPageGroup2
             // 
@@ -1262,7 +1307,6 @@
             this.barEditItemChooseSaveFolder.Id = 53;
             this.barEditItemChooseSaveFolder.Name = "barEditItemChooseSaveFolder";
             this.barEditItemChooseSaveFolder.Width = 200;
-            this.barEditItemChooseSaveFolder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barEditItemChooseFolder_ItemClick);
             // 
             // notifyIcon1
             // 
@@ -1281,39 +1325,39 @@
             this.toolStripSeparator1,
             this.tsmiExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 82);
             // 
             // tsmiShow
             // 
             this.tsmiShow.Image = ((System.Drawing.Image)(resources.GetObject("tsmiShow.Image")));
             this.tsmiShow.Name = "tsmiShow";
-            this.tsmiShow.Size = new System.Drawing.Size(152, 22);
+            this.tsmiShow.Size = new System.Drawing.Size(134, 22);
             this.tsmiShow.Text = "显示主窗体";
             this.tsmiShow.Click += new System.EventHandler(this.tsmiShow_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
             // 
             // tsmiAbout
             // 
             this.tsmiAbout.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAbout.Image")));
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAbout.Size = new System.Drawing.Size(134, 22);
             this.tsmiAbout.Text = "关于本程序";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Image = ((System.Drawing.Image)(resources.GetObject("tsmiExit.Image")));
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(134, 22);
             this.tsmiExit.Text = "退出程序";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -1382,6 +1426,8 @@
             this.navBarGroupControlContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEditSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.cmsTreeViewResult.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1494,6 +1540,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tsmiShow;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.TreeView tvResult;
+        private System.Windows.Forms.ContextMenuStrip cmsTreeViewResult;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
+        private System.Windows.Forms.ImageList tvResultImages;
     }
 }
 

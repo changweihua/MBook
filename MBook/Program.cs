@@ -41,14 +41,18 @@ namespace MBook
                    p.Column(q => q.Guid).ColumnName("i_guid");
                    p.Column(q => q.TypeId).ColumnName("i_type_id");
                })
-               .AddClass<MonoBookEntity.Folder>(p =>
-               {
-                   p.TableName("tbFolder");
-                   p.Id(q => q.Id).DbGenerated().ColumnName("f_id");
-                   p.Column(q => q.parentId).ColumnName("f_parent_id");
-                   p.Column(q => q.FolderName).ColumnName("f_display_name");
-                   p.Column(q => q.FolderPath).ColumnName("f_name");
-               });
+               .AddClass<MonoBookEntity.Folder>()
+               .AddClass<MonoBookEntity.Daily>()
+               .AddClass<MonoBookEntity.Contact>()
+               ;
+               //.AddClass<MonoBookEntity.Folder>(p =>
+               //{
+               //    p.TableName("tbFolder");
+               //    p.Id(q => q.Id).DbGenerated().ColumnName("f_id");
+               //    p.Column(q => q.parentId).ColumnName("f_parent_id");
+               //    p.Column(q => q.FolderName).ColumnName("f_display_name");
+               //    p.Column(q => q.FolderPath).ColumnName("f_name");
+               //});
             using (var ctx = cfg.CreateDbContext())
             {
                 var q = ctx.Set<MonoBookEntity.Index>();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NLite.Data;
+using System.Xml.Serialization;
 
 namespace MonoBookEntity
 {
@@ -106,5 +107,9 @@ namespace MonoBookEntity
         /// </summary>
         [Column(Name = "c_image")]
         public byte[] UserImage;
+
+        [XmlIgnore]
+        [Column(Name = "c_record_type_id")]
+        public int RecordType;
     }
 }

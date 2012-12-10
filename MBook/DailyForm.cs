@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
+using NLite.Data;
+using MonoBookEntity;
 
 namespace MBook
 {
@@ -29,14 +31,54 @@ namespace MBook
      ************************************************************************************/
     public partial class DailyForm : XtraForm
     {
+
+        /// <summary>
+        /// Guid标识符
+        /// </summary>
+        private string guid;
+        private Daily daily;
+
+        #region 初始化窗体
+
         public DailyForm()
         {
             InitializeComponent();
         }
 
+        public DailyForm(string g)
+        {
+            InitializeComponent();
+            guid = g;
+        }
+
+
+        /// <summary>
+        /// 判断guid是否为空，如为空，则打开新的，否则加载选中的日记
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DailyForm_Load(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(guid))
+            {
+                string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, guid);
+                object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, null, filePath);
+                string content = obj == null ? "" : obj.ToString();
+                this.richEditControl1.HtmlText = content;
+                using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                {
+                    daily = ctx.Set<Daily>().Where(d => d.Guid == guid).ElementAt(0);
+                }
+                barEditIsSecret.EditValue = daily.IsSecret;
+                barEditSecret.EditValue = daily.Password;
+
+            }
+
         }
+
+        #endregion
+
+        #region 工具栏按钮操作
 
         private void barButtonClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -64,11 +106,6 @@ namespace MBook
             }
         }
 
-        private void richEditControl1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void barButtonCut_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.richEditControl1.Cut();
@@ -83,6 +120,78 @@ namespace MBook
         {
             this.richEditControl1.Paste();
         }
+
+        
+        private void barButtonHighlight_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, null, @"D:\843075cd-d35f-4616-9f66-739762b892ad.mono");
+            string content = obj == null ? "" : obj.ToString();
+            XtraMessageBox.Show(content);
+        }
+
+        private void barEditIsSecret_EditValueChanged(object sender, EventArgs e)
+        {
+            barEditSecret.Enabled = Convert.ToBoolean(this.barEditIsSecret.EditValue);
+            if (barEditSecret.Enabled == false)
+            {
+                barEditSecret.EditValue = "";
+            }
+        }
+
+
+        #endregion
+
+        #region 保存日记
+
+        private void barButtonSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string content = richEditControl1.HtmlText;
+
+            bool isNew = false;
+
+            if (string.IsNullOrEmpty(guid))
+            {
+                isNew = true;
+                guid = Guid.NewGuid().ToString();
+            }
+            string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, guid);
+            bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, content, filePath);
+            int count=0;
+            if (flag)
+            {
+                using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                {
+                    if (isNew)
+                    {
+                        daily = new MonoBookEntity.Daily
+                        {
+                            CreateDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm:sss"),
+                            UpdateDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm:sss"),
+                            Guid = guid,
+                            RecordType = 2,
+                            IsSecret = Convert.ToBoolean(this.barEditIsSecret.EditValue),
+                            Password = barEditSecret.EditValue == null ? "" : barEditSecret.EditValue.ToString()
+                        };
+                        count = ctx.Set<MonoBookEntity.Daily>().Insert(daily);
+                    }
+                    else
+                    {
+                        daily.UpdateDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm:sss");
+                        daily.IsSecret = Convert.ToBoolean(this.barEditIsSecret.EditValue);
+                        daily.Password = barEditSecret.EditValue == null ? "" : barEditSecret.EditValue.ToString();
+                        count = ctx.Set<MonoBookEntity.Daily>().Update(daily);
+                    }
+                }
+                if (count == 1)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
+        }
+
+
+        #endregion
 
     }
 }

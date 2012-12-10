@@ -47,6 +47,11 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barCode = new DevExpress.XtraBars.Bar();
             this.barButtonHighlight = new DevExpress.XtraBars.BarButtonItem();
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.barEditIsSecret = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.barEditSecret = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -61,6 +66,8 @@
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.repositoryItemTimeEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditStyleEdit1)).BeginInit();
@@ -75,7 +82,7 @@
             this.richEditControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Twip;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 31);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 61);
             this.richEditControl1.MenuManager = this.barManager1;
             this.richEditControl1.Name = "richEditControl1";
             this.richEditControl1.Options.Behavior.Copy = DevExpress.XtraRichEdit.DocumentCapability.Enabled;
@@ -87,10 +94,9 @@
             this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
             this.richEditControl1.Options.DocumentSaveOptions.DefaultFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
             this.richEditControl1.Options.Import.FallbackFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
-            this.richEditControl1.Size = new System.Drawing.Size(1117, 613);
+            this.richEditControl1.Size = new System.Drawing.Size(1117, 583);
             this.richEditControl1.TabIndex = 5;
             this.richEditControl1.Text = "这里输入日记的内容";
-            this.richEditControl1.TextChanged += new System.EventHandler(this.richEditControl1_TextChanged);
             // 
             // barManager1
             // 
@@ -98,7 +104,8 @@
             this.barFile,
             this.barContent,
             this.bar3,
-            this.barCode});
+            this.barCode,
+            this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -119,15 +126,19 @@
             this.barStaticItem1,
             this.barMdiChildrenListItem1,
             this.barEditItem1,
-            this.barStaticItem2});
+            this.barStaticItem2,
+            this.barEditSecret,
+            this.barEditIsSecret});
             this.barManager1.MainMenu = this.barContent;
-            this.barManager1.MaxItemId = 17;
+            this.barManager1.MaxItemId = 21;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemColorEdit1,
             this.repositoryItemRichEditStyleEdit1,
             this.repositoryItemDateEdit1,
-            this.repositoryItemTimeEdit1});
+            this.repositoryItemTimeEdit1,
+            this.repositoryItemButtonEdit1,
+            this.repositoryItemCheckEdit1});
             this.barManager1.StatusBar = this.bar3;
             // 
             // barFile
@@ -152,6 +163,7 @@
             this.barButtonSave.LargeImageIndex = 0;
             this.barButtonSave.Name = "barButtonSave";
             this.barButtonSave.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSave_ItemClick);
             // 
             // barButtonClose
             // 
@@ -275,13 +287,57 @@
             this.barButtonHighlight.Id = 4;
             this.barButtonHighlight.ImageIndex = 9;
             this.barButtonHighlight.Name = "barButtonHighlight";
+            this.barButtonHighlight.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonHighlight_ItemClick);
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Custom 6";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 1;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barEditIsSecret),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barEditSecret)});
+            this.bar1.Text = "Custom 6";
+            // 
+            // barEditIsSecret
+            // 
+            this.barEditIsSecret.Caption = "是否加密";
+            this.barEditIsSecret.Edit = this.repositoryItemCheckEdit1;
+            this.barEditIsSecret.Id = 19;
+            this.barEditIsSecret.Name = "barEditIsSecret";
+            this.barEditIsSecret.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barEditIsSecret.EditValueChanged += new System.EventHandler(this.barEditIsSecret_EditValueChanged);
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
+            // barEditSecret
+            // 
+            this.barEditSecret.Caption = "密码";
+            this.barEditSecret.Edit = this.repositoryItemButtonEdit1;
+            this.barEditSecret.Enabled = false;
+            this.barEditSecret.Id = 18;
+            this.barEditSecret.Name = "barEditSecret";
+            this.barEditSecret.Width = 214;
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.PasswordChar = '*';
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1117, 31);
+            this.barDockControlTop.Size = new System.Drawing.Size(1117, 61);
             // 
             // barDockControlBottom
             // 
@@ -294,22 +350,22 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 613);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 61);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 583);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1117, 31);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 613);
+            this.barDockControlRight.Location = new System.Drawing.Point(1117, 61);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 583);
             // 
             // standaloneBarDockControl1
             // 
             this.standaloneBarDockControl1.AutoSize = true;
             this.standaloneBarDockControl1.CausesValidation = false;
             this.standaloneBarDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.standaloneBarDockControl1.Location = new System.Drawing.Point(0, 31);
+            this.standaloneBarDockControl1.Location = new System.Drawing.Point(0, 61);
             this.standaloneBarDockControl1.Name = "standaloneBarDockControl1";
             this.standaloneBarDockControl1.Size = new System.Drawing.Size(1117, 0);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
@@ -397,6 +453,8 @@
             this.Text = "MonoBook ---- 记录每一秒的幸福";
             this.Load += new System.EventHandler(this.DailyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditStyleEdit1)).EndInit();
@@ -440,6 +498,11 @@
         private DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit repositoryItemRichEditStyleEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit1;
+        private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraBars.BarEditItem barEditSecret;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraBars.BarEditItem barEditIsSecret;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
 
     }
 }

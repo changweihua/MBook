@@ -56,5 +56,8 @@ namespace MonoBookEntity
         /// 
         [Column(Name = "f_parent_id")]
         public int parentId { get; set; }
+
+        [Column(Name = "f_record_type_id")]
+        public int RecordTypeId { get; set; }
     }
 }

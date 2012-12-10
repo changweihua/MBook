@@ -11,13 +11,11 @@ E:\VS2010\MBook\MBook\bin\Debug\NetDimension.Weibo.dll
 E:\VS2010\MBook\MBook\bin\Debug\System.Data.SQLite.dll
 E:\VS2010\MBook\MBook\bin\Debug\System.Data.SQLite.Linq.dll
 E:\VS2010\MBook\MBook\bin\Debug\Updater.dll
-E:\VS2010\MBook\MBook\bin\Debug\NLite.Data.dll
 E:\VS2010\MBook\MBook\bin\Debug\EnterpriseObjects.pdb
 E:\VS2010\MBook\MBook\bin\Debug\MonoBookEntity.pdb
 E:\VS2010\MBook\MBook\bin\Debug\Updater.pdb
 E:\VS2010\MBook\MBook\bin\Debug\DevExpress.Data.v11.1.xml
 E:\VS2010\MBook\MBook\bin\Debug\ELinq.xml
-E:\VS2010\MBook\MBook\bin\Debug\NLite.Data.xml
 E:\VS2010\MBook\MBook\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.AboutForm.resources
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.ContactForm.resources
@@ -44,3 +42,5 @@ E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.exe
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.pdb
 E:\VS2010\MBook\MBook\bin\Debug\NLite.dll
 E:\VS2010\MBook\MBook\bin\Debug\NLite.xml
+E:\VS2010\MBook\MBook\bin\Debug\x64\SQLite.Interop.dll
+E:\VS2010\MBook\MBook\bin\Debug\x86\SQLite.Interop.dll

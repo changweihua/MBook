@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>NLite.Data</name>
+        <name>ELinq</name>
     </assembly>
     <members>
         <member name="T:NLite.Data.DbSet">
@@ -34,7 +34,7 @@
         </member>
         <member name="M:NLite.Data.DbSet.Update``1(NLite.Data.IDbSet{``0},System.Object,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
-            更新并根据Lambda表达式
+            更新
             </summary>
             <typeparam name="T"></typeparam>
             <param name="collection"></param>
@@ -54,7 +54,7 @@
         </member>
         <member name="M:NLite.Data.DbSet.Delete``1(NLite.Data.IDbSet{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
-            根据Lambda表达式条件进行批量删除
+            删除
             </summary>
             <typeparam name="T"></typeparam>
             <param name="collection"></param>
@@ -321,6 +321,11 @@
             工作日
             </summary>
         </member>
+        <member name="T:NLite.Data.InternalDbContext">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:NLite.Data.IDbHelper">
             <summary>
             SqlHelper 接口
@@ -358,6 +363,16 @@
             
             </summary>
             <returns></returns>
+        </member>
+        <member name="P:NLite.Data.IDbHelper.DbConfiguration">
+            <summary>
+            得到DbConfiguration对象
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IDbHelper.Connection">
+            <summary>
+            得到连接对象
+            </summary>
         </member>
         <member name="T:NLite.Data.IDbContext">
             <summary>
@@ -526,6 +541,26 @@
         <member name="T:NLite.Data.Common.OperationType">
             <summary>
             操作类型
+            </summary>
+        </member>
+        <member name="T:NLite.Data.Common.ISqlCommand">
+            <summary>
+            SqlCommand 接口
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Common.ISqlCommand.CommandText">
+            <summary>
+            SQL文本
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Common.ISqlCommand.Parameters">
+            <summary>
+            命名参数集合
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Common.ISqlCommand.ParameterValues">
+            <summary>
+            命名参数Value集合
             </summary>
         </member>
         <member name="T:NLite.Data.Mapping.IMemberModel">
@@ -698,6 +733,177 @@
         <member name="T:NLite.Data.Dialect.ExecutionBuilder.OuterParameterizer">
             <summary>
             columns referencing the outer alias are turned into special named-value parameters
+            </summary>
+        </member>
+        <member name="T:NLite.Data.Res">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ArgumentCountError">
+            <summary>
+              查找类似 {0} function {1} requires {2} arguments 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ArgumentEnumerableInvalid">
+            <summary>
+              查找类似 The enumerable must implement at least IEnumerable 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ArgumentLabel">
+            <summary>
+              查找类似 Continue label target must be void 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ArgumentQuery">
+            <summary>
+              查找类似 Cannot deduce query provider from query 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.BooleanExpression">
+            <summary>
+              查找类似 Test must be a boolean expression 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.CastTypeInvalid">
+            <summary>
+              查找类似 No type mapping for SqlType {0} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ColumnUndefine">
+            <summary>
+              查找类似 Reference to undefined column 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ConnectionStringConfigToMany">
+            <summary>
+              查找类似 Too many connection strings in config file. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ConnectionStringNameInvalid">
+            <summary>
+              查找类似 Invalid connection configure for :{0} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ConnectionStringNoConfigException">
+            <summary>
+              查找类似 No configure connection string by config file. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ConstructTypeInvalid">
+            <summary>
+              查找类似 Cannot construct type &apos;{0}&apos; with all mapped includedMembers. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ConvertTypeInvalid">
+            <summary>
+              查找类似 Cann&apos;t convert from &apos;{0}&apos; to db type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.CycleInvalid">
+            <summary>
+              查找类似 Cycle in topological sort 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.DeclarationQueryInvalid">
+            <summary>
+              查找类似 Declaration query not allowed for this langauge 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.DeferInvalid">
+            <summary>
+              查找类似 The member &apos;{0}&apos; cannot be deferred due to its type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.DisposableInvalid">
+            <summary>
+              查找类似 The disposable must implement IDisposable 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.EntityORMappingNoConfig">
+            <summary>
+              查找类似 Entity type &apos;{0}&apos; not configure mapping! 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.EntityRepeatRegister">
+            <summary>
+              查找类似 Repeat register entity mapping for entity 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ExpressionError">
+            <summary>
+              查找类似 The expression of type &apos;{0}&apos; is not a sequence 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.FuncionInvalid">
+            <summary>
+              查找类似 Invalid function： 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.InvalidOperationCompareException">
+            <summary>
+              查找类似 Cannot compare two constructed types with different sets of members assigned. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.LengthInvalid">
+            <summary>
+              查找类似 Incorrect number of {0} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.NoProjectionTranslateToSQL">
+            <summary>
+              查找类似 Non-scalar projections cannot be translated to SQL 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.NoQueryProvider">
+            <summary>
+              查找类似 Could not find query provider 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.NotSupported">
+            <summary>
+              查找类似 {0} is not supported {1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.OperationNotSupported">
+            <summary>
+              查找类似 &apos;{0}&apos; not support &apos;{1}&apos; operation {2} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.ORMappingMissValue">
+            <summary>
+              查找类似 Missing &apos;{0}&apos; value in member {1} when OR mapping 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.SubqueryInvalid">
+            <summary>
+              查找类似 Subquery does not originate with a member access 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.TypeInvalid">
+            <summary>
+              查找类似 {0} is valid type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.TypeUnhandle">
+            <summary>
+              查找类似 Unhandled {0} type:{1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:NLite.Data.Res.VariableNoInitialize">
+            <summary>
+              查找类似 Initializer must be assignable to variable 的本地化字符串。
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "T:NLite.Data.Linq.Expressions.SkipToRowNumberRewriter" -->
@@ -1108,57 +1314,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:NLite.Data.DbConfiguration.AddClass``1">
-            <summary>
-            注册实体到数据表的映射关系
-            </summary>
-            <typeparam name="TEntity"></typeparam>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbConfiguration.AddClass``1(System.Action{NLite.Data.Mapping.Fluent.ClassMap{``0}})">
-            <summary>
-            注册实体到数据表的映射关系
-            </summary>
-            <typeparam name="TEntity"></typeparam>
-            <param name="fnClassMap"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbConfiguration.AddClass(NLite.Data.Mapping.Fluent.ClassMap)">
-            <summary>
-            注册实体到数据表的映射关系
-            </summary>
-            <param name="classMap"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbConfiguration.Plural(System.String)">
-            <summary>
-            把单数单词转化为复数单词
-            </summary>
-            <param name="str"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbConfiguration.Singular(System.String)">
-            <summary>
-            把复数单词转换为单数单词
-            </summary>
-            <param name="str"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbConfiguration.SetCallssNameToTalbeName(System.Func{System.String,System.String})">
-            <summary>
-            设置ClassName到TableName的转换函数
-            </summary>
-            <param name="fnClassNameToTableName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbConfiguration.AddFromAssemblyOf``1(System.Func{System.Type,System.Boolean})">
-            <summary>
-            批量注册指定类型T所在的程序集内符合特定条件的实体到数据表的映射关系
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="typeFilter"></param>
-            <returns></returns>
-        </member>
         <member name="M:NLite.Data.DbConfiguration.BuildSQLExpressConnectionString(System.String)">
             <summary>
             构造SQLExpress Connection String
@@ -1212,6 +1367,85 @@
             <param name="failIfMissing"></param>
             <returns></returns>
         </member>
+        <member name="M:NLite.Data.DbConfiguration.AddClass``1">
+            <summary>
+            注册实体到数据表的映射关系
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.AddClass``1(System.Action{NLite.Data.Mapping.Fluent.ClassMap{``0}})">
+            <summary>
+            注册实体到数据表的映射关系
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="fnClassMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.AddClass(NLite.Data.Mapping.Fluent.ClassMap)">
+            <summary>
+            注册实体到数据表的映射关系
+            </summary>
+            <param name="classMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.Plural(System.String)">
+            <summary>
+            把单数单词转化为复数单词
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.Singular(System.String)">
+            <summary>
+            把复数单词转换为单数单词
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.SetCallssNameToTalbeName(System.Func{System.String,System.String})">
+            <summary>
+            设置ClassName到TableName的转换函数
+            </summary>
+            <param name="fnClassNameToTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.AddFromAssemblyOf``1(System.Func{System.Type,System.Boolean})">
+            <summary>
+            批量注册指定类型T所在的程序集内符合特定条件的实体到数据表的映射关系
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="typeFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.GetClass(System.Type)">
+            <summary>
+            根据实体类型得到映射元数据，如果不存在则Throw ORMappingException.
+            </summary>
+            <param name="entityType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.GetClass``1">
+            <summary>
+            根据实体类型得到映射元数据，如果不存在则Throw ORMappingException.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.HasClass(System.Type)">
+            <summary>
+            判断指定的实体类型是否已经注册OR映射
+            </summary>
+            <param name="entityType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbConfiguration.HasClass``1">
+            <summary>
+            判断指定的实体类型是否已经注册OR映射
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
         <member name="M:NLite.Data.DbConfiguration.SetDialect(NLite.Data.Dialect.Dialect)">
             <summary>
             设置自定义方言
@@ -1259,7 +1493,7 @@
         </member>
         <member name="P:NLite.Data.DbConfiguration.Items">
             <summary>
-            连接信息列表
+            DbConfiguration字典
             </summary>
         </member>
         <member name="P:NLite.Data.DbConfiguration.Dialect">
@@ -1334,218 +1568,6 @@
         <member name="T:NLite.Data.Linq.Expressions.CrossJoinIsolator">
             <summary>
             Isolates cross joins from other types of joins using nested sub queries
-            </summary>
-        </member>
-        <member name="T:NLite.Linq.Internal.ReflectionHelper">
-            <summary>
-            Type related helper methods
-            </summary>
-        </member>
-        <member name="T:NLite.Data.Linq.Expressions.SingletonProjectionRewriter">
-            <summary>
-            Rewrites nested singleton projection into server-side joins
-            </summary>
-        </member>
-        <member name="T:NLite.Data.Linq.Expressions.AggregateRewriter">
-            <summary>
-            Rewrite aggregate expressions, moving them into same select expression that has the group-by clause
-            </summary>
-        </member>
-        <member name="T:NLite.Data.IdAttribute">
-            <summary>
-            主键标签
-            </summary>
-        </member>
-        <member name="P:NLite.Data.IdAttribute.IsDbGenerated">
-            <summary>
-            得到或设置数据表的主键是否为自增的
-            </summary>
-        </member>
-        <member name="P:NLite.Data.IdAttribute.SequenceName">
-            <summary>
-            得到或设置序列名称
-            </summary>
-        </member>
-        <member name="T:NLite.Data.VersionAttribute">
-            <summary>
-            版本标签，该标签仅仅能够应用在实体成员的类型是短整型、整型、长整型上
-            </summary>
-        </member>
-        <member name="T:NLite.Data.ComputedColumnAttribute">
-            <summary>
-            计算列标签，计算列不允许更新
-            </summary>
-        </member>
-        <member name="T:NLite.Linq.Internal.MostRecentlyUsedCache`1">
-            <summary>
-            Implements a cache over a most recently used list
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="T:NLite.Data.Linq.Expressions.OrderByRewriter">
-            <summary>
-            Moves order-bys to the outermost select if possible
-            </summary>
-        </member>
-        <member name="M:NLite.Data.Linq.Expressions.OrderByRewriter.PrependOrderings(System.Collections.Generic.IList{NLite.Data.Linq.Expressions.OrderExpression})">
-            <summary>
-            Add a sequence of order expressions to an accumulated list, prepending so as
-            to give precedence to the new expressions over any previous expressions
-            </summary>
-            <param name="newOrderings"></param>
-        </member>
-        <member name="M:NLite.Data.Linq.Expressions.OrderByRewriter.RebindOrderings(System.Collections.Generic.IEnumerable{NLite.Data.Linq.Expressions.OrderExpression},NLite.Data.Linq.Expressions.TableAlias,System.Collections.Generic.HashSet{NLite.Data.Linq.Expressions.TableAlias},System.Collections.Generic.IEnumerable{NLite.Data.Linq.Expressions.ColumnDeclaration})">
-            <summary>
-            Rebind order expressions to reference a new alias and add to column declarations if necessary
-            </summary>
-        </member>
-        <member name="T:NLite.Data.IDbSet">
-            <summary>
-            表示用于执行插入、读取、更新和删除操作的类型化实体集，对实体集的所有增、删、改、查操作会立即同步到数据库对应的表中
-            </summary>
-        </member>
-        <member name="M:NLite.Data.IDbSet.Find(System.Object)">
-            <summary>
-            通过实体Id获取对应的实体，id可以是单Id也可以是联合Id，如果是联合Id那么以数组的形式作为参数
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.IDbSet.Insert(System.Object)">
-            <summary>
-            插入
-            </summary>
-            <param name="instance">支持PO、POCO、IDictionary、IDictionaryOfKV, NameValueCollection 类型</param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.IDbSet.Update(System.Object)">
-            <summary>
-            更新
-            </summary>
-            <param name="instance">支持PO、POCO、IDictionary、IDictionaryOfKV, NameValueCollection 类型</param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.IDbSet.Delete(System.Object)">
-            <summary>
-            删除
-            </summary>
-            <param name="instance"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.IDbSet.Include(System.Reflection.MemberInfo)">
-            <summary>
-            立即加载针对特定关系检索的对象。
-            </summary>
-            <param name="member"></param>
-            <returns></returns>
-        </member>
-        <member name="P:NLite.Data.IDbSet.Connection">
-            <summary>
-            得到连接对象
-            </summary>
-        </member>
-        <member name="P:NLite.Data.IDbSet.DbHelper">
-            <summary>
-            得到DbHelper对象
-            </summary>
-        </member>
-        <member name="P:NLite.Data.IDbSet.Entity">
-            <summary>
-            实体映射元数据
-            </summary>
-        </member>
-        <member name="P:NLite.Data.IDbSet.DbContext">
-            <summary>
-            得到DbSet关联的DbContext对象
-            </summary>
-        </member>
-        <member name="T:NLite.Data.IDbSet`1">
-            <summary>
-            表示用于执行插入、读取、更新和删除操作的类型化实体集，对实体集的所有增、删、改、查操作会立即同步到数据库对应的表中
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:NLite.Data.IDbSet`1.Find(System.Object)">
-            <summary>
-            通过实体Id获取对应的实体，id可以是单Id也可以是联合Id，如果是联合Id那么以数组的形式作为参数
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.IDbSet`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
-            <summary>
-            立即加载针对特定关系检索的对象。
-            </summary>
-            <param name="fnMember"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.IDbSet`1.IncludeWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
-            <summary>
-            立即加载针对特定关系检索的对象。
-            </summary>
-            <typeparam name="TEntity"></typeparam>
-            <param name="fnMember"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbSet`1.Insert(System.Object)">
-            <summary>
-            向数据库中插入一条T型记录
-            </summary>
-            <param name="instance"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbSet`1.Delete(System.Object)">
-            <summary>
-            删除数据库中的一条T型记录
-            </summary>
-            <param name="instance"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbSet`1.Update(System.Object)">
-            <summary>
-            更新数据库中的一条T型记录
-            </summary>
-            <param name="instance"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbSet`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean)">
-            <summary>
-            
-            </summary>
-            <param name="fnMember"></param>
-            <param name="deferLoad"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbSet`1.IncludeWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
-            <summary>
-            
-            </summary>
-            <typeparam name="TEntity"></typeparam>
-            <param name="fnMember"></param>
-            <returns></returns>
-        </member>
-        <member name="M:NLite.Data.DbSet`1.IncludeWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
-            <summary>
-            
-            </summary>
-            <typeparam name="TEntity"></typeparam>
-            <param name="fnMember"></param>
-            <param name="deferLoad"></param>
-            <returns></returns>
-        </member>
-        <member name="P:NLite.Data.DbSet`1.Entity">
-            <summary>
-            IEntityModel接口对象
-            </summary>
-        </member>
-        <member name="P:NLite.Data.DbSet`1.DbContext">
-            <summary>
-            IDbContext接口对象
-            </summary>
-        </member>
-        <member name="P:NLite.Data.DbSet`1.EntityType">
-            <summary>
-            实体类型
             </summary>
         </member>
         <member name="T:NLite.Data.Mapping.Fluent.ClassMap">
@@ -1747,6 +1769,267 @@
             </summary>
             <param name="otherKey"></param>
             <returns></returns>
+        </member>
+        <member name="T:NLite.Linq.Internal.ReflectionHelper">
+            <summary>
+            Type related helper methods
+            </summary>
+        </member>
+        <member name="T:NLite.Data.Linq.Expressions.SingletonProjectionRewriter">
+            <summary>
+            Rewrites nested singleton projection into server-side joins
+            </summary>
+        </member>
+        <member name="T:NLite.Data.Linq.Expressions.AggregateRewriter">
+            <summary>
+            Rewrite aggregate expressions, moving them into same select expression that has the group-by clause
+            </summary>
+        </member>
+        <member name="T:NLite.Data.DbContext">
+            <summary>
+            Db上下文
+            </summary>
+        </member>
+        <member name="F:NLite.Data.DbContext.DbConfiguration">
+            <summary>
+            得到DbConfiguration对象
+            </summary>
+        </member>
+        <member name="F:NLite.Data.DbContext.Connection">
+            <summary>
+            得到连接对象
+            </summary>
+        </member>
+        <member name="F:NLite.Data.DbContext.DbHelper">
+            <summary>
+            得到DbHelper对象
+            </summary>
+        </member>
+        <member name="M:NLite.Data.DbContext.#ctor(NLite.Data.DbConfiguration)">
+            <summary>
+            根据dbConfiguration 创建DbContext对象
+            </summary>
+            <param name="dbConfiguration"></param>
+        </member>
+        <member name="M:NLite.Data.DbContext.#ctor(System.String)">
+            <summary>
+            根据dbConfigurationName 创建DbContext对象
+            </summary>
+            <param name="dbConfigurationName"></param>
+        </member>
+        <member name="M:NLite.Data.DbContext.Set``1">
+            <summary>
+            得到对应的DbSet对象
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:NLite.Data.IdAttribute">
+            <summary>
+            主键标签
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IdAttribute.IsDbGenerated">
+            <summary>
+            得到或设置数据表的主键是否为自增的
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IdAttribute.SequenceName">
+            <summary>
+            得到或设置序列名称
+            </summary>
+        </member>
+        <member name="T:NLite.Data.VersionAttribute">
+            <summary>
+            版本标签，该标签仅仅能够应用在实体成员的类型是短整型、整型、长整型上
+            </summary>
+        </member>
+        <member name="T:NLite.Data.ComputedColumnAttribute">
+            <summary>
+            计算列标签，计算列不允许更新
+            </summary>
+        </member>
+        <member name="T:NLite.Linq.Internal.MostRecentlyUsedCache`1">
+            <summary>
+            Implements a cache over a most recently used list
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:NLite.Data.Linq.Expressions.OrderByRewriter">
+            <summary>
+            Moves order-bys to the outermost select if possible
+            </summary>
+        </member>
+        <member name="M:NLite.Data.Linq.Expressions.OrderByRewriter.PrependOrderings(System.Collections.Generic.IList{NLite.Data.Linq.Expressions.OrderExpression})">
+            <summary>
+            Add a sequence of order expressions to an accumulated list, prepending so as
+            to give precedence to the new expressions over any previous expressions
+            </summary>
+            <param name="newOrderings"></param>
+        </member>
+        <member name="M:NLite.Data.Linq.Expressions.OrderByRewriter.RebindOrderings(System.Collections.Generic.IEnumerable{NLite.Data.Linq.Expressions.OrderExpression},NLite.Data.Linq.Expressions.TableAlias,System.Collections.Generic.HashSet{NLite.Data.Linq.Expressions.TableAlias},System.Collections.Generic.IEnumerable{NLite.Data.Linq.Expressions.ColumnDeclaration})">
+            <summary>
+            Rebind order expressions to reference a new alias and add to column declarations if necessary
+            </summary>
+        </member>
+        <member name="T:NLite.Data.IDbSet">
+            <summary>
+            表示用于执行插入、读取、更新和删除操作的类型化实体集，对实体集的所有增、删、改、查操作会立即同步到数据库对应的表中
+            </summary>
+        </member>
+        <member name="M:NLite.Data.IDbSet.Find(System.Object)">
+            <summary>
+            通过实体Id获取对应的实体，id可以是单Id也可以是联合Id，如果是联合Id那么以数组的形式作为参数
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.IDbSet.Insert(System.Object)">
+            <summary>
+            插入
+            </summary>
+            <param name="instance">支持PO、POCO、IDictionary、IDictionaryOfKV, NameValueCollection 类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.IDbSet.Update(System.Object)">
+            <summary>
+            更新
+            </summary>
+            <param name="instance">支持PO、POCO、IDictionary、IDictionaryOfKV, NameValueCollection 类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.IDbSet.Delete(System.Object)">
+            <summary>
+            删除
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.IDbSet.Include(System.Reflection.MemberInfo)">
+            <summary>
+            立即加载针对特定关系检索的对象。
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NLite.Data.IDbSet.Connection">
+            <summary>
+            得到连接对象
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IDbSet.DbHelper">
+            <summary>
+            得到DbHelper对象
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IDbSet.Entity">
+            <summary>
+            实体映射元数据
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IDbSet.DbContext">
+            <summary>
+            得到DbSet关联的DbContext对象
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IDbSet.SqlText">
+            <summary>
+            得到Linq表达式翻译后的参数化SQL语句
+            </summary>
+        </member>
+        <member name="P:NLite.Data.IDbSet.ExecutePlan">
+            <summary>
+            得到Linq表达式的执行计划（包含SQL语句、参数、数据访问、投影信息等，该信息在调试ELinq时非常有用）
+            </summary>
+        </member>
+        <member name="T:NLite.Data.IDbSet`1">
+            <summary>
+            表示用于执行插入、读取、更新和删除操作的类型化实体集，对实体集的所有增、删、改、查操作会立即同步到数据库对应的表中
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:NLite.Data.IDbSet`1.Find(System.Object)">
+            <summary>
+            通过实体Id获取对应的实体，id可以是单Id也可以是联合Id，如果是联合Id那么以数组的形式作为参数
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.IDbSet`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            立即加载针对特定关系检索的对象。
+            </summary>
+            <param name="fnMember"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.IDbSet`1.IncludeWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            立即加载针对特定关系检索的对象。
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="fnMember"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbSet`1.Insert(System.Object)">
+            <summary>
+            向数据库中插入一条T型记录
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbSet`1.Delete(System.Object)">
+            <summary>
+            删除数据库中的一条T型记录
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbSet`1.Update(System.Object)">
+            <summary>
+            更新数据库中的一条T型记录
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbSet`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="fnMember"></param>
+            <param name="deferLoad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbSet`1.IncludeWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="fnMember"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.DbSet`1.IncludeWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="fnMember"></param>
+            <param name="deferLoad"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NLite.Data.DbSet`1.Entity">
+            <summary>
+            IEntityModel接口对象
+            </summary>
+        </member>
+        <member name="P:NLite.Data.DbSet`1.DbContext">
+            <summary>
+            IDbContext接口对象
+            </summary>
+        </member>
+        <member name="P:NLite.Data.DbSet`1.EntityType">
+            <summary>
+            实体类型
+            </summary>
         </member>
     </members>
 </doc>

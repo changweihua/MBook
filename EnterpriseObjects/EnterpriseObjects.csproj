@@ -42,6 +42,7 @@
     <Compile Include="MailHelper.cs" />
     <Compile Include="MailResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializeHelper.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="XmlHelper.cs" />
   </ItemGroup>

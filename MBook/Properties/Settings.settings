@@ -24,10 +24,10 @@
       <Value Profile="(Default)">ds</Value>
     </Setting>
     <Setting Name="savePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Changweihua\monobook</Value>
+      <Value Profile="(Default)">D:\monobook</Value>
     </Setting>
     <Setting Name="backupPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Changweihua\monobook</Value>
+      <Value Profile="(Default)">D:\monobook\backup\</Value>
     </Setting>
     <Setting Name="allowUpdate" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
