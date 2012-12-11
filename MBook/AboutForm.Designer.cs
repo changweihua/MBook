@@ -254,6 +254,7 @@
             // pictureEdit4
             // 
             this.pictureEdit4.EditValue = ((object)(resources.GetObject("pictureEdit4.EditValue")));
+            this.pictureEdit4.Enabled = false;
             this.pictureEdit4.Location = new System.Drawing.Point(243, 64);
             this.pictureEdit4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit4.Name = "pictureEdit4";
@@ -265,12 +266,12 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(257, 155);
+            this.labelControl12.Location = new System.Drawing.Point(253, 155);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(56, 14);
+            this.labelControl12.Size = new System.Drawing.Size(77, 14);
             this.labelControl12.TabIndex = 0;
-            this.labelControl12.Text = "88888888";
+            this.labelControl12.Text = "15023215505";
             // 
             // pictureEdit3
             // 
@@ -286,12 +287,12 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(62, 155);
+            this.labelControl11.Location = new System.Drawing.Point(54, 155);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(56, 14);
+            this.labelControl11.Size = new System.Drawing.Size(84, 14);
             this.labelControl11.TabIndex = 0;
-            this.labelControl11.Text = "88888888";
+            this.labelControl11.Text = "0511862*****";
             // 
             // labelControl10
             // 

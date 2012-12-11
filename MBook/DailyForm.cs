@@ -37,6 +37,7 @@ namespace MBook
         /// </summary>
         private string guid;
         private Daily daily;
+        private bool isSaved;
 
         #region 初始化窗体
 
@@ -149,7 +150,7 @@ namespace MBook
 
         #region 保存日记
 
-        private void barButtonSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        int SaveDaily()
         {
             string content = richEditControl1.HtmlText;
 
@@ -162,7 +163,7 @@ namespace MBook
             }
             string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, guid);
             bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, content, filePath);
-            int count=0;
+            int count = 0;
             if (flag)
             {
                 using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
@@ -188,14 +189,67 @@ namespace MBook
                         count = ctx.Set<MonoBookEntity.Daily>().Update(daily);
                     }
                 }
-                if (count == 1)
-                {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
+            }
+
+            return count;
+        }
+
+        private void barButtonSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int count = SaveDaily();
+            if (count == 1)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
+
+        #endregion
+
+        #region RichControl控件的方法
+
+        /// <summary>
+        /// 内容改变时，显示字数
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void richEditControl1_TextChanged(object sender, EventArgs e)
+        {
+            isSaved = false;
+            this.barStaticItemCount.Caption = string.Format("已经输入 {0} 个字", this.richEditControl1.Text.Length);
+        }
+
+        #endregion
+
+        #region 窗体方法
+
+        /// <summary>
+        /// 窗体关闭之前，确认
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DailyForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //比较麻烦，暂时不考虑
+            //if (!isSaved)
+            //{
+            //    DialogResult dr = XtraMessageBox.Show(this.LookAndFeel, "您已经修改过内容，是否保存", "信息提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+            //    if (dr == System.Windows.Forms.DialogResult.Yes)
+            //    {
+            //        if (SaveDaily() != 1)
+            //        {
+            //            XtraMessageBox.Show(this.LookAndFeel, "发生了点小意外，您可以重新保存一下吗？", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            e.Cancel = true;
+            //        }
+            //    }
+            //    else if (dr == System.Windows.Forms.DialogResult.Cancel)
+            //    {
+            //        e.Cancel = true;
+            //    }
+            //}
+        }
 
         #endregion
 

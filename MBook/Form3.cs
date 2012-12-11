@@ -3,6 +3,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit;
 using NLite.Data;
 using MonoBookEntity;
+using System.Windows.Forms;
 
 namespace MBook
 {

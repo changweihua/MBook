@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
-            this.quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
-            this.printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
-            this.printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
             this.undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
             this.redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
             this.insertPageBreakItem1 = new DevExpress.XtraRichEdit.UI.InsertPageBreakItem();
@@ -177,6 +174,8 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonSave = new DevExpress.XtraBars.BarButtonItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
             this.tableLayoutRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableLayoutRibbonPage();
             this.tableTableRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableTableRibbonPageGroup();
@@ -222,10 +221,6 @@
             this.ribbonControl1.ExpandCollapseItem.Name = "";
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.fileSaveItem1,
-            this.quickPrintItem1,
-            this.printItem1,
-            this.printPreviewItem1,
             this.undoItem1,
             this.redoItem1,
             this.insertPageBreakItem1,
@@ -361,9 +356,11 @@
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonItem4});
+            this.barButtonItem4,
+            this.barButtonSave});
+            this.ribbonControl1.LargeImages = this.imageList1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 156;
+            this.ribbonControl1.MaxItemId = 157;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -378,7 +375,7 @@
             this.repositoryItemRichEditFontSizeEdit1,
             this.repositoryItemRichEditStyleEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.insertRibbonPage1;
+            this.ribbonControl1.SelectedPage = this.fileRibbonPage1;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages;
@@ -388,39 +385,6 @@
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem4);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            // 
-            // fileSaveItem1
-            // 
-            this.fileSaveItem1.Caption = "保存";
-            this.fileSaveItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("fileSaveItem1.Glyph")));
-            this.fileSaveItem1.Id = 3;
-            this.fileSaveItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("fileSaveItem1.LargeGlyph")));
-            this.fileSaveItem1.Name = "fileSaveItem1";
-            this.fileSaveItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.fileSaveItem1_ItemClick);
-            // 
-            // quickPrintItem1
-            // 
-            this.quickPrintItem1.Caption = "快速打印(&Q)";
-            this.quickPrintItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("quickPrintItem1.Glyph")));
-            this.quickPrintItem1.Id = 5;
-            this.quickPrintItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("quickPrintItem1.LargeGlyph")));
-            this.quickPrintItem1.Name = "quickPrintItem1";
-            // 
-            // printItem1
-            // 
-            this.printItem1.Caption = "打印(&P)";
-            this.printItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("printItem1.Glyph")));
-            this.printItem1.Id = 6;
-            this.printItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("printItem1.LargeGlyph")));
-            this.printItem1.Name = "printItem1";
-            // 
-            // printPreviewItem1
-            // 
-            this.printPreviewItem1.Caption = "打印预览";
-            this.printPreviewItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("printPreviewItem1.Glyph")));
-            this.printPreviewItem1.Id = 7;
-            this.printPreviewItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("printPreviewItem1.LargeGlyph")));
-            this.printPreviewItem1.Name = "printPreviewItem1";
             // 
             // undoItem1
             // 
@@ -651,10 +615,14 @@
             this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.Location = new System.Drawing.Point(0, 124);
+            this.richEditControl1.LookAndFeel.SkinName = "Money Twins";
+            this.richEditControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
             this.richEditControl1.Options.Behavior.Drag = DevExpress.XtraRichEdit.DocumentCapability.Enabled;
             this.richEditControl1.Options.Behavior.Drop = DevExpress.XtraRichEdit.DocumentCapability.Enabled;
+            this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
+            this.richEditControl1.Options.DocumentSaveOptions.DefaultFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
             this.richEditControl1.Options.Import.FallbackFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
             this.richEditControl1.Size = new System.Drawing.Size(1030, 393);
             this.richEditControl1.TabIndex = 1;
@@ -1526,6 +1494,21 @@
             this.barButtonItem4.Id = 155;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
+            // barButtonSave
+            // 
+            this.barButtonSave.Caption = "保存";
+            this.barButtonSave.Hint = "保存";
+            this.barButtonSave.Id = 156;
+            this.barButtonSave.LargeImageIndex = 0;
+            this.barButtonSave.Name = "barButtonSave";
+            this.barButtonSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSave_ItemClick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "FileSave.png");
+            // 
             // tableToolsRibbonPageCategory1
             // 
             this.tableToolsRibbonPageCategory1.Name = "tableToolsRibbonPageCategory1";
@@ -1631,10 +1614,7 @@
             // 
             // commonRibbonPageGroup1
             // 
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.barButtonSave);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
             this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
@@ -1778,10 +1758,6 @@
             // 
             // richEditBarController1
             // 
-            this.richEditBarController1.BarItems.Add(this.fileSaveItem1);
-            this.richEditBarController1.BarItems.Add(this.quickPrintItem1);
-            this.richEditBarController1.BarItems.Add(this.printItem1);
-            this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
             this.richEditBarController1.BarItems.Add(this.undoItem1);
             this.richEditBarController1.BarItems.Add(this.redoItem1);
             this.richEditBarController1.BarItems.Add(this.insertPageBreakItem1);
@@ -1924,7 +1900,7 @@
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.ribbonControl1);
             this.DoubleBuffered = true;
-            this.LookAndFeel.SkinName = "Office 2010 Black";
+            this.LookAndFeel.SkinName = "Seven";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Form2";
             this.ShowIcon = false;
@@ -1945,10 +1921,6 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraRichEdit.UI.FileSaveItem fileSaveItem1;
-        private DevExpress.XtraRichEdit.UI.QuickPrintItem quickPrintItem1;
-        private DevExpress.XtraRichEdit.UI.PrintItem printItem1;
-        private DevExpress.XtraRichEdit.UI.PrintPreviewItem printPreviewItem1;
         private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
         private DevExpress.XtraRichEdit.UI.RedoItem redoItem1;
         private DevExpress.XtraRichEdit.UI.InsertPageBreakItem insertPageBreakItem1;
@@ -2117,5 +2089,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
+        private DevExpress.XtraBars.BarButtonItem barButtonSave;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

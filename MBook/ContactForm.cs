@@ -201,17 +201,18 @@ namespace MBook
         private void ShowContact()
         {
             //读取本地文件
-            //string filePath = string.Format(@"{0}\My StickyNotes\{1}.mono", Properties.Settings.Default.savePath, guid);
-            //if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
-            //{
-            //    XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //读取Sqlite的数据
-            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            string filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.savePath, this.Tag.ToString());
+            if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
             {
-                contact = ctx.Set<Contact>().Where(c => c.Guid == this.Tag.ToString()).ElementAt(0);
+                XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Xml, typeof(Contact), filePath);
+            contact = obj as Contact;
+            if (contact != null)
+            {
+
                 this.textEditAddress.EditValue = contact.Address;
                 this.textEditDepartment.EditValue = contact.Department;
                 this.textEditEmail.EditValue = contact.Email;
@@ -223,7 +224,24 @@ namespace MBook
                 this.textEditWebsite.EditValue = contact.Website;
                 this.dateEditBirthday.EditValue = contact.Birthday;
                 this.memoEditRemark.EditValue = contact.Remark;
+
             }
+            //读取Sqlite的数据
+            //using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            //{
+            //    contact = ctx.Set<Contact>().Where(c => c.Guid == this.Tag.ToString()).ElementAt(0);
+            //    this.textEditAddress.EditValue = contact.Address;
+            //    this.textEditDepartment.EditValue = contact.Department;
+            //    this.textEditEmail.EditValue = contact.Email;
+            //    this.textEditMsn.EditValue = contact.Msn;
+            //    this.textEditName.EditValue = contact.Name;
+            //    this.textEditQQ.EditValue = contact.QQ;
+            //    this.textEditRank.EditValue = contact.Rank;
+            //    this.textEditTelePhone.EditValue = contact.Telephone;
+            //    this.textEditWebsite.EditValue = contact.Website;
+            //    this.dateEditBirthday.EditValue = contact.Birthday;
+            //    this.memoEditRemark.EditValue = contact.Remark;
+            //}
         }
 
         #endregion

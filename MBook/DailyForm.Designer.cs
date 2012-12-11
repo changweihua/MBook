@@ -39,12 +39,10 @@
             this.barButtonUndo = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonRedo = new DevExpress.XtraBars.BarButtonItem();
             this.barContent = new DevExpress.XtraBars.Bar();
-            this.barButtonCut = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonCopy = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonPaste = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItemCount = new DevExpress.XtraBars.BarStaticItem();
             this.barCode = new DevExpress.XtraBars.Bar();
             this.barButtonHighlight = new DevExpress.XtraBars.BarButtonItem();
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -52,6 +50,10 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.barEditSecret = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.barButtonCopy = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonCut = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonPaste = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -97,15 +99,22 @@
             this.richEditControl1.Size = new System.Drawing.Size(1117, 583);
             this.richEditControl1.TabIndex = 5;
             this.richEditControl1.Text = "这里输入日记的内容";
+            this.richEditControl1.TextChanged += new System.EventHandler(this.richEditControl1_TextChanged);
             // 
             // barManager1
             // 
+            this.barManager1.AllowCustomization = false;
+            this.barManager1.AllowItemAnimatedHighlighting = false;
+            this.barManager1.AllowMoveBarOnToolbar = false;
+            this.barManager1.AllowQuickCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.barFile,
             this.barContent,
             this.bar3,
             this.barCode,
-            this.bar1});
+            this.bar1,
+            this.bar2});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -126,11 +135,13 @@
             this.barStaticItem1,
             this.barMdiChildrenListItem1,
             this.barEditItem1,
-            this.barStaticItem2,
+            this.barStaticItemCount,
             this.barEditSecret,
-            this.barEditIsSecret});
+            this.barEditIsSecret,
+            this.barStaticItem2});
             this.barManager1.MainMenu = this.barContent;
-            this.barManager1.MaxItemId = 21;
+            this.barManager1.MaxItemId = 22;
+            this.barManager1.MdiMenuMergeStyle = DevExpress.XtraBars.BarMdiMenuMergeStyle.Never;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemColorEdit1,
@@ -143,6 +154,9 @@
             // 
             // barFile
             // 
+            this.barFile.Appearance.Options.UseTextOptions = true;
+            this.barFile.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.barFile.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.barFile.BarName = "Tools";
             this.barFile.DockCol = 0;
             this.barFile.DockRow = 0;
@@ -153,6 +167,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonClear),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonUndo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonRedo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barFile.OptionsBar.AllowQuickCustomization = false;
+            this.barFile.OptionsBar.DisableClose = true;
+            this.barFile.OptionsBar.DisableCustomization = true;
+            this.barFile.OptionsBar.DrawDragBorder = false;
             this.barFile.Text = "Tools";
             // 
             // barButtonSave
@@ -204,40 +222,9 @@
             // 
             this.barContent.BarName = "Main menu";
             this.barContent.DockCol = 1;
-            this.barContent.DockRow = 0;
+            this.barContent.DockRow = 1;
             this.barContent.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.barContent.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonCut, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonCopy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonPaste, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barContent.Text = "Main menu";
-            // 
-            // barButtonCut
-            // 
-            this.barButtonCut.Caption = "剪切";
-            this.barButtonCut.Id = 1;
-            this.barButtonCut.ImageIndex = 7;
-            this.barButtonCut.Name = "barButtonCut";
-            this.barButtonCut.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonCut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonCut_ItemClick);
-            // 
-            // barButtonCopy
-            // 
-            this.barButtonCopy.Caption = "复制";
-            this.barButtonCopy.Id = 7;
-            this.barButtonCopy.ImageIndex = 6;
-            this.barButtonCopy.Name = "barButtonCopy";
-            this.barButtonCopy.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonCopy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonCopy_ItemClick);
-            // 
-            // barButtonPaste
-            // 
-            this.barButtonPaste.Caption = "粘贴";
-            this.barButtonPaste.Id = 8;
-            this.barButtonPaste.ImageIndex = 8;
-            this.barButtonPaste.Name = "barButtonPaste";
-            this.barButtonPaste.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonPaste.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonPaste_ItemClick);
             // 
             // bar3
             // 
@@ -248,7 +235,8 @@
             this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
             this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem2)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItemCount)});
             this.bar3.OptionsBar.AllowQuickCustomization = false;
             this.bar3.OptionsBar.DrawDragBorder = false;
             this.bar3.OptionsBar.UseWholeRow = true;
@@ -256,18 +244,26 @@
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.Caption = "书写日记，放飞心情";
+            this.barStaticItem1.Caption = "MonoBook 日记本 ---- 书写日记，放飞心情";
             this.barStaticItem1.Id = 9;
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // barStaticItem2
             // 
-            this.barStaticItem2.Caption = "字数：1000";
-            this.barStaticItem2.Id = 12;
+            this.barStaticItem2.Caption = "状态：正在编辑 . . .";
+            this.barStaticItem2.Id = 21;
             this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItemCount
+            // 
+            this.barStaticItemCount.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItemCount.Caption = "字数：1000";
+            this.barStaticItemCount.Id = 12;
+            this.barStaticItemCount.Name = "barStaticItemCount";
+            this.barStaticItemCount.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barStaticItemCount.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // barCode
             // 
@@ -278,7 +274,8 @@
             this.barCode.FloatLocation = new System.Drawing.Point(61, 217);
             this.barCode.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonHighlight, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barCode.Offset = 607;
+            this.barCode.OptionsBar.AllowQuickCustomization = false;
+            this.barCode.OptionsBar.DrawDragBorder = false;
             this.barCode.Text = "Custom 5";
             // 
             // barButtonHighlight
@@ -298,6 +295,10 @@
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barEditIsSecret),
             new DevExpress.XtraBars.LinkPersistInfo(this.barEditSecret)});
+            this.bar1.OptionsBar.AllowQuickCustomization = false;
+            this.bar1.OptionsBar.DisableClose = true;
+            this.bar1.OptionsBar.DisableCustomization = true;
+            this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.Text = "Custom 6";
             // 
             // barEditIsSecret
@@ -331,6 +332,49 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.PasswordChar = '*';
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Custom 7";
+            this.bar2.DockCol = 1;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonCopy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonCut, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonPaste, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar2.OptionsBar.AllowQuickCustomization = false;
+            this.bar2.OptionsBar.DisableClose = true;
+            this.bar2.OptionsBar.DisableCustomization = true;
+            this.bar2.OptionsBar.DrawDragBorder = false;
+            this.bar2.Text = "Custom 7";
+            // 
+            // barButtonCopy
+            // 
+            this.barButtonCopy.Caption = "复制";
+            this.barButtonCopy.Id = 7;
+            this.barButtonCopy.ImageIndex = 6;
+            this.barButtonCopy.Name = "barButtonCopy";
+            this.barButtonCopy.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonCopy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonCopy_ItemClick);
+            // 
+            // barButtonCut
+            // 
+            this.barButtonCut.Caption = "剪切";
+            this.barButtonCut.Id = 1;
+            this.barButtonCut.ImageIndex = 7;
+            this.barButtonCut.Name = "barButtonCut";
+            this.barButtonCut.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonCut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonCut_ItemClick);
+            // 
+            // barButtonPaste
+            // 
+            this.barButtonPaste.Caption = "粘贴";
+            this.barButtonPaste.Id = 8;
+            this.barButtonPaste.ImageIndex = 8;
+            this.barButtonPaste.Name = "barButtonPaste";
+            this.barButtonPaste.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonPaste.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonPaste_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -447,10 +491,13 @@
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.LookAndFeel.SkinName = "Office 2010 Black";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MinimizeBox = false;
             this.Name = "DailyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MonoBook ---- 记录每一秒的幸福";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DailyForm_FormClosing);
             this.Load += new System.EventHandler(this.DailyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -492,7 +539,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar repositoryItemMarqueeProgressBar1;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItemCount;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemColorEdit repositoryItemColorEdit1;
         private DevExpress.XtraRichEdit.Design.RepositoryItemRichEditStyleEdit repositoryItemRichEditStyleEdit1;
@@ -503,6 +550,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraBars.BarEditItem barEditIsSecret;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraBars.Bar bar2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
 
     }
 }

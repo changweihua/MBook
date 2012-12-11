@@ -130,6 +130,7 @@ namespace EnterpriseObjects
             switch (serType)
             {
                 case SerializeType.Xml:
+                    obj = XmlDeserialize(type, path);
                     break;
                 case SerializeType.Soap:
                     break;
@@ -152,6 +153,19 @@ namespace EnterpriseObjects
             using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 obj = formatter.Deserialize(stream);
+            }
+
+            return obj;
+        }
+
+        private static object XmlDeserialize(Type type, string path)
+        {
+            object obj = null;
+
+            XmlSerializer serializer = new XmlSerializer(type);
+            using (XmlTextReader reader = new XmlTextReader(path))
+            {
+                obj = serializer.Deserialize(reader);
             }
 
             return obj;
