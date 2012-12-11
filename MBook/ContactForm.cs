@@ -200,6 +200,15 @@ namespace MBook
 
         private void ShowContact()
         {
+            //读取本地文件
+            //string filePath = string.Format(@"{0}\My StickyNotes\{1}.mono", Properties.Settings.Default.savePath, guid);
+            //if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
+            //{
+            //    XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+
+            //读取Sqlite的数据
             using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
             {
                 contact = ctx.Set<Contact>().Where(c => c.Guid == this.Tag.ToString()).ElementAt(0);

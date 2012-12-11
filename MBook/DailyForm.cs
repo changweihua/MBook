@@ -61,7 +61,15 @@ namespace MBook
         {
             if (!string.IsNullOrEmpty(guid))
             {
+                //读取本地文件
                 string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, guid);
+
+                if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, null, filePath);
                 string content = obj == null ? "" : obj.ToString();
                 this.richEditControl1.HtmlText = content;
@@ -124,9 +132,7 @@ namespace MBook
         
         private void barButtonHighlight_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, null, @"D:\843075cd-d35f-4616-9f66-739762b892ad.mono");
-            string content = obj == null ? "" : obj.ToString();
-            XtraMessageBox.Show(content);
+            
         }
 
         private void barEditIsSecret_EditValueChanged(object sender, EventArgs e)

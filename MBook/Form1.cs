@@ -665,11 +665,14 @@ namespace MBook
                         case 7:
                             FillTreeViewWithDailyReview(parentNode);
                             break;
+                        case 8:
+                            FillTreeViewWithStickyNote(parentNode);
+                            break;
                         default:
                             FillTreeViewWithDaily(parentNode);
                             break;
                     }
-                    
+
                 }
             }
         }
@@ -828,6 +831,43 @@ namespace MBook
         }
 
         /// <summary>
+        /// 加载桌面便笺详细列表
+        /// </summary>
+        /// <param name="node"></param>
+        private void FillTreeViewWithStickyNote(TreeNode node)
+        {
+            tvResult.Nodes.Clear();
+            tvResult.Tag = node.Tag;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var folders = ctx.Set<Folder>().Where(f => f.Id == Convert.ToInt32(node.Tag));
+
+                Folder folder = folders.ElementAt<Folder>(0);
+
+                if (folder != null)
+                {
+                    var query = ctx.Set<StickyNote>().Where(s => s.RecordType == folder.RecordTypeId);
+                    var dailyReviews = query.ToList();
+
+                    TreeNode n = null;
+                    int index = 0;
+                    foreach (var item in dailyReviews)
+                    {
+                        n = new TreeNode
+                        {
+                            Text = string.Format("< {0} > ({1})", Convert.ToDateTime(item.UpdateDate).ToShortDateString(), ++index),
+                            Tag = item.Guid,
+                            ImageIndex = 4
+                        };
+                        tvResult.Nodes.Add(n);
+                    }
+                }
+
+            }
+        }
+
+
+        /// <summary>
         /// 删除
         /// </summary>
         /// <param name="sender"></param>
@@ -880,6 +920,15 @@ namespace MBook
                                 FillTreeViewWithDailyReview(new TreeNode { Tag = type });
                             }
                             break;
+                        case "8":
+                            sourceFolder = string.Format(@"{0}\My StickyNotes", Properties.Settings.Default.savePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
+                            {
+                                ctx.Set<StickyNote>().Delete(s => s.Guid == treeNode.Tag.ToString());
+                                FillTreeViewWithDailyReview(new TreeNode { Tag = type });
+                            }
+                            break;
                         default:
                             break;
                     }
@@ -921,6 +970,12 @@ namespace MBook
                     break;
                 case "7":
                     if (new Form3(e.Node.Tag.ToString()).ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+
+                    }
+                    break;
+                case "8":
+                    if (new StickyNoteForm(e.Node.Tag.ToString()).ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
 
                     }

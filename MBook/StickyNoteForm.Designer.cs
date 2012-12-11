@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StickyNoteForm));
             this.controlPanel = new System.Windows.Forms.Panel();
+            this.pictureBoxSave = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDelete = new System.Windows.Forms.PictureBox();
             this.pictureBoxNew = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDown = new System.Windows.Forms.PictureBox();
             this.pictureBoxTop = new System.Windows.Forms.PictureBox();
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.textBoxContent = new System.Windows.Forms.TextBox();
-            this.pictureBoxDown = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDelete = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSave = new System.Windows.Forms.PictureBox();
             this.controlPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNew)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSave)).BeginInit();
             this.SuspendLayout();
             // 
             // controlPanel
@@ -62,6 +62,27 @@
             this.controlPanel.TabIndex = 0;
             this.controlPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlPanel_MouseDown);
             // 
+            // pictureBoxSave
+            // 
+            this.pictureBoxSave.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSave.Image")));
+            this.pictureBoxSave.Location = new System.Drawing.Point(272, 4);
+            this.pictureBoxSave.Name = "pictureBoxSave";
+            this.pictureBoxSave.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxSave.TabIndex = 4;
+            this.pictureBoxSave.TabStop = false;
+            this.pictureBoxSave.Click += new System.EventHandler(this.pictureBoxSave_Click);
+            // 
+            // pictureBoxDelete
+            // 
+            this.pictureBoxDelete.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDelete.Image")));
+            this.pictureBoxDelete.Location = new System.Drawing.Point(294, 4);
+            this.pictureBoxDelete.Name = "pictureBoxDelete";
+            this.pictureBoxDelete.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxDelete.TabIndex = 3;
+            this.pictureBoxDelete.TabStop = false;
+            // 
             // pictureBoxNew
             // 
             this.pictureBoxNew.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNew.Image")));
@@ -72,6 +93,18 @@
             this.pictureBoxNew.TabIndex = 2;
             this.pictureBoxNew.TabStop = false;
             this.pictureBoxNew.Click += new System.EventHandler(this.pictureBoxNew_Click);
+            // 
+            // pictureBoxDown
+            // 
+            this.pictureBoxDown.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDown.Image")));
+            this.pictureBoxDown.Location = new System.Drawing.Point(250, 4);
+            this.pictureBoxDown.Name = "pictureBoxDown";
+            this.pictureBoxDown.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxDown.TabIndex = 1;
+            this.pictureBoxDown.TabStop = false;
+            this.pictureBoxDown.Visible = false;
+            this.pictureBoxDown.Click += new System.EventHandler(this.pictureBoxDown_Click);
             // 
             // pictureBoxTop
             // 
@@ -107,38 +140,6 @@
             this.textBoxContent.Size = new System.Drawing.Size(325, 211);
             this.textBoxContent.TabIndex = 1;
             // 
-            // pictureBoxDown
-            // 
-            this.pictureBoxDown.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDown.Image")));
-            this.pictureBoxDown.Location = new System.Drawing.Point(250, 4);
-            this.pictureBoxDown.Name = "pictureBoxDown";
-            this.pictureBoxDown.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxDown.TabIndex = 1;
-            this.pictureBoxDown.TabStop = false;
-            this.pictureBoxDown.Visible = false;
-            this.pictureBoxDown.Click += new System.EventHandler(this.pictureBoxDown_Click);
-            // 
-            // pictureBoxDelete
-            // 
-            this.pictureBoxDelete.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDelete.Image")));
-            this.pictureBoxDelete.Location = new System.Drawing.Point(294, 4);
-            this.pictureBoxDelete.Name = "pictureBoxDelete";
-            this.pictureBoxDelete.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxDelete.TabIndex = 3;
-            this.pictureBoxDelete.TabStop = false;
-            // 
-            // pictureBoxSave
-            // 
-            this.pictureBoxSave.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSave.Image")));
-            this.pictureBoxSave.Location = new System.Drawing.Point(272, 4);
-            this.pictureBoxSave.Name = "pictureBoxSave";
-            this.pictureBoxSave.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxSave.TabIndex = 4;
-            this.pictureBoxSave.TabStop = false;
-            // 
             // StickyNoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -154,12 +155,12 @@
             this.Load += new System.EventHandler(this.StickyNoteForm_Load);
             this.controlPanel.ResumeLayout(false);
             this.controlPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNew)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

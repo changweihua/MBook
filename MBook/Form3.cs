@@ -295,6 +295,13 @@ namespace MBook
             //读取本地
             string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.savePath, guid);
 
+            //检测本地文件是否存在
+            if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             dailyReview = new DailyReview();
             object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, dailyReview.GetType(), filePath);
 

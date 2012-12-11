@@ -373,6 +373,13 @@ namespace MBook
             if (this.Tag != null)
             {
                 string filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.savePath, this.Tag.ToString());
+
+                if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 gdm = new GridDailyModel();
                 object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, gdm.GetType(), filePath);
 

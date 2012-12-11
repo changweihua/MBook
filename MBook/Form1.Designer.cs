@@ -1297,6 +1297,7 @@
             this.tvResultImages.Images.SetKeyName(1, "NewContact.png");
             this.tvResultImages.Images.SetKeyName(2, "AddressBook.png");
             this.tvResultImages.Images.SetKeyName(3, "20121205013936765_easyicon_cn_16.png");
+            this.tvResultImages.Images.SetKeyName(4, "20121211075718985_easyicon_cn_16.png");
             // 
             // ribbonPageGroup2
             // 

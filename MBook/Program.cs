@@ -46,6 +46,7 @@ namespace MBook
                .AddClass<MonoBookEntity.Contact>()
                .AddClass<MonoBookEntity.DailyReview>()
                 .AddClass<MonoBookEntity.GridDaily>()
+                .AddClass<MonoBookEntity.StickyNote>()
                ;
                //.AddClass<MonoBookEntity.Folder>(p =>
                //{
