@@ -175,6 +175,8 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonSave = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
             this.tableLayoutRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableLayoutRibbonPage();
@@ -201,6 +203,7 @@
             this.linksRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup();
             this.headerFooterRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup();
             this.symbolsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineStyle1)).BeginInit();
@@ -357,10 +360,12 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
-            this.barButtonSave});
+            this.barButtonSave,
+            this.barStaticItem1,
+            this.barStaticItem2});
             this.ribbonControl1.LargeImages = this.imageList1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 157;
+            this.ribbonControl1.MaxItemId = 159;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -374,13 +379,13 @@
             this.repositoryItemFontEdit1,
             this.repositoryItemRichEditFontSizeEdit1,
             this.repositoryItemRichEditStyleEdit1});
-            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.SelectedPage = this.fileRibbonPage1;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1030, 124);
+            this.ribbonControl1.Size = new System.Drawing.Size(1032, 151);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem1);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barButtonItem4);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
@@ -614,8 +619,8 @@
             // 
             this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 124);
-            this.richEditControl1.LookAndFeel.SkinName = "Money Twins";
+            this.richEditControl1.Location = new System.Drawing.Point(0, 151);
+            this.richEditControl1.LookAndFeel.SkinName = "London Liquid Sky";
             this.richEditControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
@@ -624,7 +629,7 @@
             this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
             this.richEditControl1.Options.DocumentSaveOptions.DefaultFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
             this.richEditControl1.Options.Import.FallbackFormat = DevExpress.XtraRichEdit.DocumentFormat.Html;
-            this.richEditControl1.Size = new System.Drawing.Size(1030, 393);
+            this.richEditControl1.Size = new System.Drawing.Size(1032, 366);
             this.richEditControl1.TabIndex = 1;
             // 
             // changeTableBorderLineWeightItem1
@@ -1503,6 +1508,21 @@
             this.barButtonSave.Name = "barButtonSave";
             this.barButtonSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSave_ItemClick);
             // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "MonoBook笔记本 ---- 记录下你的专属知识 ";
+            this.barStaticItem1.Id = 157;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem2.Caption = "当前已经输入…………";
+            this.barStaticItem2.Id = 158;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -1756,6 +1776,15 @@
             this.symbolsRibbonPageGroup1.RichEditControl = this.richEditControl1;
             this.symbolsRibbonPageGroup1.Text = "符号";
             // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 486);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1032, 31);
+            // 
             // richEditBarController1
             // 
             this.richEditBarController1.BarItems.Add(this.undoItem1);
@@ -1894,17 +1923,18 @@
             // 
             // Form2
             // 
+            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 517);
+            this.ClientSize = new System.Drawing.Size(1032, 517);
+            this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.DoubleBuffered = true;
-            this.LookAndFeel.SkinName = "Seven";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Form2";
+            this.Ribbon = this.ribbonControl1;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -2091,5 +2121,8 @@
         private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonSave;
         private System.Windows.Forms.ImageList imageList1;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
     }
 }

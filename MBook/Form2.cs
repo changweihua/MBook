@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Ribbon;
 
 namespace MBook
 {
@@ -26,7 +27,7 @@ namespace MBook
      * 修 改 人:
      * 
      ************************************************************************************/
-    public partial class Form2 : XtraForm
+    public partial class Form2 : RibbonForm
     {
         public Form2()
         {
