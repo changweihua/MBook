@@ -51,6 +51,7 @@ namespace MBook
         /// <param name="e"></param>
         private void btnAddStickyNote_ItemClick(object sender, ItemClickEventArgs e)
         {
+            new StickyNoteForm().Show();
         }
 
 
@@ -839,36 +840,41 @@ namespace MBook
                 using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
                 {
                     string type = tvResult.Tag.ToString();
-                    string filePath = string.Empty;
+                    string targetFolder = string.Empty;
+                    string sourceFolder=string.Empty;
                     switch (type)
                     {
                         case "3":
-                            filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
-                            if (DeleteFile(filePath))
+                            sourceFolder = string.Format(@"{0}\My Grid Dailies", Properties.Settings.Default.savePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<GridDaily>().Delete(g => g.Guid == treeNode.Tag.ToString());
                                 FillTreeViewWithGridDaily(new TreeNode { Tag = type });
                             }
                             break;
                         case "4":
-                            filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
-                            if (DeleteFile(filePath))
+                            sourceFolder = string.Format(@"{0}\My Contacts", Properties.Settings.Default.savePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<Contact>().Delete(c => c.Guid == treeNode.Tag.ToString());
                                 FillTreeViewWithContact(new TreeNode { Tag = type });
                             }
                             break;
                         case "6":
-                            filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
-                            if (DeleteFile(filePath))
+                            sourceFolder = string.Format(@"{0}\My Dailies", Properties.Settings.Default.savePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<Daily>().Delete(d => d.Guid == treeNode.Tag.ToString());
                                 FillTreeViewWithDaily(new TreeNode { Tag = type });
                             }
                             break;
                         case "7":
-                            filePath = string.Format(@"{0}\My Daily Reviews\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
-                            if (DeleteFile(filePath))
+                            sourceFolder = string.Format(@"{0}\My DailyReviews", Properties.Settings.Default.savePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<DailyReview>().Delete(d => d.Guid == treeNode.Tag.ToString());
                                 FillTreeViewWithDailyReview(new TreeNode { Tag = type });
@@ -880,37 +886,6 @@ namespace MBook
                     
                 }
             }
-        }
-
-
-        /// <summary>
-        /// 删除文件
-        /// </summary>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
-        private bool DeleteFile(string filePath)
-        {
-            bool flag = false;
-
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    File.Delete(filePath);
-                    flag = true;
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(this.LookAndFeel, "出错:\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    flag = false;
-                }
-            }
-            else
-            {
-                flag = false;
-            }
-
-            return flag;
         }
 
         /// <summary>
@@ -1012,5 +987,88 @@ namespace MBook
 
 
         #endregion
+
+        #region 文件夹操作方法
+
+        /// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        private bool DeleteFile(string filePath)
+        {
+            bool flag = false;
+
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    File.Delete(filePath);
+                    flag = true;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "出错:\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    flag = false;
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+
+            return flag;
+        }
+
+
+        /// <summary>
+        /// 移动文件
+        /// </summary>
+        /// <param name="fileName">文件名</param>
+        /// <param name="sourceFolder">原文件夹</param>
+        /// <param name="targetFolder">目的文件夹</param>
+        /// <returns></returns>
+        private bool RemoveFile(string fileName, string sourceFolder, string targetFolder)
+        {
+            bool flag = false;
+
+            string source = string.Format(@"{0}\{1}.mono", sourceFolder, fileName);
+            string target = string.Format(@"{0}\{1}.mono", targetFolder, fileName);
+
+            if (File.Exists(source))
+            {
+                try
+                {
+                    File.Move(source, target);
+                    flag = true;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "出错:\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    flag = false;
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+
+            return flag;
+        }
+
+        #endregion
+
+        #region 插入已删除表
+
+        void Insert()
+        {
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+
+            }
+        }
+
+        #endregion
+
     }
 }

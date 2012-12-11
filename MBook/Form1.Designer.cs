@@ -170,6 +170,8 @@
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.alertControlImages = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
@@ -296,7 +298,7 @@
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPageSetting;
+            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(900, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
@@ -1134,6 +1136,7 @@
             // 
             this.tvFolders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvFolders.Location = new System.Drawing.Point(0, 0);
+            this.tvFolders.Margin = new System.Windows.Forms.Padding(10);
             this.tvFolders.Name = "tvFolders";
             this.tvFolders.Scrollable = false;
             this.tvFolders.ShowNodeToolTips = true;
@@ -1257,8 +1260,10 @@
             this.tvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvResult.ImageIndex = 0;
             this.tvResult.ImageList = this.tvResultImages;
+            this.tvResult.Indent = 20;
+            this.tvResult.ItemHeight = 20;
             this.tvResult.Location = new System.Drawing.Point(2, 23);
-            this.tvResult.Margin = new System.Windows.Forms.Padding(5);
+            this.tvResult.Margin = new System.Windows.Forms.Padding(10);
             this.tvResult.Name = "tvResult";
             this.tvResult.SelectedImageIndex = 3;
             this.tvResult.ShowLines = false;
@@ -1291,7 +1296,7 @@
             this.tvResultImages.Images.SetKeyName(0, "Daily.gif");
             this.tvResultImages.Images.SetKeyName(1, "NewContact.png");
             this.tvResultImages.Images.SetKeyName(2, "AddressBook.png");
-            this.tvResultImages.Images.SetKeyName(3, "20121205123055557_easyicon_cn_16.png");
+            this.tvResultImages.Images.SetKeyName(3, "20121205013936765_easyicon_cn_16.png");
             // 
             // ribbonPageGroup2
             // 
@@ -1365,6 +1370,25 @@
             this.tsmiExit.Size = new System.Drawing.Size(134, 22);
             this.tsmiExit.Text = "退出程序";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
+            // 
+            // alertControl1
+            // 
+            this.alertControl1.AppearanceCaption.Font = new System.Drawing.Font("浪漫雅圆", 10F, System.Drawing.FontStyle.Bold);
+            this.alertControl1.AppearanceCaption.Options.UseFont = true;
+            this.alertControl1.AppearanceHotTrackedText.Font = new System.Drawing.Font("浪漫雅圆", 10F, System.Drawing.FontStyle.Underline);
+            this.alertControl1.AppearanceHotTrackedText.Options.UseFont = true;
+            this.alertControl1.AppearanceText.Font = new System.Drawing.Font("浪漫雅圆", 10F);
+            this.alertControl1.AppearanceText.Options.UseFont = true;
+            this.alertControl1.FormShowingEffect = DevExpress.XtraBars.Alerter.AlertFormShowingEffect.SlideHorizontal;
+            this.alertControl1.Images = this.alertControlImages;
+            this.alertControl1.LookAndFeel.SkinName = "Glass Oceans";
+            this.alertControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            // 
+            // alertControlImages
+            // 
+            this.alertControlImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.alertControlImages.ImageSize = new System.Drawing.Size(16, 16);
+            this.alertControlImages.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -1549,6 +1573,8 @@
         private System.Windows.Forms.ContextMenuStrip cmsTreeViewResult;
         private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
         private System.Windows.Forms.ImageList tvResultImages;
+        private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
+        private System.Windows.Forms.ImageList alertControlImages;
     }
 }
 
