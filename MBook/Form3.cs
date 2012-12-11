@@ -1,6 +1,8 @@
 ﻿using System;
 using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit;
+using NLite.Data;
+using MonoBookEntity;
 
 namespace MBook
 {
@@ -22,16 +24,29 @@ namespace MBook
      ************************************************************************************/
     public partial class Form3 : XtraForm
     {
+
+        #region 全局变量
+
+        MonoBookEntity.DailyReview dailyReview; 
+
+        #endregion
+
+        #region 窗体构造
+
         public Form3()
         {
             InitializeComponent();
         }
 
-
-        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public Form3(string guid)
         {
+            InitializeComponent();
+            this.Tag = guid;
         }
 
+        #endregion
+
+        #region 窗体公共方法
 
         /// <summary>
         /// 检查窗体
@@ -122,6 +137,10 @@ namespace MBook
 
         }
 
+        #endregion
+
+        #region 按钮
+
         /// <summary>
         /// 操作按钮
         /// </summary>
@@ -134,7 +153,7 @@ namespace MBook
             switch (index)
             {
                 case 0:
-                    AddDailyReview();
+                    SaveDailyReview();
                     break;
                 case 1:
                     this.Close();
@@ -145,18 +164,170 @@ namespace MBook
 
         }
 
+        #endregion
+
+        #region 操作，改，查
 
         /// <summary>
         /// 保存每日回顾
         /// </summary>
-        private void AddDailyReview()
+        private void SaveDailyReview()
         {
-            if (CheckForm())
+            if (!CheckForm())
             {
-                SetFormReadonly();
-                mpbcStatus.Location = buttonEditAction.Location;
-                buttonEditAction.Visible = false;
-                mpbcStatus.Visible = true;
+                return;
+            }
+
+            SetFormReadonly();
+            mpbcStatus.Location = buttonEditAction.Location;
+            buttonEditAction.Visible = false;
+            mpbcStatus.Visible = true;
+
+            //得到实例
+            if (this.Tag == null)
+            {
+                dailyReview = new MonoBookEntity.DailyReview
+                {
+                    Guid = Guid.NewGuid().ToString(),
+                    CommemorationDay = textEditCommemorationDay.EditValue.ToString(),
+                    FortuneDay = textEditFortuneDay.EditValue.ToString(),
+                    Inspiration = memoEditInspiration.EditValue.ToString(),
+                    MeetionDay = textEditMeetionDay.EditValue.ToString(),
+                    TodayBooksMajored = memoEditTodayBooksMajored.EditValue.ToString(),
+                    TodayBooksNotMajored = memoEditTodayBooksNotMajored.EditValue.ToString(),
+                    TodayDate = dateEditTodayDate.EditValue.ToString(),
+                    TodayDescrption = textEditTodayDesc.EditValue.ToString(),
+                    TodayGains = memoEditTodayGains.EditValue.ToString(),
+                    TodayGetupTime = timeEditTodayGetupTime.EditValue.ToString(),
+                    TodayMood = textEditTodayMood.EditValue.ToString(),
+                    TodayWeather = textEditTodayWeather.EditValue.ToString(),
+                    YesterdayProgress = memoEditYesterdayProgress.EditValue.ToString(),
+                    YesterdayShortage = memoEditYesterdayShortage.EditValue.ToString(),
+                    YesterdaySleepTime = timeEditYesterdaySleepTime.EditValue.ToString(),
+                    CreateDate = DateTime.Now.ToShortDateString(),
+                    RecordType = 4
+                };
+            }
+            else
+            {
+                dailyReview = new MonoBookEntity.DailyReview
+                {
+                    Guid = this.Tag.ToString(),
+                    CommemorationDay = textEditCommemorationDay.EditValue.ToString(),
+                    FortuneDay = textEditFortuneDay.EditValue.ToString(),
+                    Inspiration = memoEditInspiration.EditValue.ToString(),
+                    MeetionDay = textEditMeetionDay.EditValue.ToString(),
+                    TodayBooksMajored = memoEditTodayBooksMajored.EditValue.ToString(),
+                    TodayBooksNotMajored = memoEditTodayBooksNotMajored.EditValue.ToString(),
+                    TodayDate = dateEditTodayDate.EditValue.ToString(),
+                    TodayDescrption = textEditTodayDesc.EditValue.ToString(),
+                    TodayGains = memoEditTodayGains.EditValue.ToString(),
+                    TodayGetupTime = timeEditTodayGetupTime.EditValue.ToString(),
+                    TodayMood = textEditTodayMood.EditValue.ToString(),
+                    TodayWeather = textEditTodayWeather.EditValue.ToString(),
+                    YesterdayProgress = memoEditYesterdayProgress.EditValue.ToString(),
+                    YesterdayShortage = memoEditYesterdayShortage.EditValue.ToString(),
+                    YesterdaySleepTime = timeEditYesterdaySleepTime.EditValue.ToString()
+                };
+            }
+
+            string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.savePath, dailyReview.Guid);
+
+            //序列化开始
+
+            bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, dailyReview, filePath);
+
+            //序列化结束
+
+            //数据库操作开始
+            
+            int count = 0;
+            if (this.Tag == null)
+            {
+                using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                {
+                    count = ctx.Set<MonoBookEntity.DailyReview>().Insert(dailyReview);
+                }
+            }
+            else
+            {
+                using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                {
+                    count = ctx.Set<MonoBookEntity.DailyReview>().Update(dailyReview);
+                }
+            }
+            //数据库操作结束
+
+            if (count == 1)
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
+            }
+
+           
+        }
+
+        #endregion
+
+
+        #region 废弃的方法
+
+        void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+
+
+        #region 显示每日回顾
+
+        void ShowDailyReview()
+        { 
+            //读取Sqlite
+            string guid = this.Tag.ToString();
+
+            //using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            //{
+            //    //var query = ctx.Set<DailyReview>().Where((da) =>{ da.Guid == guid});
+            //}
+
+            //读取本地
+            string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.savePath, guid);
+
+            dailyReview = new DailyReview();
+            object obj = EnterpriseObjects.SerializeHelper.Deserialize(EnterpriseObjects.SerializeType.Binary, dailyReview.GetType(), filePath);
+
+            dailyReview = obj as DailyReview;
+
+            if (dailyReview != null)
+            {
+                this.textEditCommemorationDay.EditValue = dailyReview.CommemorationDay;
+                this.textEditFortuneDay.EditValue = dailyReview.FortuneDay;
+                this.textEditMeetionDay.EditValue = dailyReview.MeetionDay;
+                this.textEditTodayDesc.EditValue = dailyReview.TodayDescrption;
+                this.textEditTodayMood.EditValue = dailyReview.TodayMood;
+                this.textEditTodayWeather.EditValue = dailyReview.TodayWeather;
+                this.dateEditTodayDate.EditValue = dailyReview.TodayDate;
+                this.memoEditInspiration.EditValue = dailyReview.Inspiration;
+                this.memoEditTodayBooksMajored.EditValue = dailyReview.TodayBooksMajored;
+                this.memoEditTodayBooksNotMajored.EditValue = dailyReview.TodayBooksNotMajored;
+                this.memoEditTodayGains.EditValue = dailyReview.TodayGains;
+                this.memoEditYesterdayProgress.EditValue = dailyReview.YesterdayProgress;
+                this.memoEditYesterdayShortage.EditValue = dailyReview.YesterdayShortage;
+                this.timeEditTodayGetupTime.EditValue = dailyReview.TodayGetupTime;
+                this.timeEditYesterdaySleepTime.EditValue = dailyReview.YesterdaySleepTime;
+            }
+
+        }
+
+        #endregion
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            if (this.Tag != null)
+            {
+                ShowDailyReview();
             }
         }
 

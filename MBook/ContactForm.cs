@@ -200,7 +200,6 @@ namespace MBook
 
         private void ShowContact()
         {
-            int a = 0;
             using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
             {
                 contact = ctx.Set<Contact>().Where(c => c.Guid == this.Tag.ToString()).ElementAt(0);

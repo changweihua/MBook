@@ -36,98 +36,98 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent1 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle1 = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
             this.buttonEditTitle = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit5 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit6 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent2 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading2 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle2 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit3 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit7 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit8 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent3 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading3 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle3 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit4 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit9 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit10 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent4 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading4 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle4 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.textEditTodayBirthday = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTodayDesc = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTodayWeather = new DevExpress.XtraEditors.TextEdit();
+            this.dateEditTodayDate = new DevExpress.XtraEditors.DateEdit();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit6 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit13 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit14 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent5 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading5 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle5 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit7 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit15 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit16 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent6 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading6 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle6 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl8 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit8 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit17 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit18 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent7 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading7 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle7 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl9 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit9 = new DevExpress.XtraEditors.MemoEdit();
-            this.buttonEdit19 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit20 = new DevExpress.XtraEditors.ButtonEdit();
+            this.memoEditContent8 = new DevExpress.XtraEditors.MemoEdit();
+            this.buttonEditGridSubHeading8 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGridTitle8 = new DevExpress.XtraEditors.ButtonEdit();
             this.mpbcStatus = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayBirthday.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayDesc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayWeather.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit16.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).BeginInit();
             this.groupControl8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit18.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).BeginInit();
             this.groupControl9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit20.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,9 +141,9 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.memoEdit1);
-            this.groupControl1.Controls.Add(this.buttonEdit4);
-            this.groupControl1.Controls.Add(this.buttonEdit3);
+            this.groupControl1.Controls.Add(this.memoEditContent1);
+            this.groupControl1.Controls.Add(this.buttonEditGridSubHeading1);
+            this.groupControl1.Controls.Add(this.buttonEditGridTitle1);
             this.groupControl1.Location = new System.Drawing.Point(12, 41);
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl1.Name = "groupControl1";
@@ -152,40 +152,40 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
-            // memoEdit1
+            // memoEditContent1
             // 
-            this.memoEdit1.EditValue = "";
-            this.memoEdit1.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.NullText = "sds";
-            this.memoEdit1.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit1.TabIndex = 0;
+            this.memoEditContent1.EditValue = "";
+            this.memoEditContent1.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent1.Name = "memoEditContent1";
+            this.memoEditContent1.Properties.NullText = "sds";
+            this.memoEditContent1.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent1.TabIndex = 0;
             // 
-            // buttonEdit4
+            // buttonEditGridSubHeading1
             // 
-            this.buttonEdit4.EditValue = "梦想是蝴蝶的翅膀";
-            this.buttonEdit4.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit4.Name = "buttonEdit4";
-            this.buttonEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading1.EditValue = "梦想是蝴蝶的翅膀";
+            this.buttonEditGridSubHeading1.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading1.Name = "buttonEditGridSubHeading1";
+            this.buttonEditGridSubHeading1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit4.Properties.ReadOnly = true;
-            this.buttonEdit4.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit4.TabIndex = 99;
-            this.buttonEdit4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading1.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading1.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading1.TabIndex = 99;
+            this.buttonEditGridSubHeading1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit3
+            // buttonEditGridTitle1
             // 
-            this.buttonEdit3.EditValue = "愿望•人生的梦";
-            this.buttonEdit3.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit3.Name = "buttonEdit3";
-            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle1.EditValue = "愿望•人生的梦";
+            this.buttonEditGridTitle1.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle1.Name = "buttonEditGridTitle1";
+            this.buttonEditGridTitle1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit3.Properties.ReadOnly = true;
-            this.buttonEdit3.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit3.TabIndex = 99;
-            this.buttonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle1.Properties.ReadOnly = true;
+            this.buttonEditGridTitle1.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle1.TabIndex = 99;
+            this.buttonEditGridTitle1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // buttonEditAction
             // 
@@ -216,9 +216,9 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.memoEdit2);
-            this.groupControl2.Controls.Add(this.buttonEdit5);
-            this.groupControl2.Controls.Add(this.buttonEdit6);
+            this.groupControl2.Controls.Add(this.memoEditContent2);
+            this.groupControl2.Controls.Add(this.buttonEditGridSubHeading2);
+            this.groupControl2.Controls.Add(this.buttonEditGridTitle2);
             this.groupControl2.Location = new System.Drawing.Point(336, 41);
             this.groupControl2.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl2.Name = "groupControl2";
@@ -227,44 +227,44 @@
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "groupControl1";
             // 
-            // memoEdit2
+            // memoEditContent2
             // 
-            this.memoEdit2.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit2.Name = "memoEdit2";
-            this.memoEdit2.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit2.TabIndex = 1;
+            this.memoEditContent2.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent2.Name = "memoEditContent2";
+            this.memoEditContent2.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent2.TabIndex = 1;
             // 
-            // buttonEdit5
+            // buttonEditGridSubHeading2
             // 
-            this.buttonEdit5.EditValue = "活了多少年，用思维时间来计算";
-            this.buttonEdit5.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit5.Name = "buttonEdit5";
-            this.buttonEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading2.EditValue = "活了多少年，用思维时间来计算";
+            this.buttonEditGridSubHeading2.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading2.Name = "buttonEditGridSubHeading2";
+            this.buttonEditGridSubHeading2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit5.Properties.ReadOnly = true;
-            this.buttonEdit5.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit5.TabIndex = 99;
-            this.buttonEdit5.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading2.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading2.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading2.TabIndex = 99;
+            this.buttonEditGridSubHeading2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit6
+            // buttonEditGridTitle2
             // 
-            this.buttonEdit6.EditValue = "学习•信息•阅读";
-            this.buttonEdit6.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit6.Name = "buttonEdit6";
-            this.buttonEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle2.EditValue = "学习•信息•阅读";
+            this.buttonEditGridTitle2.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle2.Name = "buttonEditGridTitle2";
+            this.buttonEditGridTitle2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit6.Properties.ReadOnly = true;
-            this.buttonEdit6.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit6.TabIndex = 99;
-            this.buttonEdit6.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle2.Properties.ReadOnly = true;
+            this.buttonEditGridTitle2.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle2.TabIndex = 99;
+            this.buttonEditGridTitle2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.memoEdit3);
-            this.groupControl3.Controls.Add(this.buttonEdit7);
-            this.groupControl3.Controls.Add(this.buttonEdit8);
+            this.groupControl3.Controls.Add(this.memoEditContent3);
+            this.groupControl3.Controls.Add(this.buttonEditGridSubHeading3);
+            this.groupControl3.Controls.Add(this.buttonEditGridTitle3);
             this.groupControl3.Location = new System.Drawing.Point(660, 41);
             this.groupControl3.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl3.Name = "groupControl3";
@@ -273,44 +273,44 @@
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "groupControl1";
             // 
-            // memoEdit3
+            // memoEditContent3
             // 
-            this.memoEdit3.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit3.Name = "memoEdit3";
-            this.memoEdit3.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit3.TabIndex = 2;
+            this.memoEditContent3.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent3.Name = "memoEditContent3";
+            this.memoEditContent3.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent3.TabIndex = 2;
             // 
-            // buttonEdit7
+            // buttonEditGridSubHeading3
             // 
-            this.buttonEdit7.EditValue = "每天做一件让别人快乐的事";
-            this.buttonEdit7.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit7.Name = "buttonEdit7";
-            this.buttonEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading3.EditValue = "每天做一件让别人快乐的事";
+            this.buttonEditGridSubHeading3.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading3.Name = "buttonEditGridSubHeading3";
+            this.buttonEditGridSubHeading3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit7.Properties.ReadOnly = true;
-            this.buttonEdit7.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit7.TabIndex = 99;
-            this.buttonEdit7.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading3.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading3.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading3.TabIndex = 99;
+            this.buttonEditGridSubHeading3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit8
+            // buttonEditGridTitle3
             // 
-            this.buttonEdit8.EditValue = "人际关系•家庭•朋友";
-            this.buttonEdit8.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit8.Name = "buttonEdit8";
-            this.buttonEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle3.EditValue = "人际关系•家庭•朋友";
+            this.buttonEditGridTitle3.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle3.Name = "buttonEditGridTitle3";
+            this.buttonEditGridTitle3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit8.Properties.ReadOnly = true;
-            this.buttonEdit8.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit8.TabIndex = 99;
-            this.buttonEdit8.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle3.Properties.ReadOnly = true;
+            this.buttonEditGridTitle3.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle3.TabIndex = 99;
+            this.buttonEditGridTitle3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl4
             // 
-            this.groupControl4.Controls.Add(this.memoEdit4);
-            this.groupControl4.Controls.Add(this.buttonEdit9);
-            this.groupControl4.Controls.Add(this.buttonEdit10);
+            this.groupControl4.Controls.Add(this.memoEditContent4);
+            this.groupControl4.Controls.Add(this.buttonEditGridSubHeading4);
+            this.groupControl4.Controls.Add(this.buttonEditGridTitle4);
             this.groupControl4.Location = new System.Drawing.Point(12, 239);
             this.groupControl4.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl4.Name = "groupControl4";
@@ -319,38 +319,38 @@
             this.groupControl4.TabIndex = 0;
             this.groupControl4.Text = "groupControl1";
             // 
-            // memoEdit4
+            // memoEditContent4
             // 
-            this.memoEdit4.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit4.Name = "memoEdit4";
-            this.memoEdit4.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit4.TabIndex = 3;
+            this.memoEditContent4.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent4.Name = "memoEditContent4";
+            this.memoEditContent4.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent4.TabIndex = 3;
             // 
-            // buttonEdit9
+            // buttonEditGridSubHeading4
             // 
-            this.buttonEdit9.EditValue = "起居以时，劳逸均匀";
-            this.buttonEdit9.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit9.Name = "buttonEdit9";
-            this.buttonEdit9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading4.EditValue = "起居以时，劳逸均匀";
+            this.buttonEditGridSubHeading4.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading4.Name = "buttonEditGridSubHeading4";
+            this.buttonEditGridSubHeading4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit9.Properties.ReadOnly = true;
-            this.buttonEdit9.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit9.TabIndex = 99;
-            this.buttonEdit9.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading4.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading4.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading4.TabIndex = 99;
+            this.buttonEditGridSubHeading4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit10
+            // buttonEditGridTitle4
             // 
-            this.buttonEdit10.EditValue = "健康·饮食·锻炼";
-            this.buttonEdit10.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit10.Name = "buttonEdit10";
-            this.buttonEdit10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle4.EditValue = "健康·饮食·锻炼";
+            this.buttonEditGridTitle4.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle4.Name = "buttonEditGridTitle4";
+            this.buttonEditGridTitle4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit10.Properties.ReadOnly = true;
-            this.buttonEdit10.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit10.TabIndex = 99;
-            this.buttonEdit10.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle4.Properties.ReadOnly = true;
+            this.buttonEditGridTitle4.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle4.TabIndex = 99;
+            this.buttonEditGridTitle4.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl5
             // 
@@ -358,10 +358,10 @@
             this.groupControl5.Controls.Add(this.labelControl3);
             this.groupControl5.Controls.Add(this.labelControl2);
             this.groupControl5.Controls.Add(this.labelControl1);
-            this.groupControl5.Controls.Add(this.textEdit3);
-            this.groupControl5.Controls.Add(this.textEdit2);
-            this.groupControl5.Controls.Add(this.textEdit1);
-            this.groupControl5.Controls.Add(this.dateEdit1);
+            this.groupControl5.Controls.Add(this.textEditTodayBirthday);
+            this.groupControl5.Controls.Add(this.textEditTodayDesc);
+            this.groupControl5.Controls.Add(this.textEditTodayWeather);
+            this.groupControl5.Controls.Add(this.dateEditTodayDate);
             this.groupControl5.Location = new System.Drawing.Point(336, 239);
             this.groupControl5.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl5.Name = "groupControl5";
@@ -406,48 +406,48 @@
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "日期";
             // 
-            // textEdit3
+            // textEditTodayBirthday
             // 
-            this.textEdit3.Location = new System.Drawing.Point(72, 88);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEdit3.Size = new System.Drawing.Size(206, 19);
-            this.textEdit3.TabIndex = 7;
+            this.textEditTodayBirthday.Location = new System.Drawing.Point(72, 88);
+            this.textEditTodayBirthday.Name = "textEditTodayBirthday";
+            this.textEditTodayBirthday.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEditTodayBirthday.Size = new System.Drawing.Size(206, 19);
+            this.textEditTodayBirthday.TabIndex = 7;
             // 
-            // textEdit2
+            // textEditTodayDesc
             // 
-            this.textEdit2.Location = new System.Drawing.Point(72, 61);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEdit2.Size = new System.Drawing.Size(206, 19);
-            this.textEdit2.TabIndex = 6;
+            this.textEditTodayDesc.Location = new System.Drawing.Point(72, 61);
+            this.textEditTodayDesc.Name = "textEditTodayDesc";
+            this.textEditTodayDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEditTodayDesc.Size = new System.Drawing.Size(206, 19);
+            this.textEditTodayDesc.TabIndex = 6;
             // 
-            // textEdit1
+            // textEditTodayWeather
             // 
-            this.textEdit1.Location = new System.Drawing.Point(72, 37);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEdit1.Size = new System.Drawing.Size(206, 19);
-            this.textEdit1.TabIndex = 5;
+            this.textEditTodayWeather.Location = new System.Drawing.Point(72, 37);
+            this.textEditTodayWeather.Name = "textEditTodayWeather";
+            this.textEditTodayWeather.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.textEditTodayWeather.Size = new System.Drawing.Size(206, 19);
+            this.textEditTodayWeather.TabIndex = 5;
             // 
-            // dateEdit1
+            // dateEditTodayDate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(72, 10);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTodayDate.EditValue = null;
+            this.dateEditTodayDate.Location = new System.Drawing.Point(72, 10);
+            this.dateEditTodayDate.Name = "dateEditTodayDate";
+            this.dateEditTodayDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.dateEditTodayDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTodayDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(206, 19);
-            this.dateEdit1.TabIndex = 4;
+            this.dateEditTodayDate.Size = new System.Drawing.Size(206, 19);
+            this.dateEditTodayDate.TabIndex = 4;
             // 
             // groupControl6
             // 
-            this.groupControl6.Controls.Add(this.memoEdit6);
-            this.groupControl6.Controls.Add(this.buttonEdit13);
-            this.groupControl6.Controls.Add(this.buttonEdit14);
+            this.groupControl6.Controls.Add(this.memoEditContent5);
+            this.groupControl6.Controls.Add(this.buttonEditGridSubHeading5);
+            this.groupControl6.Controls.Add(this.buttonEditGridTitle5);
             this.groupControl6.Location = new System.Drawing.Point(660, 239);
             this.groupControl6.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl6.Name = "groupControl6";
@@ -456,44 +456,44 @@
             this.groupControl6.TabIndex = 0;
             this.groupControl6.Text = "groupControl1";
             // 
-            // memoEdit6
+            // memoEditContent5
             // 
-            this.memoEdit6.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit6.Name = "memoEdit6";
-            this.memoEdit6.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit6.TabIndex = 8;
+            this.memoEditContent5.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent5.Name = "memoEditContent5";
+            this.memoEditContent5.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent5.TabIndex = 8;
             // 
-            // buttonEdit13
+            // buttonEditGridSubHeading5
             // 
-            this.buttonEdit13.EditValue = "行成于思,业精于勤";
-            this.buttonEdit13.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit13.Name = "buttonEdit13";
-            this.buttonEdit13.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading5.EditValue = "行成于思,业精于勤";
+            this.buttonEditGridSubHeading5.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading5.Name = "buttonEditGridSubHeading5";
+            this.buttonEditGridSubHeading5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit13.Properties.ReadOnly = true;
-            this.buttonEdit13.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit13.TabIndex = 99;
-            this.buttonEdit13.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading5.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading5.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading5.TabIndex = 99;
+            this.buttonEditGridSubHeading5.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit14
+            // buttonEditGridTitle5
             // 
-            this.buttonEdit14.EditValue = "工作";
-            this.buttonEdit14.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit14.Name = "buttonEdit14";
-            this.buttonEdit14.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle5.EditValue = "工作";
+            this.buttonEditGridTitle5.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle5.Name = "buttonEditGridTitle5";
+            this.buttonEditGridTitle5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit14.Properties.ReadOnly = true;
-            this.buttonEdit14.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit14.TabIndex = 99;
-            this.buttonEdit14.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle5.Properties.ReadOnly = true;
+            this.buttonEditGridTitle5.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle5.TabIndex = 99;
+            this.buttonEditGridTitle5.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl7
             // 
-            this.groupControl7.Controls.Add(this.memoEdit7);
-            this.groupControl7.Controls.Add(this.buttonEdit15);
-            this.groupControl7.Controls.Add(this.buttonEdit16);
+            this.groupControl7.Controls.Add(this.memoEditContent6);
+            this.groupControl7.Controls.Add(this.buttonEditGridSubHeading6);
+            this.groupControl7.Controls.Add(this.buttonEditGridTitle6);
             this.groupControl7.Location = new System.Drawing.Point(12, 437);
             this.groupControl7.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl7.Name = "groupControl7";
@@ -502,44 +502,44 @@
             this.groupControl7.TabIndex = 0;
             this.groupControl7.Text = "groupControl1";
             // 
-            // memoEdit7
+            // memoEditContent6
             // 
-            this.memoEdit7.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit7.Name = "memoEdit7";
-            this.memoEdit7.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit7.TabIndex = 9;
+            this.memoEditContent6.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent6.Name = "memoEditContent6";
+            this.memoEditContent6.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent6.TabIndex = 9;
             // 
-            // buttonEdit15
+            // buttonEditGridSubHeading6
             // 
-            this.buttonEdit15.EditValue = "金钱拥有中立的能量";
-            this.buttonEdit15.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit15.Name = "buttonEdit15";
-            this.buttonEdit15.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading6.EditValue = "金钱拥有中立的能量";
+            this.buttonEditGridSubHeading6.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading6.Name = "buttonEditGridSubHeading6";
+            this.buttonEditGridSubHeading6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit15.Properties.ReadOnly = true;
-            this.buttonEdit15.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit15.TabIndex = 99;
-            this.buttonEdit15.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading6.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading6.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading6.TabIndex = 99;
+            this.buttonEditGridSubHeading6.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit16
+            // buttonEditGridTitle6
             // 
-            this.buttonEdit16.EditValue = "理财·金钱";
-            this.buttonEdit16.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit16.Name = "buttonEdit16";
-            this.buttonEdit16.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle6.EditValue = "理财·金钱";
+            this.buttonEditGridTitle6.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle6.Name = "buttonEditGridTitle6";
+            this.buttonEditGridTitle6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit16.Properties.ReadOnly = true;
-            this.buttonEdit16.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit16.TabIndex = 99;
-            this.buttonEdit16.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle6.Properties.ReadOnly = true;
+            this.buttonEditGridTitle6.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle6.TabIndex = 99;
+            this.buttonEditGridTitle6.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl8
             // 
-            this.groupControl8.Controls.Add(this.memoEdit8);
-            this.groupControl8.Controls.Add(this.buttonEdit17);
-            this.groupControl8.Controls.Add(this.buttonEdit18);
+            this.groupControl8.Controls.Add(this.memoEditContent7);
+            this.groupControl8.Controls.Add(this.buttonEditGridSubHeading7);
+            this.groupControl8.Controls.Add(this.buttonEditGridTitle7);
             this.groupControl8.Location = new System.Drawing.Point(336, 437);
             this.groupControl8.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl8.Name = "groupControl8";
@@ -548,44 +548,44 @@
             this.groupControl8.TabIndex = 0;
             this.groupControl8.Text = "groupControl1";
             // 
-            // memoEdit8
+            // memoEditContent7
             // 
-            this.memoEdit8.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit8.Name = "memoEdit8";
-            this.memoEdit8.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit8.TabIndex = 10;
+            this.memoEditContent7.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent7.Name = "memoEditContent7";
+            this.memoEditContent7.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent7.TabIndex = 10;
             // 
-            // buttonEdit17
+            // buttonEditGridSubHeading7
             // 
-            this.buttonEdit17.EditValue = "真正的快乐是内在的";
-            this.buttonEdit17.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit17.Name = "buttonEdit17";
-            this.buttonEdit17.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading7.EditValue = "真正的快乐是内在的";
+            this.buttonEditGridSubHeading7.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading7.Name = "buttonEditGridSubHeading7";
+            this.buttonEditGridSubHeading7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit17.Properties.ReadOnly = true;
-            this.buttonEdit17.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit17.TabIndex = 99;
-            this.buttonEdit17.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading7.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading7.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading7.TabIndex = 99;
+            this.buttonEditGridSubHeading7.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit18
+            // buttonEditGridTitle7
             // 
-            this.buttonEdit18.EditValue = "快乐·惊喜·其他";
-            this.buttonEdit18.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit18.Name = "buttonEdit18";
-            this.buttonEdit18.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle7.EditValue = "快乐·惊喜·其他";
+            this.buttonEditGridTitle7.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle7.Name = "buttonEditGridTitle7";
+            this.buttonEditGridTitle7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit18.Properties.ReadOnly = true;
-            this.buttonEdit18.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit18.TabIndex = 99;
-            this.buttonEdit18.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle7.Properties.ReadOnly = true;
+            this.buttonEditGridTitle7.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle7.TabIndex = 99;
+            this.buttonEditGridTitle7.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // groupControl9
             // 
-            this.groupControl9.Controls.Add(this.memoEdit9);
-            this.groupControl9.Controls.Add(this.buttonEdit19);
-            this.groupControl9.Controls.Add(this.buttonEdit20);
+            this.groupControl9.Controls.Add(this.memoEditContent8);
+            this.groupControl9.Controls.Add(this.buttonEditGridSubHeading8);
+            this.groupControl9.Controls.Add(this.buttonEditGridTitle8);
             this.groupControl9.Location = new System.Drawing.Point(661, 437);
             this.groupControl9.LookAndFeel.SkinName = "Office 2010 Black";
             this.groupControl9.Name = "groupControl9";
@@ -594,38 +594,38 @@
             this.groupControl9.TabIndex = 0;
             this.groupControl9.Text = "groupControl1";
             // 
-            // memoEdit9
+            // memoEditContent8
             // 
-            this.memoEdit9.Location = new System.Drawing.Point(6, 60);
-            this.memoEdit9.Name = "memoEdit9";
-            this.memoEdit9.Size = new System.Drawing.Size(288, 119);
-            this.memoEdit9.TabIndex = 11;
+            this.memoEditContent8.Location = new System.Drawing.Point(6, 60);
+            this.memoEditContent8.Name = "memoEditContent8";
+            this.memoEditContent8.Size = new System.Drawing.Size(288, 119);
+            this.memoEditContent8.TabIndex = 11;
             // 
-            // buttonEdit19
+            // buttonEditGridSubHeading8
             // 
-            this.buttonEdit19.EditValue = "擒贼先擒王";
-            this.buttonEdit19.Location = new System.Drawing.Point(5, 32);
-            this.buttonEdit19.Name = "buttonEdit19";
-            this.buttonEdit19.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridSubHeading8.EditValue = "擒贼先擒王";
+            this.buttonEditGridSubHeading8.Location = new System.Drawing.Point(5, 32);
+            this.buttonEditGridSubHeading8.Name = "buttonEditGridSubHeading8";
+            this.buttonEditGridSubHeading8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit19.Properties.ReadOnly = true;
-            this.buttonEdit19.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit19.TabIndex = 99;
-            this.buttonEdit19.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridSubHeading8.Properties.ReadOnly = true;
+            this.buttonEditGridSubHeading8.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridSubHeading8.TabIndex = 99;
+            this.buttonEditGridSubHeading8.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
-            // buttonEdit20
+            // buttonEditGridTitle8
             // 
-            this.buttonEdit20.EditValue = "未来日记·今日摘要";
-            this.buttonEdit20.Location = new System.Drawing.Point(5, 5);
-            this.buttonEdit20.Name = "buttonEdit20";
-            this.buttonEdit20.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditGridTitle8.EditValue = "未来日记·今日摘要";
+            this.buttonEditGridTitle8.Location = new System.Drawing.Point(5, 5);
+            this.buttonEditGridTitle8.Name = "buttonEditGridTitle8";
+            this.buttonEditGridTitle8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK)});
-            this.buttonEdit20.Properties.ReadOnly = true;
-            this.buttonEdit20.Size = new System.Drawing.Size(289, 21);
-            this.buttonEdit20.TabIndex = 99;
-            this.buttonEdit20.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
+            this.buttonEditGridTitle8.Properties.ReadOnly = true;
+            this.buttonEditGridTitle8.Size = new System.Drawing.Size(289, 21);
+            this.buttonEditGridTitle8.TabIndex = 99;
+            this.buttonEditGridTitle8.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_ButtonClick);
             // 
             // mpbcStatus
             // 
@@ -665,56 +665,57 @@
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mono Book ---- 九宫格日记";
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditTitle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayBirthday.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayDesc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayWeather.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
             this.groupControl7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit16.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).EndInit();
             this.groupControl8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit18.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).EndInit();
             this.groupControl9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit20.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditContent8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridSubHeading8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGridTitle8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -726,46 +727,46 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
         private DevExpress.XtraEditors.ButtonEdit buttonEditTitle;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit3;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit4;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit2;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit5;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit6;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit3;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit7;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit8;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent3;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading3;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle3;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.MemoEdit memoEdit4;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit9;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit10;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent4;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading4;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle4;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.GroupControl groupControl6;
-        private DevExpress.XtraEditors.MemoEdit memoEdit6;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit13;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit14;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent5;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading5;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle5;
         private DevExpress.XtraEditors.GroupControl groupControl7;
-        private DevExpress.XtraEditors.MemoEdit memoEdit7;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit15;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit16;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent6;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading6;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle6;
         private DevExpress.XtraEditors.GroupControl groupControl8;
-        private DevExpress.XtraEditors.MemoEdit memoEdit8;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit17;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit18;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent7;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading7;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle7;
         private DevExpress.XtraEditors.GroupControl groupControl9;
-        private DevExpress.XtraEditors.MemoEdit memoEdit9;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit19;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit20;
+        private DevExpress.XtraEditors.MemoEdit memoEditContent8;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridSubHeading8;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGridTitle8;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.TextEdit textEditTodayBirthday;
+        private DevExpress.XtraEditors.TextEdit textEditTodayDesc;
+        private DevExpress.XtraEditors.TextEdit textEditTodayWeather;
+        private DevExpress.XtraEditors.DateEdit dateEditTodayDate;
         private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcStatus;
     }
 }

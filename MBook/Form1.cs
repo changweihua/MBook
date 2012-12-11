@@ -18,6 +18,7 @@ using DevExpress.XtraTreeList;
 using Updater;
 using NLite.Data;
 using MonoBookEntity;
+using System.IO;
 
 
 namespace MBook
@@ -92,7 +93,10 @@ namespace MBook
         private void btnGridDaily_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form4 form = new Form4();
-            form.ShowDialog();
+            if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                FillTreeViewWithGridDaily(new TreeNode { Tag = 3 });
+            }
         }
 
         /// <summary>
@@ -310,7 +314,7 @@ namespace MBook
         #region 操作区标签 --> 工具区
 
         /// <summary>
-        /// 工具选择，例如发送右键
+        /// 工具选择，例如发送邮件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -584,7 +588,6 @@ namespace MBook
             }
         }
 
-
         /// <summary>
         /// 加载文件夹树形菜单
         /// </summary>
@@ -630,7 +633,11 @@ namespace MBook
 
         }
 
-
+        /// <summary>
+        /// 节点选择之后
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tvFolders_AfterSelect(object sender, TreeViewEventArgs e)
         {
             TreeNode parentNode = e.Node;
@@ -645,11 +652,17 @@ namespace MBook
                 {
                     switch (index)
                     {
+                        case 3:
+                            FillTreeViewWithGridDaily(parentNode);
+                            break;
                         case 4:
                             FillTreeViewWithContact(parentNode);
                             break;
                         case 6:
                             FillTreeViewWithDaily(parentNode);
+                            break;
+                        case 7:
+                            FillTreeViewWithDailyReview(parentNode);
                             break;
                         default:
                             FillTreeViewWithDaily(parentNode);
@@ -705,6 +718,44 @@ namespace MBook
         }
 
         /// <summary>
+        /// 加载九宫格日记详细列表
+        /// </summary>
+        /// <param name="node"></param>
+        private void FillTreeViewWithGridDaily(TreeNode node)
+        {
+            tvResult.Nodes.Clear();
+            tvResult.Tag = node.Tag;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var folders = ctx.Set<Folder>().Where(f => f.Id == Convert.ToInt32(node.Tag));
+
+                Folder folder = folders.ElementAt<Folder>(0);
+
+                if (folder != null)
+                {
+                    var query = ctx.Set<GridDaily>().Where(g => g.RecordType == folder.RecordTypeId);
+                    var dailies = query.ToList();
+
+                    TreeNode n = null;
+                    int index = 0;
+                    foreach (var item in dailies)
+                    {
+                        n = new TreeNode
+                        {
+                            Text = string.Format("{0} ({1})", Convert.ToDateTime(item.CreateDate).ToShortDateString(), (++index).ToString()),
+                            Tag = item.Guid,
+                            ImageIndex = 0
+                        };
+                        tvResult.Nodes.Add(n);
+                    }
+                }
+
+            }
+
+
+        }
+
+        /// <summary>
         /// 加载联系人详细列表
         /// </summary>
         /// <param name="node"></param>
@@ -740,6 +791,42 @@ namespace MBook
         }
 
         /// <summary>
+        /// 加载每日回顾详细列表
+        /// </summary>
+        /// <param name="node"></param>
+        private void FillTreeViewWithDailyReview(TreeNode node)
+        {
+            tvResult.Nodes.Clear();
+            tvResult.Tag = node.Tag;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var folders = ctx.Set<Folder>().Where(f => f.Id == Convert.ToInt32(node.Tag));
+
+                Folder folder = folders.ElementAt<Folder>(0);
+
+                if (folder != null)
+                {
+                    var query = ctx.Set<DailyReview>().Where(d => d.RecordType == folder.RecordTypeId);
+                    var dailyReviews = query.ToList();
+
+                    TreeNode n = null;
+                    int index = 0;
+                    foreach (var item in dailyReviews)
+                    {
+                        n = new TreeNode
+                        {
+                            Text = string.Format("< {0} > ({1})", item.CreateDate, ++index),
+                            Tag = item.Guid,
+                            ImageIndex = 2
+                        };
+                        tvResult.Nodes.Add(n);
+                    }
+                }
+
+            }
+        }
+
+        /// <summary>
         /// 删除
         /// </summary>
         /// <param name="sender"></param>
@@ -752,15 +839,40 @@ namespace MBook
                 using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
                 {
                     string type = tvResult.Tag.ToString();
+                    string filePath = string.Empty;
                     switch (type)
                     {
+                        case "3":
+                            filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
+                            if (DeleteFile(filePath))
+                            {
+                                ctx.Set<GridDaily>().Delete(g => g.Guid == treeNode.Tag.ToString());
+                                FillTreeViewWithGridDaily(new TreeNode { Tag = type });
+                            }
+                            break;
                         case "4":
-                            ctx.Set<Contact>().Delete(c => c.Guid == treeNode.Tag.ToString());
-                            FillTreeViewWithContact(new TreeNode { Tag = type });
+                            filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
+                            if (DeleteFile(filePath))
+                            {
+                                ctx.Set<Contact>().Delete(c => c.Guid == treeNode.Tag.ToString());
+                                FillTreeViewWithContact(new TreeNode { Tag = type });
+                            }
                             break;
                         case "6":
-                            ctx.Set<Daily>().Delete(d => d.Guid == treeNode.Tag.ToString());
-                            FillTreeViewWithDaily(new TreeNode { Tag = type });
+                            filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
+                            if (DeleteFile(filePath))
+                            {
+                                ctx.Set<Daily>().Delete(d => d.Guid == treeNode.Tag.ToString());
+                                FillTreeViewWithDaily(new TreeNode { Tag = type });
+                            }
+                            break;
+                        case "7":
+                            filePath = string.Format(@"{0}\My Daily Reviews\{1}.mono", Properties.Settings.Default.savePath, treeNode.Tag.ToString());
+                            if (DeleteFile(filePath))
+                            {
+                                ctx.Set<DailyReview>().Delete(d => d.Guid == treeNode.Tag.ToString());
+                                FillTreeViewWithDailyReview(new TreeNode { Tag = type });
+                            }
                             break;
                         default:
                             break;
@@ -770,6 +882,36 @@ namespace MBook
             }
         }
 
+
+        /// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        private bool DeleteFile(string filePath)
+        {
+            bool flag = false;
+
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    File.Delete(filePath);
+                    flag = true;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "出错:\r\n" + ex.Message, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    flag = false;
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+
+            return flag;
+        }
 
         /// <summary>
         /// 双击
@@ -782,6 +924,13 @@ namespace MBook
             //XtraMessageBox.Show(type);
             switch (type)
             {
+                case "3":
+                    Form4 form4 = new Form4(e.Node.Tag.ToString());
+                    if (form4.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        form4.Close();
+                    }
+                    break;
                 case "4":
                     ContactForm cf =new ContactForm(e.Node.Tag.ToString());
                     if (cf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -791,6 +940,12 @@ namespace MBook
                     break;
                 case "6":
                     if (new DailyForm(e.Node.Tag.ToString()).ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+
+                    }
+                    break;
+                case "7":
+                    if (new Form3(e.Node.Tag.ToString()).ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
 
                     }

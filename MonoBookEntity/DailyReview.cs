@@ -27,6 +27,7 @@ namespace MonoBookEntity
     /// </summary>
     
     [Table(Name="tbDailyReview")]
+    [Serializable]
     public class DailyReview
     {
         /// <summary>
@@ -56,7 +57,7 @@ namespace MonoBookEntity
         /// <summary>
         /// 纪念日
         /// </summary>
-        [Column(Name = "dr_commenoration_day")]
+        [Column(Name = "dr_commemoration_day")]
         public string CommemorationDay;
 
         /// <summary>
@@ -124,5 +125,17 @@ namespace MonoBookEntity
         /// </summary>
         [Column(Name = "dr_today_books_majored")]
         public string TodayBooksMajored;
+
+        /// <summary>
+        /// 创建日期
+        /// </summary>
+        [Column(Name = "dr_create_date")]
+        public string CreateDate;
+
+        /// <summary>
+        /// 记录类型
+        /// </summary>
+        [Column(Name = "dr_record_type_id")]
+        public int RecordType;
     }
 }

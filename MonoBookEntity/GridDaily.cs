@@ -36,39 +36,28 @@ namespace MonoBookEntity
         public string Guid;
 
         /// <summary>
-        /// 标题
+        /// 内容
         /// </summary>
-        [Column(Name = "gd_title")]
-        public string Title;
+        [Column(Name="gd_content")]
+        public string Content;
 
         /// <summary>
-        /// 日期
+        /// 记录类型
         /// </summary>
-        [Column(Name = "gd_date")]
-        public string Date;
+        [Column(Name = "gd_record_type_id")]
+        public int RecordType;
 
         /// <summary>
-        /// 天气
+        /// 记录日期
         /// </summary>
-        [Column(Name = "gd_weather")]
-        public string Weather;
+        [Column(Name = "gd_create_date")]
+        public string CreateDate;
 
         /// <summary>
-        /// 什么日子
+        /// 修改日期
         /// </summary>
-        [Column(Name = "gd_today")]
-        public string Today;
+        [Column(Name = "gd_update_date")]
+        public string UpdateDate;
 
-        /// <summary>
-        /// 谁的生日
-        /// </summary>
-        [Column(Name = "gd_birthday")]
-        public string Birthday;
-
-        /// <summary>
-        /// 其他八个格子的信息
-        /// </summary>
-        [Column(Name="gd_info")]
-        public string Info;
     }
 }

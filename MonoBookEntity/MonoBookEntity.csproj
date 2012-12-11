@@ -56,11 +56,13 @@
   <ItemGroup>
     <Compile Include="Contact.cs" />
     <Compile Include="Daily.cs" />
+    <Compile Include="DailyGrid.cs" />
     <Compile Include="DailyReview.cs" />
     <Compile Include="Folder.cs" />
     <Compile Include="Friend.cs" />
     <Compile Include="Grade.cs" />
     <Compile Include="GridDaily.cs" />
+    <Compile Include="GridDailyModel.cs" />
     <Compile Include="Index.cs" />
     <Compile Include="Mail.cs" />
     <Compile Include="Manifest.cs" />

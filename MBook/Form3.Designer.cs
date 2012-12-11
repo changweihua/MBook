@@ -49,20 +49,20 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.mpbcStatus = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.buttonEditAction = new DevExpress.XtraEditors.ButtonEdit();
-            this.memoEdit3 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit6 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit5 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit4 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.timeEdit2 = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.memoEditYesterdayProgress = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditYesterdayShortage = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditTodayBooksMajored = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditTodayBooksNotMajored = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditTodayGains = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditInspiration = new DevExpress.XtraEditors.MemoEdit();
+            this.timeEditYesterdaySleepTime = new DevExpress.XtraEditors.TimeEdit();
+            this.timeEditTodayGetupTime = new DevExpress.XtraEditors.TimeEdit();
+            this.textEditCommemorationDay = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTodayMood = new DevExpress.XtraEditors.TextEdit();
+            this.textEditMeetionDay = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTodayDesc = new DevExpress.XtraEditors.TextEdit();
+            this.textEditFortuneDay = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTodayWeather = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -78,29 +78,29 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditTodayDate = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditYesterdayProgress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditYesterdayShortage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditTodayBooksMajored.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditTodayBooksNotMajored.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditTodayGains.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditInspiration.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEditYesterdaySleepTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEditTodayGetupTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditCommemorationDay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayMood.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditMeetionDay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayDesc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditFortuneDay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayWeather.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -237,20 +237,20 @@
             this.groupControl1.AutoSize = true;
             this.groupControl1.Controls.Add(this.mpbcStatus);
             this.groupControl1.Controls.Add(this.buttonEditAction);
-            this.groupControl1.Controls.Add(this.memoEdit3);
-            this.groupControl1.Controls.Add(this.memoEdit2);
-            this.groupControl1.Controls.Add(this.memoEdit6);
-            this.groupControl1.Controls.Add(this.memoEdit5);
-            this.groupControl1.Controls.Add(this.memoEdit4);
-            this.groupControl1.Controls.Add(this.memoEdit1);
-            this.groupControl1.Controls.Add(this.timeEdit2);
-            this.groupControl1.Controls.Add(this.timeEdit1);
-            this.groupControl1.Controls.Add(this.textEdit3);
-            this.groupControl1.Controls.Add(this.textEdit6);
-            this.groupControl1.Controls.Add(this.textEdit5);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.textEdit4);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.memoEditYesterdayProgress);
+            this.groupControl1.Controls.Add(this.memoEditYesterdayShortage);
+            this.groupControl1.Controls.Add(this.memoEditTodayBooksMajored);
+            this.groupControl1.Controls.Add(this.memoEditTodayBooksNotMajored);
+            this.groupControl1.Controls.Add(this.memoEditTodayGains);
+            this.groupControl1.Controls.Add(this.memoEditInspiration);
+            this.groupControl1.Controls.Add(this.timeEditYesterdaySleepTime);
+            this.groupControl1.Controls.Add(this.timeEditTodayGetupTime);
+            this.groupControl1.Controls.Add(this.textEditCommemorationDay);
+            this.groupControl1.Controls.Add(this.textEditTodayMood);
+            this.groupControl1.Controls.Add(this.textEditMeetionDay);
+            this.groupControl1.Controls.Add(this.textEditTodayDesc);
+            this.groupControl1.Controls.Add(this.textEditFortuneDay);
+            this.groupControl1.Controls.Add(this.textEditTodayWeather);
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl12);
             this.groupControl1.Controls.Add(this.labelControl9);
@@ -266,7 +266,7 @@
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.dateEdit1);
+            this.groupControl1.Controls.Add(this.dateEditTodayDate);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
@@ -301,112 +301,112 @@
             this.buttonEditAction.TabIndex = 15;
             this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
-            // memoEdit3
+            // memoEditYesterdayProgress
             // 
-            this.memoEdit3.Location = new System.Drawing.Point(510, 303);
-            this.memoEdit3.Name = "memoEdit3";
-            this.memoEdit3.Size = new System.Drawing.Size(400, 89);
-            this.memoEdit3.TabIndex = 11;
+            this.memoEditYesterdayProgress.Location = new System.Drawing.Point(510, 303);
+            this.memoEditYesterdayProgress.Name = "memoEditYesterdayProgress";
+            this.memoEditYesterdayProgress.Size = new System.Drawing.Size(400, 89);
+            this.memoEditYesterdayProgress.TabIndex = 11;
             // 
-            // memoEdit2
+            // memoEditYesterdayShortage
             // 
-            this.memoEdit2.Location = new System.Drawing.Point(21, 303);
-            this.memoEdit2.Name = "memoEdit2";
-            this.memoEdit2.Size = new System.Drawing.Size(400, 89);
-            this.memoEdit2.TabIndex = 10;
+            this.memoEditYesterdayShortage.Location = new System.Drawing.Point(21, 303);
+            this.memoEditYesterdayShortage.Name = "memoEditYesterdayShortage";
+            this.memoEditYesterdayShortage.Size = new System.Drawing.Size(400, 89);
+            this.memoEditYesterdayShortage.TabIndex = 10;
             // 
-            // memoEdit6
+            // memoEditTodayBooksMajored
             // 
-            this.memoEdit6.Location = new System.Drawing.Point(510, 494);
-            this.memoEdit6.Name = "memoEdit6";
-            this.memoEdit6.Size = new System.Drawing.Size(400, 49);
-            this.memoEdit6.TabIndex = 14;
+            this.memoEditTodayBooksMajored.Location = new System.Drawing.Point(510, 494);
+            this.memoEditTodayBooksMajored.Name = "memoEditTodayBooksMajored";
+            this.memoEditTodayBooksMajored.Size = new System.Drawing.Size(400, 49);
+            this.memoEditTodayBooksMajored.TabIndex = 14;
             // 
-            // memoEdit5
+            // memoEditTodayBooksNotMajored
             // 
-            this.memoEdit5.Location = new System.Drawing.Point(21, 494);
-            this.memoEdit5.Name = "memoEdit5";
-            this.memoEdit5.Size = new System.Drawing.Size(400, 49);
-            this.memoEdit5.TabIndex = 13;
+            this.memoEditTodayBooksNotMajored.Location = new System.Drawing.Point(21, 494);
+            this.memoEditTodayBooksNotMajored.Name = "memoEditTodayBooksNotMajored";
+            this.memoEditTodayBooksNotMajored.Size = new System.Drawing.Size(400, 49);
+            this.memoEditTodayBooksNotMajored.TabIndex = 13;
             // 
-            // memoEdit4
+            // memoEditTodayGains
             // 
-            this.memoEdit4.Location = new System.Drawing.Point(21, 420);
-            this.memoEdit4.Name = "memoEdit4";
-            this.memoEdit4.Size = new System.Drawing.Size(889, 49);
-            this.memoEdit4.TabIndex = 12;
+            this.memoEditTodayGains.Location = new System.Drawing.Point(21, 420);
+            this.memoEditTodayGains.Name = "memoEditTodayGains";
+            this.memoEditTodayGains.Size = new System.Drawing.Size(889, 49);
+            this.memoEditTodayGains.TabIndex = 12;
             // 
-            // memoEdit1
+            // memoEditInspiration
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(21, 186);
-            this.memoEdit1.MenuManager = this.barManager1;
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(889, 89);
-            this.memoEdit1.TabIndex = 9;
+            this.memoEditInspiration.Location = new System.Drawing.Point(21, 186);
+            this.memoEditInspiration.MenuManager = this.barManager1;
+            this.memoEditInspiration.Name = "memoEditInspiration";
+            this.memoEditInspiration.Size = new System.Drawing.Size(889, 89);
+            this.memoEditInspiration.TabIndex = 9;
             // 
-            // timeEdit2
+            // timeEditYesterdaySleepTime
             // 
-            this.timeEdit2.EditValue = new System.DateTime(2012, 12, 2, 0, 0, 0, 0);
-            this.timeEdit2.Location = new System.Drawing.Point(336, 140);
-            this.timeEdit2.Name = "timeEdit2";
-            this.timeEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.timeEditYesterdaySleepTime.EditValue = new System.DateTime(2012, 12, 2, 0, 0, 0, 0);
+            this.timeEditYesterdaySleepTime.Location = new System.Drawing.Point(336, 140);
+            this.timeEditYesterdaySleepTime.Name = "timeEditYesterdaySleepTime";
+            this.timeEditYesterdaySleepTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.timeEdit2.Size = new System.Drawing.Size(250, 21);
-            this.timeEdit2.TabIndex = 7;
+            this.timeEditYesterdaySleepTime.Size = new System.Drawing.Size(250, 21);
+            this.timeEditYesterdaySleepTime.TabIndex = 7;
             // 
-            // timeEdit1
+            // timeEditTodayGetupTime
             // 
-            this.timeEdit1.EditValue = new System.DateTime(2012, 12, 2, 0, 0, 0, 0);
-            this.timeEdit1.Location = new System.Drawing.Point(21, 140);
-            this.timeEdit1.MenuManager = this.barManager1;
-            this.timeEdit1.Name = "timeEdit1";
-            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.timeEditTodayGetupTime.EditValue = new System.DateTime(2012, 12, 2, 0, 0, 0, 0);
+            this.timeEditTodayGetupTime.Location = new System.Drawing.Point(21, 140);
+            this.timeEditTodayGetupTime.MenuManager = this.barManager1;
+            this.timeEditTodayGetupTime.Name = "timeEditTodayGetupTime";
+            this.timeEditTodayGetupTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.timeEdit1.Size = new System.Drawing.Size(250, 21);
-            this.timeEdit1.TabIndex = 6;
+            this.timeEditTodayGetupTime.Size = new System.Drawing.Size(250, 21);
+            this.timeEditTodayGetupTime.TabIndex = 6;
             // 
-            // textEdit3
+            // textEditCommemorationDay
             // 
-            this.textEdit3.Location = new System.Drawing.Point(21, 92);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(250, 21);
-            this.textEdit3.TabIndex = 3;
+            this.textEditCommemorationDay.Location = new System.Drawing.Point(21, 92);
+            this.textEditCommemorationDay.Name = "textEditCommemorationDay";
+            this.textEditCommemorationDay.Size = new System.Drawing.Size(250, 21);
+            this.textEditCommemorationDay.TabIndex = 3;
             // 
-            // textEdit6
+            // textEditTodayMood
             // 
-            this.textEdit6.Location = new System.Drawing.Point(651, 140);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(250, 21);
-            this.textEdit6.TabIndex = 8;
+            this.textEditTodayMood.Location = new System.Drawing.Point(651, 140);
+            this.textEditTodayMood.Name = "textEditTodayMood";
+            this.textEditTodayMood.Size = new System.Drawing.Size(250, 21);
+            this.textEditTodayMood.TabIndex = 8;
             // 
-            // textEdit5
+            // textEditMeetionDay
             // 
-            this.textEdit5.Location = new System.Drawing.Point(651, 92);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(250, 21);
-            this.textEdit5.TabIndex = 5;
+            this.textEditMeetionDay.Location = new System.Drawing.Point(651, 92);
+            this.textEditMeetionDay.Name = "textEditMeetionDay";
+            this.textEditMeetionDay.Size = new System.Drawing.Size(250, 21);
+            this.textEditMeetionDay.TabIndex = 5;
             // 
-            // textEdit2
+            // textEditTodayDesc
             // 
-            this.textEdit2.Location = new System.Drawing.Point(651, 40);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(250, 21);
-            this.textEdit2.TabIndex = 2;
+            this.textEditTodayDesc.Location = new System.Drawing.Point(651, 40);
+            this.textEditTodayDesc.Name = "textEditTodayDesc";
+            this.textEditTodayDesc.Size = new System.Drawing.Size(250, 21);
+            this.textEditTodayDesc.TabIndex = 2;
             // 
-            // textEdit4
+            // textEditFortuneDay
             // 
-            this.textEdit4.Location = new System.Drawing.Point(336, 92);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(250, 21);
-            this.textEdit4.TabIndex = 4;
+            this.textEditFortuneDay.Location = new System.Drawing.Point(336, 92);
+            this.textEditFortuneDay.Name = "textEditFortuneDay";
+            this.textEditFortuneDay.Size = new System.Drawing.Size(250, 21);
+            this.textEditFortuneDay.TabIndex = 4;
             // 
-            // textEdit1
+            // textEditTodayWeather
             // 
-            this.textEdit1.Location = new System.Drawing.Point(336, 40);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(250, 21);
-            this.textEdit1.TabIndex = 1;
+            this.textEditTodayWeather.Location = new System.Drawing.Point(336, 40);
+            this.textEditTodayWeather.MenuManager = this.barManager1;
+            this.textEditTodayWeather.Name = "textEditTodayWeather";
+            this.textEditTodayWeather.Size = new System.Drawing.Size(250, 21);
+            this.textEditTodayWeather.TabIndex = 1;
             // 
             // labelControl10
             // 
@@ -528,18 +528,18 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "日期";
             // 
-            // dateEdit1
+            // dateEditTodayDate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(21, 44);
-            this.dateEdit1.MenuManager = this.barManager1;
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTodayDate.EditValue = null;
+            this.dateEditTodayDate.Location = new System.Drawing.Point(21, 44);
+            this.dateEditTodayDate.MenuManager = this.barManager1;
+            this.dateEditTodayDate.Name = "dateEditTodayDate";
+            this.dateEditTodayDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTodayDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(250, 21);
-            this.dateEdit1.TabIndex = 0;
+            this.dateEditTodayDate.Size = new System.Drawing.Size(250, 21);
+            this.dateEditTodayDate.TabIndex = 0;
             // 
             // Form3
             // 
@@ -562,6 +562,7 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mono Book ---- 每日回顾";
+            this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -569,27 +570,28 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mpbcStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditAction.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditYesterdayProgress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditYesterdayShortage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditTodayBooksMajored.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditTodayBooksNotMajored.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditTodayGains.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditInspiration.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEditYesterdaySleepTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEditTodayGetupTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditCommemorationDay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayMood.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditMeetionDay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayDesc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditFortuneDay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTodayWeather.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTodayDate.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        
         #endregion
 
         private DevExpress.XtraBars.BarManager barManager1;
@@ -619,24 +621,24 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEditTodayDate;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TimeEdit timeEdit2;
-        private DevExpress.XtraEditors.TimeEdit timeEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.MemoEdit memoEdit3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit5;
-        private DevExpress.XtraEditors.MemoEdit memoEdit4;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.MemoEdit memoEdit6;
+        private DevExpress.XtraEditors.TextEdit textEditTodayWeather;
+        private DevExpress.XtraEditors.TextEdit textEditCommemorationDay;
+        private DevExpress.XtraEditors.TextEdit textEditTodayDesc;
+        private DevExpress.XtraEditors.TimeEdit timeEditYesterdaySleepTime;
+        private DevExpress.XtraEditors.TimeEdit timeEditTodayGetupTime;
+        private DevExpress.XtraEditors.TextEdit textEditTodayMood;
+        private DevExpress.XtraEditors.TextEdit textEditMeetionDay;
+        private DevExpress.XtraEditors.TextEdit textEditFortuneDay;
+        private DevExpress.XtraEditors.MemoEdit memoEditYesterdayProgress;
+        private DevExpress.XtraEditors.MemoEdit memoEditYesterdayShortage;
+        private DevExpress.XtraEditors.MemoEdit memoEditTodayBooksNotMajored;
+        private DevExpress.XtraEditors.MemoEdit memoEditTodayGains;
+        private DevExpress.XtraEditors.MemoEdit memoEditInspiration;
+        private DevExpress.XtraEditors.MemoEdit memoEditTodayBooksMajored;
         private DevExpress.XtraEditors.ButtonEdit buttonEditAction;
         private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcStatus;
     }
