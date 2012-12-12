@@ -21,7 +21,7 @@
       <Value Profile="(Default)">changweihua@outlook.com</Value>
     </Setting>
     <Setting Name="userpassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ds</Value>
+      <Value Profile="(Default)">sss</Value>
     </Setting>
     <Setting Name="savePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\monobook</Value>

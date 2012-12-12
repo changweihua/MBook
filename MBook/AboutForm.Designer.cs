@@ -299,9 +299,9 @@
             this.labelControl10.Location = new System.Drawing.Point(751, 12);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(316, 14);
+            this.labelControl10.Size = new System.Drawing.Size(343, 14);
             this.labelControl10.TabIndex = 0;
-            this.labelControl10.Text = "如果你也爱好C#开发，可以与我联系，共同学习，共同进步";
+            this.labelControl10.Text = "如果你也爱好C#.NET开发，可以与我联系，共同学习，共同进步";
             // 
             // groupControl2
             // 
@@ -381,6 +381,9 @@
             this.pictureEdit2.Location = new System.Drawing.Point(970, 48);
             this.pictureEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.AllowFocused = false;
+            this.pictureEdit2.Properties.ReadOnly = true;
+            this.pictureEdit2.Properties.ShowMenu = false;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit2.Size = new System.Drawing.Size(142, 164);
             this.pictureEdit2.TabIndex = 1;

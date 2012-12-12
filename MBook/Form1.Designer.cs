@@ -167,6 +167,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiShow = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiEmail = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -1324,7 +1326,6 @@
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "MonoBook";
-            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // contextMenuStrip1
@@ -1332,11 +1333,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiShow,
             this.toolStripSeparator2,
+            this.tsmiEmail,
+            this.toolStripSeparator3,
             this.tsmiAbout,
             this.toolStripSeparator1,
             this.tsmiExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 82);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 110);
             // 
             // tsmiShow
             // 
@@ -1350,6 +1353,19 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
+            // 
+            // tsmiEmail
+            // 
+            this.tsmiEmail.Image = ((System.Drawing.Image)(resources.GetObject("tsmiEmail.Image")));
+            this.tsmiEmail.Name = "tsmiEmail";
+            this.tsmiEmail.Size = new System.Drawing.Size(134, 22);
+            this.tsmiEmail.Text = "发送邮件";
+            this.tsmiEmail.Click += new System.EventHandler(this.tsmiEmail_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(131, 6);
             // 
             // tsmiAbout
             // 
@@ -1576,6 +1592,8 @@
         private System.Windows.Forms.ImageList tvResultImages;
         private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
         private System.Windows.Forms.ImageList alertControlImages;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEmail;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

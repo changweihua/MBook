@@ -504,16 +504,12 @@ namespace MBook
 
         #region 实现程序托盘功能
 
-        private void notifyIcon1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void InitNotify()
-        {
-
-        }
-
+        
+        /// <summary>
+        /// 窗体大小调整
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -528,6 +524,11 @@ namespace MBook
 
         }
 
+        /// <summary>
+        /// 双击托盘图标
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
             // Show the form when the user double clicks on the notify icon.
@@ -543,12 +544,22 @@ namespace MBook
             this.Activate();
         }
 
+        /// <summary>
+        /// 退出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiExit_Click(object sender, EventArgs e)
         {
             this.Close();
             System.Windows.Forms.Application.Exit();
         }
 
+        /// <summary>
+        /// 关于
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiAbout_Click(object sender, EventArgs e)
         {
             using (AboutForm aboutForm = new AboutForm())
@@ -558,6 +569,25 @@ namespace MBook
             }
         }
 
+        /// <summary>
+        /// 发送邮件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiEmail_Click(object sender, EventArgs e)
+        {
+            using (MailForm mailForm = new MailForm())
+            {
+                mailForm.ShowInTaskbar = true;
+                mailForm.ShowDialog();
+            }
+        }
+
+        /// <summary>
+        /// 显示窗体
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiShow_Click(object sender, EventArgs e)
         {
             notifyIcon1_DoubleClick(sender, e);
@@ -975,10 +1005,7 @@ namespace MBook
                     }
                     break;
                 case "8":
-                    if (new StickyNoteForm(e.Node.Tag.ToString()).ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                    {
-
-                    }
+                    new StickyNoteForm(e.Node.Tag.ToString()).Show();
                     break;
                 default:
                     break;
@@ -1125,5 +1152,6 @@ namespace MBook
 
         #endregion
 
+        
     }
 }
