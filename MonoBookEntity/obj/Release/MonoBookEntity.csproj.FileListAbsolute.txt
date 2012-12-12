@@ -1,7 +1,11 @@
 E:\VS2010\MBook\MonoBookEntity\bin\Release\MonoBookEntity.dll
 E:\VS2010\MBook\MonoBookEntity\bin\Release\MonoBookEntity.pdb
-E:\VS2010\MBook\MonoBookEntity\bin\Release\NLite.Data.dll
-E:\VS2010\MBook\MonoBookEntity\bin\Release\NLite.Data.xml
-E:\VS2010\MBook\MonoBookEntity\obj\Release\ResolveAssemblyReference.cache
 E:\VS2010\MBook\MonoBookEntity\obj\Release\MonoBookEntity.dll
 E:\VS2010\MBook\MonoBookEntity\obj\Release\MonoBookEntity.pdb
+E:\VS2010\MBook\MonoBookEntity\bin\Release\ELinq.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Release\NLite.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Release\System.Data.SQLite.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Release\System.Data.SQLite.Linq.dll
+E:\VS2010\MBook\MonoBookEntity\bin\Release\ELinq.xml
+E:\VS2010\MBook\MonoBookEntity\bin\Release\NLite.xml
+E:\VS2010\MBook\MonoBookEntity\obj\Release\MonoBookEntity.csprojResolveAssemblyReference.cache

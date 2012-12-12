@@ -25,24 +25,31 @@ namespace MonoBookEntity
     /// </summary>
     /// 
     [Table(Name="tbNote")]
+    [Serializable]
     public class Note
     {
         [Id(Name = "n_guid")]
         public string Guid { get; set; }
 
-        [Id(Name = "n_title")]
+        [Column(Name = "n_title")]
         public string Title { get; set; }
 
-        [Id(Name = "n_content")]
+        [Column(Name = "n_content")]
         public string Content { get; set; }
 
-        [Id(Name = "n_create_date")]
+        [Column(Name = "n_create_date")]
         public string CreateDate { get; set; }
 
-        [Id(Name = "n_update_date")]
+        [Column(Name = "n_update_date")]
         public string UpdateDate { get; set; }
 
-        [Id(Name = "n_attachment")]
+        [Column(Name = "n_attachment")]
         public string Attachment { get; set; }
+
+        [Column(Name = "n_tag")]
+        public string Tag { get; set; }
+
+        [Column(Name = "n_record_type_id")]
+        public int RecordType { get; set; }
     }
 }

@@ -150,9 +150,9 @@
             this.redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
             this.barButtonSave = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonClose = new DevExpress.XtraBars.BarButtonItem();
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.barEditTag = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.barEditTitle = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barButtonSina = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonBaidu = new DevExpress.XtraBars.BarButtonItem();
@@ -355,14 +355,14 @@
             this.redoItem1,
             this.barButtonSave,
             this.barButtonClose,
-            this.barEditItem1,
-            this.barEditItem2,
+            this.barEditTag,
+            this.barEditTitle,
             this.barButtonSina,
             this.barButtonBaidu,
             this.barButtonAttchment});
             this.ribbonControl1.LargeImages = this.largeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 124;
+            this.ribbonControl1.MaxItemId = 125;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.tableToolsRibbonPageCategory1});
@@ -1214,6 +1214,7 @@
             this.barButtonSave.ImageIndex = 2;
             this.barButtonSave.LargeImageIndex = 0;
             this.barButtonSave.Name = "barButtonSave";
+            this.barButtonSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSave_ItemClick);
             // 
             // barButtonClose
             // 
@@ -1224,28 +1225,28 @@
             this.barButtonClose.Name = "barButtonClose";
             this.barButtonClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonClose_ItemClick);
             // 
-            // barEditItem1
+            // barEditTag
             // 
-            this.barEditItem1.Edit = this.repositoryItemTextEdit1;
-            this.barEditItem1.Id = 118;
-            this.barEditItem1.ImageIndex = 1;
-            this.barEditItem1.Name = "barEditItem1";
-            this.barEditItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barEditItem1.Width = 250;
+            this.barEditTag.Edit = this.repositoryItemTextEdit1;
+            this.barEditTag.Id = 118;
+            this.barEditTag.ImageIndex = 1;
+            this.barEditTag.Name = "barEditTag";
+            this.barEditTag.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barEditTag.Width = 250;
             // 
             // repositoryItemTextEdit1
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // barEditItem2
+            // barEditTitle
             // 
-            this.barEditItem2.Edit = this.repositoryItemTextEdit2;
-            this.barEditItem2.Id = 119;
-            this.barEditItem2.ImageIndex = 0;
-            this.barEditItem2.Name = "barEditItem2";
-            this.barEditItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barEditItem2.Width = 250;
+            this.barEditTitle.Edit = this.repositoryItemTextEdit2;
+            this.barEditTitle.Id = 119;
+            this.barEditTitle.ImageIndex = 0;
+            this.barEditTitle.Name = "barEditTitle";
+            this.barEditTitle.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barEditTitle.Width = 250;
             // 
             // repositoryItemTextEdit2
             // 
@@ -1383,8 +1384,8 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barEditItem2);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barEditItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barEditTitle);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barEditTag);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "笔记信息";
             // 
@@ -1813,9 +1814,9 @@
         private DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup commonRibbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonSave;
         private DevExpress.XtraBars.BarButtonItem barButtonClose;
-        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraBars.BarEditItem barEditTag;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private DevExpress.XtraBars.BarEditItem barEditItem2;
+        private DevExpress.XtraBars.BarEditItem barEditTitle;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonSina;

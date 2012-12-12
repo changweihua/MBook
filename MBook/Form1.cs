@@ -604,7 +604,7 @@ namespace MBook
 
         #endregion
 
-        #region 加载树形列表
+        #region 加载树形列表 == 左上
 
         /// <summary>
         /// 详细信息列表的右键菜单
@@ -683,6 +683,9 @@ namespace MBook
                 {
                     switch (index)
                     {
+                        case 2:
+                            FillTreeViewWithNote(parentNode);
+                            break;
                         case 3:
                             FillTreeViewWithGridDaily(parentNode);
                             break;
@@ -699,7 +702,7 @@ namespace MBook
                             FillTreeViewWithStickyNote(parentNode);
                             break;
                         default:
-                            FillTreeViewWithDaily(parentNode);
+                            FillTreeViewWithNote(parentNode);
                             break;
                     }
 
@@ -709,8 +712,8 @@ namespace MBook
 
         #endregion
 
-        #region 左侧树形菜单的具体信息
-
+        #region 左侧树形菜单的具体信息 == 左下
+        //tvResult.Tag 为左上文件夹的编号
         TreeNode treeNode;
 
         /// <summary>
@@ -896,6 +899,41 @@ namespace MBook
             }
         }
 
+        /// <summary>
+        /// 加载笔记详细列表
+        /// </summary>
+        /// <param name="node"></param>
+        private void FillTreeViewWithNote(TreeNode node)
+        {
+            tvResult.Nodes.Clear();
+            tvResult.Tag = node.Tag;
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var folders = ctx.Set<Folder>().Where(f => f.Id == Convert.ToInt32(node.Tag));
+
+                Folder folder = folders.ElementAt<Folder>(0);
+
+                if (folder != null)
+                {
+                    var query = ctx.Set<Note>().Where(n => n.RecordType == folder.RecordTypeId);
+                    var notes = query.ToList();
+
+                    TreeNode tn = null;
+                    foreach (var item in notes)
+                    {
+                        tn = new TreeNode
+                        {
+                            Text = string.Format("< {0} > ", item.Title),
+                            Tag = item.Guid,
+                            ImageIndex = 5
+                        };
+                        tvResult.Nodes.Add(tn);
+                    }
+                }
+
+            }
+        }
+
 
         /// <summary>
         /// 删除
@@ -909,13 +947,22 @@ namespace MBook
             {
                 using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
                 {
-                    string type = tvResult.Tag.ToString();
+                    string type = tvResult.Tag.ToString();//Folder Id
                     string targetFolder = string.Empty;
                     string sourceFolder=string.Empty;
                     switch (type)
                     {
+                        case "2":
+                            sourceFolder = string.Format(@"{0}\My Notes", Properties.Settings.Default.savePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
+                            {
+                                ctx.Set<Note>().Delete(n => n.Guid == treeNode.Tag.ToString());
+                                FillTreeViewWithNote(new TreeNode { Tag = type });
+                            }
+                            break;
                         case "3":
-                            sourceFolder = string.Format(@"{0}\My Grid Dailies", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My GridDailies", Properties.Settings.Default.savePath);
                             targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
@@ -974,10 +1021,18 @@ namespace MBook
         /// <param name="e"></param>
         private void tvResult_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            //Folder Id
             string type = tvResult.Tag.ToString();
             //XtraMessageBox.Show(type);
             switch (type)
             {
+                case "2":
+                    Form2 form2 = new Form2(e.Node.Tag.ToString());
+                    if (form2.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        form2.Close();
+                    }
+                    break;
                 case "3":
                     Form4 form4 = new Form4(e.Node.Tag.ToString());
                     if (form4.ShowDialog() == System.Windows.Forms.DialogResult.OK)
