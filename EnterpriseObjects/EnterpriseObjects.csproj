@@ -37,11 +37,13 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DirectoryHelper.cs" />
     <Compile Include="EncryptHelper.cs" />
     <Compile Include="FileHelper.cs" />
+    <Compile Include="GZipHelper.cs" />
     <Compile Include="MailHelper.cs" />
     <Compile Include="MailResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -49,6 +51,8 @@
     <Compile Include="Singleton.cs" />
     <Compile Include="StringExtension.cs" />
     <Compile Include="XmlHelper.cs" />
+    <Compile Include="ZipArchiveWithoutSubFolder.cs" />
+    <Compile Include="ZipArchiveWithSubFolder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
