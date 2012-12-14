@@ -129,7 +129,7 @@ namespace EnterpriseObjects
         ModemUnlink,
         [EnumDescription("采用网卡上网")]
         LanCardLink,
-        [EnumDescription("网络没有联通，是不是没有输入账号和密码呢？")]
+        [EnumDescription("网络没有连通，是不是没有输入账号和密码呢？")]
         LanCardUnlink
     }
 

@@ -19,6 +19,7 @@ using Updater;
 using NLite.Data;
 using MonoBookEntity;
 using System.IO;
+using NLite.Dynamic;
 
 
 namespace MBook
@@ -978,6 +979,7 @@ namespace MBook
                             {
                                 ctx.Set<Note>().Delete(n => n.Guid == treeNode.Tag.ToString());
                                 FillTreeViewWithNote(new TreeNode { Tag = type });
+                                this.btnEditSearch.EditValue = "";
                             }
                             break;
                         case "3":
@@ -1022,7 +1024,7 @@ namespace MBook
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<StickyNote>().Delete(s => s.Guid == treeNode.Tag.ToString());
-                                FillTreeViewWithDailyReview(new TreeNode { Tag = type });
+                                FillTreeViewWithStickyNote(new TreeNode { Tag = type });
                             }
                             break;
                         default:
@@ -1133,7 +1135,15 @@ namespace MBook
             switch (edit.Properties.Buttons.IndexOf(e.Button))
             {
                 case 0:
-                    MessageBox.Show("搜索");
+                    if (edit.EditValue == null)
+                    {
+                        XtraMessageBox.Show(this.LookAndFeel, "亲，您总得写点啥吧\r\n这样让人家好为难啊", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        Search(edit.EditValue.ToString());
+                    }
                     break;
                 case 1:
                     edit.EditValue = "";
@@ -1141,7 +1151,75 @@ namespace MBook
             }
         }
 
+        /// <summary>
+        /// 搜索
+        /// </summary>
+        void Search(string keyword)
+        {
+            var item1 = new Filter 
+            { 
+                Field="Title",
+                Operation= OperationType.Like, 
+                Value=keyword,
+                OrGroup="a"
+            };
+            var item2 = new Filter
+            {
+                Field = "Tag",
+                Operation = OperationType.Like,
+                Value = keyword,
+                OrGroup = "a"
+            };
 
+            var sm = new QueryModel();
+            sm.AddRange(new[]{item1,item2});
+             List<Note> notes = null;
+            using (var ctx =  DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                IQueryable<Note> query = ctx.Set<Note>().AsQueryable();
+                IQueryable<Note> actual = query.Where(n => n.Title.ToLower().Contains(keyword.ToLower()) || n.Tag.ToLower().Contains(keyword.ToLower()));
+
+                notes = actual.ToList<Note>();
+
+            }
+
+            if (notes.Count == 0)
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "亲，抱歉哦\r\n没能为您找到任何关于“" + keyword + "”文件", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            tvResult.Nodes.Clear();
+            tvResult.Tag = 2;
+            TreeNode tn = null;
+            foreach (var item in notes)
+            {
+                tn = new TreeNode
+                {
+                    Text = string.Format("< {0} > ", item.Title),
+                    Tag = item.Guid,
+                    ImageIndex = 5
+                };
+                tvResult.Nodes.Add(tn);
+            }
+            //tvResult.NodeMouseDoubleClick -= tvResult_NodeMouseDoubleClick;
+        }
+
+        /// <summary>
+        /// 当输入框处于激活状态时，监听键盘事件，回车，启动搜索
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEditSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnEditSearch_ButtonPressed(this.btnEditSearch, new ButtonPressedEventArgs(this.btnEditSearch.Properties.Buttons[0]));
+                //MessageBox.Show("你敲回车了");  
+            }
+        }
+
+        
         #endregion
 
         #region 文件夹操作方法
@@ -1187,14 +1265,15 @@ namespace MBook
         private bool RemoveFile(string fileName, string sourceFolder, string targetFolder)
         {
             bool flag = false;
-
+            EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
+            directoryHelper.CreateDirOperate(targetFolder, EnterpriseObjects.OperateOption.ExistReturn);
             string source = string.Format(@"{0}\{1}.mono", sourceFolder, fileName);
             string target = string.Format(@"{0}\{1}.mono", targetFolder, fileName);
-
             if (File.Exists(source))
             {
                 try
                 {
+                    //File.Create(target);
                     File.Move(source, target);
                     flag = true;
                 }
@@ -1226,6 +1305,6 @@ namespace MBook
 
         #endregion
 
-        
+       
     }
 }

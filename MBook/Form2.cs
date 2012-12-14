@@ -239,6 +239,7 @@ namespace MBook
 
                 if (count == 1)
                 {
+                    UpdateIndex(note.Guid, note.RecordType);
                     this.Close();
                 }
                 else
@@ -309,6 +310,25 @@ namespace MBook
             }
 
         }
+
+        /// <summary>
+        /// 更新索引表
+        /// </summary>
+        /// <param name="guid"></param>
+        /// <param name="typeId"></param>
+        private void UpdateIndex(string guid,int typeId)
+        {
+            Index index = new Index { 
+                Guid = guid,
+                TypeId = typeId
+            };
+
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                ctx.Set<Index>().Insert(index);
+            }
+        }
+
 
         #endregion
 
