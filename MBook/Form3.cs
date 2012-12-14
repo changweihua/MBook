@@ -232,7 +232,7 @@ namespace MBook
                 };
             }
 
-            string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.savePath, dailyReview.Guid);
+            string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.SavePath, dailyReview.Guid);
 
             //序列化开始
 
@@ -294,7 +294,7 @@ namespace MBook
             //}
 
             //读取本地
-            string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.savePath, guid);
+            string filePath = string.Format(@"{0}\My DailyReviews\{1}.mono", Properties.Settings.Default.SavePath, guid);
 
             //检测本地文件是否存在
             if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
@@ -335,7 +335,7 @@ namespace MBook
         {
             //检测本地是否已经存在文件夹，不存在，就创建
             EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
-            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My DailyReviews", EnterpriseObjects.OperateOption.ExistReturn);
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\My DailyReviews", EnterpriseObjects.OperateOption.ExistReturn);
 
             if (this.Tag != null)
             {

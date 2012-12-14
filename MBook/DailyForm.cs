@@ -62,12 +62,12 @@ namespace MBook
         {
             //检测本地是否已经存在文件夹，不存在，就创建
             EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
-            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My Dailies", EnterpriseObjects.OperateOption.ExistReturn);
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\My Dailies", EnterpriseObjects.OperateOption.ExistReturn);
 
             if (!string.IsNullOrEmpty(guid))
             {
                 //读取本地文件
-                string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, guid);
+                string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.SavePath, guid);
 
                 if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
                 {
@@ -165,7 +165,7 @@ namespace MBook
                 isNew = true;
                 guid = Guid.NewGuid().ToString();
             }
-            string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.savePath, guid);
+            string filePath = string.Format(@"{0}\My Dailies\{1}.mono", Properties.Settings.Default.SavePath, guid);
             bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, content, filePath);
             int count = 0;
             if (flag)

@@ -90,7 +90,7 @@
             this.checkEditRemember.Properties.Appearance.Options.UseFont = true;
             this.checkEditRemember.Properties.Caption = "是否记住用户名和密码";
             this.checkEditRemember.Size = new System.Drawing.Size(169, 19);
-            this.checkEditRemember.TabIndex = 4;
+            this.checkEditRemember.TabIndex = 3;
             // 
             // labelControl2
             // 
@@ -116,6 +116,7 @@
             this.buttonEditPassword.Name = "buttonEditPassword";
             this.buttonEditPassword.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "点此，清空文本框", null, null, true)});
+            this.buttonEditPassword.Properties.PasswordChar = '*';
             this.buttonEditPassword.Size = new System.Drawing.Size(289, 21);
             this.buttonEditPassword.TabIndex = 2;
             // 
@@ -128,7 +129,7 @@
             this.buttonEditPassport.Properties.Mask.EditMask = "([a-zA-Z]+([a-zA-Z]\\.)?)@([a-zA-Z]+\\.)+([a-zA-Z]+\\.)?[a-zA-Z]+";
             this.buttonEditPassport.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.buttonEditPassport.Size = new System.Drawing.Size(289, 21);
-            this.buttonEditPassport.TabIndex = 2;
+            this.buttonEditPassport.TabIndex = 1;
             // 
             // loginProgress
             // 
@@ -148,7 +149,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "关闭登录窗体", null, null, true)});
             this.buttonEditAction.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.buttonEditAction.Size = new System.Drawing.Size(352, 18);
-            this.buttonEditAction.TabIndex = 0;
+            this.buttonEditAction.TabIndex = 4;
             this.buttonEditAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditAction_ButtonClick);
             // 
             // SystemLoginForm

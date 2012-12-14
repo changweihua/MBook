@@ -50,51 +50,51 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditUserName = new DevExpress.XtraEditors.ButtonEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit3 = new DevExpress.XtraEditors.ButtonEdit();
-            this.buttonEdit4 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditPassword = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditQQ = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditEmail = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditBirthday = new DevExpress.XtraEditors.DateEdit();
             this.hyperLinkEdit3 = new DevExpress.XtraEditors.HyperLinkEdit();
-            this.hyperLinkEdit2 = new DevExpress.XtraEditors.HyperLinkEdit();
-            this.hyperLinkEdit1 = new DevExpress.XtraEditors.HyperLinkEdit();
+            this.hyperLinkEditMemberCount = new DevExpress.XtraEditors.HyperLinkEdit();
+            this.hyperLinkEditGradeName = new DevExpress.XtraEditors.HyperLinkEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonEdit5 = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditVipTypeName = new DevExpress.XtraEditors.ButtonEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlFlow = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlUsedFlow = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlFlowUsage = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlTencent = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlSina = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlWebsite = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditUserName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditQQ.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditMemberCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditGradeName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditVipTypeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
@@ -144,6 +144,8 @@
             this.barButtonItemSave.ImageIndex = 0;
             this.barButtonItemSave.Name = "barButtonItemSave";
             this.barButtonItemSave.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItemSave.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.barButtonItemSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSave_ItemClick);
             // 
             // barButtonItemDrop
             // 
@@ -153,6 +155,7 @@
             this.barButtonItemDrop.ImageIndex = 1;
             this.barButtonItemDrop.Name = "barButtonItemDrop";
             this.barButtonItemDrop.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItemDrop.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // barButtonItemCloseWindow
             // 
@@ -238,17 +241,17 @@
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "用户名";
             // 
-            // buttonEdit1
+            // buttonEditUserName
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(233, 96);
-            this.buttonEdit1.MenuManager = this.barManager1;
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditUserName.Location = new System.Drawing.Point(233, 96);
+            this.buttonEditUserName.MenuManager = this.barManager1;
+            this.buttonEditUserName.Name = "buttonEditUserName";
+            this.buttonEditUserName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "点击，修改", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "点击，保存修改", null, null, true)});
-            this.buttonEdit1.Properties.ReadOnly = true;
-            this.buttonEdit1.Size = new System.Drawing.Size(198, 21);
-            this.buttonEdit1.TabIndex = 6;
+            this.buttonEditUserName.Properties.ReadOnly = true;
+            this.buttonEditUserName.Size = new System.Drawing.Size(198, 21);
+            this.buttonEditUserName.TabIndex = 6;
             // 
             // labelControl2
             // 
@@ -274,73 +277,74 @@
             this.labelControl4.TabIndex = 5;
             this.labelControl4.Text = " Q  Q";
             // 
-            // buttonEdit2
+            // buttonEditPassword
             // 
-            this.buttonEdit2.Location = new System.Drawing.Point(233, 125);
-            this.buttonEdit2.Name = "buttonEdit2";
-            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditPassword.Location = new System.Drawing.Point(233, 125);
+            this.buttonEditPassword.Name = "buttonEditPassword";
+            this.buttonEditPassword.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "点击，修改", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "点击，保存修改", null, null, true)});
-            this.buttonEdit2.Properties.ReadOnly = true;
-            this.buttonEdit2.Size = new System.Drawing.Size(198, 21);
-            this.buttonEdit2.TabIndex = 6;
+            this.buttonEditPassword.Properties.PasswordChar = '•';
+            this.buttonEditPassword.Properties.ReadOnly = true;
+            this.buttonEditPassword.Size = new System.Drawing.Size(198, 21);
+            this.buttonEditPassword.TabIndex = 6;
             // 
-            // buttonEdit3
+            // buttonEditQQ
             // 
-            this.buttonEdit3.Location = new System.Drawing.Point(233, 154);
-            this.buttonEdit3.Name = "buttonEdit3";
-            this.buttonEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.buttonEditQQ.Location = new System.Drawing.Point(233, 154);
+            this.buttonEditQQ.Name = "buttonEditQQ";
+            this.buttonEditQQ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "点击，修改", null, null, true),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.OK, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "点击，保存修改", null, null, true)});
-            this.buttonEdit3.Properties.ReadOnly = true;
-            this.buttonEdit3.Size = new System.Drawing.Size(198, 21);
-            this.buttonEdit3.TabIndex = 6;
+            this.buttonEditQQ.Properties.ReadOnly = true;
+            this.buttonEditQQ.Size = new System.Drawing.Size(198, 21);
+            this.buttonEditQQ.TabIndex = 6;
             // 
-            // buttonEdit4
+            // buttonEditEmail
             // 
-            this.buttonEdit4.Location = new System.Drawing.Point(234, 38);
-            this.buttonEdit4.Name = "buttonEdit4";
-            this.buttonEdit4.Properties.ReadOnly = true;
-            this.buttonEdit4.Size = new System.Drawing.Size(198, 21);
-            this.buttonEdit4.TabIndex = 6;
+            this.buttonEditEmail.Location = new System.Drawing.Point(234, 38);
+            this.buttonEditEmail.Name = "buttonEditEmail";
+            this.buttonEditEmail.Properties.ReadOnly = true;
+            this.buttonEditEmail.Size = new System.Drawing.Size(198, 21);
+            this.buttonEditEmail.TabIndex = 6;
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.dateEdit1);
+            this.groupControl1.Controls.Add(this.dateEditBirthday);
             this.groupControl1.Controls.Add(this.hyperLinkEdit3);
-            this.groupControl1.Controls.Add(this.hyperLinkEdit2);
-            this.groupControl1.Controls.Add(this.hyperLinkEdit1);
+            this.groupControl1.Controls.Add(this.hyperLinkEditMemberCount);
+            this.groupControl1.Controls.Add(this.hyperLinkEditGradeName);
             this.groupControl1.Controls.Add(this.pictureBox1);
             this.groupControl1.Controls.Add(this.labelControl15);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.buttonEdit5);
-            this.groupControl1.Controls.Add(this.buttonEdit4);
+            this.groupControl1.Controls.Add(this.buttonEditVipTypeName);
+            this.groupControl1.Controls.Add(this.buttonEditEmail);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.buttonEdit3);
+            this.groupControl1.Controls.Add(this.buttonEditQQ);
             this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.buttonEdit2);
+            this.groupControl1.Controls.Add(this.buttonEditPassword);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.buttonEdit1);
+            this.groupControl1.Controls.Add(this.buttonEditUserName);
             this.groupControl1.Location = new System.Drawing.Point(12, 38);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(448, 267);
             this.groupControl1.TabIndex = 11;
             this.groupControl1.Text = "账户信息";
             // 
-            // dateEdit1
+            // dateEditBirthday
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(234, 67);
-            this.dateEdit1.MenuManager = this.barManager1;
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditBirthday.EditValue = null;
+            this.dateEditBirthday.Location = new System.Drawing.Point(234, 67);
+            this.dateEditBirthday.MenuManager = this.barManager1;
+            this.dateEditBirthday.Name = "dateEditBirthday";
+            this.dateEditBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditBirthday.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(197, 21);
-            this.dateEdit1.TabIndex = 8;
+            this.dateEditBirthday.Size = new System.Drawing.Size(197, 21);
+            this.dateEditBirthday.TabIndex = 8;
             // 
             // hyperLinkEdit3
             // 
@@ -352,26 +356,26 @@
             this.hyperLinkEdit3.Size = new System.Drawing.Size(147, 24);
             this.hyperLinkEdit3.TabIndex = 7;
             // 
-            // hyperLinkEdit2
+            // hyperLinkEditMemberCount
             // 
-            this.hyperLinkEdit2.EditValue = "www.cmono.net";
-            this.hyperLinkEdit2.Location = new System.Drawing.Point(284, 226);
-            this.hyperLinkEdit2.Name = "hyperLinkEdit2";
-            this.hyperLinkEdit2.Properties.Caption = "2400";
-            this.hyperLinkEdit2.Properties.Image = ((System.Drawing.Image)(resources.GetObject("hyperLinkEdit2.Properties.Image")));
-            this.hyperLinkEdit2.Size = new System.Drawing.Size(147, 24);
-            this.hyperLinkEdit2.TabIndex = 7;
+            this.hyperLinkEditMemberCount.EditValue = "www.cmono.net";
+            this.hyperLinkEditMemberCount.Location = new System.Drawing.Point(284, 226);
+            this.hyperLinkEditMemberCount.Name = "hyperLinkEditMemberCount";
+            this.hyperLinkEditMemberCount.Properties.Caption = "2400";
+            this.hyperLinkEditMemberCount.Properties.Image = ((System.Drawing.Image)(resources.GetObject("hyperLinkEditMemberCount.Properties.Image")));
+            this.hyperLinkEditMemberCount.Size = new System.Drawing.Size(147, 24);
+            this.hyperLinkEditMemberCount.TabIndex = 7;
             // 
-            // hyperLinkEdit1
+            // hyperLinkEditGradeName
             // 
-            this.hyperLinkEdit1.EditValue = "www.cmono.net";
-            this.hyperLinkEdit1.Location = new System.Drawing.Point(72, 226);
-            this.hyperLinkEdit1.MenuManager = this.barManager1;
-            this.hyperLinkEdit1.Name = "hyperLinkEdit1";
-            this.hyperLinkEdit1.Properties.Caption = "将军";
-            this.hyperLinkEdit1.Properties.Image = ((System.Drawing.Image)(resources.GetObject("hyperLinkEdit1.Properties.Image")));
-            this.hyperLinkEdit1.Size = new System.Drawing.Size(206, 24);
-            this.hyperLinkEdit1.TabIndex = 7;
+            this.hyperLinkEditGradeName.EditValue = "www.cmono.net";
+            this.hyperLinkEditGradeName.Location = new System.Drawing.Point(72, 226);
+            this.hyperLinkEditGradeName.MenuManager = this.barManager1;
+            this.hyperLinkEditGradeName.Name = "hyperLinkEditGradeName";
+            this.hyperLinkEditGradeName.Properties.Caption = "将军";
+            this.hyperLinkEditGradeName.Properties.Image = ((System.Drawing.Image)(resources.GetObject("hyperLinkEditGradeName.Properties.Image")));
+            this.hyperLinkEditGradeName.Size = new System.Drawing.Size(206, 24);
+            this.hyperLinkEditGradeName.TabIndex = 7;
             // 
             // labelControl15
             // 
@@ -381,13 +385,13 @@
             this.labelControl15.TabIndex = 5;
             this.labelControl15.Text = "生   日";
             // 
-            // buttonEdit5
+            // buttonEditVipTypeName
             // 
-            this.buttonEdit5.Location = new System.Drawing.Point(72, 193);
-            this.buttonEdit5.Name = "buttonEdit5";
-            this.buttonEdit5.Properties.ReadOnly = true;
-            this.buttonEdit5.Size = new System.Drawing.Size(206, 21);
-            this.buttonEdit5.TabIndex = 6;
+            this.buttonEditVipTypeName.Location = new System.Drawing.Point(72, 193);
+            this.buttonEditVipTypeName.Name = "buttonEditVipTypeName";
+            this.buttonEditVipTypeName.Properties.ReadOnly = true;
+            this.buttonEditVipTypeName.Size = new System.Drawing.Size(206, 21);
+            this.buttonEditVipTypeName.TabIndex = 6;
             // 
             // labelControl6
             // 
@@ -407,22 +411,41 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.labelControl9);
+            this.groupControl2.Controls.Add(this.labelControlFlow);
+            this.groupControl2.Controls.Add(this.labelControlUsedFlow);
+            this.groupControl2.Controls.Add(this.labelControlFlowUsage);
             this.groupControl2.Controls.Add(this.labelControl8);
-            this.groupControl2.Controls.Add(this.progressBarControl1);
             this.groupControl2.Location = new System.Drawing.Point(466, 38);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(459, 115);
             this.groupControl2.TabIndex = 16;
             this.groupControl2.Text = "每月使用统计";
             // 
-            // labelControl9
+            // labelControlFlow
             // 
-            this.labelControl9.Location = new System.Drawing.Point(102, 65);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(100, 14);
-            this.labelControl9.TabIndex = 1;
-            this.labelControl9.Text = "30/150 MB (20%)";
+            this.labelControlFlow.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControlFlow.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.labelControlFlow.Location = new System.Drawing.Point(21, 41);
+            this.labelControlFlow.Name = "labelControlFlow";
+            this.labelControlFlow.Size = new System.Drawing.Size(420, 14);
+            this.labelControlFlow.TabIndex = 2;
+            // 
+            // labelControlUsedFlow
+            // 
+            this.labelControlUsedFlow.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControlUsedFlow.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.labelControlUsedFlow.Location = new System.Drawing.Point(21, 21);
+            this.labelControlUsedFlow.Name = "labelControlUsedFlow";
+            this.labelControlUsedFlow.Size = new System.Drawing.Size(420, 14);
+            this.labelControlUsedFlow.TabIndex = 2;
+            // 
+            // labelControlFlowUsage
+            // 
+            this.labelControlFlowUsage.Location = new System.Drawing.Point(102, 65);
+            this.labelControlFlowUsage.Name = "labelControlFlowUsage";
+            this.labelControlFlowUsage.Size = new System.Drawing.Size(100, 14);
+            this.labelControlFlowUsage.TabIndex = 1;
+            this.labelControlFlowUsage.Text = "30/150 MB (20%)";
             // 
             // labelControl8
             // 
@@ -432,23 +455,13 @@
             this.labelControl8.TabIndex = 1;
             this.labelControl8.Text = "流量使用";
             // 
-            // progressBarControl1
-            // 
-            this.progressBarControl1.Location = new System.Drawing.Point(34, 41);
-            this.progressBarControl1.MenuManager = this.barManager1;
-            this.progressBarControl1.Name = "progressBarControl1";
-            this.progressBarControl1.Properties.Maximum = 150;
-            this.progressBarControl1.Properties.ReadOnly = true;
-            this.progressBarControl1.Size = new System.Drawing.Size(432, 18);
-            this.progressBarControl1.TabIndex = 0;
-            // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.labelControl14);
+            this.groupControl3.Controls.Add(this.labelControlTencent);
             this.groupControl3.Controls.Add(this.labelControl11);
-            this.groupControl3.Controls.Add(this.labelControl13);
+            this.groupControl3.Controls.Add(this.labelControlSina);
             this.groupControl3.Controls.Add(this.labelControl10);
-            this.groupControl3.Controls.Add(this.labelControl12);
+            this.groupControl3.Controls.Add(this.labelControlWebsite);
             this.groupControl3.Controls.Add(this.labelControl7);
             this.groupControl3.Location = new System.Drawing.Point(466, 160);
             this.groupControl3.Name = "groupControl3";
@@ -456,13 +469,13 @@
             this.groupControl3.TabIndex = 21;
             this.groupControl3.Text = "更多";
             // 
-            // labelControl14
+            // labelControlTencent
             // 
-            this.labelControl14.Location = new System.Drawing.Point(101, 107);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(70, 14);
-            this.labelControl14.TabIndex = 0;
-            this.labelControl14.Text = "labelControl7";
+            this.labelControlTencent.Location = new System.Drawing.Point(101, 107);
+            this.labelControlTencent.Name = "labelControlTencent";
+            this.labelControlTencent.Size = new System.Drawing.Size(70, 14);
+            this.labelControlTencent.TabIndex = 0;
+            this.labelControlTencent.Text = "labelControl7";
             // 
             // labelControl11
             // 
@@ -472,13 +485,13 @@
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "腾讯微博";
             // 
-            // labelControl13
+            // labelControlSina
             // 
-            this.labelControl13.Location = new System.Drawing.Point(101, 71);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(70, 14);
-            this.labelControl13.TabIndex = 0;
-            this.labelControl13.Text = "labelControl7";
+            this.labelControlSina.Location = new System.Drawing.Point(101, 71);
+            this.labelControlSina.Name = "labelControlSina";
+            this.labelControlSina.Size = new System.Drawing.Size(70, 14);
+            this.labelControlSina.TabIndex = 0;
+            this.labelControlSina.Text = "labelControl7";
             // 
             // labelControl10
             // 
@@ -488,13 +501,13 @@
             this.labelControl10.TabIndex = 0;
             this.labelControl10.Text = "新浪微博";
             // 
-            // labelControl12
+            // labelControlWebsite
             // 
-            this.labelControl12.Location = new System.Drawing.Point(101, 35);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(70, 14);
-            this.labelControl12.TabIndex = 0;
-            this.labelControl12.Text = "labelControl7";
+            this.labelControlWebsite.Location = new System.Drawing.Point(101, 35);
+            this.labelControlWebsite.Name = "labelControlWebsite";
+            this.labelControlWebsite.Size = new System.Drawing.Size(70, 14);
+            this.labelControlWebsite.TabIndex = 0;
+            this.labelControlWebsite.Text = "labelControl7";
             // 
             // labelControl7
             // 
@@ -534,23 +547,22 @@
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditUserName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditQQ.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditBirthday.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditMemberCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditGradeName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditVipTypeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
@@ -573,35 +585,36 @@
         private System.Windows.Forms.ImageList imageList1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditUserName;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit4;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit3;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditEmail;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditQQ;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditPassword;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit5;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditVipTypeName;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEdit2;
-        private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEdit1;
+        private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEditMemberCount;
+        private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEditGradeName;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControlFlowUsage;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.ProgressBarControl progressBarControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonItemCloseWindow;
         private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEdit3;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl labelControlTencent;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControlSina;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControlWebsite;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEditBirthday;
+        private DevExpress.XtraEditors.LabelControl labelControlFlow;
+        private DevExpress.XtraEditors.LabelControl labelControlUsedFlow;
     }
 }

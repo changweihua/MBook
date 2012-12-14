@@ -48,7 +48,7 @@ namespace MBook
         {
             //检测本地是否已经存在文件夹，不存在，就创建
             EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
-            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My StickyNotes", EnterpriseObjects.OperateOption.ExistReturn);
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\My StickyNotes", EnterpriseObjects.OperateOption.ExistReturn);
             
             this.textBoxContent.Dock = DockStyle.Fill;
             this.pictureBoxDown.Location = this.pictureBoxTop.Location;
@@ -147,7 +147,7 @@ namespace MBook
                     RecordType = 7
                 };
 
-                string filePath = string.Format(@"{0}\My StickyNotes\{1}.mono", Properties.Settings.Default.savePath, guid);
+                string filePath = string.Format(@"{0}\My StickyNotes\{1}.mono", Properties.Settings.Default.SavePath, guid);
 
                 bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, note, filePath);
 
@@ -186,7 +186,7 @@ namespace MBook
         {
             string guid = this.Tag.ToString();
 
-            string filePath = string.Format(@"{0}\My StickyNotes\{1}.mono", Properties.Settings.Default.savePath, guid);
+            string filePath = string.Format(@"{0}\My StickyNotes\{1}.mono", Properties.Settings.Default.SavePath, guid);
 
             if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
             {

@@ -53,7 +53,7 @@ namespace MBook
 
 
                     //创建目录
-                    if (directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath, OperateOption.ExistReturn) && directoryHelper.CreateDirOperate(Properties.Settings.Default.backupPath, OperateOption.ExistReturn))
+                    if (directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath, OperateOption.ExistReturn) && directoryHelper.CreateDirOperate(Properties.Settings.Default.BackupPath, OperateOption.ExistReturn))
                     {
                         InitComplete(true, "您还没有登录");
                     }
@@ -73,7 +73,7 @@ namespace MBook
                     }
                     else
                     {
-                        InitComplete(false, "登录失败，可能是您放弃了登录");
+                        InitComplete(false, "登录失败，可能是您放弃了登录或者用户密码输入错误");
                     }
                 }
             }));
@@ -88,7 +88,7 @@ namespace MBook
         /// <returns></returns>
         private bool CheckIsLogin()
         {
-            if (string.IsNullOrEmpty(Properties.Settings.Default.username) || string.IsNullOrEmpty(Properties.Settings.Default.userpassword))
+            if (string.IsNullOrEmpty(Properties.Settings.Default.UserName) || string.IsNullOrEmpty(Properties.Settings.Default.UserPassword))
             {
                 return false;
             }

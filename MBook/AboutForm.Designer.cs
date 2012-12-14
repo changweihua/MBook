@@ -132,8 +132,8 @@
             // memoEdit2
             // 
             this.memoEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.memoEdit2.EditValue = "文章            ----   记录所学知识\r\n九宫格日记  ----   记录当天发生的事情\r\n日记            ----   记录当天发生" +
-    "的事情\r\n日历            ----   备忘待做的事情";
+            this.memoEdit2.EditValue = "笔记            ----   记录所学知识\r\n九宫格日记  ----   记录当天发生的事情\r\n日记            ----   记录当天发生" +
+    "的事情\r\n联系人\t   ----   一起学习的伙伴\r\n邮箱\t   ----   简易的发件箱\r\n第三方\t   ----   快速查看和发布微博";
             this.memoEdit2.Location = new System.Drawing.Point(2, 24);
             this.memoEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.memoEdit2.Name = "memoEdit2";

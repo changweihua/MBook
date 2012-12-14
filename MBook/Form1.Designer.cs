@@ -447,6 +447,7 @@
             galleryItemGroup1.Caption = "Group1";
             galleryItem1.Caption = "日历";
             galleryItem1.Description = "calendar";
+            galleryItem1.HoverImageIndex = 0;
             galleryItem1.ImageIndex = 0;
             galleryItem2.Caption = "任务";
             galleryItem2.Description = "task";
@@ -458,12 +459,12 @@
             galleryItem3.ImageIndex = 2;
             galleryItem4.Caption = "邮件";
             galleryItem4.Description = "email";
-            galleryItem4.HoverImageIndex = 4;
-            galleryItem4.ImageIndex = 4;
+            galleryItem4.HoverImageIndex = 3;
+            galleryItem4.ImageIndex = 3;
             galleryItem5.Caption = "相册";
             galleryItem5.Description = "gallary";
-            galleryItem5.HoverImageIndex = 3;
-            galleryItem5.ImageIndex = 3;
+            galleryItem5.HoverImageIndex = 1;
+            galleryItem5.ImageIndex = 1;
             galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem1,
             galleryItem2,
@@ -489,14 +490,19 @@
             // 
             this.ribbonGallaryHoverImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonGallaryHoverImages.ImageStream")));
             this.ribbonGallaryHoverImages.TransparentColor = System.Drawing.Color.Transparent;
-            this.ribbonGallaryHoverImages.Images.SetKeyName(0, "20121207113932430_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(0, "20121214113131982_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(1, "20121212095537212_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(2, "20121206054954726_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(3, "2012121411355292_easyicon_cn_32.png");
             // 
             // ribbonGallaryImages
             // 
             this.ribbonGallaryImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonGallaryImages.ImageStream")));
             this.ribbonGallaryImages.TransparentColor = System.Drawing.Color.Transparent;
-            this.ribbonGallaryImages.Images.SetKeyName(0, "20121207113049112_easyicon_cn_32.png");
-            this.ribbonGallaryImages.Images.SetKeyName(1, "20121207113933278_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(0, "20121214113009233_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(1, "20121212095541277_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(2, "20121206054956428_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(3, "20121214113550434_easyicon_cn_24.png");
             // 
             // rgbiSkins
             // 
@@ -1225,6 +1231,7 @@
             this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup4.LargeImageIndex = 2;
             this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup4.Visible = false;
             this.navBarGroup4.ItemChanged += new System.EventHandler(this.navBarGroup_ItemChanged);
             // 
             // navBarGroup1

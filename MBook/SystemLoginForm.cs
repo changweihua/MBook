@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Threading;
 using System.Collections;
+using NLite.Data;
+using MonoBookEntity;
 
 namespace MBook
 {
@@ -83,11 +85,33 @@ namespace MBook
             }
 
             SetControlReadonly();
-
+            loginProgress.Visible = true;
             string passport = this.buttonEditPassport.EditValue.ToString();
             string password = this.buttonEditPassword.EditValue.ToString();
 
             bool isRemeber = this.checkEditRemember.Checked;
+
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                var profile = ctx.Set<Profile>().SingleOrDefault(p => p.Email == passport && p.Password == password);
+
+                if (profile != null)
+                {
+                    if (isRemeber)
+                    {
+                        Properties.Settings.Default.UserEmail = passport;
+                        Properties.Settings.Default.UserPassword = password;
+                        Properties.Settings.Default.Save();
+                    }
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    loginProgress.Visible = false;
+                    this.DialogResult = DialogResult.No;
+                }
+
+            }
 
             //新建一个线程进行登录
             //Thread threadLogin = new Thread(new ThreadStart(() =>
@@ -117,9 +141,7 @@ namespace MBook
 
             //threadLogin.Start();
 
-            loginProgress.Visible = true;
-
-            this.DialogResult = DialogResult.OK;
+           
             
         }
 

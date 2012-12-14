@@ -17,23 +17,26 @@
     <Setting Name="Password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">changweihua@outlook.com</Value>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">changweihua</Value>
     </Setting>
-    <Setting Name="userpassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sss</Value>
+    <Setting Name="UserPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="savePath" Type="System.String" Scope="User">
+    <Setting Name="SavePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\monobook</Value>
     </Setting>
-    <Setting Name="backupPath" Type="System.String" Scope="User">
+    <Setting Name="BackupPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\monobook\backup\</Value>
     </Setting>
-    <Setting Name="allowUpdate" Type="System.Boolean" Scope="User">
+    <Setting Name="AllowUpdate" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="allowUpdateToBeta" Type="System.Boolean" Scope="User">
+    <Setting Name="AllowUpdateToBeta" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UserEmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">changweihua@outlook.com</Value>
     </Setting>
   </Settings>
 </SettingsFile>

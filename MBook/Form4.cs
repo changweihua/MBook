@@ -300,7 +300,7 @@ namespace MBook
                 UpdateDate = DateTime.Now.ToString()
             };
 
-            string filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.savePath, tempGdm.Guid);
+            string filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.SavePath, tempGdm.Guid);
 
             bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, tempGdm, filePath);
             string content = "";
@@ -372,7 +372,7 @@ namespace MBook
         {
             if (this.Tag != null)
             {
-                string filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.savePath, this.Tag.ToString());
+                string filePath = string.Format(@"{0}\My GridDailies\{1}.mono", Properties.Settings.Default.SavePath, this.Tag.ToString());
 
                 if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
                 {
@@ -439,7 +439,7 @@ namespace MBook
         {
             //检测本地是否已经存在文件夹，不存在，就创建
             EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
-            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My GridDailies", EnterpriseObjects.OperateOption.ExistReturn);
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\My GridDailies", EnterpriseObjects.OperateOption.ExistReturn);
 
             if (this.Tag != null)
             {

@@ -159,6 +159,7 @@ namespace MBook
             #endregion 分支3中的方法
             this.ribbonControl1.SelectedPage = ribbonPage1;
             FillFolderTreeView(null, 0);
+           
         }
 
 
@@ -431,10 +432,10 @@ namespace MBook
         /// </summary>
         private void InitSettingPage()
         {
-            this.barEditItemSavePath.EditValue = Properties.Settings.Default.savePath;
-            this.barEditItemBackupPath.EditValue = Properties.Settings.Default.backupPath;
-            this.barEditItemAllowAutoUpdate.EditValue = Properties.Settings.Default.allowUpdate;
-            this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.allowUpdateToBeta;
+            this.barEditItemSavePath.EditValue = Properties.Settings.Default.SavePath;
+            this.barEditItemBackupPath.EditValue = Properties.Settings.Default.BackupPath;
+            this.barEditItemAllowAutoUpdate.EditValue = Properties.Settings.Default.AllowUpdate;
+            this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.AllowUpdateToBeta;
         }
 
         private void barButtonItemCancel_ItemClick(object sender, ItemClickEventArgs e)
@@ -474,10 +475,10 @@ namespace MBook
 
             try
             {
-                Properties.Settings.Default.savePath = this.barEditItemSavePath.EditValue.ToString();
-                Properties.Settings.Default.backupPath = this.barEditItemBackupPath.EditValue.ToString();
-                Properties.Settings.Default.allowUpdate = (bool)this.barEditItemAllowAutoUpdate.EditValue;
-                Properties.Settings.Default.allowUpdateToBeta = (bool)this.barEditItemAllowUpdateToDevelop.EditValue;
+                Properties.Settings.Default.SavePath = this.barEditItemSavePath.EditValue.ToString();
+                Properties.Settings.Default.BackupPath = this.barEditItemBackupPath.EditValue.ToString();
+                Properties.Settings.Default.AllowUpdate = (bool)this.barEditItemAllowAutoUpdate.EditValue;
+                Properties.Settings.Default.AllowUpdateToBeta = (bool)this.barEditItemAllowUpdateToDevelop.EditValue;
                 //保存配置
                 Properties.Settings.Default.Save();
 
@@ -973,8 +974,8 @@ namespace MBook
                     switch (type)
                     {
                         case "2":
-                            sourceFolder = string.Format(@"{0}\My Notes", Properties.Settings.Default.savePath);
-                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My Notes", Properties.Settings.Default.SavePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.SavePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<Note>().Delete(n => n.Guid == treeNode.Tag.ToString());
@@ -983,8 +984,8 @@ namespace MBook
                             }
                             break;
                         case "3":
-                            sourceFolder = string.Format(@"{0}\My GridDailies", Properties.Settings.Default.savePath);
-                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My GridDailies", Properties.Settings.Default.SavePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.SavePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<GridDaily>().Delete(g => g.Guid == treeNode.Tag.ToString());
@@ -992,8 +993,8 @@ namespace MBook
                             }
                             break;
                         case "4":
-                            sourceFolder = string.Format(@"{0}\My Contacts", Properties.Settings.Default.savePath);
-                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My Contacts", Properties.Settings.Default.SavePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.SavePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<Contact>().Delete(c => c.Guid == treeNode.Tag.ToString());
@@ -1001,8 +1002,8 @@ namespace MBook
                             }
                             break;
                         case "6":
-                            sourceFolder = string.Format(@"{0}\My Dailies", Properties.Settings.Default.savePath);
-                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My Dailies", Properties.Settings.Default.SavePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.SavePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<Daily>().Delete(d => d.Guid == treeNode.Tag.ToString());
@@ -1010,8 +1011,8 @@ namespace MBook
                             }
                             break;
                         case "7":
-                            sourceFolder = string.Format(@"{0}\My DailyReviews", Properties.Settings.Default.savePath);
-                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My DailyReviews", Properties.Settings.Default.SavePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.SavePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<DailyReview>().Delete(d => d.Guid == treeNode.Tag.ToString());
@@ -1019,8 +1020,8 @@ namespace MBook
                             }
                             break;
                         case "8":
-                            sourceFolder = string.Format(@"{0}\My StickyNotes", Properties.Settings.Default.savePath);
-                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.savePath);
+                            sourceFolder = string.Format(@"{0}\My StickyNotes", Properties.Settings.Default.SavePath);
+                            targetFolder = string.Format(@"{0}\Deleted Items", Properties.Settings.Default.SavePath);
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<StickyNote>().Delete(s => s.Guid == treeNode.Tag.ToString());
@@ -1156,18 +1157,33 @@ namespace MBook
         /// </summary>
         void Search(string keyword)
         {
-            var item1 = new Filter 
-            { 
-                Field="Title",
-                Operation= OperationType.Like, 
-                Value=keyword,
-                OrGroup="a"
+            //var item1 = new Filter
+            //{
+            //    Field = "Title",
+            //    Operation = OperationType.Contains,
+            //    Value = keyword,
+            //    OrGroup = "a"
+            //};
+            //var item2 = new Filter
+            //{
+            //    Field = "Tag",
+            //    Operation = OperationType.Contains,
+            //    Value = keyword,
+            //    OrGroup = "a"
+            //};
+
+            var item1 = new Filter
+            {
+                Field = "Title",
+                Operation = OperationType.Like,
+                Value = "*" + keyword + "*",
+                OrGroup = "a"
             };
             var item2 = new Filter
             {
                 Field = "Tag",
                 Operation = OperationType.Like,
-                Value = keyword,
+                Value = "*" + keyword + "*",
                 OrGroup = "a"
             };
 
@@ -1177,8 +1193,8 @@ namespace MBook
             using (var ctx =  DbConfiguration.Items["Mono"].CreateDbContext())
             {
                 IQueryable<Note> query = ctx.Set<Note>().AsQueryable();
-                IQueryable<Note> actual = query.Where(n => n.Title.ToLower().Contains(keyword.ToLower()) || n.Tag.ToLower().Contains(keyword.ToLower()));
-
+                //IQueryable<Note> actual = query.Where(n => n.Title.ToLower().Contains(keyword.ToLower()) || n.Tag.ToLower().Contains(keyword.ToLower()));
+                IQueryable<Note> actual = query.Where(sm);
                 notes = actual.ToList<Note>();
 
             }

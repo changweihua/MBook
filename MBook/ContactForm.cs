@@ -157,7 +157,7 @@ namespace MBook
                 RecordType = 5
             };
 
-            string filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.savePath, contact.Guid);
+            string filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.SavePath, contact.Guid);
 
             bool flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Xml, contact, filePath);
 
@@ -201,7 +201,7 @@ namespace MBook
         private void ShowContact()
         {
             //读取本地文件
-            string filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.savePath, this.Tag.ToString());
+            string filePath = string.Format(@"{0}\My Contacts\{1}.mono", Properties.Settings.Default.SavePath, this.Tag.ToString());
             if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
             {
                 XtraMessageBox.Show(this.LookAndFeel, "可能出现了点小意外，文件找不到了", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -312,7 +312,7 @@ namespace MBook
         {
             //检测本地是否已经存在文件夹，不存在，就创建
             EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
-            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My Contacts", EnterpriseObjects.OperateOption.ExistReturn);
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\My Contacts", EnterpriseObjects.OperateOption.ExistReturn);
 
             if (!string.IsNullOrEmpty(this.Tag.ToString()))
             {

@@ -85,73 +85,85 @@ namespace MBook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("changweihua@outlook.com")]
-        public string username {
+        [global::System.Configuration.DefaultSettingValueAttribute("changweihua")]
+        public string UserName {
             get {
-                return ((string)(this["username"]));
+                return ((string)(this["UserName"]));
             }
             set {
-                this["username"] = value;
+                this["UserName"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sss")]
-        public string userpassword {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserPassword {
             get {
-                return ((string)(this["userpassword"]));
+                return ((string)(this["UserPassword"]));
             }
             set {
-                this["userpassword"] = value;
+                this["UserPassword"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("D:\\monobook")]
-        public string savePath {
+        public string SavePath {
             get {
-                return ((string)(this["savePath"]));
+                return ((string)(this["SavePath"]));
             }
             set {
-                this["savePath"] = value;
+                this["SavePath"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("D:\\monobook\\backup\\")]
-        public string backupPath {
+        public string BackupPath {
             get {
-                return ((string)(this["backupPath"]));
+                return ((string)(this["BackupPath"]));
             }
             set {
-                this["backupPath"] = value;
+                this["BackupPath"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool allowUpdate {
+        public bool AllowUpdate {
             get {
-                return ((bool)(this["allowUpdate"]));
+                return ((bool)(this["AllowUpdate"]));
             }
             set {
-                this["allowUpdate"] = value;
+                this["AllowUpdate"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool allowUpdateToBeta {
+        public bool AllowUpdateToBeta {
             get {
-                return ((bool)(this["allowUpdateToBeta"]));
+                return ((bool)(this["AllowUpdateToBeta"]));
             }
             set {
-                this["allowUpdateToBeta"] = value;
+                this["AllowUpdateToBeta"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("changweihua@outlook.com")]
+        public string UserEmail {
+            get {
+                return ((string)(this["UserEmail"]));
+            }
+            set {
+                this["UserEmail"] = value;
             }
         }
     }

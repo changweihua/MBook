@@ -63,7 +63,7 @@ namespace MBook
         {
             //检测本地是否已经存在文件夹，不存在，就创建
             EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
-            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My Notes", EnterpriseObjects.OperateOption.ExistReturn);
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\My Notes", EnterpriseObjects.OperateOption.ExistReturn);
 
             if (this.Tag != null)
             {
@@ -170,7 +170,7 @@ namespace MBook
         {
             bool flag = false;
 
-            string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.savePath, note.Guid);
+            string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.SavePath, note.Guid);
 
             flag = EnterpriseObjects.SerializeHelper.Serialize(EnterpriseObjects.SerializeType.Binary, note, filePath);
 
@@ -244,7 +244,7 @@ namespace MBook
                 }
                 else
                 {
-                    string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.savePath, note.Guid);
+                    string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.SavePath, note.Guid);
                     EnterpriseObjects.FileHelper.DeleteFile(filePath);
                     XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "发生了点小意外，重新保存一下，好吗？", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -276,7 +276,7 @@ namespace MBook
                 }
                 else
                 {
-                    string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.savePath, note.Guid);
+                    string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.SavePath, note.Guid);
                     EnterpriseObjects.FileHelper.DeleteFile(filePath);
                     XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "保存的时候发生了点小意外，重新保存一下，好吗？", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -292,7 +292,7 @@ namespace MBook
         /// </summary>
         private void ShowNote()
         {
-            string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.savePath, this.Tag.ToString());
+            string filePath = string.Format(@"{0}\My Notes\{1}.mono", Properties.Settings.Default.SavePath, this.Tag.ToString());
 
             if (!EnterpriseObjects.FileHelper.CheckFile(filePath))
             {
