@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Threading;
+using EnterpriseObjects;
 
 namespace MBook
 {
@@ -48,7 +49,18 @@ namespace MBook
                 {
                     //初始化数据访问类
                     //实例化窗体
-                    InitComplete(true, "您还没有登录");
+                    //InitComplete(true, "成功");
+
+
+                    //创建目录
+                    if (directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath, OperateOption.ExistReturn) && directoryHelper.CreateDirOperate(Properties.Settings.Default.backupPath, OperateOption.ExistReturn))
+                    {
+                        InitComplete(true, "您还没有登录");
+                    }
+                    else
+                    {
+                        InitComplete(false, "初始化目录失败");
+                    }
                 }
                 else
                 {
@@ -69,6 +81,11 @@ namespace MBook
             
         }
 
+
+        /// <summary>
+        /// 检测是否已经登录或者是否有本地登录的信息
+        /// </summary>
+        /// <returns></returns>
         private bool CheckIsLogin()
         {
             if (string.IsNullOrEmpty(Properties.Settings.Default.username) || string.IsNullOrEmpty(Properties.Settings.Default.userpassword))
@@ -80,8 +97,11 @@ namespace MBook
             }
         }
 
+        EnterpriseObjects.DirectoryHelper directoryHelper = null;
         private void InitForm_Load(object sender, EventArgs e)
         {
+            directoryHelper = new EnterpriseObjects.DirectoryHelper();
+
             InitProgram();
         }
 

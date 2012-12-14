@@ -63,6 +63,11 @@ namespace MBook
                 var mapping = q.Entity;
             }
 
+            #region 单例
+
+
+            #endregion
+
             #region 注册皮肤
 
             BonusSkins.Register();

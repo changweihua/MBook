@@ -237,6 +237,13 @@ namespace MBook
             }
         }
 
+        private void MailForm_Load(object sender, EventArgs e)
+        {
+            //检测本地是否已经存在文件夹，不存在，就创建
+            EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My Mails", EnterpriseObjects.OperateOption.ExistReturn);
+        }
+
     }
 
 

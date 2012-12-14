@@ -310,6 +310,10 @@ namespace MBook
 
         private void ContactForm_Load(object sender, EventArgs e)
         {
+            //检测本地是否已经存在文件夹，不存在，就创建
+            EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My Contacts", EnterpriseObjects.OperateOption.ExistReturn);
+
             if (!string.IsNullOrEmpty(this.Tag.ToString()))
             {
                 ShowContact();

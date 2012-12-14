@@ -46,6 +46,10 @@ namespace MBook
 
         private void StickyNoteForm_Load(object sender, EventArgs e)
         {
+            //检测本地是否已经存在文件夹，不存在，就创建
+            EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My StickyNotes", EnterpriseObjects.OperateOption.ExistReturn);
+            
             this.textBoxContent.Dock = DockStyle.Fill;
             this.pictureBoxDown.Location = this.pictureBoxTop.Location;
             if (this.Tag != null)

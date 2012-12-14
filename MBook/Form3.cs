@@ -28,7 +28,7 @@ namespace MBook
 
         #region 全局变量
 
-        MonoBookEntity.DailyReview dailyReview; 
+        MonoBookEntity.DailyReview dailyReview;
 
         #endregion
 
@@ -333,6 +333,10 @@ namespace MBook
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            //检测本地是否已经存在文件夹，不存在，就创建
+            EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.savePath + @"\My DailyReviews", EnterpriseObjects.OperateOption.ExistReturn);
+
             if (this.Tag != null)
             {
                 ShowDailyReview();
