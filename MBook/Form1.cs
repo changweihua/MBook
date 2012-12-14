@@ -348,6 +348,25 @@ namespace MBook
         /// <param name="e"></param>
         private void rgbiSocial_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
         {
+
+           EnterpriseObjects.NetStatus netStatus = EnterpriseObjects.NetworkHelper.GetConnectionStatus("weibo.com");
+
+            if(netStatus== EnterpriseObjects.NetStatus.None)
+            {
+                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription < EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (netStatus == EnterpriseObjects.NetStatus.ModemUnlink)
+            {
+                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (netStatus == EnterpriseObjects.NetStatus.LanCardUnlink) 
+            {
+                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string desc = e.Item.Description;
             switch (desc)
             {
