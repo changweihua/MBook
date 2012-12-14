@@ -49,6 +49,8 @@ namespace MBook
                 .AddClass<MonoBookEntity.StickyNote>()
                 .AddClass<MonoBookEntity.Note>()
                 .AddClass<MonoBookEntity.Profile>()
+                .AddClass<MonoBookEntity.Event>()
+                .AddClass<MonoBookEntity.UserScheduler>()
                ;
                //.AddClass<MonoBookEntity.Folder>(p =>
                //{
@@ -130,7 +132,7 @@ namespace MBook
 
                 //if (!mutexWasCreated)
                 //{
-                Application.Run(new Form1());
+                Application.Run(new MCalendar());
                 //}
                 //else
                 //{

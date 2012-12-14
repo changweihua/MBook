@@ -34,10 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MCalendar));
             this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
             this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.schedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).BeginInit();
@@ -75,6 +76,7 @@
             this.schedulerControl1.Location = new System.Drawing.Point(2, 23);
             this.schedulerControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.schedulerControl1.Name = "schedulerControl1";
+            this.schedulerControl1.OptionsBehavior.ShowRemindersForm = false;
             this.schedulerControl1.OptionsView.FirstDayOfWeek = DevExpress.XtraScheduler.FirstDayOfWeek.Monday;
             this.schedulerControl1.OptionsView.NavigationButtons.NextCaption = "下一个约定";
             this.schedulerControl1.OptionsView.NavigationButtons.PrevCaption = "上一个约定";
@@ -86,6 +88,12 @@
             this.schedulerControl1.Text = "schedulerControl1";
             this.schedulerControl1.Views.DayView.DisplayName = "日历";
             this.schedulerControl1.Views.DayView.MenuCaption = "日视图";
+            timeRuler1.TimeZone.DaylightBias = System.TimeSpan.Parse("-01:00:00");
+            timeRuler1.TimeZone.DaylightZoneName = "中国夏令时";
+            timeRuler1.TimeZone.DisplayName = "(UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐";
+            timeRuler1.TimeZone.StandardZoneName = "中国标准时间";
+            timeRuler1.TimeZone.UtcOffset = System.TimeSpan.Parse("08:00:00");
+            timeRuler1.UseClientTimeZone = false;
             this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1);
             this.schedulerControl1.Views.MonthView.DisplayName = "月历";
             this.schedulerControl1.Views.MonthView.MenuCaption = "月视图";
@@ -95,7 +103,19 @@
             this.schedulerControl1.Views.WeekView.MenuCaption = "周视图";
             this.schedulerControl1.Views.WorkWeekView.DisplayName = "工作周历";
             this.schedulerControl1.Views.WorkWeekView.MenuCaption = "工作周视图";
+            timeRuler2.TimeZone.DaylightBias = System.TimeSpan.Parse("-01:00:00");
+            timeRuler2.TimeZone.DaylightZoneName = "中国夏令时";
+            timeRuler2.TimeZone.DisplayName = "(UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐";
+            timeRuler2.TimeZone.StandardZoneName = "中国标准时间";
+            timeRuler2.TimeZone.UtcOffset = System.TimeSpan.Parse("08:00:00");
+            timeRuler2.UseClientTimeZone = false;
             this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler2);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // schedulerStorage1
             // 
@@ -110,9 +130,11 @@
             this.schedulerStorage1.Appointments.Labels.Add(new DevExpress.XtraScheduler.AppointmentLabel(System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(207)))), ((int)(((byte)(233))))), "生日"));
             this.schedulerStorage1.Appointments.Labels.Add(new DevExpress.XtraScheduler.AppointmentLabel(System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(233)))), ((int)(((byte)(223))))), "周年纪念日"));
             this.schedulerStorage1.Appointments.Labels.Add(new DevExpress.XtraScheduler.AppointmentLabel(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(165))))), "打电话"));
+            this.schedulerStorage1.EnableReminders = false;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.simpleButtonSave);
             this.groupControl1.Controls.Add(this.dateNavigator1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
@@ -131,11 +153,14 @@
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "事件";
             // 
-            // imageList1
+            // simpleButtonSave
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.simpleButtonSave.Location = new System.Drawing.Point(12, 234);
+            this.simpleButtonSave.Name = "simpleButtonSave";
+            this.simpleButtonSave.Size = new System.Drawing.Size(203, 31);
+            this.simpleButtonSave.TabIndex = 1;
+            this.simpleButtonSave.Text = "保存";
+            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click);
             // 
             // MCalendar
             // 
@@ -151,6 +176,7 @@
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "MCalendar";
             this.Text = "MonoBook ---- 日历，记录重要的时刻";
+            this.Load += new System.EventHandler(this.MCalendar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).EndInit();
@@ -166,9 +192,10 @@
 
         private DevExpress.XtraScheduler.DateNavigator dateNavigator1;
         private DevExpress.XtraScheduler.SchedulerControl schedulerControl1;
-        private DevExpress.XtraScheduler.SchedulerStorage schedulerStorage1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private System.Windows.Forms.ImageList imageList1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
+        private DevExpress.XtraScheduler.SchedulerStorage schedulerStorage1;
     }
 }

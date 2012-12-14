@@ -58,6 +58,7 @@
     <Compile Include="Daily.cs" />
     <Compile Include="DailyGrid.cs" />
     <Compile Include="DailyReview.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="Folder.cs" />
     <Compile Include="Friend.cs" />
     <Compile Include="Grade.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="RecordType.cs" />
     <Compile Include="StickyNote.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserScheduler.cs" />
     <Compile Include="VipType.cs" />
   </ItemGroup>
   <ItemGroup>
