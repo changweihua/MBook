@@ -51,6 +51,7 @@ namespace MBook
                 .AddClass<MonoBookEntity.Profile>()
                 .AddClass<MonoBookEntity.Event>()
                 .AddClass<MonoBookEntity.UserScheduler>()
+                .AddClass<MonoBookEntity.RssResource>()
                ;
                //.AddClass<MonoBookEntity.Folder>(p =>
                //{

@@ -99,6 +99,7 @@
             this.repositoryItemTextEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -107,6 +108,7 @@
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageSetting = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -174,8 +176,6 @@
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
             this.alertControlImages = new System.Windows.Forms.ImageList(this.components);
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
@@ -303,7 +303,7 @@
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPageSetting;
+            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(1190, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
@@ -464,10 +464,10 @@
             galleryItem4.Description = "email";
             galleryItem4.HoverImageIndex = 3;
             galleryItem4.ImageIndex = 3;
-            galleryItem5.Caption = "相册";
-            galleryItem5.Description = "gallary";
-            galleryItem5.HoverImageIndex = 1;
-            galleryItem5.ImageIndex = 1;
+            galleryItem5.Caption = "RSS";
+            galleryItem5.Description = "rss";
+            galleryItem5.HoverImageIndex = 4;
+            galleryItem5.ImageIndex = 4;
             galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem1,
             galleryItem2,
@@ -497,6 +497,7 @@
             this.ribbonGallaryHoverImages.Images.SetKeyName(1, "20121212095553169_easyicon_cn_32.png");
             this.ribbonGallaryHoverImages.Images.SetKeyName(2, "20121206054954726_easyicon_cn_32.png");
             this.ribbonGallaryHoverImages.Images.SetKeyName(3, "2012121411355292_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(4, "20121216094519605_easyicon_cn_32.png");
             // 
             // ribbonGallaryImages
             // 
@@ -506,6 +507,7 @@
             this.ribbonGallaryImages.Images.SetKeyName(1, "20121212095554935_easyicon_cn_24.png");
             this.ribbonGallaryImages.Images.SetKeyName(2, "20121206054956428_easyicon_cn_24.png");
             this.ribbonGallaryImages.Images.SetKeyName(3, "20121214113550434_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(4, "20121216094553671_easyicon_cn_24.png");
             // 
             // rgbiSkins
             // 
@@ -760,6 +762,13 @@
             this.barButtonItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "通过RSS，订阅第三方";
+            this.barStaticItem3.Id = 65;
+            this.barStaticItem3.Name = "barStaticItem3";
+            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // ribbonLargeImages
             // 
             this.ribbonLargeImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonLargeImages.ImageStream")));
@@ -848,6 +857,12 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.rgbiSocial);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "第三方分享";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.barStaticItem3);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "第三方订阅";
             // 
             // ribbonPageSetting
             // 
@@ -1420,19 +1435,6 @@
             this.alertControlImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.alertControlImages.ImageSize = new System.Drawing.Size(16, 16);
             this.alertControlImages.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // ribbonPageGroup10
-            // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.barStaticItem3);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "第三方订阅";
-            // 
-            // barStaticItem3
-            // 
-            this.barStaticItem3.Caption = "通过RSS，订阅第三方";
-            this.barStaticItem3.Id = 65;
-            this.barStaticItem3.Name = "barStaticItem3";
-            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // Form1
             // 

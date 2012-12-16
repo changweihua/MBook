@@ -332,6 +332,9 @@ namespace MBook
                 case "calendar":
                     new MCalendar().ShowDialog();
                     break;
+                case "rss":
+                    new RssForm().ShowDialog();
+                    break;
                 default:
                     break;
             }

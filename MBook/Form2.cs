@@ -358,9 +358,9 @@ namespace MBook
             MailForm mailForm = new MailForm();
             string content = string.Format("我的笔记:《{0}》\r\n内容如下\r\n{1}", this.barEditTitle.EditValue == null ? "未命名" : this.barEditTitle.EditValue.ToString(), this.richEditControl1.Text);
             (mailForm.Controls.Find("memoEditMailContent", true).ElementAt(0) as MemoEdit).Text = content;
-            string subject = string.Format("关于 “{0}” 的笔记", barEditTag.EditValue);
+            string subject = barEditTag.EditValue == null ? "" : string.Format("关于 “{0}” 的笔记", barEditTag.EditValue);
             (mailForm.Controls.Find("memoEditMailSubject", true).ElementAt(0) as MemoEdit).Text = subject;
-            string title = string.Format("{0}的分享{1}", Properties.Settings.Default.UserName, DateTime.Now.ToString());
+            string title = string.Format("{0}的{1}分享{2}", Properties.Settings.Default.UserName, subject, DateTime.Now.ToString());
             (mailForm.Controls.Find("buttonEditMailTitle", true).ElementAt(0) as ButtonEdit).Text = title;
             (mailForm.Controls.Find("buttonEditMailFrom", true).ElementAt(0) as ButtonEdit).Text = Properties.Settings.Default.UserEmail;
             (mailForm.Controls.Find("buttonEditMailFromName", true).ElementAt(0) as ButtonEdit).Text = Properties.Settings.Default.UserName;

@@ -123,7 +123,7 @@ namespace MBook
                         MailHelper mailHelper = Singleton<MailHelper>.Instance;
                         //  mailHelper.SendMail("smtp.yeah.net", 25, "dyelcwh@yeah.net", "danyang%%huazai", "monobook", "ceshi", "ceshineirong", "dyelcwh@163.com", "mamager");
                         //mailHelper.SendMailAsync("smtp.yeah.net", 25, "dyelcwh@yeah.net", "************", "monobook", "ceshi", "ceshineirong", "dyelcwh@163.com", "mamager", (sender, e) =>
-                        mailHelper.SendMailAsync(server, 25, mailFrom, mailFromPassword, mailFromName, mailTitle, mailSubject + mailContent, mailTo, mailToName, (sender, e) =>
+                        mailHelper.SendMailAsync(server, 25, mailFrom, mailFromPassword, mailFromName, mailTitle, mailSubject + "\r\n" + mailContent, mailTo, mailToName, (sender, e) =>
                         {
                             string msg = mailHelper.Message;
                             MailResult result = mailHelper.Result;

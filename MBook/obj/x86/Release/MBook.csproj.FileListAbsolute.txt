@@ -48,3 +48,8 @@ E:\VS2010\MBook\MBook\obj\x86\Release\MBook.TestForm.resources
 E:\VS2010\MBook\MBook\bin\Release\NLog.config
 E:\VS2010\MBook\MBook\bin\Release\NLog.dll
 E:\VS2010\MBook\MBook\bin\Release\NLog.xml
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.RSSDetailForm.resources
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.RssForm.resources
+E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.dll
+E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.pdb
+E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.xml

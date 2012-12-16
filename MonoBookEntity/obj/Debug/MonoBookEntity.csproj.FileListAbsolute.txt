@@ -8,3 +8,4 @@ E:\VS2010\MBook\MonoBookEntity\bin\Debug\System.Data.SQLite.dll
 E:\VS2010\MBook\MonoBookEntity\bin\Debug\System.Data.SQLite.Linq.dll
 E:\VS2010\MBook\MonoBookEntity\bin\Debug\ELinq.xml
 E:\VS2010\MBook\MonoBookEntity\bin\Debug\NLite.xml
+E:\VS2010\MBook\MonoBookEntity\obj\Debug\MonoBookEntity.csprojResolveAssemblyReference.cache

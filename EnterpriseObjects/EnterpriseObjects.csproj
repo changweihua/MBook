@@ -50,6 +50,11 @@
     <Compile Include="MailResult.cs" />
     <Compile Include="NetworkHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RssHelper.cs" />
+    <Compile Include="RssItem.cs" />
+    <Compile Include="RssLanguage.cs" />
+    <Compile Include="RssReader.cs" />
+    <Compile Include="RssWriter.cs" />
     <Compile Include="SerializeHelper.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="StringExtension.cs" />
