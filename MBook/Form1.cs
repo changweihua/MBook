@@ -327,7 +327,7 @@ namespace MBook
             switch (desc)
             {
                 case "email":
-                    new MailForm().ShowDialog();
+                    SendMail();
                     break;
                 case "calendar":
                     new MCalendar().ShowDialog();
@@ -335,6 +335,12 @@ namespace MBook
                 default:
                     break;
             }
+        }
+
+        void SendMail()
+        {
+            MailForm mf = new MailForm();
+            mf.ShowDialog();
         }
 
 
@@ -979,6 +985,7 @@ namespace MBook
                             if (RemoveFile(treeNode.Tag.ToString(), sourceFolder, targetFolder))
                             {
                                 ctx.Set<Note>().Delete(n => n.Guid == treeNode.Tag.ToString());
+                                ctx.Set<Index>().Delete(i => i.Guid == treeNode.Tag.ToString());
                                 FillTreeViewWithNote(new TreeNode { Tag = type });
                                 this.btnEditSearch.EditValue = "";
                             }

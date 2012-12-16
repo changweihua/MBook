@@ -216,6 +216,8 @@
             this.largeImages.Images.SetKeyName(3, "20121212094356307_easyicon_cn_32.png");
             this.largeImages.Images.SetKeyName(4, "20121212094602259_easyicon_cn_32.png");
             this.largeImages.Images.SetKeyName(5, "20121212120113266_easyicon_cn_32.png");
+            this.largeImages.Images.SetKeyName(6, "20121206054447905_easyicon_cn_32.png");
+            this.largeImages.Images.SetKeyName(7, "20121203082114666_easyicon_cn_32.png");
             // 
             // richEditControl1
             // 
@@ -1264,9 +1266,9 @@
             // 
             // barButtonBaidu
             // 
-            this.barButtonBaidu.Caption = "百度空间";
+            this.barButtonBaidu.Caption = "邮件发送";
             this.barButtonBaidu.Id = 121;
-            this.barButtonBaidu.LargeImageIndex = 3;
+            this.barButtonBaidu.LargeImageIndex = 7;
             this.barButtonBaidu.Name = "barButtonBaidu";
             this.barButtonBaidu.Tag = "baidu";
             this.barButtonBaidu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonShare_ItemClick);

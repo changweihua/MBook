@@ -124,30 +124,7 @@ namespace MBook
             XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "您选择了:" + attachments, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        /// <summary>
-        /// 第三方分享
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void barButtonShare_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            string tag = e.Item.Tag==null?"":e.Item.Tag.ToString();
-            if (!string.IsNullOrEmpty(tag))
-            {
-                switch (tag)
-                {
-                    case "sina":
-                        XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "受限于本人技术以及新浪微博字数限制，暂时未能实现同步，\r\n不过您可以在个人信息标签页中收发微博", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    case "baidu":
-                        XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "暂时还不能使用", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
+        
         /// <summary>
         /// 关闭窗体
         /// </summary>
@@ -342,6 +319,52 @@ namespace MBook
         private void richEditControl1_TextChanged(object sender, EventArgs e)
         {
             this.barStaticInputStatus.Caption = string.Format("当前输入 {0} 个字", this.richEditControl1.Text.Length);
+        }
+
+        #endregion
+
+        #region 分享按钮方法
+
+        /// <summary>
+        /// 第三方分享按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonShare_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string tag = e.Item.Tag == null ? "" : e.Item.Tag.ToString();
+            if (!string.IsNullOrEmpty(tag))
+            {
+                switch (tag)
+                {
+                    case "sina":
+                        XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "受限于本人技术以及新浪微博字数限制，暂时未能实现同步，\r\n不过您可以在个人信息标签页中收发微博", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    case "baidu":
+                        SendEmail();
+                        //XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "暂时还不能使用", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 将笔记以邮件的形式发送
+        /// </summary>
+        private void SendEmail()
+        {
+            MailForm mailForm = new MailForm();
+            string content = string.Format("我的笔记:《{0}》\r\n内容如下\r\n{1}", this.barEditTitle.EditValue == null ? "未命名" : this.barEditTitle.EditValue.ToString(), this.richEditControl1.Text);
+            (mailForm.Controls.Find("memoEditMailContent", true).ElementAt(0) as MemoEdit).Text = content;
+            string subject = string.Format("关于 “{0}” 的笔记", barEditTag.EditValue);
+            (mailForm.Controls.Find("memoEditMailSubject", true).ElementAt(0) as MemoEdit).Text = subject;
+            string title = string.Format("{0}的分享{1}", Properties.Settings.Default.UserName, DateTime.Now.ToString());
+            (mailForm.Controls.Find("buttonEditMailTitle", true).ElementAt(0) as ButtonEdit).Text = title;
+            (mailForm.Controls.Find("buttonEditMailFrom", true).ElementAt(0) as ButtonEdit).Text = Properties.Settings.Default.UserEmail;
+            (mailForm.Controls.Find("buttonEditMailFromName", true).ElementAt(0) as ButtonEdit).Text = Properties.Settings.Default.UserName;
+            mailForm.ShowDialog();
         }
 
         #endregion

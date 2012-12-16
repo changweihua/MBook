@@ -44,3 +44,7 @@ E:\VS2010\MBook\MBook\bin\Release\System.Data.SQLite.Linq.dll
 E:\VS2010\MBook\MBook\bin\Release\Updater.dll
 E:\VS2010\MBook\MBook\bin\Release\Updater.pdb
 E:\VS2010\MBook\MBook\bin\Release\ELinq.xml
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.TestForm.resources
+E:\VS2010\MBook\MBook\bin\Release\NLog.config
+E:\VS2010\MBook\MBook\bin\Release\NLog.dll
+E:\VS2010\MBook\MBook\bin\Release\NLog.xml

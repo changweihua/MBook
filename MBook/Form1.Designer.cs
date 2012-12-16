@@ -174,6 +174,8 @@
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
             this.alertControlImages = new System.Windows.Forms.ImageList(this.components);
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mBookMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biSchemaRepository)).BeginInit();
@@ -261,10 +263,11 @@
             this.barEditItemSavePath,
             this.barEditItemBackupPath,
             this.barButtonItem2,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.barStaticItem3});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 65;
+            this.ribbonControl1.MaxItemId = 66;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
@@ -300,8 +303,8 @@
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPage1;
-            this.ribbonControl1.Size = new System.Drawing.Size(900, 124);
+            this.ribbonControl1.SelectedPage = this.ribbonPageSetting;
+            this.ribbonControl1.Size = new System.Drawing.Size(1190, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
             // 
@@ -491,7 +494,7 @@
             this.ribbonGallaryHoverImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonGallaryHoverImages.ImageStream")));
             this.ribbonGallaryHoverImages.TransparentColor = System.Drawing.Color.Transparent;
             this.ribbonGallaryHoverImages.Images.SetKeyName(0, "20121214113131982_easyicon_cn_32.png");
-            this.ribbonGallaryHoverImages.Images.SetKeyName(1, "20121212095537212_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(1, "20121212095553169_easyicon_cn_32.png");
             this.ribbonGallaryHoverImages.Images.SetKeyName(2, "20121206054954726_easyicon_cn_32.png");
             this.ribbonGallaryHoverImages.Images.SetKeyName(3, "2012121411355292_easyicon_cn_32.png");
             // 
@@ -500,7 +503,7 @@
             this.ribbonGallaryImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonGallaryImages.ImageStream")));
             this.ribbonGallaryImages.TransparentColor = System.Drawing.Color.Transparent;
             this.ribbonGallaryImages.Images.SetKeyName(0, "20121214113009233_easyicon_cn_24.png");
-            this.ribbonGallaryImages.Images.SetKeyName(1, "20121212095541277_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(1, "20121212095554935_easyicon_cn_24.png");
             this.ribbonGallaryImages.Images.SetKeyName(2, "20121206054956428_easyicon_cn_24.png");
             this.ribbonGallaryImages.Images.SetKeyName(3, "20121214113550434_easyicon_cn_24.png");
             // 
@@ -835,7 +838,8 @@
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup10});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "个人信息";
             // 
@@ -1032,7 +1036,7 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(131)))));
             this.hideContainerRight.Controls.Add(this.dockPanel2);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(880, 124);
+            this.hideContainerRight.Location = new System.Drawing.Point(1170, 124);
             this.hideContainerRight.Name = "hideContainerRight";
             this.hideContainerRight.Size = new System.Drawing.Size(20, 452);
             // 
@@ -1417,12 +1421,25 @@
             this.alertControlImages.ImageSize = new System.Drawing.Size(16, 16);
             this.alertControlImages.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.barStaticItem3);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "第三方订阅";
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "通过RSS，订阅第三方";
+            this.barStaticItem3.Id = 65;
+            this.barStaticItem3.Name = "barStaticItem3";
+            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(900, 576);
+            this.ClientSize = new System.Drawing.Size(1190, 576);
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonControl1);
@@ -1604,6 +1621,8 @@
         private System.Windows.Forms.ImageList alertControlImages;
         private System.Windows.Forms.ToolStripMenuItem tsmiEmail;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem3;
     }
 }
 

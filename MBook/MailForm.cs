@@ -228,12 +228,18 @@ namespace MBook
                 if (success == MailResult.Success)
                 {
                     XtraMessageBox.Show(this.LookAndFeel, msg, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+
                 }
                 else
                 {
-                    XtraMessageBox.Show(this.LookAndFeel, msg, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //this.DialogResult = System.Windows.Forms.DialogResult.None;
+                    if (XtraMessageBox.Show(this.LookAndFeel, msg + "\r\n是否重新发送", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) != System.Windows.Forms.DialogResult.Yes)
+                    {
+                        this.Close();
+                    }
                 }
-                this.Close();
             }
         }
 

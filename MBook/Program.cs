@@ -132,7 +132,7 @@ namespace MBook
 
                 //if (!mutexWasCreated)
                 //{
-                Application.Run(new MCalendar());
+                Application.Run(new Form1());
                 //}
                 //else
                 //{

@@ -51,6 +51,10 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>20121212095542273_easyicon_cn_32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Compile Include="AboutForm.cs">
       <SubType>Form</SubType>
@@ -240,6 +244,14 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="20121212095542273_easyicon_cn_32.ico" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -442,6 +454,9 @@
     </Reference>
     <Reference Include="NLite, Version=0.9.3.10, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NLite.0.9.3.11\lib\net35\NLite.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.0.0.2000\lib\net35\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
