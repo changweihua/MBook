@@ -47,9 +47,12 @@ E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.TestForm.resources
 E:\VS2010\MBook\MBook\bin\Debug\NLog.config
 E:\VS2010\MBook\MBook\bin\Debug\NLog.dll
 E:\VS2010\MBook\MBook\bin\Debug\NLog.xml
-E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.csprojResolveAssemblyReference.cache
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.RssForm.resources
 E:\VS2010\MBook\MBook\bin\Debug\HtmlAgilityPack.dll
 E:\VS2010\MBook\MBook\bin\Debug\HtmlAgilityPack.pdb
 E:\VS2010\MBook\MBook\bin\Debug\HtmlAgilityPack.xml
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.RSSDetailForm.resources
+E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.RichEditTabPage.resources
+E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.TreeViewTabPage.resources
+E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.TreeListTabPage.resources
+E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.csprojResolveAssemblyReference.cache

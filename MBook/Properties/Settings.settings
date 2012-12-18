@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="AppKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">830467795</Value>
+      <Value Profile="(Default)">1877113096</Value>
     </Setting>
     <Setting Name="AppSecret" Type="System.String" Scope="User">
-      <Value Profile="(Default)">fbe940e1c19d35c8d67cf7d6c45bd0e4</Value>
+      <Value Profile="(Default)">fc60d0bee070d2753281bc17a77060a1</Value>
     </Setting>
     <Setting Name="CallbackUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://www.cmono.net</Value>

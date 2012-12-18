@@ -30,42 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RssForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.tvArticle = new System.Windows.Forms.TreeView();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.radioGroupRssAddress = new DevExpress.XtraEditors.RadioGroup();
-            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.hyperLinkEditRssAddress = new DevExpress.XtraEditors.HyperLinkEdit();
+            this.textEditRssName = new DevExpress.XtraEditors.TextEdit();
             this.textEditRssAddress = new DevExpress.XtraEditors.TextEdit();
             this.simpleButtonAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.textEditRssName = new DevExpress.XtraEditors.TextEdit();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControlSiteTitle = new DevExpress.XtraEditors.LabelControl();
-            this.labelControlSiteDescription = new DevExpress.XtraEditors.LabelControl();
-            this.labelControlArticleTitle = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.hyperLinkEditArticleLink = new DevExpress.XtraEditors.HyperLinkEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButtonDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.tvArticle = new System.Windows.Forms.TreeView();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.hyperLinkEditRssAddress = new DevExpress.XtraEditors.HyperLinkEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroupRssAddress = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditRssAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditRssName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditArticleLink.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditRssName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditRssAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -83,6 +75,35 @@
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
+            // tvArticle
+            // 
+            this.tvArticle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvArticle.Location = new System.Drawing.Point(0, 0);
+            this.tvArticle.Name = "tvArticle";
+            this.tvArticle.Size = new System.Drawing.Size(199, 496);
+            this.tvArticle.TabIndex = 0;
+            this.tvArticle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tvArticle_MouseClick);
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.xtraTabControl1);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(0, 134);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(873, 362);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "详细信息 ";
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageAndTabControlHeader;
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(2, 23);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.Size = new System.Drawing.Size(869, 337);
+            this.xtraTabControl1.TabIndex = 0;
+            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
+            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.textEditRssName);
@@ -95,6 +116,48 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(873, 134);
             this.panelControl1.TabIndex = 0;
+            // 
+            // textEditRssName
+            // 
+            this.textEditRssName.EditValue = "";
+            this.textEditRssName.Location = new System.Drawing.Point(18, 101);
+            this.textEditRssName.Name = "textEditRssName";
+            this.textEditRssName.Size = new System.Drawing.Size(131, 21);
+            this.textEditRssName.TabIndex = 4;
+            this.textEditRssName.ToolTip = "这里RSS源名称";
+            // 
+            // textEditRssAddress
+            // 
+            this.textEditRssAddress.EditValue = "";
+            this.textEditRssAddress.Location = new System.Drawing.Point(165, 101);
+            this.textEditRssAddress.Name = "textEditRssAddress";
+            this.textEditRssAddress.Size = new System.Drawing.Size(431, 21);
+            this.textEditRssAddress.TabIndex = 4;
+            this.textEditRssAddress.ToolTip = "这里RSS源名称";
+            // 
+            // simpleButtonAdd
+            // 
+            this.simpleButtonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonAdd.Image")));
+            this.simpleButtonAdd.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButtonAdd.Location = new System.Drawing.Point(619, 99);
+            this.simpleButtonAdd.Name = "simpleButtonAdd";
+            this.simpleButtonAdd.Size = new System.Drawing.Size(108, 23);
+            this.simpleButtonAdd.TabIndex = 3;
+            this.simpleButtonAdd.Text = "添  加 RSS 源";
+            this.simpleButtonAdd.Click += new System.EventHandler(this.simpleButtonAdd_Click);
+            // 
+            // simpleButtonUpdate
+            // 
+            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonUpdate.Image")));
+            this.simpleButtonUpdate.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(748, 99);
+            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
+            this.simpleButtonUpdate.Size = new System.Drawing.Size(108, 23);
+            this.simpleButtonUpdate.TabIndex = 3;
+            this.simpleButtonUpdate.Text = "更  新 RSS 源";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
             // 
             // groupControl1
             // 
@@ -112,25 +175,43 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "RSS站点";
             // 
-            // radioGroupRssAddress
+            // simpleButtonDelete
             // 
-            this.radioGroupRssAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioGroupRssAddress.EditValue = "http://www.cmono.net/rss.php";
-            this.radioGroupRssAddress.Location = new System.Drawing.Point(2, 23);
-            this.radioGroupRssAddress.Name = "radioGroupRssAddress";
-            this.radioGroupRssAddress.Size = new System.Drawing.Size(865, 33);
-            this.radioGroupRssAddress.TabIndex = 0;
-            this.radioGroupRssAddress.SelectedIndexChanged += new System.EventHandler(this.radioGroupRssAddress_SelectedIndexChanged);
+            this.simpleButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonDelete.Location = new System.Drawing.Point(617, 62);
+            this.simpleButtonDelete.Name = "simpleButtonDelete";
+            this.simpleButtonDelete.Size = new System.Drawing.Size(108, 24);
+            this.simpleButtonDelete.TabIndex = 3;
+            this.simpleButtonDelete.Text = "删  除 RSS 源";
+            this.simpleButtonDelete.Click += new System.EventHandler(this.simpleButtonDelete_Click);
             // 
-            // simpleButtonUpdate
+            // simpleButton1
             // 
-            this.simpleButtonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonUpdate.Image")));
-            this.simpleButtonUpdate.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButtonUpdate.Location = new System.Drawing.Point(748, 99);
-            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
-            this.simpleButtonUpdate.Size = new System.Drawing.Size(108, 23);
-            this.simpleButtonUpdate.TabIndex = 3;
-            this.simpleButtonUpdate.Text = "更  新 RSS 源";
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton1.Location = new System.Drawing.Point(746, 62);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(108, 24);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "修  改 RSS 源";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // hyperLinkEditRssAddress
+            // 
+            this.hyperLinkEditRssAddress.EditValue = "http://www.cmono.net/rss.php";
+            this.hyperLinkEditRssAddress.Location = new System.Drawing.Point(163, 62);
+            this.hyperLinkEditRssAddress.Name = "hyperLinkEditRssAddress";
+            this.hyperLinkEditRssAddress.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.hyperLinkEditRssAddress.Properties.ReadOnly = true;
+            this.hyperLinkEditRssAddress.Size = new System.Drawing.Size(431, 21);
+            this.hyperLinkEditRssAddress.TabIndex = 2;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(104, 62);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(0, 14);
+            this.labelControl3.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -140,169 +221,14 @@
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "当前RSS地址  ";
             // 
-            // labelControl3
+            // radioGroupRssAddress
             // 
-            this.labelControl3.Location = new System.Drawing.Point(104, 62);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(0, 14);
-            this.labelControl3.TabIndex = 1;
-            // 
-            // hyperLinkEditRssAddress
-            // 
-            this.hyperLinkEditRssAddress.EditValue = "http://www.cmono.net/rss.php";
-            this.hyperLinkEditRssAddress.Location = new System.Drawing.Point(163, 62);
-            this.hyperLinkEditRssAddress.Name = "hyperLinkEditRssAddress";
-            this.hyperLinkEditRssAddress.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.hyperLinkEditRssAddress.Size = new System.Drawing.Size(431, 21);
-            this.hyperLinkEditRssAddress.TabIndex = 2;
-            // 
-            // textEditRssAddress
-            // 
-            this.textEditRssAddress.EditValue = "";
-            this.textEditRssAddress.Location = new System.Drawing.Point(165, 101);
-            this.textEditRssAddress.Name = "textEditRssAddress";
-            this.textEditRssAddress.Size = new System.Drawing.Size(431, 21);
-            this.textEditRssAddress.TabIndex = 4;
-            this.textEditRssAddress.ToolTip = "这里RSS源名称";
-            // 
-            // simpleButtonAdd
-            // 
-            this.simpleButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonAdd.Image")));
-            this.simpleButtonAdd.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButtonAdd.Location = new System.Drawing.Point(619, 99);
-            this.simpleButtonAdd.Name = "simpleButtonAdd";
-            this.simpleButtonAdd.Size = new System.Drawing.Size(108, 23);
-            this.simpleButtonAdd.TabIndex = 3;
-            this.simpleButtonAdd.Text = "添  加 RSS 源";
-            // 
-            // textEditRssName
-            // 
-            this.textEditRssName.EditValue = "";
-            this.textEditRssName.Location = new System.Drawing.Point(18, 101);
-            this.textEditRssName.Name = "textEditRssName";
-            this.textEditRssName.Size = new System.Drawing.Size(131, 21);
-            this.textEditRssName.TabIndex = 4;
-            this.textEditRssName.ToolTip = "这里RSS源名称";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.hyperLinkEditArticleLink);
-            this.groupControl2.Controls.Add(this.labelControl4);
-            this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Controls.Add(this.labelControl8);
-            this.groupControl2.Controls.Add(this.labelControlArticleTitle);
-            this.groupControl2.Controls.Add(this.labelControl7);
-            this.groupControl2.Controls.Add(this.labelControlSiteDescription);
-            this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.labelControlSiteTitle);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 134);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(873, 362);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "详细信息 ";
-            // 
-            // labelControlSiteTitle
-            // 
-            this.labelControlSiteTitle.Location = new System.Drawing.Point(86, 38);
-            this.labelControlSiteTitle.Name = "labelControlSiteTitle";
-            this.labelControlSiteTitle.Size = new System.Drawing.Size(48, 14);
-            this.labelControlSiteTitle.TabIndex = 0;
-            this.labelControlSiteTitle.Text = "站点名称";
-            // 
-            // labelControlSiteDescription
-            // 
-            this.labelControlSiteDescription.Location = new System.Drawing.Point(86, 66);
-            this.labelControlSiteDescription.Name = "labelControlSiteDescription";
-            this.labelControlSiteDescription.Size = new System.Drawing.Size(48, 14);
-            this.labelControlSiteDescription.TabIndex = 0;
-            this.labelControlSiteDescription.Text = "站点描述";
-            // 
-            // labelControlArticleTitle
-            // 
-            this.labelControlArticleTitle.Location = new System.Drawing.Point(86, 94);
-            this.labelControlArticleTitle.Name = "labelControlArticleTitle";
-            this.labelControlArticleTitle.Size = new System.Drawing.Size(48, 14);
-            this.labelControlArticleTitle.TabIndex = 0;
-            this.labelControlArticleTitle.Text = "文章标题";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(18, 150);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(48, 14);
-            this.labelControl5.TabIndex = 0;
-            this.labelControl5.Text = "大致内容";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(18, 122);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 14);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "文章链接";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(18, 38);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(48, 14);
-            this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "站点名称";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(18, 66);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(48, 14);
-            this.labelControl7.TabIndex = 0;
-            this.labelControl7.Text = "站点描述";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(18, 94);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(48, 14);
-            this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "文章标题";
-            // 
-            // hyperLinkEditArticleLink
-            // 
-            this.hyperLinkEditArticleLink.EditValue = "";
-            this.hyperLinkEditArticleLink.Location = new System.Drawing.Point(86, 120);
-            this.hyperLinkEditArticleLink.Name = "hyperLinkEditArticleLink";
-            this.hyperLinkEditArticleLink.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.hyperLinkEditArticleLink.Properties.ReadOnly = true;
-            this.hyperLinkEditArticleLink.Size = new System.Drawing.Size(100, 19);
-            this.hyperLinkEditArticleLink.TabIndex = 1;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(617, 62);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(108, 23);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "修  改 RSS 源";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // simpleButtonDelete
-            // 
-            this.simpleButtonDelete.Location = new System.Drawing.Point(746, 62);
-            this.simpleButtonDelete.Name = "simpleButtonDelete";
-            this.simpleButtonDelete.Size = new System.Drawing.Size(108, 23);
-            this.simpleButtonDelete.TabIndex = 3;
-            this.simpleButtonDelete.Text = "删  除 RSS 源";
-            this.simpleButtonDelete.Click += new System.EventHandler(this.simpleButtonDelete_Click);
-            // 
-            // tvArticle
-            // 
-            this.tvArticle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvArticle.Location = new System.Drawing.Point(0, 0);
-            this.tvArticle.Name = "tvArticle";
-            this.tvArticle.Size = new System.Drawing.Size(199, 496);
-            this.tvArticle.TabIndex = 0;
-            this.tvArticle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tvArticle_MouseClick);
+            this.radioGroupRssAddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioGroupRssAddress.EditValue = "http://www.cmono.net/rss.php";
+            this.radioGroupRssAddress.Location = new System.Drawing.Point(2, 23);
+            this.radioGroupRssAddress.Name = "radioGroupRssAddress";
+            this.radioGroupRssAddress.Size = new System.Drawing.Size(865, 33);
+            this.radioGroupRssAddress.TabIndex = 0;
             // 
             // RssForm
             // 
@@ -310,29 +236,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 496);
             this.Controls.Add(this.splitContainerControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.MaximizeBox = false;
             this.Name = "RssForm";
             this.Text = "RSS采集器";
             this.Load += new System.EventHandler(this.RssForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEditRssName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditRssAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditRssAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditRssName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditArticleLink.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,17 +274,9 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonAdd;
         private DevExpress.XtraEditors.TextEdit textEditRssName;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.LabelControl labelControlSiteTitle;
-        private DevExpress.XtraEditors.LabelControl labelControlSiteDescription;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControlArticleTitle;
-        private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEditArticleLink;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.SimpleButton simpleButtonDelete;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TreeView tvArticle;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
     }
 }

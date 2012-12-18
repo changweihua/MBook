@@ -519,9 +519,9 @@
             // 
             // groupControl4
             // 
-            this.groupControl4.Location = new System.Drawing.Point(13, 312);
+            this.groupControl4.Location = new System.Drawing.Point(13, 311);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(912, 75);
+            this.groupControl4.Size = new System.Drawing.Size(912, 76);
             this.groupControl4.TabIndex = 26;
             this.groupControl4.Text = "其他";
             // 
@@ -538,9 +538,11 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "Office 2010 Silver";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.MaximizeBox = false;
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MonoBook ---- 您的信息哟";

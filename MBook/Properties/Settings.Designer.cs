@@ -25,7 +25,7 @@ namespace MBook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("830467795")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1877113096")]
         public string AppKey {
             get {
                 return ((string)(this["AppKey"]));
@@ -37,7 +37,7 @@ namespace MBook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("fbe940e1c19d35c8d67cf7d6c45bd0e4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("fc60d0bee070d2753281bc17a77060a1")]
         public string AppSecret {
             get {
                 return ((string)(this["AppSecret"]));

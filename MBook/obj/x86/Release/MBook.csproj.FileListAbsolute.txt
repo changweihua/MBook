@@ -33,7 +33,6 @@ E:\VS2010\MBook\MBook\obj\x86\Release\MBook.pdb
 E:\VS2010\MBook\MBook\obj\x86\Release\MBook.InitForm.resources
 E:\VS2010\MBook\MBook\bin\Release\EnterpriseObjects.dll
 E:\VS2010\MBook\MBook\bin\Release\EnterpriseObjects.pdb
-E:\VS2010\MBook\MBook\obj\x86\Release\MBook.csprojResolveAssemblyReference.cache
 E:\VS2010\MBook\MBook\obj\x86\Release\MBook.StickyNoteForm.resources
 E:\VS2010\MBook\MBook\obj\x86\Release\MBook.csproj.GenerateResource.Cache
 E:\VS2010\MBook\MBook\bin\Release\x64\SQLite.Interop.dll
@@ -53,3 +52,6 @@ E:\VS2010\MBook\MBook\obj\x86\Release\MBook.RssForm.resources
 E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.dll
 E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.pdb
 E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.xml
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.RichEditTabPage.resources
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.TreeListTabPage.resources
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.TreeViewTabPage.resources

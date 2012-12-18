@@ -14,11 +14,14 @@ using HtmlAgilityPack;
 using MonoBookEntity;
 using NLite.Data;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraTab;
 
 namespace MBook
 {
     public partial class RssForm : XtraForm
     {
+
+        #region 窗体自身的方法
 
         public RssForm()
         {
@@ -32,18 +35,19 @@ namespace MBook
         /// <param name="e"></param>
         private void RssForm_Load(object sender, EventArgs e)
         {
-            if (!CheckNetworkStatus())
-            {
-                if (XtraMessageBox.Show(this.LookAndFeel, "貌似您没有连接上网络，是否读取本地数据", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                {
-                    this.Close();
-                }
-                return;
-            }
+            //if (!CheckNetworkStatus())
+            //{
+            //    if (XtraMessageBox.Show(this.LookAndFeel, "貌似您没有连接上网络，是否读取本地数据", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+            //    {
+            //        this.Close();
+            //    }
+            //}
 
             FillRadioGroup();
-
-           
+            this.radioGroupRssAddress.SelectedIndex = -1;
+            this.radioGroupRssAddress.SelectedIndexChanged += radioGroupRssAddress_SelectedIndexChanged;
+            
+            //InitTabPanel(0);
 
             #region 废弃的方法
 
@@ -83,9 +87,12 @@ namespace MBook
             //}
 
             #endregion
-            
+
         }
 
+
+        #endregion
+        
         #region 更新TreeView
 
 
@@ -100,9 +107,6 @@ namespace MBook
                                  Title = blog.Element("title").Value,
                                  Link = blog.Element("link").Value
                              }).Take(20);
-
-                this.labelControlSiteTitle.Text = query.ElementAt(0).Title;
-                this.labelControlSiteDescription.Text = query.ElementAt(0).Title;
             }
             else if (url.Contains("cnblogs"))
             {
@@ -114,9 +118,6 @@ namespace MBook
                                  Title = blog.Element("link").Value,
                                  Summary = blog.Element("summary").Value
                              }).Take(10);
-                //XtraMessageBox.Show(query.Count().ToString());
-                //this.labelControlSiteTitle.Text = query.ElementAt(0).Id;
-                //this.labelControlSiteDescription.Text = query.ElementAt(0).Title;
             }
         }
 
@@ -129,23 +130,23 @@ namespace MBook
         /// 检测网络状况，决定是读取本地还是网络数据
         /// </summary>
         /// <returns></returns>
-        private bool CheckNetworkStatus()
+        private bool CheckNetworkStatus(string url)
         {
-            EnterpriseObjects.NetStatus netStatus = EnterpriseObjects.NetworkHelper.GetConnectionStatus("cmono.net");
+            EnterpriseObjects.NetStatus netStatus = EnterpriseObjects.NetworkHelper.GetConnectionStatus(url);
 
             if (netStatus == EnterpriseObjects.NetStatus.None)
             {
-                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (netStatus == EnterpriseObjects.NetStatus.ModemUnlink)
             {
-                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (netStatus == EnterpriseObjects.NetStatus.LanCardUnlink)
             {
-                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -164,14 +165,28 @@ namespace MBook
         {
             RadioGroup radioGroup = sender as RadioGroup;
             int index = radioGroup.SelectedIndex;
-            hyperLinkEditRssAddress.Text = radioGroup.Properties.Items[index].Value.ToString();
-            Refresh(radioGroup.Properties.Items[index].Value.ToString());
+            RadioGroupItem rgi = radioGroup.Properties.Items[index];
+            string desc = rgi.Description.ToString();
+            string url = rgi.Value.ToString();
+            hyperLinkEditRssAddress.Text = url;
+            //Refresh(radioGroup.Properties.Items[index].Value.ToString());
+            if (!CheckNetworkStatus(url))
+            {
+                if (XtraMessageBox.Show(this.LookAndFeel, "貌似您没有连接上网络，是否读取本地数据", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                {
+                    return;
+                }
+            }
+            ShowPanel(rgi);
         }
 
         #endregion
 
         #region 填充RadioGroup
 
+        /// <summary>
+        /// 加载所有RSS源
+        /// </summary>
         private void FillRadioGroup()
         {
             List<RssResource> rssResources = null;
@@ -180,9 +195,10 @@ namespace MBook
             {
                 rssResources = ctx.Set<RssResource>().ToList();
             }
-
             if (rssResources != null)
             {
+                this.radioGroupRssAddress.Properties.Items.Clear();
+
                 RadioGroupItem rgi = null;
                 foreach (var item in rssResources)
                 {
@@ -193,17 +209,24 @@ namespace MBook
                     };
                     this.radioGroupRssAddress.Properties.Items.Add(rgi);
                 }
-                this.radioGroupRssAddress.SelectedIndex = 0;
+                //this.radioGroupRssAddress.SelectedIndex = 0;
             }
 
         }
 
         #endregion
 
+        #region TreeView的方法
+
         private void tvArticle_MouseClick(object sender, MouseEventArgs e)
         {
 
         }
+
+
+        #endregion
+
+        #region 增删改查RSS源
 
         /// <summary>
         /// 删除RSS源
@@ -214,11 +237,18 @@ namespace MBook
         {
             using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
             {
-                int count = ctx.Set<RssResource>().Delete(r => r.Address == this.textEditRssAddress.EditValue.ToString());
+                string url = this.hyperLinkEditRssAddress.EditValue.ToString();
+                int count = ctx.Set<RssResource>().Delete(r => r.Address == url);
                 if (count == 1)
                 {
-                    //this.radioGroupRssAddress.Properties.Items.Remove(
                     XtraMessageBox.Show(this.LookAndFeel, "删除成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FillRadioGroup();
+                    this.radioGroupRssAddress.SelectedIndex = 0;
+                    RemovePanel(url);
+                }
+                else
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "删除失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -235,5 +265,128 @@ namespace MBook
             this.textEditRssAddress.EditValue = radioGroupRssAddress.Properties.Items[index].Value;
         }
 
+        /// <summary>
+        /// 添加RSS源
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void simpleButtonAdd_Click(object sender, EventArgs e)
+        {
+            if (!CheckNameAndAddress())
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "必须输入RSS源名称和地址", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                int count = ctx.Set<RssResource>().Insert(new RssResource
+                {
+                    Address = textEditRssName.EditValue.ToString(),
+                    Description = textEditRssAddress.EditValue.ToString()
+                });
+                if (count == 1)
+                {
+                    //this.radioGroupRssAddress.Properties.Items.Remove(
+                    XtraMessageBox.Show(this.LookAndFeel, "成功添加RSS源成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FillRadioGroup();
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// 更新RSS源
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void simpleButtonUpdate_Click(object sender, EventArgs e)
+        {
+            if (!CheckNameAndAddress())
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "必须输入RSS源名称和地址", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+        }
+
+
+        private bool CheckNameAndAddress()
+        {
+            if (string.IsNullOrEmpty(textEditRssName.EditValue == null ? "" : textEditRssName.EditValue.ToString()) || string.IsNullOrEmpty(textEditRssAddress.EditValue == null ? "" : textEditRssAddress.EditValue.ToString()))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        #endregion
+
+        #region TabPanel
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        void InitTabPanel(int index)
+        {
+            //this.xtraTabPage1.Text = this.radioGroupRssAddress.Properties.Items[this.radioGroupRssAddress.SelectedIndex].Description;
+            //this.xtraTabPage1.Tag = this.radioGroupRssAddress.Properties.Items[this.radioGroupRssAddress.SelectedIndex].Value;
+        }
+
+        /// <summary>
+        /// 根据标题显示Panel
+        /// </summary>
+        /// <param name="title"></param>
+        void ShowPanel(RadioGroupItem rgi)
+        {
+            XtraTabPage page = null;
+            var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == rgi.Value.ToString());
+            
+            page = query.ElementAtOrDefault(0);
+
+            if (page == null)
+            {
+                page = new XtraTabPage
+                {
+                    Text = rgi.Description,
+                    Tag = rgi.Value
+                };
+                page.Controls.Add(new TreeListTabPage {  Dock = DockStyle.Fill});
+                this.xtraTabControl1.TabPages.Add(page);
+            }
+            page.PageVisible = true;
+            this.xtraTabControl1.SelectedTabPage = page;
+        }
+
+        /// <summary>
+        /// 根据url地址移除Panel
+        /// </summary>
+        /// <param name="title"></param>
+        void RemovePanel(string url)
+        {
+            XtraTabPage page = null;
+            var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == url);
+            page = query.ElementAtOrDefault(0);
+            if (page != null)
+            {
+                this.xtraTabControl1.TabPages.Remove(page);
+            }
+        }
+
+        /// <summary>
+        /// 关闭标签页
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show(this.LookAndFeel, "是否真的要关闭?", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+            {
+                (sender as XtraTabControl).SelectedTabPage.PageVisible = false;
+                this.radioGroupRssAddress.SelectedIndex = 0;
+            }
+        }
+
+        #endregion
+       
     }
 }

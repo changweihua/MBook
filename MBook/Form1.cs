@@ -361,21 +361,29 @@ namespace MBook
         {
 
            EnterpriseObjects.NetStatus netStatus = EnterpriseObjects.NetworkHelper.GetConnectionStatus("weibo.com");
-
+           bool isLinked = true;
             if(netStatus== EnterpriseObjects.NetStatus.None)
             {
-                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription < EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                //XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription < EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isLinked = false;
             }
             else if (netStatus == EnterpriseObjects.NetStatus.ModemUnlink)
             {
-                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                //XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isLinked = false;
             }
             else if (netStatus == EnterpriseObjects.NetStatus.LanCardUnlink) 
             {
-                XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                //XtraMessageBox.Show(this.LookAndFeel, EnterpriseObjects.EnumHelper.GetEnumDescription<EnterpriseObjects.NetStatus>(netStatus), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isLinked = false;
+            }
+
+            if (!isLinked)
+            {
+                if (XtraMessageBox.Show(this.LookAndFeel, "您没有连接到任何网络，仍然要尝试登录吗", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == System.Windows.Forms.DialogResult.No)
+                {
+                    return;
+                }
             }
 
             string desc = e.Item.Description;
