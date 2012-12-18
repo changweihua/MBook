@@ -411,7 +411,6 @@ namespace MBook
             }
 
             XDocument doc = XDocument.Load(url);
-            MessageBox.Show(doc.Descendants("title").ElementAt(0).Value);
         }
 
         #endregion

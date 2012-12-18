@@ -5464,12 +5464,12 @@
         </member>
         <member name="F:NLite.Dynamic.FilterSettings.NotBeginWith">
              <summary>
-            NotBeginWith ,缺省值为bn
+            NotBeginWith ,缺省值为nbw
              </summary>
         </member>
         <member name="F:NLite.Dynamic.FilterSettings.NotEndWith">
              <summary>
-            NotEndWith ,缺省值为en
+            NotEndWith ,缺省值为new
              </summary>
         </member>
         <member name="F:NLite.Dynamic.FilterSettings.NotContains">
@@ -10095,7 +10095,7 @@
             <summary>
             构造函数
             </summary>
-            <modelExp name="collection">数据源集合</modelExp>
+            <modelExp name="collection">Local 数据源</modelExp>
             <modelExp name="pageIndex">页面索引号，下标从0开始</modelExp>
             <modelExp name="pageSize">页面大小</modelExp>
         </member>
@@ -10164,11 +10164,11 @@
             泛型分页记录集对象
             </summary>
         </member>
-        <member name="M:NLite.Data.Pagination`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32)">
+        <member name="M:NLite.Data.Pagination`1.#ctor(System.Linq.IQueryable{`0},System.Int32,System.Int32)">
             <summary>
             
             </summary>
-            <param name="collection"></param>
+            <param name="dataSource">Remote 数据源</param>
             <param name="pageIndex"></param>
             <param name="pageSize"></param>
         </member>
@@ -10176,7 +10176,7 @@
             <summary>
             构造函数
             </summary>
-            <modelExp name="collection">数据源集合</modelExp>
+            <modelExp name="collection">Local 数据源</modelExp>
             <modelExp name="pageIndex">页面索引号，下标从0开始</modelExp>
             <modelExp name="pageSize">页面大小</modelExp>
         </member>
@@ -10196,12 +10196,12 @@
             集合的扩展类
             </summary>
         </member>
-        <member name="M:NLite.Data.QueryableExtensions.ToPagination``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+        <member name="M:NLite.Data.QueryableExtensions.ToPagination``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
             <summary>
             将数据源转会为分页记录集
             </summary>
             <typeparam name="T"></typeparam>
-            <modelExp name="dataSource">数据源</modelExp>
+            <modelExp name="dataSource">Remote数据源</modelExp>
             <modelExp name="pageIndex">页面索引号（下标从0开始）</modelExp>
             <modelExp name="pageSize">页面大小</modelExp>
             <returns></returns>
@@ -10211,7 +10211,7 @@
             将数据源转会为分页记录集
             </summary>
             <typeparam name="T"></typeparam>
-            <modelExp name="dataSource">数据源</modelExp>
+            <modelExp name="dataSource">Local数据源</modelExp>
             <modelExp name="pageIndex">页面索引号（下标从0开始）</modelExp>
             <modelExp name="pageSize">页面大小</modelExp>
             <returns></returns>
@@ -10220,7 +10220,7 @@
             <summary>
             
             </summary>
-            <param name="dataTable"></param>
+            <param name="dataTable">local datatable</param>
             <param name="pageIndex"></param>
             <param name="pageSize"></param>
             <param name="rowCount"></param>
@@ -10230,7 +10230,7 @@
             <summary>
             
             </summary>
-            <param name="dataReader"></param>
+            <param name="dataReader">local dataReader</param>
             <param name="pageIndex"></param>
             <param name="pageSize"></param>
             <param name="rowCount"></param>
@@ -10241,7 +10241,7 @@
             对数据源进行排序
             </summary>
             <typeparam name="T"></typeparam>
-            <modelExp name="dataSource">数据源</modelExp>
+            <modelExp name="dataSource">Remote数据源</modelExp>
             <modelExp name="propertyName">排序列</modelExp>
             <modelExp name="sortOrder">排序方向</modelExp>
             <returns></returns>
@@ -10251,7 +10251,7 @@
             使IQueryable支持动态查询
             </summary>
             <typeparam name="TEntity"></typeparam>
-            <modelExp name="dataSource">IQueryable的查询对象</modelExp>
+            <modelExp name="dataSource">Remote 数据源</modelExp>
             <modelExp name="filters">filters对象</modelExp>
             <modelExp name="prefix">使用前缀区分查询条件</modelExp>
             <returns></returns>
@@ -10261,7 +10261,7 @@
             将数据源转会为分页记录集
             </summary>
             <typeparam name="T"></typeparam>
-            <modelExp name="dataSource">数据源</modelExp>
+            <modelExp name="dataSource">Remote数据源</modelExp>
             <modelExp name="ctx">查询上下文对象</modelExp>
             <returns></returns>
         </member>

@@ -31,11 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ELinq">
-      <HintPath>..\packages\ELinq.0.4\lib\net35\ELinq.dll</HintPath>
+    <Reference Include="ELinq, Version=0.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ELinq.0.4.21\lib\net35\ELinq.dll</HintPath>
     </Reference>
-    <Reference Include="NLite">
-      <HintPath>..\packages\NLite.0.9.3.11\lib\net35\NLite.dll</HintPath>
+    <Reference Include="NLite, Version=0.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLite.0.9.5\lib\net35\NLite.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -67,6 +69,7 @@
     <Compile Include="Index.cs" />
     <Compile Include="Mail.cs" />
     <Compile Include="Manifest.cs" />
+    <Compile Include="Northwind.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,7 +81,13 @@
     <Compile Include="VipType.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ELinq.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Northwind.Mapping.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

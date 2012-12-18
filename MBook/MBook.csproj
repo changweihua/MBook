@@ -111,6 +111,7 @@
       <DependentUpon>MCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="MonoBookDBUtil.cs" />
+    <Compile Include="Northwind.cs" />
     <Compile Include="ProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +297,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="ELinq.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -404,6 +408,7 @@
     <None Include="images\small\NewContact.png" />
     <None Include="images\small\NewTask.png" />
     <None Include="images\small\Sticky.png" />
+    <Content Include="Northwind.Mapping.xml" />
     <Content Include="templates\contact.htm" />
     <Content Include="templates\contact\contact.template.html" />
     <Content Include="templates\contact\contact.template_1028.html" />
@@ -492,8 +497,9 @@
     <Reference Include="DevExpress.XtraScheduler.v11.1.Extensions, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="ELinq, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ELinq.0.4\lib\net35\ELinq.dll</HintPath>
+    <Reference Include="ELinq, Version=0.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ELinq.0.4.21\lib\net35\ELinq.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net20\HtmlAgilityPack.dll</HintPath>
@@ -501,8 +507,9 @@
     <Reference Include="NetDimension.Weibo">
       <HintPath>..\..\..\DLL\NetDimension.Weibo.dll</HintPath>
     </Reference>
-    <Reference Include="NLite, Version=0.9.3.10, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLite.0.9.3.11\lib\net35\NLite.dll</HintPath>
+    <Reference Include="NLite, Version=0.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLite.0.9.5\lib\net35\NLite.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
       <HintPath>..\packages\NLog.2.0.0.2000\lib\net35\NLog.dll</HintPath>

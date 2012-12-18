@@ -4,6 +4,91 @@
         <name>ELinq</name>
     </assembly>
     <members>
+        <member name="F:NLite.Data.Linq.DateParts.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Quarter">
+            <summary>
+            季度
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Month">
+            <summary>
+            月份
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Day">
+            <summary>
+            表示的日期为该月中的第几天
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Hour">
+            <summary>
+            小时
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Minute">
+            <summary>
+            分钟
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Second">
+            <summary>
+            秒
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Millisecond">
+            <summary>
+            毫秒
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Microsecond">
+            <summary>
+            微秒
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Nanosecond">
+            <summary>
+            纳秒
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Week">
+            <summary>
+            表示的日期是该年中的第几周
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.DayOfYear">
+            <summary>
+            表示的日期是该年中的第几天
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.DayOfWeek">
+            <summary>
+            表示的日期是星期几
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.TimeSpan">
+            <summary>
+            仅作为框架内部使用
+            </summary>
+        </member>
+        <member name="F:NLite.Data.Linq.DateParts.WorkDay">
+            <summary>
+            工作日
+            </summary>
+        </member>
         <member name="T:NLite.Data.Linq.Expressions.ClientJoinedProjectionRewriter">
             <summary>
             rewrites nested projections into client-side joins
@@ -144,91 +229,6 @@
             计算两个 System.Decimal 值相除后的余数
             </summary>
         </member>
-        <member name="F:NLite.Data.Linq.DateParts.Year">
-            <summary>
-            年份
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Quarter">
-            <summary>
-            季度
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Month">
-            <summary>
-            月份
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Day">
-            <summary>
-            表示的日期为该月中的第几天
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Hour">
-            <summary>
-            小时
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Minute">
-            <summary>
-            分钟
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Second">
-            <summary>
-            秒
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Millisecond">
-            <summary>
-            毫秒
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Microsecond">
-            <summary>
-            微秒
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Nanosecond">
-            <summary>
-            纳秒
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Week">
-            <summary>
-            表示的日期是该年中的第几周
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Date">
-            <summary>
-            日期
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.Time">
-            <summary>
-            时间
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.DayOfYear">
-            <summary>
-            表示的日期是该年中的第几天
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.DayOfWeek">
-            <summary>
-            表示的日期是星期几
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.TimeSpan">
-            <summary>
-            仅作为框架内部使用
-            </summary>
-        </member>
-        <member name="F:NLite.Data.Linq.DateParts.WorkDay">
-            <summary>
-            工作日
-            </summary>
-        </member>
         <member name="T:NLite.Data.Mapping.IEntityModel">
             <summary>
             实体Mapping元数据接口
@@ -342,7 +342,6 @@
             <summary>
             执行查询并返回DataTable
             </summary>
-            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:NLite.Data.IDbHelper.ExecuteDataSet(System.String,System.Object)">
@@ -385,6 +384,25 @@
             <summary>
             Attempt to rewrite cross joins as inner joins
             </summary>
+        </member>
+        <member name="T:NLite.Data.ExpandoExtensions">
+            <summary>
+            DataReader 扩展类
+            </summary>
+        </member>
+        <member name="M:NLite.Data.ExpandoExtensions.ToExpandoList(System.Data.IDataReader)">
+            <summary>
+            把DataReader转化为动态对象列表
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NLite.Data.ExpandoExtensions.ToExpando(System.Data.IDataReader)">
+            <summary>
+            把DataReader转化为动态对象
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
         </member>
         <member name="T:NLite.Data.AssociationAttribute">
             <summary>
@@ -2108,7 +2126,7 @@
             <param name="func"></param>
             <returns></returns>
         </member>
-        <member name="M:NLite.Data.Linq.LinqMapping.Lambda``6(System.Linq.Expressions.Expression{NLite.Data.Linq.LinqMapping.Func{``0,``1,``2,``3,``4,``5}})">
+        <member name="M:NLite.Data.Linq.LinqMapping.Lambda``6(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5}})">
             <summary>
             得到NLite.Data Linq 所支持的Lambda表达式
             </summary>
@@ -2121,7 +2139,7 @@
             <param name="func"></param>
             <returns></returns>
         </member>
-        <member name="M:NLite.Data.Linq.LinqMapping.Lambda``7(System.Linq.Expressions.Expression{NLite.Data.Linq.LinqMapping.Func{``0,``1,``2,``3,``4,``5,``6}})">
+        <member name="M:NLite.Data.Linq.LinqMapping.Lambda``7(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6}})">
             <summary>
             得到NLite.Data Linq 所支持的Lambda表达式
             </summary>
