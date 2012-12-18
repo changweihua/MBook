@@ -16,11 +16,21 @@ using NLite.Data;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraTab;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace MBook
 {
     public partial class RssForm : XtraForm
     {
+
+        #region 全局变量
+
+        /// <summary>
+        /// NLog对象，实现日志记录
+        /// </summary>
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+        #endregion
 
         #region 窗体自身的方法
 
@@ -47,7 +57,7 @@ namespace MBook
             FillRadioGroup();
             this.radioGroupRssAddress.SelectedIndex = -1;
             this.radioGroupRssAddress.SelectedIndexChanged += radioGroupRssAddress_SelectedIndexChanged;
-            
+
             //InitTabPanel(0);
 
             #region 废弃的方法
@@ -93,7 +103,7 @@ namespace MBook
 
 
         #endregion
-        
+
         #region 更新TreeView
 
 
@@ -167,7 +177,7 @@ namespace MBook
         #endregion
 
         #region RSS源选择事件
-        
+
         /// <summary>
         /// RSS源选择事件
         /// </summary>
@@ -182,7 +192,7 @@ namespace MBook
             string url = rgi.Value.ToString();
             hyperLinkEditRssAddress.Text = url;
             //Refresh(radioGroup.Properties.Items[index].Value.ToString());
-            UpdateTreeList(url);
+
 
             //更新TreeList
 
@@ -226,16 +236,6 @@ namespace MBook
 
         #endregion
 
-        #region TreeView的方法
-
-        private void tvArticle_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-
-        #endregion
-
         #region 增删改查RSS源
 
         /// <summary>
@@ -276,11 +276,11 @@ namespace MBook
         }
 
         /// <summary>
-        /// 添加RSS源
+        /// 保存RSS源
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void simpleButtonAdd_Click(object sender, EventArgs e)
+        private void simpleButtonSave_Click(object sender, EventArgs e)
         {
             if (!CheckNameAndAddress())
             {
@@ -305,19 +305,13 @@ namespace MBook
 
         }
 
-        /// <summary>
-        /// 更新RSS源
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void simpleButtonUpdate_Click(object sender, EventArgs e)
+        private void simpleButtonRead_Click(object sender, EventArgs e)
         {
-            if (!CheckNameAndAddress())
-            {
-                XtraMessageBox.Show(this.LookAndFeel, "必须输入RSS源名称和地址", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+            string url = hyperLinkEditRssAddress.Text;
+            Read(url);
         }
+
+
 
 
         private bool CheckNameAndAddress()
@@ -350,7 +344,7 @@ namespace MBook
         {
             XtraTabPage page = null;
             var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == rgi.Value.ToString());
-            
+
             page = query.ElementAtOrDefault(0);
 
             if (page == null)
@@ -360,7 +354,7 @@ namespace MBook
                     Text = rgi.Description,
                     Tag = rgi.Value
                 };
-                page.Controls.Add(new TreeListTabPage {  Dock = DockStyle.Fill});
+                page.Controls.Add(new TreeListTabPage { Dock = DockStyle.Fill });
                 this.xtraTabControl1.TabPages.Add(page);
             }
             page.PageVisible = true;
@@ -398,9 +392,59 @@ namespace MBook
 
         #endregion
 
-        #region TreeList
+        #region TreeView
 
-        private void UpdateTreeList(string url)
+        /// <summary>
+        /// TreeView节点单击事件，显示内容
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tvRss_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 更新TreeView
+        /// </summary>
+        /// <param name="url"></param>
+        private void UpdateTreeView(string url, List<RssEntity> entities)
+        {
+            if (tvRss.Nodes["root"].Nodes[url] == null)
+            {
+                tvRss.Nodes["root"].Nodes.Add(new TreeNode
+                {
+                    Name = url,
+                    Text = url,
+                    Tag = url,
+                    ToolTipText = url
+                });
+            }
+            tvRss.Nodes["root"].Nodes[url].Nodes.Clear();
+            foreach (var entity in entities)
+            {
+                tvRss.Nodes["root"].Nodes[url].Nodes.Add(new TreeNode
+                {
+                    Name = entity.Link,
+                    Text = entity.Title,
+                    ToolTipText = entity.Title
+                });
+            }
+            tvRss.CollapseAll();
+            tvRss.Nodes["root"].Expand();
+            tvRss.Nodes["root"].Nodes[url].Expand();
+
+        }
+
+        #endregion
+
+        #region 读取RSS源线程方法
+
+        /// <summary>
+        /// 读取RSS，根据网络判断读取方式
+        /// </summary>
+        /// <param name="url"></param>
+        private void Read(string url)
         {
             if (!CheckNetworkStatus(url))
             {
@@ -408,15 +452,139 @@ namespace MBook
                 {
                     return;
                 }
+                else
+                {
+                    ReadFromLocal(url);
+                }
             }
+            ReadFromInternet(url);
+        }
 
-            XDocument doc = XDocument.Load(url);
+        /// <summary>
+        /// 网络读取
+        /// </summary>
+        /// <param name="url"></param>
+        private void ReadFromInternet(string url)
+        {
+            mpbcReadStatus.Visible = true;
+            mpbcReadStatus.Text = "正在从远程读取数据";
+
+            //新建一个线程进行登录
+            Thread threadLogin = new Thread(new ThreadStart(() =>
+            {
+                try
+                {
+                    XDocument doc = XDocument.Load(url);
+
+                    var query = doc.Descendants("item").Take(10);
+                    List<RssEntity> entities = new List<RssEntity>();
+                    foreach (var item in query)
+                    {
+                        entities.Add(new RssEntity
+                        {
+                            Guid = url,
+                            Author = "",
+                            Link = item.Element("link").Value,
+                            PubDate = item.Element("pubDate").Value,
+                            Summary = item.Element("description").Value,
+                            Title = item.Element("title").Value,
+                            Content = item.Element("description").Value,
+                            AddDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")
+                        });
+                    }
+
+                    using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                    {
+                        foreach (var entity in entities)
+                        {
+                            ctx.Set<RssEntity>().Insert(entity);
+                        }
+                    }
+
+                    ReadComplete(true, url, entities);
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex.Message);
+                    ReadComplete(false, url, null);
+                }
+            }));
+
+            threadLogin.Start();
+
+        }
+
+        /// <summary>
+        /// 本地读取
+        /// </summary>
+        /// <param name="url"></param>
+        private void ReadFromLocal(string url)
+        {
+            mpbcReadStatus.Visible = true;
+            mpbcReadStatus.Text = "正在从本地读取数据";
+
+            //新建一个线程进行登录
+            Thread threadLogin = new Thread(new ThreadStart(() =>
+            {
+                try
+                {
+                    List<RssEntity> entities = null;
+                    using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                    {
+                        entities = ctx.Set<RssEntity>().Where(r =>  r.Guid == url).Take(10).ToList();
+                    }
+                    if (entities != null)
+                    {
+                        logger.Trace(string.Format("成功加载{0}条数据", entities.Count));
+                        ReadComplete(true, url, entities);
+                    }
+                    else
+                    {
+                        logger.Error("加载数据失败");
+                        ReadComplete(false, url, null);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex.Message);
+                    ReadComplete(false, url, null);
+                }
+            }));
+
+            threadLogin.Start();
+
+        }
+
+        /// <summary>
+        /// 读取完毕
+        /// </summary>
+        /// <param name="success"></param>
+        /// <param name="url"></param>
+        /// <param name="entities"></param>
+        private void ReadComplete(bool success, string url, List<RssEntity> entities)
+        {
+            if (mpbcReadStatus.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(() =>
+                {
+                    ReadComplete(success, url, entities);
+                }));
+            }
+            else
+            {
+                if (success)
+                {
+                    UpdateTreeView(url, entities);
+                }
+                else
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "加载" + url + "数据失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                mpbcReadStatus.Visible = false;
+            }
         }
 
         #endregion
-
-
-
 
     }
 }

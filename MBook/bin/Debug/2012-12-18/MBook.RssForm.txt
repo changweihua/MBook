@@ -1,0 +1,26 @@
+ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass12.<Read>b__11 Abort due to constraint violation
+PRIMARY KEY must be unique
+ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass12.<Read>b__11 Abort due to constraint violation
+PRIMARY KEY must be unique
+ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass12.<Read>b__11 Abort due to constraint violation
+PRIMARY KEY must be unique
+ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass12.<Read>b__11 Abort due to constraint violation
+PRIMARY KEY must be unique
+2012-12-18 21:25:28.3320 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass12.<ReadFromInternet>b__11 无法解析此远程名称: 'www.ithome.com'
+2012-12-18 21:25:28.3870 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass16.<ReadFromLocal>b__15 无法解析此远程名称: 'www.ithome.com'
+2012-12-18 22:12:16.9716 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:13:20.9973 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:16:49.0732 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:21:38.5418 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:32:36.1804 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:34:02.1843 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载10条数据
+22:34:17.5022 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:34:22.6825 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载10条数据
+22:35:07.4270 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:35:11.2022 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:35:40.8579 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
+22:37:34.3954 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载10条数据
+22:38:05.5242 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载10条数据
+22:38:37.3030 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载10条数据
+22:39:31.9972 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载10条数据
+22:39:37.4705 ExecutionContext.Run => ThreadHelper.ThreadStart_Context => <>c__DisplayClass17.<ReadFromLocal>b__16 成功加载0条数据
