@@ -55,3 +55,4 @@ E:\VS2010\MBook\MBook\bin\Release\HtmlAgilityPack.xml
 E:\VS2010\MBook\MBook\obj\x86\Release\MBook.RichEditTabPage.resources
 E:\VS2010\MBook\MBook\obj\x86\Release\MBook.TreeListTabPage.resources
 E:\VS2010\MBook\MBook\obj\x86\Release\MBook.TreeViewTabPage.resources
+E:\VS2010\MBook\MBook\obj\x86\Release\MBook.csprojResolveAssemblyReference.cache

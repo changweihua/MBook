@@ -15,6 +15,7 @@ using MonoBookEntity;
 using NLite.Data;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraTab;
+using System.Text.RegularExpressions;
 
 namespace MBook
 {
@@ -132,7 +133,18 @@ namespace MBook
         /// <returns></returns>
         private bool CheckNetworkStatus(string url)
         {
-            EnterpriseObjects.NetStatus netStatus = EnterpriseObjects.NetworkHelper.GetConnectionStatus(url);
+            string domain = string.Empty;
+            Regex reg = new Regex(@"(?imn)(http://(?<do>[^/]+)/)(?<dir>([^/]+/)*([^/.]*$)?)((?<page>[^?.]+\.[^?]+)\?)?(?<par>.*$)");
+            MatchCollection mc = reg.Matches(url);
+            domain = mc[0].Groups["do"].Value.ToString();
+            //foreach (Match m in mc)
+            //{
+            //    Console.WriteLine(m.Groups["do"].Value);  //http://www.rczjp.cn/
+            //    Console.WriteLine(m.Groups["dir"].Value); //A/B/C/
+            //    Console.WriteLine(m.Groups["page"].Value);  //index.aspx
+            //    Console.WriteLine(m.Groups["par"].Value); //cid=11&sid=22
+            //}
+            EnterpriseObjects.NetStatus netStatus = EnterpriseObjects.NetworkHelper.GetConnectionStatus(domain);
 
             if (netStatus == EnterpriseObjects.NetStatus.None)
             {
@@ -170,14 +182,12 @@ namespace MBook
             string url = rgi.Value.ToString();
             hyperLinkEditRssAddress.Text = url;
             //Refresh(radioGroup.Properties.Items[index].Value.ToString());
-            if (!CheckNetworkStatus(url))
-            {
-                if (XtraMessageBox.Show(this.LookAndFeel, "貌似您没有连接上网络，是否读取本地数据", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                {
-                    return;
-                }
-            }
-            ShowPanel(rgi);
+            UpdateTreeList(url);
+
+            //更新TreeList
+
+
+            //ShowPanel(rgi);
         }
 
         #endregion
@@ -387,6 +397,27 @@ namespace MBook
         }
 
         #endregion
-       
+
+        #region TreeList
+
+        private void UpdateTreeList(string url)
+        {
+            if (!CheckNetworkStatus(url))
+            {
+                if (XtraMessageBox.Show(this.LookAndFeel, "貌似您没有连接上网络，是否读取本地数据", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            XDocument doc = XDocument.Load(url);
+            MessageBox.Show(doc.Descendants("title").ElementAt(0).Value);
+        }
+
+        #endregion
+
+
+
+
     }
 }

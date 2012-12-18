@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RssForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.tvArticle = new System.Windows.Forms.TreeView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -45,6 +44,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.radioGroupRssAddress = new DevExpress.XtraEditors.RadioGroup();
+            this.treeListRss = new DevExpress.XtraTreeList.TreeList();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -58,6 +58,7 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListRss)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -65,7 +66,7 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.tvArticle);
+            this.splitContainerControl1.Panel1.Controls.Add(this.treeListRss);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Controls.Add(this.panelControl1);
@@ -74,15 +75,6 @@
             this.splitContainerControl1.SplitterPosition = 199;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
-            // 
-            // tvArticle
-            // 
-            this.tvArticle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvArticle.Location = new System.Drawing.Point(0, 0);
-            this.tvArticle.Name = "tvArticle";
-            this.tvArticle.Size = new System.Drawing.Size(199, 496);
-            this.tvArticle.TabIndex = 0;
-            this.tvArticle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tvArticle_MouseClick);
             // 
             // groupControl2
             // 
@@ -230,6 +222,14 @@
             this.radioGroupRssAddress.Size = new System.Drawing.Size(865, 33);
             this.radioGroupRssAddress.TabIndex = 0;
             // 
+            // treeListRss
+            // 
+            this.treeListRss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeListRss.Location = new System.Drawing.Point(0, 0);
+            this.treeListRss.Name = "treeListRss";
+            this.treeListRss.Size = new System.Drawing.Size(199, 496);
+            this.treeListRss.TabIndex = 0;
+            // 
             // RssForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -256,6 +256,7 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeListRss)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,7 +277,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButtonDelete;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.TreeView tvArticle;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTreeList.TreeList treeListRss;
     }
 }
