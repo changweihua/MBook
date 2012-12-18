@@ -254,7 +254,7 @@ namespace MBook
                     XtraMessageBox.Show(this.LookAndFeel, "删除成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FillRadioGroup();
                     this.radioGroupRssAddress.SelectedIndex = 0;
-                    RemovePanel(url);
+                    //RemovePanel(url);
                 }
                 else
                 {
@@ -325,72 +325,72 @@ namespace MBook
 
         #endregion
 
-        #region TabPanel
+        //#region TabPanel
 
-        /// <summary>
-        /// 初始化
-        /// </summary>
-        void InitTabPanel(int index)
-        {
-            //this.xtraTabPage1.Text = this.radioGroupRssAddress.Properties.Items[this.radioGroupRssAddress.SelectedIndex].Description;
-            //this.xtraTabPage1.Tag = this.radioGroupRssAddress.Properties.Items[this.radioGroupRssAddress.SelectedIndex].Value;
-        }
+        ///// <summary>
+        ///// 初始化
+        ///// </summary>
+        //void InitTabPanel(int index)
+        //{
+        //    //this.xtraTabPage1.Text = this.radioGroupRssAddress.Properties.Items[this.radioGroupRssAddress.SelectedIndex].Description;
+        //    //this.xtraTabPage1.Tag = this.radioGroupRssAddress.Properties.Items[this.radioGroupRssAddress.SelectedIndex].Value;
+        //}
 
-        /// <summary>
-        /// 根据标题显示Panel
-        /// </summary>
-        /// <param name="title"></param>
-        void ShowPanel(RadioGroupItem rgi)
-        {
-            XtraTabPage page = null;
-            var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == rgi.Value.ToString());
+        ///// <summary>
+        ///// 根据标题显示Panel
+        ///// </summary>
+        ///// <param name="title"></param>
+        //void ShowPanel(RadioGroupItem rgi)
+        //{
+        //    XtraTabPage page = null;
+        //    var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == rgi.Value.ToString());
 
-            page = query.ElementAtOrDefault(0);
+        //    page = query.ElementAtOrDefault(0);
 
-            if (page == null)
-            {
-                page = new XtraTabPage
-                {
-                    Text = rgi.Description,
-                    Tag = rgi.Value
-                };
-                page.Controls.Add(new TreeListTabPage { Dock = DockStyle.Fill });
-                this.xtraTabControl1.TabPages.Add(page);
-            }
-            page.PageVisible = true;
-            this.xtraTabControl1.SelectedTabPage = page;
-        }
+        //    if (page == null)
+        //    {
+        //        page = new XtraTabPage
+        //        {
+        //            Text = rgi.Description,
+        //            Tag = rgi.Value
+        //        };
+        //        page.Controls.Add(new TreeListTabPage { Dock = DockStyle.Fill });
+        //        this.xtraTabControl1.TabPages.Add(page);
+        //    }
+        //    page.PageVisible = true;
+        //    this.xtraTabControl1.SelectedTabPage = page;
+        //}
 
-        /// <summary>
-        /// 根据url地址移除Panel
-        /// </summary>
-        /// <param name="title"></param>
-        void RemovePanel(string url)
-        {
-            XtraTabPage page = null;
-            var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == url);
-            page = query.ElementAtOrDefault(0);
-            if (page != null)
-            {
-                this.xtraTabControl1.TabPages.Remove(page);
-            }
-        }
+        ///// <summary>
+        ///// 根据url地址移除Panel
+        ///// </summary>
+        ///// <param name="title"></param>
+        //void RemovePanel(string url)
+        //{
+        //    XtraTabPage page = null;
+        //    var query = this.xtraTabControl1.TabPages.Where(t => t.Tag.ToString() == url);
+        //    page = query.ElementAtOrDefault(0);
+        //    if (page != null)
+        //    {
+        //        this.xtraTabControl1.TabPages.Remove(page);
+        //    }
+        //}
 
-        /// <summary>
-        /// 关闭标签页
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
-        {
-            if (XtraMessageBox.Show(this.LookAndFeel, "是否真的要关闭?", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
-            {
-                (sender as XtraTabControl).SelectedTabPage.PageVisible = false;
-                this.radioGroupRssAddress.SelectedIndex = 0;
-            }
-        }
+        ///// <summary>
+        ///// 关闭标签页
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        //{
+        //    if (XtraMessageBox.Show(this.LookAndFeel, "是否真的要关闭?", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+        //    {
+        //        (sender as XtraTabControl).SelectedTabPage.PageVisible = false;
+        //        this.radioGroupRssAddress.SelectedIndex = 0;
+        //    }
+        //}
 
-        #endregion
+        //#endregion
 
         #region TreeView
 
@@ -401,7 +401,10 @@ namespace MBook
         /// <param name="e"></param>
         private void tvRss_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-
+            TreeNode node = e.Node;
+            this.labelControlTitle.Text = node.Text;
+            this.hyperLinkEditLink.Text = node.Name;
+            this.richEditControl1.HtmlText = node.Tag.ToString();
         }
 
         /// <summary>
@@ -427,7 +430,8 @@ namespace MBook
                 {
                     Name = entity.Link,
                     Text = entity.Title,
-                    ToolTipText = entity.Title
+                    ToolTipText = entity.Title,
+                    Tag = entity.Content
                 });
             }
             tvRss.CollapseAll();

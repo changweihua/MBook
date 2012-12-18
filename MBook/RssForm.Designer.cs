@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("RSS读取器");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("RSS读取器");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RssForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.tvRss = new System.Windows.Forms.TreeView();
@@ -46,7 +46,13 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.radioGroupRssAddress = new DevExpress.XtraEditors.RadioGroup();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlTitle = new DevExpress.XtraEditors.LabelControl();
+            this.hyperLinkEditLink = new DevExpress.XtraEditors.HyperLinkEdit();
+            this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -60,7 +66,9 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditLink.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -83,18 +91,19 @@
             this.tvRss.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvRss.Location = new System.Drawing.Point(0, 0);
             this.tvRss.Name = "tvRss";
-            treeNode4.Checked = true;
-            treeNode4.Name = "root";
-            treeNode4.Text = "RSS读取器";
+            treeNode3.Checked = true;
+            treeNode3.Name = "root";
+            treeNode3.Text = "RSS读取器";
             this.tvRss.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            treeNode3});
             this.tvRss.Size = new System.Drawing.Size(199, 496);
             this.tvRss.TabIndex = 0;
             this.tvRss.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvRss_NodeMouseDoubleClick);
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.xtraTabControl1);
+            this.groupControl2.Controls.Add(this.richEditControl1);
+            this.groupControl2.Controls.Add(this.panelControl2);
             this.groupControl2.Controls.Add(this.mpbcReadStatus);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 134);
@@ -240,15 +249,67 @@
             this.radioGroupRssAddress.Size = new System.Drawing.Size(865, 33);
             this.radioGroupRssAddress.TabIndex = 0;
             // 
-            // xtraTabControl1
+            // labelControl1
             // 
-            this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(2, 23);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(869, 337);
-            this.xtraTabControl1.TabIndex = 2;
-            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
+            this.labelControl1.Location = new System.Drawing.Point(5, 5);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(48, 14);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "文章标题";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(5, 62);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(228, 14);
+            this.labelControl4.TabIndex = 2;
+            this.labelControl4.Text = "文章内容或摘要，具体点击请访问文章地址";
+            // 
+            // labelControlTitle
+            // 
+            this.labelControlTitle.Location = new System.Drawing.Point(82, 5);
+            this.labelControlTitle.Name = "labelControlTitle";
+            this.labelControlTitle.Size = new System.Drawing.Size(70, 14);
+            this.labelControlTitle.TabIndex = 3;
+            this.labelControlTitle.Text = "labelControl5";
+            // 
+            // hyperLinkEditLink
+            // 
+            this.hyperLinkEditLink.Location = new System.Drawing.Point(82, 32);
+            this.hyperLinkEditLink.Name = "hyperLinkEditLink";
+            this.hyperLinkEditLink.Properties.ReadOnly = true;
+            this.hyperLinkEditLink.Size = new System.Drawing.Size(726, 21);
+            this.hyperLinkEditLink.TabIndex = 4;
+            // 
+            // richEditControl1
+            // 
+            this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
+            this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richEditControl1.Location = new System.Drawing.Point(2, 105);
+            this.richEditControl1.Name = "richEditControl1";
+            this.richEditControl1.Size = new System.Drawing.Size(869, 255);
+            this.richEditControl1.TabIndex = 5;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.labelControl5);
+            this.panelControl2.Controls.Add(this.labelControl4);
+            this.panelControl2.Controls.Add(this.hyperLinkEditLink);
+            this.panelControl2.Controls.Add(this.labelControlTitle);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl2.Location = new System.Drawing.Point(2, 23);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(869, 82);
+            this.panelControl2.TabIndex = 6;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(5, 35);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(48, 14);
+            this.labelControl5.TabIndex = 2;
+            this.labelControl5.Text = "文章地址";
             // 
             // RssForm
             // 
@@ -276,7 +337,10 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditRssAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupRssAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hyperLinkEditLink.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -299,6 +363,12 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.MarqueeProgressBarControl mpbcReadStatus;
         private System.Windows.Forms.TreeView tvRss;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.HyperLinkEdit hyperLinkEditLink;
+        private DevExpress.XtraEditors.LabelControl labelControlTitle;
+        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }
