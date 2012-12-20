@@ -10,6 +10,8 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using MonoBookEntity;
 using NLite.Data;
+using System.Xml.Linq;
+using System.IO;
 
 namespace MBook
 {
@@ -35,6 +37,7 @@ namespace MBook
 
         string attachments = string.Empty;
         Note globalNote;
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         #endregion
 
@@ -69,6 +72,7 @@ namespace MBook
             {
                 ShowNote();
             }
+
         }
 
         #endregion
@@ -124,7 +128,7 @@ namespace MBook
             XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "您选择了:" + attachments, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        
+
         /// <summary>
         /// 关闭窗体
         /// </summary>
@@ -164,7 +168,8 @@ namespace MBook
             Note note = null;
             if (flag)
             {
-                note = new Note { 
+                note = new Note
+                {
                     Attachment = attachments,
                     //CreateDate = globalNote.CreateDate,
                     Content = EnterpriseObjects.EncryptHelper.EncryptAES(this.richEditControl1.HtmlText),
@@ -203,7 +208,7 @@ namespace MBook
         {
             //string temp = EnterpriseObjects.EncryptHelper.EncryptAES(this.richEditControl1.HtmlText);
             //XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "加密之后\r\n" + temp, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            //GetHtmlTag(this.richEditControl1.HtmlText, "<body>", "</body>");
             //return;
 
             if (SerializeNote(note))
@@ -211,12 +216,25 @@ namespace MBook
                 int count = 0;
                 using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
                 {
-                   count = ctx.Set<Note>().Insert(note);
+                    count = ctx.Set<Note>().Insert(note);
                 }
 
                 if (count == 1)
                 {
                     UpdateIndex(note.Guid, note.RecordType);
+                    using (var ctx = DbConfiguration.Items["MonoLog"].CreateDbContext())
+                    {
+                        count = ctx.Set<MonoNote>().Insert(new MonoNote
+                        {
+                            Tag = note.Tag,
+                            Title = note.Title,
+                            UpdateDate = Convert.ToDateTime(note.UpdateDate),
+                            Guid = note.Guid,
+                            CreateDate = Convert.ToDateTime(note.CreateDate),
+                            Content = this.richEditControl1.Text,
+                            Grade = 0
+                        });
+                    }
                     this.Close();
                 }
                 else
@@ -231,6 +249,30 @@ namespace MBook
             {
                 XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "发生了点小意外，重新保存一下，好吗？", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        /// <summary>
+        /// 截取HTML部分内容
+        /// </summary>
+        /// <param name="html"></param>
+        /// <param name="startTag"></param>
+        /// <param name="endTag"></param>
+        /// <returns></returns>
+        public string GetHtmlTag(string html, string startTag, string endTag)
+        {
+            string msg = string.Empty;
+            try
+            {
+                if (!string.IsNullOrEmpty(html) && html.IndexOf(startTag) > 0 && html.IndexOf(endTag) > 0 && html.IndexOf(endTag) > html.IndexOf(startTag))
+                {
+                    int a = html.IndexOf(startTag);
+                    int b = html.IndexOf(endTag);
+                    var len1 = a + startTag.Length;
+                    msg = html.Substring(len1, b - len1);
+                }
+            }
+            catch { }
+            return msg;
         }
 
         /// <summary>
@@ -293,9 +335,10 @@ namespace MBook
         /// </summary>
         /// <param name="guid"></param>
         /// <param name="typeId"></param>
-        private void UpdateIndex(string guid,int typeId)
+        private void UpdateIndex(string guid, int typeId)
         {
-            Index index = new Index { 
+            Index index = new Index
+            {
                 Guid = guid,
                 TypeId = typeId
             };
@@ -340,7 +383,7 @@ namespace MBook
                     case "sina":
                         XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "受限于本人技术以及新浪微博字数限制，暂时未能实现同步，\r\n不过您可以在个人信息标签页中收发微博", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
-                    case "baidu":
+                    case "mail":
                         SendEmail();
                         //XtraMessageBox.Show(this.richEditControl1.LookAndFeel, "暂时还不能使用", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;

@@ -402,9 +402,7 @@ namespace MBook
         private void tvRss_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             TreeNode node = e.Node;
-            this.labelControlTitle.Text = node.Text;
-            this.hyperLinkEditLink.Text = node.Name;
-            this.richEditControl1.HtmlText = node.Tag.ToString();
+            ReadArticle(node);
         }
 
         /// <summary>
@@ -450,6 +448,11 @@ namespace MBook
         /// <param name="url"></param>
         private void Read(string url)
         {
+            if (string.IsNullOrEmpty(hyperLinkEditRssAddress.Text))
+            {
+                XtraMessageBox.Show(this.LookAndFeel, "至少也得选择一个RSS地址吧，不然很为难啊", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (!CheckNetworkStatus(url))
             {
                 if (XtraMessageBox.Show(this.LookAndFeel, "貌似您没有连接上网络，是否读取本地数据", "信息提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
@@ -474,7 +477,7 @@ namespace MBook
             mpbcReadStatus.Text = "正在从远程读取数据";
 
             //新建一个线程进行登录
-            Thread threadLogin = new Thread(new ThreadStart(() =>
+            Thread threadReadRss = new Thread(new ThreadStart(() =>
             {
                 try
                 {
@@ -514,7 +517,7 @@ namespace MBook
                 }
             }));
 
-            threadLogin.Start();
+            threadReadRss.Start();
 
         }
 
@@ -528,7 +531,7 @@ namespace MBook
             mpbcReadStatus.Text = "正在从本地读取数据";
 
             //新建一个线程进行登录
-            Thread threadLogin = new Thread(new ThreadStart(() =>
+            Thread threadReadRss = new Thread(new ThreadStart(() =>
             {
                 try
                 {
@@ -555,7 +558,7 @@ namespace MBook
                 }
             }));
 
-            threadLogin.Start();
+            threadReadRss.Start();
 
         }
 
@@ -585,6 +588,70 @@ namespace MBook
                     XtraMessageBox.Show(this.LookAndFeel, "加载" + url + "数据失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 mpbcReadStatus.Visible = false;
+            }
+        }
+
+        #endregion
+
+        #region 加载内容
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="node"></param>
+        private void ReadArticle(TreeNode node)
+        {
+            pictureEditStatus.Visible = true;
+
+            //新建一个线程进行登录
+            Thread threadReadArticle = new Thread(new ThreadStart(() =>
+            {
+                try
+                {
+                    string title = node.Text;
+                    string link = node.Name;
+                    string content = node.Tag.ToString();
+                    ReadArticleComplete(true, title, link, content);
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex.Message);
+                    ReadArticleComplete(false, null, null, null);
+                }
+            }));
+            threadReadArticle.Start();
+
+        }
+
+        /// <summary>
+        /// 文章读取结束
+        /// </summary>
+        /// <param name="success"></param>
+        /// <param name="title"></param>
+        /// <param name="link"></param>
+        /// <param name="content"></param>
+        private void ReadArticleComplete(bool success,string title,string link,string content)
+        {
+            if (mpbcReadStatus.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(() =>
+                {
+                    ReadArticleComplete(success, title, link, content);
+                }));
+            }
+            else
+            {
+                if (success)
+                {
+                    this.labelControlTitle.Text = title;
+                    this.hyperLinkEditLink.Text = link;
+                    this.richEditControl1.HtmlText = content;
+                }
+                else
+                {
+                    XtraMessageBox.Show(this.LookAndFeel, "加载数据失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                pictureEditStatus.Visible = false;
             }
         }
 

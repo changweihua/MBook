@@ -63,11 +63,9 @@ namespace MBook
                //    p.Column(q => q.FolderName).ColumnName("f_display_name");
                //    p.Column(q => q.FolderPath).ColumnName("f_name");
                //});
-            using (var ctx = cfg.CreateDbContext())
-            {
-                var q = ctx.Set<MonoBookEntity.Index>();
-                var mapping = q.Entity;
-            }
+
+            DbConfiguration cfg2 = DbConfiguration
+               .Configure("MonoLog").AddClass<MonoBookEntity.MonoNote>();
 
             #region 单例
 

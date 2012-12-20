@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using EnterpriseObjects;
 using System.IO;
+using NLite.Data;
 
 namespace MBook
 {
@@ -82,6 +83,15 @@ namespace MBook
                     }
                 }
                 );
+            }
+        }
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var ctx = DbConfiguration.Items["MonoLog"].CreateDbContext())
+            {
+                ctx.Connection.Open();
+                logger.Info(ctx.Connection.State.ToString());
             }
         }
     }

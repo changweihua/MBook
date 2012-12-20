@@ -1,0 +1,2 @@
+21:47:51.8616 Button.OnClick => Control.OnClick => TestForm.button2_Click Closed
+21:48:43.4516 Button.OnClick => Control.OnClick => TestForm.button2_Click Open

@@ -69,6 +69,7 @@
     <Compile Include="Index.cs" />
     <Compile Include="Mail.cs" />
     <Compile Include="Manifest.cs" />
+    <Compile Include="MonoNote.cs" />
     <Compile Include="Northwind.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Profile.cs" />

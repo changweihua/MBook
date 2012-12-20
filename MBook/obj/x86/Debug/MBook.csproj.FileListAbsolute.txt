@@ -55,4 +55,5 @@ E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.RSSDetailForm.resources
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.RichEditTabPage.resources
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.TreeViewTabPage.resources
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.TreeListTabPage.resources
+E:\VS2010\MBook\MBook\bin\Debug\MySql.Data.dll
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.csprojResolveAssemblyReference.cache
