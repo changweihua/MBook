@@ -192,6 +192,7 @@ namespace MBook
                     Title = this.barEditTitle.EditValue == null ? "未命名" + DateTime.Now.ToString() : this.barEditTitle.EditValue.ToString(),
                     UpdateDate = DateTime.Now.ToString(),
                     RecordType = 1,
+                    IsSync = 0,
                     Tag = this.barEditTag.EditValue == null ? "" : this.barEditTag.EditValue.ToString()
                 };
             }
@@ -222,19 +223,7 @@ namespace MBook
                 if (count == 1)
                 {
                     UpdateIndex(note.Guid, note.RecordType);
-                    using (var ctx = DbConfiguration.Items["MonoLog"].CreateDbContext())
-                    {
-                        count = ctx.Set<MonoNote>().Insert(new MonoNote
-                        {
-                            Tag = note.Tag,
-                            Title = note.Title,
-                            UpdateDate = Convert.ToDateTime(note.UpdateDate),
-                            Guid = note.Guid,
-                            CreateDate = Convert.ToDateTime(note.CreateDate),
-                            Content = this.richEditControl1.HtmlText,
-                            Grade = 0
-                        });
-                    }
+                    
                     this.Close();
                 }
                 else

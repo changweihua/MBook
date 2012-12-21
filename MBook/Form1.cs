@@ -1339,6 +1339,12 @@ namespace MBook
 
         #endregion
 
+        private void barButtonItemSync_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SyncForm syncForm = new SyncForm();
+            syncForm.Show();
+        }
+
        
     }
 }
