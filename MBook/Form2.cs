@@ -231,7 +231,7 @@ namespace MBook
                             UpdateDate = Convert.ToDateTime(note.UpdateDate),
                             Guid = note.Guid,
                             CreateDate = Convert.ToDateTime(note.CreateDate),
-                            Content = this.richEditControl1.Text,
+                            Content = this.richEditControl1.HtmlText,
                             Grade = 0
                         });
                     }
