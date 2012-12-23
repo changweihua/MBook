@@ -9,40 +9,92 @@ using System.Windows.Forms;
 using NLite.Data;
 using MonoBookEntity;
 using DevExpress.XtraEditors;
+using System.Threading;
 
 namespace MBook
 {
     public partial class SyncForm : XtraForm
     {
 
+        #region 全局变量
+
+        int totalProgress = 0;
+        List<Note> notes = null;
+        List<MonoNote> monoNotes = null;
+        #endregion
+
         #region 公共方法
 
         /// <summary>
         /// 同步方法
         /// </summary>
-        void Sync()
+        int Sync(BackgroundWorker worker, DoWorkEventArgs e)
         {
-            int count = 0;
-            using (var ctx = DbConfiguration.Items["MonoLog"].CreateDbContext())
+            int max = (int)e.Argument;
+            int percent = 0;
+            for (int i = 1; i <= max; i++)
             {
-                count = ctx.Set<MonoNote>().Insert(new MonoNote
+                if (worker.CancellationPending)
                 {
-
-                });
+                    return i;
+                }
+                else
+                {
+                    percent = (int)((double)i / (double)max * 100);
+                    Note note = null;
+                    using (var ctx = DbConfiguration.Items["MonoLog"].CreateDbContext())
+                    {
+                        ctx.Set<MonoNote>().Insert(monoNotes[i-1]);
+                        note = notes.SingleOrDefault(n => n.Guid == monoNotes[i - 1].Guid);
+                    }
+                    note.IsSync = 1;
+                    using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
+                    {
+                        ctx.Set<Note>().Update(note);
+                    }
+                    worker.ReportProgress(percent, new KeyValuePair<int, string>(i, Guid.NewGuid().ToString()));
+                    Thread.Sleep(100);
+                }
             }
+
+            return max;
+           
         }
 
         /// <summary>
         /// 启动同步
         /// </summary>
-        private void StartSync()
+        private bool StartSync()
         {
-            int count = 0;
             using (var ctx = DbConfiguration.Items["Mono"].CreateDbContext())
             {
-                count = ctx.Set<Note>().Count(n => n.IsSync == 0);
+                totalProgress = ctx.Set<Note>().Count(n => n.IsSync == 0);
+                notes = ctx.Set<Note>().Where(n => n.IsSync == 0).ToList();
             }
-            XtraMessageBox.Show(this.LookAndFeel, count.ToString(), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (totalProgress == 0)
+            {
+                return false;
+            }
+
+            //XtraMessageBox.Show(this.LookAndFeel, count.ToString(), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.labelControl1.Text = "需要同步的记录数" + totalProgress.ToString();
+            monoNotes = new List<MonoNote>();
+            foreach (var note in notes)
+            {
+                monoNotes.Add(new MonoNote
+                {
+                    Content = EnterpriseObjects.EncryptHelper.DecryptAES(note.Content),
+                    CreateDate = Convert.ToDateTime(note.CreateDate),
+                    Guid = note.Guid,
+                    Tag = note.Tag,
+                    Title = note.Title,
+                    UpdateDate = Convert.ToDateTime(note.UpdateDate),
+                    Grade = 0
+                });
+            }
+
+            return true;
         }
 
         /// <summary>
@@ -51,7 +103,7 @@ namespace MBook
         /// <param name="msg"></param>
         void UpdateMemoEdit(string msg)
         {
-            this.memoEditDetail.Text = "123456\r\n123456\r\n123456\r\n123456\r\n123456\r\n";
+            this.memoEditDetail.Text += string.Format("{0}\r\n", msg);
         }
 
         #endregion
@@ -100,13 +152,20 @@ namespace MBook
         /// <param name="e"></param>
         private void simpleButtonSync_Click(object sender, EventArgs e)
         {
-            if (backgroundWorkerSync.IsBusy)
+            if (StartSync())
             {
-                this.backgroundWorkerSync.CancelAsync();
+                if (backgroundWorkerSync.IsBusy)
+                {
+                    this.backgroundWorkerSync.CancelAsync();
+                }
+                else
+                {
+                    this.backgroundWorkerSync.RunWorkerAsync(totalProgress);
+                }
             }
             else
             {
-                this.backgroundWorkerSync.RunWorkerAsync();
+                XtraMessageBox.Show(this.LookAndFeel, "没有找到需要同步的信息", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -158,8 +217,8 @@ namespace MBook
         /// <param name="e"></param>
         private void backgroundWorkerSync_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            XtraMessageBox.Show(this.LookAndFeel, "后台线程操作完毕", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //this.Close();
+            XtraMessageBox.Show(this.LookAndFeel, "同步完成", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.progressBarControlTotalProgress.EditValue = 0;
         }
 
         /// <summary>
@@ -169,12 +228,7 @@ namespace MBook
         /// <param name="e"></param>
         private void backgroundWorkerSync_DoWork(object sender, DoWorkEventArgs e)
         {
-            while (true)
-            {
-                int a = 0;
-                this.backgroundWorkerSync.ReportProgress(0);
-            }
-
+            e.Result = Sync(backgroundWorkerSync, e);
         }
 
         /// <summary>
@@ -184,7 +238,10 @@ namespace MBook
         /// <param name="e"></param>
         private void backgroundWorkerSync_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            UpdateMemoEdit("");
+            KeyValuePair<int, string> record = (KeyValuePair<int, string>)e.UserState;
+            labelControlCurrentStatus.Text = string.Format("已处理{0}条记录", record.Key);
+            progressBarControlTotalProgress.EditValue = e.ProgressPercentage;
+            UpdateMemoEdit(record.Value);
         }
 
         #endregion

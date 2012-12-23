@@ -42,6 +42,8 @@
             this.pictureBoxNormal = new System.Windows.Forms.PictureBox();
             this.backgroundWorkerSync = new System.ComponentModel.BackgroundWorker();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControlCurrentProgress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControlTotalProgress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditDetail.Properties)).BeginInit();
@@ -125,11 +127,11 @@
             // 
             // labelControlCurrentStatus
             // 
-            this.labelControlCurrentStatus.Location = new System.Drawing.Point(11, 9);
+            this.labelControlCurrentStatus.Location = new System.Drawing.Point(186, 78);
             this.labelControlCurrentStatus.Name = "labelControlCurrentStatus";
-            this.labelControlCurrentStatus.Size = new System.Drawing.Size(48, 14);
+            this.labelControlCurrentStatus.Size = new System.Drawing.Size(18, 14);
             this.labelControlCurrentStatus.TabIndex = 4;
-            this.labelControlCurrentStatus.Text = "详细信息";
+            this.labelControlCurrentStatus.Text = "xxx";
             // 
             // pictureBoxNormal
             // 
@@ -154,18 +156,36 @@
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.memoEditDetail);
-            this.panelControl1.Controls.Add(this.labelControlCurrentStatus);
+            this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Location = new System.Drawing.Point(12, 150);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(652, 258);
             this.panelControl1.TabIndex = 5;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(186, 54);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(70, 14);
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "labelControl1";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(5, 9);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(48, 14);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "详细信息";
             // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 420);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.labelControlCurrentStatus);
             this.Controls.Add(this.pictureBoxNormal);
             this.Controls.Add(this.pictureBoxTopMost);
             this.Controls.Add(this.simpleButtonHide);
@@ -210,5 +230,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.ComponentModel.BackgroundWorker backgroundWorkerSync;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
