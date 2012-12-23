@@ -62,6 +62,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupForm.Designer.cs">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContactForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <Compile Include="WeiboType.cs" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupForm.resx">
+      <DependentUpon>BackupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContactForm.resx">
       <DependentUpon>ContactForm.cs</DependentUpon>

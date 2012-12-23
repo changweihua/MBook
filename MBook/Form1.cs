@@ -455,6 +455,11 @@ namespace MBook
             this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.AllowUpdateToBeta;
         }
 
+        /// <summary>
+        /// 取消按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void barButtonItemCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             InitSettingPage();
@@ -475,6 +480,8 @@ namespace MBook
 
             XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
 
 
         /// <summary>
@@ -536,6 +543,30 @@ namespace MBook
                 this.barEditItemBackupPath.EditValue = fdb.SelectedPath;
             }
             fdb = null;
+        }
+
+
+        /// <summary>
+        /// 同步按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItemSync_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SyncForm syncForm = new SyncForm();
+            syncForm.Show();
+        }
+
+
+        /// <summary>
+        /// 备份按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItemBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BackupForm backupForm = new BackupForm();
+            backupForm.Show();
         }
 
         #endregion
@@ -1339,11 +1370,6 @@ namespace MBook
 
         #endregion
 
-        private void barButtonItemSync_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            SyncForm syncForm = new SyncForm();
-            syncForm.Show();
-        }
 
        
     }

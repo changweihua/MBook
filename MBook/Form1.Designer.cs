@@ -101,6 +101,7 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItemSync = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemBackup = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -268,10 +269,11 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barStaticItem3,
-            this.barButtonItemSync});
+            this.barButtonItemSync,
+            this.barButtonItemBackup});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 67;
+            this.ribbonControl1.MaxItemId = 68;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
@@ -454,8 +456,8 @@
             galleryItemGroup1.Caption = "Group1";
             galleryItem1.Caption = "日历";
             galleryItem1.Description = "calendar";
-            galleryItem1.HoverImageIndex = 0;
-            galleryItem1.ImageIndex = 0;
+            galleryItem1.HoverImageIndex = 5;
+            galleryItem1.ImageIndex = 5;
             galleryItem2.Caption = "任务";
             galleryItem2.Description = "task";
             galleryItem2.HoverImageIndex = 1;
@@ -502,6 +504,7 @@
             this.ribbonGallaryHoverImages.Images.SetKeyName(2, "20121206054954726_easyicon_cn_32.png");
             this.ribbonGallaryHoverImages.Images.SetKeyName(3, "2012121411355292_easyicon_cn_32.png");
             this.ribbonGallaryHoverImages.Images.SetKeyName(4, "20121216094519605_easyicon_cn_32.png");
+            this.ribbonGallaryHoverImages.Images.SetKeyName(5, "20121223085501101_easyicon_cn_32.png");
             // 
             // ribbonGallaryImages
             // 
@@ -512,6 +515,7 @@
             this.ribbonGallaryImages.Images.SetKeyName(2, "20121206054956428_easyicon_cn_24.png");
             this.ribbonGallaryImages.Images.SetKeyName(3, "20121214113550434_easyicon_cn_24.png");
             this.ribbonGallaryImages.Images.SetKeyName(4, "20121216094553671_easyicon_cn_24.png");
+            this.ribbonGallaryImages.Images.SetKeyName(5, "20121223085504108_easyicon_cn_24.png");
             // 
             // rgbiSkins
             // 
@@ -781,6 +785,14 @@
             this.barButtonItemSync.Name = "barButtonItemSync";
             this.barButtonItemSync.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSync_ItemClick);
             // 
+            // barButtonItemBackup
+            // 
+            this.barButtonItemBackup.Caption = "备份";
+            this.barButtonItemBackup.Id = 67;
+            this.barButtonItemBackup.LargeImageIndex = 33;
+            this.barButtonItemBackup.Name = "barButtonItemBackup";
+            this.barButtonItemBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemBackup_ItemClick);
+            // 
             // ribbonLargeImages
             // 
             this.ribbonLargeImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonLargeImages.ImageStream")));
@@ -818,6 +830,7 @@
             this.ribbonLargeImages.Images.SetKeyName(30, "20121207114720165_easyicon_cn_32.png");
             this.ribbonLargeImages.Images.SetKeyName(31, "20121207114949555_easyicon_cn_32.png");
             this.ribbonLargeImages.Images.SetKeyName(32, "20121221041329215_easyicon_cn_32.png");
+            this.ribbonLargeImages.Images.SetKeyName(33, "20121223084426509_easyicon_cn_32.png");
             // 
             // ribbonPage1
             // 
@@ -915,6 +928,7 @@
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItemSync);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItemBackup);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "数据";
             // 
@@ -1656,6 +1670,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem 分享到新浪微博ToolStripMenuItem;
         private DevExpress.XtraBars.BarButtonItem barButtonItemSync;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemBackup;
     }
 }
 
