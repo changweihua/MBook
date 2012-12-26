@@ -1,0 +1,16 @@
+E:\VS2010\MBook\MBookService\bin\Debug\NLog.config
+E:\VS2010\MBook\MBookService\bin\Debug\MBookService.exe.config
+E:\VS2010\MBook\MBookService\bin\Debug\MBookService.exe
+E:\VS2010\MBook\MBookService\bin\Debug\MBookService.pdb
+E:\VS2010\MBook\MBookService\bin\Debug\ELinq.dll
+E:\VS2010\MBook\MBookService\bin\Debug\NLite.dll
+E:\VS2010\MBook\MBookService\bin\Debug\NLog.dll
+E:\VS2010\MBook\MBookService\bin\Debug\System.Data.SQLite.dll
+E:\VS2010\MBook\MBookService\bin\Debug\System.Data.SQLite.Linq.dll
+E:\VS2010\MBook\MBookService\bin\Debug\ELinq.xml
+E:\VS2010\MBook\MBookService\bin\Debug\NLite.xml
+E:\VS2010\MBook\MBookService\bin\Debug\NLog.xml
+E:\VS2010\MBook\MBookService\obj\x86\Debug\MBookService.ProjectInstaller.resources
+E:\VS2010\MBook\MBookService\obj\x86\Debug\MBookService.csproj.GenerateResource.Cache
+E:\VS2010\MBook\MBookService\obj\x86\Debug\MBookService.exe
+E:\VS2010\MBook\MBookService\obj\x86\Debug\MBookService.pdb

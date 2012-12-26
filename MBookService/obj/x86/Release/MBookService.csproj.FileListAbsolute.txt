@@ -1,0 +1,14 @@
+E:\VS2010\MBook\MBookService\bin\Release\NLog.config
+E:\VS2010\MBook\MBookService\bin\Release\MBookService.exe.config
+E:\VS2010\MBook\MBookService\bin\Release\MBookService.exe
+E:\VS2010\MBook\MBookService\bin\Release\MBookService.pdb
+E:\VS2010\MBook\MBookService\bin\Release\ELinq.dll
+E:\VS2010\MBook\MBookService\bin\Release\NLite.dll
+E:\VS2010\MBook\MBookService\bin\Release\NLog.dll
+E:\VS2010\MBook\MBookService\bin\Release\ELinq.xml
+E:\VS2010\MBook\MBookService\bin\Release\NLite.xml
+E:\VS2010\MBook\MBookService\bin\Release\NLog.xml
+E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.ProjectInstaller.resources
+E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.csproj.GenerateResource.Cache
+E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.exe
+E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.pdb

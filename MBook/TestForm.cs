@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using EnterpriseObjects;
 using System.IO;
 using NLite.Data;
+using System.Diagnostics;
+using System.ServiceProcess;
 
 namespace MBook
 {
@@ -93,6 +95,38 @@ namespace MBook
                 ctx.Connection.Open();
                 logger.Info(ctx.Connection.State.ToString());
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string CurrentDirectory = System.Environment.CurrentDirectory;
+
+            Process process = new Process();
+
+            //process.StartInfo.UseShellExecute = false;
+
+            process.StartInfo.FileName = "Install.bat";
+
+           // process.StartInfo.CreateNoWindow = true;
+
+            process.Start();
+
+            System.Environment.CurrentDirectory = CurrentDirectory;
+
+            //ServiceController serviceController = new ServiceController("MBookService");
+            //if (serviceController != null)
+            //{
+            //    serviceController.Start(new string[] {  });
+            //}
+            //else
+            //{
+            //    MessageBox.Show("没有找到指定的服务");
+            //}
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + @"\Uninstall.bat");
         }
     }
 }

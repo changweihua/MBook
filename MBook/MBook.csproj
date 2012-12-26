@@ -474,6 +474,10 @@
       <Project>{199D55C4-4C6F-4776-A664-FE819FEE0DA7}</Project>
       <Name>EnterpriseObjects</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MBookService\MBookService.csproj">
+      <Project>{044BA68D-2D2C-4341-A8DB-8B25C3917950}</Project>
+      <Name>MBookService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonoBookEntity\MonoBookEntity.csproj">
       <Project>{EF3C29F4-4269-43B7-9675-8664A4FD60EB}</Project>
       <Name>MonoBookEntity</Name>
@@ -544,6 +548,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />

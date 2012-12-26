@@ -133,7 +133,7 @@ namespace MBook
 
                 //if (!mutexWasCreated)
                 //{
-                Application.Run(new Form1());
+                Application.Run(new TestForm());
                 //}
                 //else
                 //{
