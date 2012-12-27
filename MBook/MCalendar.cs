@@ -10,6 +10,9 @@ using DevExpress.XtraEditors;
 using NLite.Data;
 using MonoBookEntity;
 using DevExpress.XtraScheduler;
+using System.ServiceProcess;
+using System.Threading;
+using System.Diagnostics;
 
 namespace MBook
 {
@@ -163,6 +166,40 @@ namespace MBook
             }
 
             //this.schedulerStorage1.Appointments.BeginUpdate();
+        }
+
+        private void simpleButtonSchedulerService_Click(object sender, EventArgs e)
+        {
+            string CurrentDirectory = System.Environment.CurrentDirectory;
+
+            Process process = new Process();
+
+            //process.StartInfo.UseShellExecute = false;
+
+            process.StartInfo.FileName = "Install.bat";
+
+            // process.StartInfo.CreateNoWindow = true;
+
+            process.Start();
+
+            System.Environment.CurrentDirectory = CurrentDirectory;
+
+            ServiceController serviceController = new ServiceController("MBookService");
+            Thread.Sleep(10000);
+            if (serviceController.Status == ServiceControllerStatus.Stopped)
+            {
+                serviceController.Start(new string[] {  System.Windows.Forms.Application.StartupPath + @"\Data.db", "System.Data.SQLite" });
+            }
+            else
+            {
+                MessageBox.Show("没有找到指定的服务");
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Process.Start(System.Windows.Forms.Application.StartupPath + @"\Uninstall.bat");
+
         }
 
     }

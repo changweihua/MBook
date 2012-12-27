@@ -33,8 +33,13 @@ namespace MBookService
                 timer = new System.Timers.Timer();
                 timer.Interval = 1000;
                 timer.Elapsed += new System.Timers.ElapsedEventHandler(timer_Elapsed);
-                logger.Trace(DbConfiguration.Configure("MBook").ConnectionString);
-                cfg = DbConfiguration.Configure("MBook").AddClass<UserScheduler>();
+                logger.Trace(args[0]);
+                logger.Trace(args[1]);
+                logger.Trace(DbConfiguration.Configure(DbConfiguration.BuildSQLiteConnectionString(args[0], false), args[1]).ConnectionString);
+                cfg = DbConfiguration.Configure(DbConfiguration.BuildSQLiteConnectionString(args[0], false), args[1]).AddClass<UserScheduler>();
+                //logger.Trace(DbConfiguration.Configure(DbConfiguration.BuildSQLiteConnectionString(@"E:\VS2010\MBook\MBook\bin\Debug\Data.db", false), "System.Data.SQLite").ConnectionString);
+                //cfg = DbConfiguration.Configure(DbConfiguration.BuildSQLiteConnectionString(@"E:\VS2010\MBook\MBook\bin\Debug\Data.db", false), "System.Data.SQLite").AddClass<UserScheduler>();
+                logger.Trace(cfg == null);
                 logger.Debug("注册数据库");
                 timer.Enabled = true;
                 logger.Debug("启动Timer控件");
@@ -43,8 +48,9 @@ namespace MBookService
             }
             catch (Exception ex)
             {
-                logger.Error(DbConfiguration.Configure("MBook").ConnectionString);
-                logger.Error(ex.Message);
+                //logger.Error(DbConfiguration.Configure(DbConfiguration.BuildSQLiteConnectionString(@"E:\VS2010\MBook\MBook\bin\Debug\Data.db", false), "System.Data.SQLite").ConnectionString);
+                logger.Error(DbConfiguration.Configure(DbConfiguration.BuildSQLiteConnectionString(args[0], false), args[1]).ConnectionString);
+                logger.Error("启动发生错误" + ex.Message);
             }
         }
 
@@ -53,6 +59,7 @@ namespace MBookService
             try
             {
                 DateTime now = e.SignalTime;
+                logger.Debug("当前时间" + now.ToString("yyyy-MM-dd hh:mm:ss"));
                 scheduler = schedulers.Count > 0 ? schedulers[0] : null;
                 if (scheduler != null)
                 {
@@ -79,7 +86,7 @@ namespace MBookService
         /// </summary>
         void RefreshScheduler()
         {
-            using (var ctx = DbConfiguration.Items["MBook"].CreateDbContext())
+            using (var ctx = cfg.CreateDbContext())
             {
                 schedulers = ctx.Set<UserScheduler>().Where(s => DateTime.Compare(s.AppStart, DateTime.Now) > 0 ? true : false).OrderBy(s => s.AppStart).ToList();
             }
@@ -91,6 +98,7 @@ namespace MBookService
         void Remind()
         {
             logger.Debug(scheduler.AppSubject + "时间到了");
+            logger.Trace("开始调用提醒窗体");
             scheduler = null;
         }
 

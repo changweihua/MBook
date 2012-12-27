@@ -82,3 +82,5 @@ E:\VS2010\MBook\MCalendar\obj\x86\Debug\zh\WizCalendar.resources.dll
 E:\VS2010\MBook\MCalendar\obj\x86\Debug\WizCalendar.exe
 E:\VS2010\MBook\MCalendar\obj\x86\Debug\WizCalendar.pdb
 E:\VS2010\MBook\MCalendar\obj\x86\Debug\MCalendar.csproj.GenerateResource.Cache
+E:\VS2010\MBook\MCalendar\obj\x86\Debug\MCalendar.csprojResolveAssemblyReference.cache
+E:\VS2010\MBook\MCalendar\obj\x86\Debug\MCalendar.MindForm.resources

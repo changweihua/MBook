@@ -11,6 +11,7 @@ using System.IO;
 using NLite.Data;
 using System.Diagnostics;
 using System.ServiceProcess;
+using System.Threading;
 
 namespace MBook
 {
@@ -113,15 +114,16 @@ namespace MBook
 
             System.Environment.CurrentDirectory = CurrentDirectory;
 
-            //ServiceController serviceController = new ServiceController("MBookService");
-            //if (serviceController != null)
-            //{
-            //    serviceController.Start(new string[] {  });
-            //}
-            //else
-            //{
-            //    MessageBox.Show("没有找到指定的服务");
-            //}
+            ServiceController serviceController = new ServiceController("MBookService");
+            Thread.Sleep(10000);
+            if (serviceController.Status == ServiceControllerStatus.Stopped)
+            {
+                serviceController.Start(new string[] { Application.StartupPath + @"\Data.db", "System.Data.SQLite" });
+            }
+            else
+            {
+                MessageBox.Show("没有找到指定的服务");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

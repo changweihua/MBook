@@ -104,8 +104,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MindForm.Designer.cs">
+      <DependentUpon>MindForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserScheduler.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.zh.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindForm.resx">
+      <DependentUpon>MindForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,6 +150,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\icons\20121227045130108_easyicon_cn_24.ico" />
     <Content Include="images\icons\calendar.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

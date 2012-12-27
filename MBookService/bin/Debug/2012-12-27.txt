@@ -1,0 +1,16 @@
+TRACE E:\VS2010\MBook\MBook\bin\Debug\Data.db
+TRACE System.Data.SQLite
+TRACE Data Source=E:\VS2010\MBook\MBook\bin\Debug\Data.db;FailIfMissing=False;
+TRACE False
+DEBUG 注册数据库
+DEBUG 启动Timer控件
+DEBUG 启动服务
+DEBUG 当前时间2012-12-27 04:23:23
+DEBUG 当前时间2012-12-27 04:23:24
+DEBUG 当前时间2012-12-27 04:23:25
+DEBUG 当前时间2012-12-27 04:23:26
+DEBUG 当前时间2012-12-27 04:23:27
+DEBUG 当前时间2012-12-27 04:23:28
+DEBUG 当前时间2012-12-27 04:23:29
+DEBUG 当前时间2012-12-27 04:23:30
+TRACE 停止服务

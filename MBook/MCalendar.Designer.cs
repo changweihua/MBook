@@ -37,8 +37,10 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.schedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButtonSchedulerService = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).BeginInit();
@@ -134,6 +136,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.simpleButtonSchedulerService);
             this.groupControl1.Controls.Add(this.simpleButtonSave);
             this.groupControl1.Controls.Add(this.dateNavigator1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -142,6 +146,15 @@
             this.groupControl1.Size = new System.Drawing.Size(233, 454);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "月历";
+            // 
+            // simpleButtonSave
+            // 
+            this.simpleButtonSave.Location = new System.Drawing.Point(12, 234);
+            this.simpleButtonSave.Name = "simpleButtonSave";
+            this.simpleButtonSave.Size = new System.Drawing.Size(203, 31);
+            this.simpleButtonSave.TabIndex = 1;
+            this.simpleButtonSave.Text = "保存";
+            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click);
             // 
             // groupControl3
             // 
@@ -153,14 +166,23 @@
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "事件";
             // 
-            // simpleButtonSave
+            // simpleButtonSchedulerService
             // 
-            this.simpleButtonSave.Location = new System.Drawing.Point(12, 234);
-            this.simpleButtonSave.Name = "simpleButtonSave";
-            this.simpleButtonSave.Size = new System.Drawing.Size(203, 31);
-            this.simpleButtonSave.TabIndex = 1;
-            this.simpleButtonSave.Text = "保存";
-            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click);
+            this.simpleButtonSchedulerService.Location = new System.Drawing.Point(13, 281);
+            this.simpleButtonSchedulerService.Name = "simpleButtonSchedulerService";
+            this.simpleButtonSchedulerService.Size = new System.Drawing.Size(203, 31);
+            this.simpleButtonSchedulerService.TabIndex = 2;
+            this.simpleButtonSchedulerService.Text = "创建并启动提醒服务";
+            this.simpleButtonSchedulerService.Click += new System.EventHandler(this.simpleButtonSchedulerService_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(13, 334);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(203, 31);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "停止并卸载提醒服务";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // MCalendar
             // 
@@ -197,5 +219,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
         private DevExpress.XtraScheduler.SchedulerStorage schedulerStorage1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonSchedulerService;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

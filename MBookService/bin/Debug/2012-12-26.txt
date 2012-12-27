@@ -339,3 +339,4 @@ DEBUG 当前时间2012/12/26 23:00:00
 DEBUG 时间对比0
 DEBUG 测试
 DEBUG 测试时间到了
+TRACE 停止服务
