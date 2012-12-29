@@ -38,5 +38,8 @@
     <Setting Name="UserEmail" Type="System.String" Scope="User">
       <Value Profile="(Default)">changweihua@outlook.com</Value>
     </Setting>
+    <Setting Name="AutoRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

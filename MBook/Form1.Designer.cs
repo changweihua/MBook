@@ -43,23 +43,16 @@
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem11 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem12 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem13 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem14 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem15 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem16 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem17 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem18 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("群组1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("我的群组", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("快速搜索");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("快速搜索");
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mBookMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -102,6 +95,8 @@
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItemSync = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -110,13 +105,13 @@
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageSetting = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -149,13 +144,10 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.tvFolders = new System.Windows.Forms.TreeView();
-            this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
-            this.treeView2 = new System.Windows.Forms.TreeView();
             this.navBarGroupControlContainer3 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.treeView3 = new System.Windows.Forms.TreeView();
             this.navBarGroupControlContainer4 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.btnEditSearch = new DevExpress.XtraEditors.ButtonEdit();
-            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbgImages = new System.Windows.Forms.ImageList(this.components);
@@ -188,6 +180,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -220,7 +213,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
             this.navBarControl2.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
-            this.navBarGroupControlContainer2.SuspendLayout();
             this.navBarGroupControlContainer3.SuspendLayout();
             this.navBarGroupControlContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditSearch.Properties)).BeginInit();
@@ -270,10 +262,11 @@
             this.barButtonItem3,
             this.barStaticItem3,
             this.barButtonItemSync,
-            this.barButtonItemBackup});
+            this.barButtonItemBackup,
+            this.barEditItem1});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 68;
+            this.ribbonControl1.MaxItemId = 70;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
@@ -307,9 +300,10 @@
             this.repositoryItemButtonEdit6,
             this.repositoryItemButtonEdit7,
             this.repositoryItemTextEdit5,
-            this.repositoryItemTextEdit6});
+            this.repositoryItemTextEdit6,
+            this.repositoryItemCheckEdit3});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPageSetting;
+            this.ribbonControl1.SelectedPage = this.ribbonPage2;
             this.ribbonControl1.Size = new System.Drawing.Size(1190, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
@@ -376,6 +370,7 @@
             this.ribbonSmallImages.Images.SetKeyName(20, "20121203082940739_easyicon_cn_16.png");
             this.ribbonSmallImages.Images.SetKeyName(21, "20121207114721583_easyicon_cn_24.png");
             this.ribbonSmallImages.Images.SetKeyName(22, "20121207114813949_easyicon_cn_24.png");
+            this.ribbonSmallImages.Images.SetKeyName(23, "20121229045900264_easyicon_cn_16.png");
             // 
             // barButtonItem1
             // 
@@ -625,61 +620,41 @@
             galleryItem7.Description = "tencent";
             galleryItem7.HoverImageIndex = 1;
             galleryItem7.ImageIndex = 1;
-            galleryItem8.Caption = "搜狐微博";
-            galleryItem8.Description = "sohu";
-            galleryItem8.HoverImageIndex = 2;
-            galleryItem8.ImageIndex = 2;
-            galleryItem9.Caption = "网易空间";
-            galleryItem9.Description = "netease";
-            galleryItem9.HoverImageIndex = 3;
-            galleryItem9.ImageIndex = 3;
-            galleryItem10.Caption = "人人网";
-            galleryItem10.Description = "renren";
-            galleryItem10.HoverImageIndex = 4;
-            galleryItem10.ImageIndex = 4;
-            galleryItem11.Caption = "开心网";
-            galleryItem11.Description = "kaixin";
-            galleryItem11.HoverImageIndex = 5;
-            galleryItem11.ImageIndex = 5;
-            galleryItem12.Caption = "QQ空间";
-            galleryItem12.Description = "qzone";
-            galleryItem12.HoverImageIndex = 6;
-            galleryItem12.ImageIndex = 6;
-            galleryItem13.Caption = "豆瓣日记";
-            galleryItem13.Description = "douban";
-            galleryItem13.HoverImageIndex = 7;
-            galleryItem13.ImageIndex = 7;
+            galleryItem8.Caption = "人人网";
+            galleryItem8.Description = "renren";
+            galleryItem8.HoverImageIndex = 4;
+            galleryItem8.ImageIndex = 4;
+            galleryItem9.Caption = "QQ空间";
+            galleryItem9.Description = "qzone";
+            galleryItem9.HoverImageIndex = 6;
+            galleryItem9.ImageIndex = 6;
             galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem6,
             galleryItem7,
             galleryItem8,
-            galleryItem9,
+            galleryItem9});
+            galleryItemGroup4.Caption = "国外";
+            galleryItem10.Caption = "Item9";
+            galleryItem10.HoverImageIndex = 10;
+            galleryItem10.ImageIndex = 9;
+            galleryItem11.Caption = "Item10";
+            galleryItem11.HoverImageIndex = 8;
+            galleryItem11.ImageIndex = 8;
+            galleryItem12.Caption = "Item11";
+            galleryItem12.HoverImageIndex = 11;
+            galleryItem12.ImageIndex = 10;
+            galleryItem13.Caption = "Item12";
+            galleryItem13.HoverImageIndex = 12;
+            galleryItem13.ImageIndex = 11;
+            galleryItem14.Caption = "Item13";
+            galleryItem14.HoverImageIndex = 9;
+            galleryItem14.ImageIndex = 12;
+            galleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem10,
             galleryItem11,
             galleryItem12,
-            galleryItem13});
-            galleryItemGroup4.Caption = "国外";
-            galleryItem14.Caption = "Item9";
-            galleryItem14.HoverImageIndex = 10;
-            galleryItem14.ImageIndex = 9;
-            galleryItem15.Caption = "Item10";
-            galleryItem15.HoverImageIndex = 8;
-            galleryItem15.ImageIndex = 8;
-            galleryItem16.Caption = "Item11";
-            galleryItem16.HoverImageIndex = 11;
-            galleryItem16.ImageIndex = 10;
-            galleryItem17.Caption = "Item12";
-            galleryItem17.HoverImageIndex = 12;
-            galleryItem17.ImageIndex = 11;
-            galleryItem18.Caption = "Item13";
-            galleryItem18.HoverImageIndex = 9;
-            galleryItem18.ImageIndex = 12;
-            galleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem14,
-            galleryItem15,
-            galleryItem16,
-            galleryItem17,
-            galleryItem18});
+            galleryItem13,
+            galleryItem14});
             this.rgbiSocial.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             galleryItemGroup3,
             galleryItemGroup4});
@@ -793,6 +768,24 @@
             this.barButtonItemBackup.Name = "barButtonItemBackup";
             this.barButtonItemBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemBackup_ItemClick);
             // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Edit = this.repositoryItemCheckEdit3;
+            this.barEditItem1.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
+            this.barEditItem1.Id = 69;
+            this.barEditItem1.Name = "barEditItem1";
+            this.barEditItem1.Width = 85;
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Caption = "开机启动";
+            this.repositoryItemCheckEdit3.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.repositoryItemCheckEdit3.FullFocusRect = true;
+            this.repositoryItemCheckEdit3.GlyphAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
             // ribbonLargeImages
             // 
             this.ribbonLargeImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonLargeImages.ImageStream")));
@@ -873,8 +866,7 @@
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup10});
+            this.ribbonPageGroup4});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "个人信息";
             // 
@@ -884,22 +876,17 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "第三方分享";
             // 
-            // ribbonPageGroup10
-            // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.barStaticItem3);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "第三方订阅";
-            // 
             // ribbonPageSetting
             // 
             this.ribbonPageSetting.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup6,
             this.ribbonPageGroup7,
-            this.ribbonPageGroup8,
-            this.ribbonPageGroup9});
+            this.ribbonPageGroup9,
+            this.ribbonPageGroup13,
+            this.ribbonPageGroup8});
             this.ribbonPageSetting.Name = "ribbonPageSetting";
-            this.ribbonPageSetting.Text = "选项";
+            this.ribbonPageSetting.Text = "系统选项";
             // 
             // ribbonPageGroup5
             // 
@@ -925,19 +912,25 @@
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "自动升级";
             // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItemSync);
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItemBackup);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "数据";
-            // 
             // ribbonPageGroup9
             // 
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItemSave);
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItemCancel);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             this.ribbonPageGroup9.Text = "按钮区域";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.barEditItem1);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageGroup13.Text = "启动项";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItemSync);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItemBackup);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "数据";
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -1152,13 +1145,11 @@
             // 
             this.navBarControl2.ActiveGroup = this.navBarGroup2;
             this.navBarControl2.Controls.Add(this.navBarGroupControlContainer1);
-            this.navBarControl2.Controls.Add(this.navBarGroupControlContainer2);
             this.navBarControl2.Controls.Add(this.navBarGroupControlContainer3);
             this.navBarControl2.Controls.Add(this.navBarGroupControlContainer4);
             this.navBarControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl2.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup2,
-            this.navBarGroup3,
             this.navBarGroup4,
             this.navBarGroup1});
             this.navBarControl2.LargeImages = this.nbgImages;
@@ -1198,27 +1189,6 @@
             this.tvFolders.Size = new System.Drawing.Size(168, 146);
             this.tvFolders.TabIndex = 0;
             // 
-            // navBarGroupControlContainer2
-            // 
-            this.navBarGroupControlContainer2.Controls.Add(this.treeView2);
-            this.navBarGroupControlContainer2.Name = "navBarGroupControlContainer2";
-            this.navBarGroupControlContainer2.Size = new System.Drawing.Size(168, 76);
-            this.navBarGroupControlContainer2.TabIndex = 1;
-            // 
-            // treeView2
-            // 
-            this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView2.Location = new System.Drawing.Point(0, 0);
-            this.treeView2.Name = "treeView2";
-            treeNode1.Name = "节点1";
-            treeNode1.Text = "群组1";
-            treeNode2.Name = "节点0";
-            treeNode2.Text = "我的群组";
-            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            this.treeView2.Size = new System.Drawing.Size(168, 76);
-            this.treeView2.TabIndex = 0;
-            // 
             // navBarGroupControlContainer3
             // 
             this.navBarGroupControlContainer3.Controls.Add(this.treeView3);
@@ -1232,10 +1202,10 @@
             this.treeView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView3.Location = new System.Drawing.Point(0, 0);
             this.treeView3.Name = "treeView3";
-            treeNode3.Name = "节点0";
-            treeNode3.Text = "快速搜索";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "快速搜索";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode1});
             this.treeView3.Size = new System.Drawing.Size(168, 76);
             this.treeView3.TabIndex = 0;
             // 
@@ -1259,16 +1229,6 @@
             this.btnEditSearch.TabIndex = 0;
             this.btnEditSearch.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditSearch_ButtonPressed);
             this.btnEditSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnEditSearch_KeyPress);
-            // 
-            // navBarGroup3
-            // 
-            this.navBarGroup3.Caption = "群组";
-            this.navBarGroup3.ControlContainer = this.navBarGroupControlContainer2;
-            this.navBarGroup3.GroupClientHeight = 80;
-            this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
-            this.navBarGroup3.LargeImageIndex = 1;
-            this.navBarGroup3.Name = "navBarGroup3";
-            this.navBarGroup3.ItemChanged += new System.EventHandler(this.navBarGroup_ItemChanged);
             // 
             // navBarGroup4
             // 
@@ -1506,6 +1466,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -1538,7 +1499,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).EndInit();
             this.navBarControl2.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
-            this.navBarGroupControlContainer2.ResumeLayout(false);
             this.navBarGroupControlContainer3.ResumeLayout(false);
             this.navBarGroupControlContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEditSearch.Properties)).EndInit();
@@ -1620,9 +1580,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
         private System.Windows.Forms.TreeView tvFolders;
-        private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer2;
-        private System.Windows.Forms.TreeView treeView2;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer3;
         private System.Windows.Forms.TreeView treeView3;
@@ -1665,12 +1622,14 @@
         private System.Windows.Forms.ImageList alertControlImages;
         private System.Windows.Forms.ToolStripMenuItem tsmiEmail;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarStaticItem barStaticItem3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem 分享到新浪微博ToolStripMenuItem;
         private DevExpress.XtraBars.BarButtonItem barButtonItemSync;
         private DevExpress.XtraBars.BarButtonItem barButtonItemBackup;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
     }
 }
 
