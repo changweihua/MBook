@@ -12,3 +12,9 @@ E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.ProjectInstaller.resou
 E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.csproj.GenerateResource.Cache
 E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.exe
 E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.pdb
+E:\VS2010\MBook\MBookService\bin\Release\x64\SQLite.Interop.dll
+E:\VS2010\MBook\MBookService\bin\Release\x86\SQLite.Interop.dll
+E:\VS2010\MBook\MBookService\bin\Release\System.Data.SQLite.dll
+E:\VS2010\MBook\MBookService\bin\Release\System.Data.SQLite.Linq.dll
+E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.csprojResolveAssemblyReference.cache
+E:\VS2010\MBook\MBookService\obj\x86\Release\MBookService.RemindForm.resources

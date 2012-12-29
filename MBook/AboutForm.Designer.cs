@@ -199,8 +199,8 @@
             // 
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.EditValue = "开发平台 ---- Windows 7 SP1\r\n开发工具 ---- Visual Studio 2010 SP1\r\n开发语言 ---- C# .NET Fram" +
-    "ework 3.5\r\n开发人员 ---- 常伟华\r\n项目地址 ---- https://github.com/CMONO/MBook\r\n项目微博 ---- ht" +
-    "tp://t.qq.com/monobook";
+    "ework 3.5\r\n开发人员 ---- 常伟华\r\n项目地址 ---- https://github.com/changweihua/mbook\r\n项目微博 -" +
+    "--- http://t.qq.com/monobook";
             this.memoEdit1.Location = new System.Drawing.Point(2, 24);
             this.memoEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.memoEdit1.Name = "memoEdit1";
