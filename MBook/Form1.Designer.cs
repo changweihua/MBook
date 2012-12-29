@@ -95,8 +95,9 @@
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItemSync = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemBackup = new DevExpress.XtraBars.BarButtonItem();
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.barEditItemRunWithSystem = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.barButtonItemSaveRunWithSystem = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -131,6 +132,7 @@
             this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
@@ -180,7 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -200,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.hideContainerRight.SuspendLayout();
@@ -263,10 +266,11 @@
             this.barStaticItem3,
             this.barButtonItemSync,
             this.barButtonItemBackup,
-            this.barEditItem1});
+            this.barEditItemRunWithSystem,
+            this.barButtonItemSaveRunWithSystem});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 70;
+            this.ribbonControl1.MaxItemId = 72;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
@@ -301,9 +305,10 @@
             this.repositoryItemButtonEdit7,
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6,
-            this.repositoryItemCheckEdit3});
+            this.repositoryItemCheckEdit3,
+            this.repositoryItemCheckEdit4});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPage2;
+            this.ribbonControl1.SelectedPage = this.ribbonPageSetting;
             this.ribbonControl1.Size = new System.Drawing.Size(1190, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
@@ -768,23 +773,30 @@
             this.barButtonItemBackup.Name = "barButtonItemBackup";
             this.barButtonItemBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemBackup_ItemClick);
             // 
-            // barEditItem1
+            // barEditItemRunWithSystem
             // 
-            this.barEditItem1.Edit = this.repositoryItemCheckEdit3;
-            this.barEditItem1.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
-            this.barEditItem1.Id = 69;
-            this.barEditItem1.Name = "barEditItem1";
-            this.barEditItem1.Width = 85;
+            this.barEditItemRunWithSystem.Caption = "开机启动";
+            this.barEditItemRunWithSystem.CaptionAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.barEditItemRunWithSystem.Edit = this.repositoryItemCheckEdit4;
+            this.barEditItemRunWithSystem.EditValue = false;
+            this.barEditItemRunWithSystem.Id = 70;
+            this.barEditItemRunWithSystem.ImageIndex = 23;
+            this.barEditItemRunWithSystem.Name = "barEditItemRunWithSystem";
             // 
-            // repositoryItemCheckEdit3
+            // repositoryItemCheckEdit4
             // 
-            this.repositoryItemCheckEdit3.AutoHeight = false;
-            this.repositoryItemCheckEdit3.Caption = "开机启动";
-            this.repositoryItemCheckEdit3.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.repositoryItemCheckEdit3.FullFocusRect = true;
-            this.repositoryItemCheckEdit3.GlyphAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
-            this.repositoryItemCheckEdit3.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.repositoryItemCheckEdit4.AutoHeight = false;
+            this.repositoryItemCheckEdit4.FullFocusRect = true;
+            this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
+            this.repositoryItemCheckEdit4.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Inactive;
+            // 
+            // barButtonItemSaveRunWithSystem
+            // 
+            this.barButtonItemSaveRunWithSystem.Caption = "保存设置";
+            this.barButtonItemSaveRunWithSystem.Id = 71;
+            this.barButtonItemSaveRunWithSystem.ImageIndex = 21;
+            this.barButtonItemSaveRunWithSystem.Name = "barButtonItemSaveRunWithSystem";
+            this.barButtonItemSaveRunWithSystem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSaveRunWithSystem_ItemClick);
             // 
             // ribbonLargeImages
             // 
@@ -921,7 +933,8 @@
             // 
             // ribbonPageGroup13
             // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.barEditItem1);
+            this.ribbonPageGroup13.ItemLinks.Add(this.barEditItemRunWithSystem);
+            this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItemSaveRunWithSystem);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "启动项";
             // 
@@ -1047,6 +1060,16 @@
             this.repositoryItemButtonEdit7.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit7.Name = "repositoryItemButtonEdit7";
+            // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Caption = "开机启动";
+            this.repositoryItemCheckEdit3.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.repositoryItemCheckEdit3.FullFocusRect = true;
+            this.repositoryItemCheckEdit3.GlyphAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             // 
             // xtraTabbedMdiManager1
             // 
@@ -1466,7 +1489,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -1486,6 +1509,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.hideContainerRight.ResumeLayout(false);
@@ -1627,9 +1651,11 @@
         private System.Windows.Forms.ToolStripMenuItem 分享到新浪微博ToolStripMenuItem;
         private DevExpress.XtraBars.BarButtonItem barButtonItemSync;
         private DevExpress.XtraBars.BarButtonItem barButtonItemBackup;
-        private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.BarEditItem barEditItemRunWithSystem;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemSaveRunWithSystem;
     }
 }
 

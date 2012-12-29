@@ -20,6 +20,7 @@ using NLite.Data;
 using MonoBookEntity;
 using System.IO;
 using NLite.Dynamic;
+using Microsoft.Win32;
 
 
 namespace MBook
@@ -453,6 +454,19 @@ namespace MBook
             this.barEditItemBackupPath.EditValue = Properties.Settings.Default.BackupPath;
             this.barEditItemAllowAutoUpdate.EditValue = Properties.Settings.Default.AllowUpdate;
             this.barEditItemAllowUpdateToDevelop.EditValue = Properties.Settings.Default.AllowUpdateToBeta;
+            //this.barEditItemRunWithSystem.EditValue = Properties.Settings.Default.AutoRun;
+            RegistryKey R_local = Registry.LocalMachine;
+            RegistryKey R_run = R_local.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+            if (R_run.GetValue("MonoBook") == null)
+            {
+               barEditItemRunWithSystem.EditValue = false;
+            }
+            else
+            {
+                barEditItemRunWithSystem.EditValue = true;
+            }
+            R_run.Close();
+            R_local.Close();
         }
 
         /// <summary>
@@ -465,6 +479,41 @@ namespace MBook
             InitSettingPage();
         }
 
+        /// <summary>
+        /// 保存开机启动
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItemSaveRunWithSystem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string startPath = System.Windows.Forms.Application.ExecutablePath;
+
+            if ((bool)barEditItemRunWithSystem.EditValue)
+            {
+                RegistryKey r_local = Registry.LocalMachine;
+                RegistryKey r_run = r_local.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+                r_run.SetValue("MonoBook", startPath);
+                r_run.Close();
+                r_local.Close();
+            }
+            else
+            {
+                try
+                {
+                    RegistryKey R_local = Registry.LocalMachine;
+                    RegistryKey R_run = R_local.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+                    R_run.DeleteValue("MonoBook", false);
+                    R_run.Close();
+                    R_local.Close();
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                }
+            }
+            
+        }
+       
 
         /// <summary>
         /// 检查程序更新
@@ -480,9 +529,6 @@ namespace MBook
 
             XtraMessageBox.Show(this.LookAndFeel, "已经是最新了，无需更新", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
-
 
         /// <summary>
         /// 保存程序配置信息
@@ -503,6 +549,7 @@ namespace MBook
                 Properties.Settings.Default.BackupPath = this.barEditItemBackupPath.EditValue.ToString();
                 Properties.Settings.Default.AllowUpdate = (bool)this.barEditItemAllowAutoUpdate.EditValue;
                 Properties.Settings.Default.AllowUpdateToBeta = (bool)this.barEditItemAllowUpdateToDevelop.EditValue;
+                //Properties.Settings.Default.AutoRun = (bool)this.barEditItemRunWithSystem.EditValue;
                 //保存配置
                 Properties.Settings.Default.Save();
 
@@ -1369,7 +1416,6 @@ namespace MBook
         }
 
         #endregion
-
 
        
     }
