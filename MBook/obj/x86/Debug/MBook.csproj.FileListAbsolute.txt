@@ -61,3 +61,4 @@ E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.SyncForm.resources
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.BackupForm.resources
 E:\VS2010\MBook\MBook\bin\Debug\MBookService.exe
 E:\VS2010\MBook\MBook\bin\Debug\MBookService.pdb
+E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.MIndForm.resources

@@ -24,6 +24,11 @@ namespace MBook
 
         #endregion
 
+        #region 单例信号量
+
+        private static Mutex mutex;
+
+        #endregion
 
         /// <summary>
         /// 应用程序的主入口点。
@@ -124,22 +129,32 @@ namespace MBook
 
             #region 初始化资源窗体，根据初始化结果判断是否显示主窗体
 
-            InitForm initForm = new InitForm();
-            if (initForm.ShowDialog() == DialogResult.OK)
+            mutex = new Mutex(true, "OnlyRun");
+            if (mutex.WaitOne(0, false))
             {
-                //bool mutexWasCreated;
+                InitForm initForm = new InitForm();
+                if (initForm.ShowDialog() == DialogResult.OK)
+                {
+                    //bool mutexWasCreated;
 
-                //Mutex mutex = new Mutex(true, "Mutex", out mutexWasCreated);
+                    //Mutex mutex = new Mutex(true, "Mutex", out mutexWasCreated);
 
-                //if (!mutexWasCreated)
-                //{
-                Application.Run(new Form1());
-                //}
-                //else
-                //{
-                //    XtraMessageBox.Show("程序已经在运行了");
-                //}
-                //mutex.ReleaseMutex();
+                    //if (!mutexWasCreated)
+                    //{
+                    Application.Run(new Form1());
+                    //}
+                    //else
+                    //{
+                    //    XtraMessageBox.Show("程序已经在运行了");
+                    //}
+                    //mutex.ReleaseMutex();
+                }
+            }
+            else
+            {
+                //XtraMessageBox.Show("已经在运行");
+                new MIndForm("程序已经在运行").ShowDialog();
+                Application.Exit();
             }
 
             #endregion

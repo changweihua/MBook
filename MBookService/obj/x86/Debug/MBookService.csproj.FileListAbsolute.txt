@@ -17,3 +17,4 @@ E:\VS2010\MBook\MBookService\bin\Debug\x86\SQLite.Interop.dll
 E:\VS2010\MBook\MBookService\bin\Debug\System.Data.SQLite.dll
 E:\VS2010\MBook\MBookService\bin\Debug\System.Data.SQLite.Linq.dll
 E:\VS2010\MBook\MBookService\obj\x86\Debug\MBookService.RemindForm.resources
+E:\VS2010\MBook\MBookService\obj\x86\Debug\MBookService.csprojResolveAssemblyReference.cache
