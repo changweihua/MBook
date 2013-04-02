@@ -62,7 +62,6 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Analyzer.cs" />
     <Compile Include="BackupForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -2,3 +2,5 @@ E:\VS2010\MBook\EnterpriseObjects\bin\Release\EnterpriseObjects.dll
 E:\VS2010\MBook\EnterpriseObjects\bin\Release\EnterpriseObjects.pdb
 E:\VS2010\MBook\EnterpriseObjects\obj\Release\EnterpriseObjects.dll
 E:\VS2010\MBook\EnterpriseObjects\obj\Release\EnterpriseObjects.pdb
+E:\VS2010\MBook\EnterpriseObjects\bin\Release\Ionic.Zip.dll
+E:\VS2010\MBook\EnterpriseObjects\obj\Release\EnterpriseObjects.csprojResolveAssemblyReference.cache
