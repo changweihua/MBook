@@ -62,3 +62,9 @@ E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.BackupForm.resources
 E:\VS2010\MBook\MBook\bin\Debug\MBookService.exe
 E:\VS2010\MBook\MBook\bin\Debug\MBookService.pdb
 E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.MIndForm.resources
+E:\VS2010\MBook\MBook\obj\x86\Debug\MBook.PanGuForm.resources
+E:\VS2010\MBook\MBook\bin\Debug\Ionic.Zip.dll
+E:\VS2010\MBook\MBook\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\VS2010\MBook\MBook\bin\Debug\Lucene.Net.dll
+E:\VS2010\MBook\MBook\bin\Debug\Lucene.Net.pdb
+E:\VS2010\MBook\MBook\bin\Debug\Lucene.Net.xml

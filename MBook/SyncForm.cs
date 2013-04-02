@@ -103,7 +103,7 @@ namespace MBook
         /// <param name="msg"></param>
         void UpdateMemoEdit(string msg)
         {
-            this.memoEditDetail.Text += string.Format("{0}\r\n", msg);
+            this.memoEditDetail.Text += string.Format("{0}\r\n={1}", msg, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"));
         }
 
         #endregion

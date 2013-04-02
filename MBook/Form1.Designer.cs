@@ -98,12 +98,15 @@
             this.barEditItemRunWithSystem = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.barButtonItemSaveRunWithSystem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemCreateIndex = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonLargeImages = new System.Windows.Forms.ImageList(this.components);
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageSetting = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -267,11 +270,13 @@
             this.barButtonItemSync,
             this.barButtonItemBackup,
             this.barEditItemRunWithSystem,
-            this.barButtonItemSaveRunWithSystem});
+            this.barButtonItemSaveRunWithSystem,
+            this.barButtonItemCreateIndex});
             this.ribbonControl1.LargeImages = this.ribbonLargeImages;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 72;
+            this.ribbonControl1.MaxItemId = 73;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
+            this.ribbonControl1.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biStyle);
             this.ribbonControl1.PageHeaderItemLinks.Add(this.biSchema);
@@ -308,7 +313,7 @@
             this.repositoryItemCheckEdit3,
             this.repositoryItemCheckEdit4});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.SelectedPage = this.ribbonPageSetting;
+            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(1190, 124);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
@@ -798,6 +803,14 @@
             this.barButtonItemSaveRunWithSystem.Name = "barButtonItemSaveRunWithSystem";
             this.barButtonItemSaveRunWithSystem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSaveRunWithSystem_ItemClick);
             // 
+            // barButtonItemCreateIndex
+            // 
+            this.barButtonItemCreateIndex.Caption = "创建索引";
+            this.barButtonItemCreateIndex.Id = 72;
+            this.barButtonItemCreateIndex.LargeImageIndex = 34;
+            this.barButtonItemCreateIndex.Name = "barButtonItemCreateIndex";
+            this.barButtonItemCreateIndex.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCreateIndex_ItemClick);
+            // 
             // ribbonLargeImages
             // 
             this.ribbonLargeImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ribbonLargeImages.ImageStream")));
@@ -836,6 +849,7 @@
             this.ribbonLargeImages.Images.SetKeyName(31, "20121207114949555_easyicon_cn_32.png");
             this.ribbonLargeImages.Images.SetKeyName(32, "20121221041329215_easyicon_cn_32.png");
             this.ribbonLargeImages.Images.SetKeyName(33, "20121223084426509_easyicon_cn_32.png");
+            this.ribbonLargeImages.Images.SetKeyName(34, "20130402102955968_easyicon_net_32.png");
             // 
             // ribbonPage1
             // 
@@ -843,7 +857,8 @@
             this.ribbonPageGroup1,
             this.ribbonPageGroup3,
             this.ribbonPageGroup11,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup10});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "操作区";
             // 
@@ -874,6 +889,12 @@
             this.ribbonPageGroup12.ItemLinks.Add(this.rgbiSkins);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "皮肤区";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItemCreateIndex);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "站内搜索和分词";
             // 
             // ribbonPage2
             // 
@@ -1656,6 +1677,9 @@
         private DevExpress.XtraBars.BarEditItem barEditItemRunWithSystem;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private DevExpress.XtraBars.BarButtonItem barButtonItemSaveRunWithSystem;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemCreateIndex;
+        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
     }
 }
 

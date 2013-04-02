@@ -54,5 +54,8 @@ namespace MonoBookEntity
 
         [Column(Name = "n_is_sync")]
         public int? IsSync { get; set; }
+
+        [Column(Name = "n_is_modified")]
+        public int? IsModified { get; set; }
     }
 }

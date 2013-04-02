@@ -172,6 +172,8 @@ namespace MBook
                 {
                     Attachment = attachments,
                     //CreateDate = globalNote.CreateDate,
+                    //不进行序列化，为了实现快速检索
+                    //Content =this.richEditControl1.HtmlText,
                     Content = EnterpriseObjects.EncryptHelper.EncryptAES(this.richEditControl1.HtmlText),
                     Guid = globalNote.Guid,
                     Title = this.barEditTitle.EditValue == null ? "未命名" + DateTime.Now.ToString() : this.barEditTitle.EditValue.ToString(),
@@ -186,6 +188,7 @@ namespace MBook
                 {
                     Attachment = attachments,
                     //AES加密
+                    //Content = this.richEditControl1.HtmlText,
                     Content = EnterpriseObjects.EncryptHelper.EncryptAES(this.richEditControl1.HtmlText),
                     CreateDate = DateTime.Now.ToString(),
                     Guid = Guid.NewGuid().ToString(),

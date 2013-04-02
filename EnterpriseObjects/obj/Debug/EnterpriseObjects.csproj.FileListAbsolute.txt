@@ -2,3 +2,4 @@ E:\VS2010\MBook\EnterpriseObjects\bin\Debug\EnterpriseObjects.dll
 E:\VS2010\MBook\EnterpriseObjects\bin\Debug\EnterpriseObjects.pdb
 E:\VS2010\MBook\EnterpriseObjects\obj\Debug\EnterpriseObjects.dll
 E:\VS2010\MBook\EnterpriseObjects\obj\Debug\EnterpriseObjects.pdb
+E:\VS2010\MBook\EnterpriseObjects\bin\Debug\Ionic.Zip.dll

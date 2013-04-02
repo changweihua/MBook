@@ -130,5 +130,10 @@ namespace MBook
         {
             Process.Start(Application.StartupPath + @"\Uninstall.bat");
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ZipHelper.ZipByFolderName(@Properties.Settings.Default.SavePath, "zipp");
+        }
     }
 }

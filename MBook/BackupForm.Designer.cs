@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BackupForm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.simpleButtonStart = new DevExpress.XtraEditors.SimpleButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.simpleButtonStop = new DevExpress.XtraEditors.SimpleButton();
@@ -38,14 +39,18 @@
             this.simpleButtonClose = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.backgroundWorkerBackup = new System.ComponentModel.BackgroundWorker();
+            this.memoEditProgress = new DevExpress.XtraEditors.MemoEdit();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.buttonEditSelectFolder = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditProgress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditSelectFolder.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButtonStart
@@ -116,43 +121,61 @@
             this.panelControl1.Controls.Add(this.simpleButtonStop);
             this.panelControl1.Controls.Add(this.simpleButtonClose);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 172);
+            this.panelControl1.Location = new System.Drawing.Point(0, 285);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(520, 74);
+            this.panelControl1.Size = new System.Drawing.Size(523, 74);
             this.panelControl1.TabIndex = 2;
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.memoEdit1);
+            this.groupControl1.Controls.Add(this.memoEditProgress);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Location = new System.Drawing.Point(0, 100);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(520, 172);
+            this.groupControl1.Size = new System.Drawing.Size(523, 259);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "详细信息";
             // 
-            // memoEdit1
+            // memoEditProgress
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(12, 28);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(496, 137);
-            this.memoEdit1.TabIndex = 0;
+            this.memoEditProgress.Location = new System.Drawing.Point(12, 39);
+            this.memoEditProgress.Name = "memoEditProgress";
+            this.memoEditProgress.Size = new System.Drawing.Size(496, 140);
+            this.memoEditProgress.TabIndex = 0;
             // 
-            // backgroundWorkerBackup
+            // groupControl2
             // 
-            this.backgroundWorkerBackup.WorkerReportsProgress = true;
-            this.backgroundWorkerBackup.WorkerSupportsCancellation = true;
-            this.backgroundWorkerBackup.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerBackup_DoWork);
-            this.backgroundWorkerBackup.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerBackup_ProgressChanged);
-            this.backgroundWorkerBackup.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerBackup_RunWorkerCompleted);
+            this.groupControl2.Controls.Add(this.buttonEditSelectFolder);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(523, 100);
+            this.groupControl2.TabIndex = 4;
+            this.groupControl2.Text = "设置备份信息";
+            // 
+            // buttonEditSelectFolder
+            // 
+            this.buttonEditSelectFolder.EditValue = "选择备份文件保存路径";
+            this.buttonEditSelectFolder.Location = new System.Drawing.Point(23, 28);
+            this.buttonEditSelectFolder.Name = "buttonEditSelectFolder";
+            this.buttonEditSelectFolder.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            serializableAppearanceObject1.Options.UseTextOptions = true;
+            serializableAppearanceObject1.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.buttonEditSelectFolder.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "点击，选择文件你就", null, null, true)});
+            this.buttonEditSelectFolder.Properties.ReadOnly = true;
+            this.buttonEditSelectFolder.Size = new System.Drawing.Size(451, 21);
+            this.buttonEditSelectFolder.TabIndex = 0;
+            this.buttonEditSelectFolder.Click += new System.EventHandler(this.buttonEditSelectFolder_Click);
             // 
             // BackupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 246);
-            this.Controls.Add(this.groupControl1);
+            this.ClientSize = new System.Drawing.Size(523, 359);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "Sharp";
@@ -160,12 +183,16 @@
             this.Name = "BackupForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "数据备份";
+            this.Load += new System.EventHandler(this.BackupForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditProgress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditSelectFolder.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,7 +207,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonClose;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerBackup;
+        private DevExpress.XtraEditors.MemoEdit memoEditProgress;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditSelectFolder;
     }
 }

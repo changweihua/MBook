@@ -23,6 +23,7 @@ using NLite.Dynamic;
 using Microsoft.Win32;
 
 
+
 namespace MBook
 {
 
@@ -1268,6 +1269,24 @@ namespace MBook
             //    OrGroup = "a"
             //};
 
+
+            String field = "title";
+
+            Lucene.Net.Index.IndexReader reader = Lucene.Net.Index.IndexReader.Open(Lucene.Net.Store.FSDirectory.Open(new DirectoryInfo(Properties.Settings.Default.SavePath + @"\Index")), true);
+
+           Lucene.Net.Search.Searcher searcher = new Lucene.Net.Search.IndexSearcher(reader);
+           Lucene.Net.Analysis.Analyzer analyzer = new Lucene.Net.Analysis.Standard.StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30);
+
+            Lucene.Net.QueryParsers.QueryParser parser = new Lucene.Net.QueryParsers.QueryParser(Lucene.Net.Util.Version.LUCENE_30, field, analyzer);
+
+            Lucene.Net.Search.Query query1 = parser.Parse(keyword.Trim());
+
+            Lucene.Net.Search.TopScoreDocCollector collector = Lucene.Net.Search.TopScoreDocCollector.Create(searcher.MaxDoc, false);
+            searcher.Search(query1, collector);
+            Lucene.Net.Search.ScoreDoc[] hits = collector.TopDocs().ScoreDocs;
+
+            MessageBox.Show(this, "共 " + collector.TotalHits.ToString() + " 条记录");
+            return;
             var item1 = new Filter
             {
                 Field = "Title",
@@ -1416,6 +1435,42 @@ namespace MBook
         }
 
         #endregion
+
+        private void barButtonItemCreateIndex_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            //检测本地是否已经存在索引文件夹 ，不存在，就创建
+            EnterpriseObjects.DirectoryHelper directoryHelper = new EnterpriseObjects.DirectoryHelper();
+            directoryHelper.CreateDirOperate(Properties.Settings.Default.SavePath + @"\Index", EnterpriseObjects.OperateOption.ExistReturn);
+
+            IEnumerable<Note> notes = null;
+
+            using (var db = DbConfiguration.Items["Mono"].CreateDbContext())
+            {
+                notes = db.Set<Note>().ToList();
+            }
+
+            Lucene.Net.Index.IndexWriter writer = new Lucene.Net.Index.IndexWriter(Lucene.Net.Store.FSDirectory.Open(new DirectoryInfo(Properties.Settings.Default.SavePath + @"\Index")), new Lucene.Net.Analysis.Standard.StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30), true, Lucene.Net.Index.IndexWriter.MaxFieldLength.LIMITED);
+
+            foreach (var note in notes)
+            {
+                CreateIndex(writer, note.Title, note.Content);
+
+            }
+            writer.Optimize();
+            writer.Dispose();
+        }
+
+        private void CreateIndex(Lucene.Net.Index.IndexWriter writer, string a, string b)
+        {
+            Lucene.Net.Documents.Document doc = new Lucene.Net.Documents.Document();
+            doc.Add(new Lucene.Net.Documents.Field("title", a,  Lucene.Net.Documents.Field.Store.YES,  Lucene.Net.Documents.Field.Index.ANALYZED));
+            doc.Add(new Lucene.Net.Documents.Field("content", b,  Lucene.Net.Documents.Field.Store.YES,  Lucene.Net.Documents.Field.Index.ANALYZED));
+
+            writer.AddDocument(doc);
+            writer.Commit();
+        }
+
 
        
     }
