@@ -1233,14 +1233,14 @@ namespace MBook
             switch (edit.Properties.Buttons.IndexOf(e.Button))
             {
                 case 0:
-                    if (edit.EditValue == null)
+                    if (edit.EditValue == null || edit.EditValue.ToString().Trim().Length==0)
                     {
                         XtraMessageBox.Show(this.LookAndFeel, "亲，您总得写点啥吧\r\n这样让人家好为难啊", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     else
                     {
-                        Search(edit.EditValue.ToString());
+                        Search(edit.EditValue.ToString().Trim());
                     }
                     break;
                 case 1:
@@ -1269,7 +1269,6 @@ namespace MBook
             //    OrGroup = "a"
             //};
 
-
             String field = "title";
 
             Lucene.Net.Index.IndexReader reader = Lucene.Net.Index.IndexReader.Open(Lucene.Net.Store.FSDirectory.Open(new DirectoryInfo(Properties.Settings.Default.SavePath + @"\Index")), true);
@@ -1279,13 +1278,28 @@ namespace MBook
 
             Lucene.Net.QueryParsers.QueryParser parser = new Lucene.Net.QueryParsers.QueryParser(Lucene.Net.Util.Version.LUCENE_30, field, analyzer);
 
-            Lucene.Net.Search.Query query1 = parser.Parse(keyword.Trim());
+            Lucene.Net.Search.Query query1 = parser.Parse(keyword);
 
             Lucene.Net.Search.TopScoreDocCollector collector = Lucene.Net.Search.TopScoreDocCollector.Create(searcher.MaxDoc, false);
             searcher.Search(query1, collector);
             Lucene.Net.Search.ScoreDoc[] hits = collector.TopDocs().ScoreDocs;
 
-            MessageBox.Show(this, "共 " + collector.TotalHits.ToString() + " 条记录");
+            tvResult.Nodes.Clear();
+            tvResult.Tag = 2;
+            TreeNode node = null;
+            for (int i = 0; i < collector.TotalHits; i++)
+            {
+                node = new TreeNode
+                {
+                    Text = string.Format("< {0} > ", searcher.Doc(hits[i].Doc).Get("title")),
+                    Tag = searcher.Doc(hits[i].Doc).Get("guid"),
+                    ImageIndex = 5
+                };
+                tvResult.Nodes.Add(node);
+                MessageBox.Show(searcher.Doc(hits[i].Doc).Get("title") + searcher.Doc(hits[i].Doc).Get("guid"));
+            }
+            //MessageBox.Show(this, "共 " + collector.TotalHits.ToString() + " 条记录");
+
             return;
             var item1 = new Filter
             {
@@ -1454,18 +1468,19 @@ namespace MBook
 
             foreach (var note in notes)
             {
-                CreateIndex(writer, note.Title, note.Content);
+                CreateIndex(writer, note.Guid, note.Title);
 
             }
             writer.Optimize();
             writer.Dispose();
         }
 
-        private void CreateIndex(Lucene.Net.Index.IndexWriter writer, string a, string b)
+        private void CreateIndex(Lucene.Net.Index.IndexWriter writer, string guid, string title)
         {
             Lucene.Net.Documents.Document doc = new Lucene.Net.Documents.Document();
-            doc.Add(new Lucene.Net.Documents.Field("title", a,  Lucene.Net.Documents.Field.Store.YES,  Lucene.Net.Documents.Field.Index.ANALYZED));
-            doc.Add(new Lucene.Net.Documents.Field("content", b,  Lucene.Net.Documents.Field.Store.YES,  Lucene.Net.Documents.Field.Index.ANALYZED));
+            doc.Add(new Lucene.Net.Documents.Field("guid", guid, Lucene.Net.Documents.Field.Store.YES, Lucene.Net.Documents.Field.Index.ANALYZED));
+            doc.Add(new Lucene.Net.Documents.Field("title", title, Lucene.Net.Documents.Field.Store.YES, Lucene.Net.Documents.Field.Index.ANALYZED));
+           // doc.Add(new Lucene.Net.Documents.Field("content", b,  Lucene.Net.Documents.Field.Store.YES,  Lucene.Net.Documents.Field.Index.ANALYZED));
 
             writer.AddDocument(doc);
             writer.Commit();

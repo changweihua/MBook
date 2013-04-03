@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo2 = new DevExpress.XtraRichEdit.Model.BorderInfo();
+            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
             this.smallImages = new System.Windows.Forms.ImageList(this.components);
             this.largeImages = new System.Windows.Forms.ImageList(this.components);
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
@@ -223,6 +223,7 @@
             this.smallImages.Images.SetKeyName(1, "20121212095525579_easyicon_cn_16.png");
             this.smallImages.Images.SetKeyName(2, "20121204094139448_easyicon_cn_16.png");
             this.smallImages.Images.SetKeyName(3, "20121212120115683_easyicon_cn_16.png");
+            this.smallImages.Images.SetKeyName(4, "20130403093651654_easyicon_net_16.png");
             // 
             // largeImages
             // 
@@ -236,6 +237,7 @@
             this.largeImages.Images.SetKeyName(5, "20121212120113266_easyicon_cn_32.png");
             this.largeImages.Images.SetKeyName(6, "20121206054447905_easyicon_cn_32.png");
             this.largeImages.Images.SetKeyName(7, "20121203082114666_easyicon_cn_32.png");
+            this.largeImages.Images.SetKeyName(8, "20130403093507139_easyicon_net_32.png");
             // 
             // richEditControl1
             // 
@@ -643,13 +645,13 @@
             // changeTableBorderLineStyleItem1
             // 
             this.changeTableBorderLineStyleItem1.Edit = this.repositoryItemBorderLineStyle1;
-            borderInfo2.Color = System.Drawing.Color.Black;
-            borderInfo2.Frame = false;
-            borderInfo2.Offset = 0;
-            borderInfo2.Shadow = false;
-            borderInfo2.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
-            borderInfo2.Width = 10;
-            this.changeTableBorderLineStyleItem1.EditValue = borderInfo2;
+            borderInfo1.Color = System.Drawing.Color.Black;
+            borderInfo1.Frame = false;
+            borderInfo1.Offset = 0;
+            borderInfo1.Shadow = false;
+            borderInfo1.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
+            borderInfo1.Width = 10;
+            this.changeTableBorderLineStyleItem1.EditValue = borderInfo1;
             this.changeTableBorderLineStyleItem1.Id = 31;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
             // 
@@ -1336,8 +1338,8 @@
             // 
             this.barButtonClose.Caption = "关闭窗体";
             this.barButtonClose.Id = 123;
-            this.barButtonClose.ImageIndex = 3;
-            this.barButtonClose.LargeImageIndex = 5;
+            this.barButtonClose.ImageIndex = 4;
+            this.barButtonClose.LargeImageIndex = 8;
             this.barButtonClose.Name = "barButtonClose";
             this.barButtonClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonClose_ItemClick);
             // 
@@ -1369,10 +1371,12 @@
             // 
             // barEditTitle
             // 
+            this.barEditTitle.Caption = "日志标题";
             this.barEditTitle.Edit = this.repositoryItemTextEdit1;
             this.barEditTitle.Id = 130;
             this.barEditTitle.ImageIndex = 0;
             this.barEditTitle.Name = "barEditTitle";
+            this.barEditTitle.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barEditTitle.Width = 250;
             // 
             // repositoryItemTextEdit1
@@ -1382,6 +1386,7 @@
             // 
             // barEditTag
             // 
+            this.barEditTag.Caption = "日志标签";
             this.barEditTag.Edit = this.repositoryItemTextEdit2;
             this.barEditTag.Id = 131;
             this.barEditTag.ImageIndex = 1;
